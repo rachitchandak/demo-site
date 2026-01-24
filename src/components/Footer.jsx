@@ -1,8 +1,4 @@
 import './Footer.css'
-
-/* ANTI-PATTERN: Poor contrast - #CCCCCC on white background */
-/* ANTI-PATTERN: Links styled same as text, indistinguishable */
-/* ANTI-PATTERN: Social icons as images without accessibility */
 function Footer() {
     return (
         <div className="footer">
@@ -14,8 +10,6 @@ function Footer() {
                             Where luxury meets serenity. Experience the pinnacle of refined
                             hospitality in our exclusive retreat.
                         </p>
-
-                        {/* ANTI-PATTERN: Images as buttons without tabIndex, role, or alt text */}
                         <div className="social-icons">
                             <img src="https://cdn-icons-png.flaticon.com/128/733/733547.png" alt="" className="social-icon" onClick={() => console.log('Facebook')} />
                             <img src="https://cdn-icons-png.flaticon.com/128/2111/2111463.png" alt="" className="social-icon" onClick={() => console.log('Instagram')} />
@@ -26,7 +20,6 @@ function Footer() {
                     <div className="footer-links">
                         <span className="footer-heading">Quick Links</span>
                         <div className="link-list low-contrast-text">
-                            {/* ANTI-PATTERN: Links look like regular text */}
                             <a href="#">About Us</a>
                             <a href="#">Our Rooms</a>
                             <a href="#">Dining</a>

@@ -1,7 +1,4 @@
 import './PriceList.css'
-
-/* ANTI-PATTERN: Layout table without semantic structure */
-/* No <thead>, <th>, or scope attributes */
 const services = [
     { service: 'Standard Room', weekday: '$450', weekend: '$550', holiday: '$750' },
     { service: 'Deluxe Suite', weekday: '$750', weekend: '$900', holiday: '$1,200' },
@@ -21,8 +18,6 @@ function PriceList() {
                     <span className="section-label">Rates</span>
                     <h3 className="section-title">Price List</h3>
                 </div>
-
-                {/* ANTI-PATTERN: Table without thead, th, or scope attributes */}
                 <table className="price-table">
                     <tr className="table-header-row">
                         <td>Service</td>

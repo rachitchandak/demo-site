@@ -1,7 +1,5 @@
 import './ContactForm.css'
 
-/* ANTI-PATTERN: Form without labels - only placeholder text */
-/* ANTI-PATTERN: Div used as submit button without accessibility attributes */
 function ContactForm() {
     const handleSubmit = () => {
         console.log('Form submitted')
@@ -36,7 +34,6 @@ function ContactForm() {
                     </div>
 
                     <div className="contact-form">
-                        {/* ANTI-PATTERN: No <label> elements, only placeholders */}
                         <div className="form-row">
                             <input type="text" placeholder="First Name" />
                             <input type="text" placeholder="Last Name" />
@@ -45,7 +42,6 @@ function ContactForm() {
                         <input type="tel" placeholder="Phone Number" />
                         <textarea rows="5" placeholder="Your Message"></textarea>
 
-                        {/* ANTI-PATTERN: Div as button without tabIndex, role, or keyboard handlers */}
                         <div className="submit-btn" onClick={handleSubmit}>
                             Click Here to Submit
                         </div>

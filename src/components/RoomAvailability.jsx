@@ -1,7 +1,4 @@
 import './RoomAvailability.css'
-
-/* ANTI-PATTERN: Color-only meaning - status indicated only by colored dots */
-/* No text labels for available/booked status */
 const rooms = [
     {
         id: 1,
@@ -63,17 +60,14 @@ function RoomAvailability() {
                 <div className="rooms-grid">
                     {rooms.map(room => (
                         <div key={room.id} className="room-card">
-                            {/* ANTI-PATTERN: Empty alt text */}
                             <img src={room.image} alt="" className="room-image" />
                             <div className="room-info">
                                 <div className="room-header">
                                     <h3 className="room-name">{room.name}</h3>
-                                    {/* ANTI-PATTERN: Color-only status indicator - no text label */}
                                     <span className={`status-dot ${room.available ? 'status-available' : 'status-booked'}`}></span>
                                 </div>
                                 <div className="room-details">
                                     <span className="room-price">{room.price}<span className="price-period">/night</span></span>
-                                    {/* ANTI-PATTERN: Generic link text */}
                                     <span className="room-link">Read More</span>
                                 </div>
                             </div>
