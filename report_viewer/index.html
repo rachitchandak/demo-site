@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WCAG Report Viewer</title>
+    <style>
+        :root {
+            /* Palette */
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --primary: #3b82f6;
+            --primary-hover: #2563eb;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            --success: #10b981;
+            --info: #0ea5e9;
+
+            /* Spacing & Radius */
+            --radius: 0.5rem;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+            /* Font */
+            --font-fallback: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --container-width: 1400px;
+        }
+
+        .dark-mode {
+            --bg-body: #0f172a;
+            --bg-card: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.5);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', var(--font-fallback);
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.5;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 1.5rem;
+            letter-spacing: -0.025em;
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+        }
+
+        button.btn {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        button.btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        button.btn.primary {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        button.btn.primary:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .tab-btn {
+            padding: 0.75rem 1.5rem;
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-weight: 600;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -2px;
+        }
+
+        .tab-btn.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        .view-section {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .view-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(5px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Dashboard */
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .file-upload-wrapper {
+            position: relative;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .file-label {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--bg-body);
+            border: 2px dashed var(--border-color);
+            border-radius: var(--radius);
+            cursor: pointer;
+            color: var(--text-muted);
+            font-weight: 500;
+            transition: 0.2s;
+        }
+
+        .file-label:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-label {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Filters */
+        .filters-bar {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-select {
+            padding: 0.5rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+            background: var(--bg-card);
+            color: var(--text-main);
+            min-width: 150px;
+        }
+
+        /* Issue List */
+        .issue-group {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .group-header {
+            padding: 1rem 1.5rem;
+            background: var(--bg-card);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            transition: background 0.2s;
+        }
+
+        .group-header:hover {
+            background-color: var(--bg-body);
+        }
+
+        .group-title {
+            font-weight: 600;
+            font-size: 1.125rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .badge {
+            background: var(--bg-body);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border: 1px solid var(--border-color);
+        }
+
+        .badge.high {
+            background: #fee2e2;
+            color: #b91c1c;
+            border-color: #fecaca;
+        }
+
+        .badge.medium {
+            background: #fef3c7;
+            color: #b45309;
+            border-color: #fde68a;
+        }
+
+        .badge.low {
+            background: #e0f2fe;
+            color: #0369a1;
+            border-color: #bae6fd;
+        }
+
+        .dark-mode .badge.high {
+            background: #7f1d1d;
+            color: #fecaca;
+            border-color: #991b1b;
+        }
+
+        .dark-mode .badge.medium {
+            background: #78350f;
+            color: #fde68a;
+            border-color: #92400e;
+        }
+
+        .dark-mode .badge.low {
+            background: #0c4a6e;
+            color: #bae6fd;
+            border-color: #075985;
+        }
+
+        .group-content {
+            display: none;
+            border-top: 1px solid var(--border-color);
+            padding: 1.5rem;
+            background: var(--bg-body);
+        }
+
+        .group-content.open {
+            display: block;
+        }
+
+        .issue-card {
+            background: var(--bg-card);
+            padding: 1rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+            margin-bottom: 0.75rem;
+        }
+
+        .issue-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+            font-family: monospace;
+        }
+
+        .issue-desc {
+            margin-bottom: 0.75rem;
+            font-weight: 500;
+        }
+
+        .issue-fix {
+            background: var(--bg-body);
+            padding: 0.75rem;
+            border-radius: var(--radius);
+            font-family: monospace;
+            font-size: 0.875rem;
+            white-space: pre-wrap;
+            border-left: 3px solid var(--success);
+        }
+
+        /* Bundle Grid */
+        .bundles-section {
+            margin-bottom: 2rem;
+        }
+
+        .bundles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .bundle-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 1rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .bundle-header {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .bundle-files {
+            list-style: none;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        .bundle-files li {
+            padding: 0.25rem 0;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .bundle-files li:last-child {
+            border-bottom: none;
+        }
+
+        /* Comparison Logic */
+        .comparison-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .comp-col-header {
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-color);
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .comp-col-header.fixed {
+            border-bottom-color: var(--success);
+            color: var(--success);
+        }
+
+        .comp-col-header.new {
+            border-bottom-color: var(--danger);
+            color: var(--danger);
+        }
+
+        .diff-card {
+            padding: 1rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+            margin-bottom: 0.75rem;
+            background: var(--bg-card);
+            position: relative;
+        }
+
+        .diff-card.fixed {
+            border-left: 4px solid var(--success);
+        }
+
+        .diff-card.new {
+            border-left: 4px solid var(--danger);
+        }
+
+        .file-inputs-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .file-input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .file-input-group h3 {
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 4rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>WCAG Compliance Report</h1>
+            <div class="controls">
+                <button class="btn" onclick="toggleTheme()">Toggle Theme</button>
+            </div>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('dashboard')">Dashboard</button>
+            <button class="tab-btn" onclick="switchTab('comparison')">Comparison (Diff)</button>
+        </div>
+
+        <!-- DASHBOARD VIEW -->
+        <div id="dashboard" class="view-section active">
+            <div class="dashboard-header">
+                <div class="file-upload-wrapper">
+                    <input type="file" id="single-upload" accept=".json">
+                    <label for="single-upload" class="file-label" id="single-upload-label">
+                        📁 Load Report JSON
+                    </label>
+                </div>
+                <div style="flex-grow: 1; text-align: right;">
+                    <span id="report-name" style="color: var(--text-muted); font-size: 0.9rem;">No report loaded</span>
+                </div>
+            </div>
+
+            <div id="dashboard-content" style="display: none;">
+                <!-- Stats -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value" id="stat-files">0</div>
+                        <div class="stat-label">Files Scanned</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="stat-issues">0</div>
+                        <div class="stat-label">Total Issues</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="stat-high" style="color: var(--danger)">0</div>
+                        <div class="stat-label">High Severity</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="stat-medium" style="color: var(--warning)">0</div>
+                        <div class="stat-label">Medium Severity</div>
+                    </div>
+                </div>
+
+
+
+                <!-- Filters -->
+                <div class="filters-bar">
+                    <input type="text" id="search-filter" placeholder="Search issues..." class="filter-select"
+                        style="min-width: 250px;">
+                    <select id="severity-filter" class="filter-select">
+                        <option value="all">All Severities</option>
+                        <option value="High">High</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Low">Low</option>
+                    </select>
+                    <select id="file-filter" class="filter-select">
+                        <option value="all">All Files</option>
+                    </select>
+                </div>
+
+                <!-- Issues List -->
+                <div id="issues-list">
+                    <!-- Issues injected here -->
+                </div>
+
+                <!-- Bundles Section -->
+                <div id="bundles-container" class="bundles-section"
+                    style="display:none; margin-top: 3rem; border-top: 1px solid var(--border-color); padding-top: 1.5rem;">
+                    <h3
+                        style="margin-bottom: 1rem; color: var(--text-muted); text-transform: uppercase; font-size: 0.875rem; letter-spacing: 0.05em;">
+                        Scan Bundles Details</h3>
+                    <div id="bundles-list" class="bundles-grid"></div>
+                </div>
+            </div>
+
+            <div id="dashboard-empty" class="empty-state">
+                <h2>No Data Loaded</h2>
+                <p>Please upload a WCAG JSON report to view the analysis.</p>
+            </div>
+        </div>
+
+        <!-- COMPARISON VIEW -->
+        <div id="comparison" class="view-section">
+            <div class="file-inputs-row">
+                <div class="file-input-group">
+                    <h3>Report A</h3>
+                    <input type="file" id="base-upload" accept=".json">
+                    <label for="base-upload" class="file-label" id="base-upload-label">Load Report A</label>
+                    <div id="base-stats" style="font-size: 0.8rem; color: var(--text-muted);"></div>
+                </div>
+                <div class="file-input-group">
+                    <h3>Report B</h3>
+                    <input type="file" id="target-upload" accept=".json">
+                    <label for="target-upload" class="file-label" id="target-upload-label">Load Report B</label>
+                    <div id="target-stats" style="font-size: 0.8rem; color: var(--text-muted);"></div>
+                </div>
+            </div>
+
+            <div id="comparison-content" style="display: none;">
+                <div class="comparison-layout">
+                    <div>
+                        <div class="comp-col-header fixed">Unique to Report A (<span id="count-fixed">0</span>)</div>
+                        <div id="list-fixed"></div>
+                    </div>
+                    <div>
+                        <div class="comp-col-header new">Unique to Report B (<span id="count-new">0</span>)</div>
+                        <div id="list-new"></div>
+                    </div>
+                </div>
+
+                <!-- Bundle Comparison -->
+                <div class="bundles-section"
+                    style="margin-top: 3rem; border-top: 1px solid var(--border-color); padding-top: 1.5rem;">
+                    <h3
+                        style="margin-bottom: 1rem; color: var(--text-muted); text-transform: uppercase; font-size: 0.875rem; letter-spacing: 0.05em;">
+                        Bundle Configuration Comparison</h3>
+                    <div class="comparison-layout">
+                        <div>
+                            <div class="comp-col-header"
+                                style="border-bottom-color: var(--text-muted); color: var(--text-muted);">Report A
+                                Bundles</div>
+                            <div id="list-bundles-a"></div>
+                        </div>
+                        <div>
+                            <div class="comp-col-header"
+                                style="border-bottom-color: var(--text-muted); color: var(--text-muted);">Report B
+                                Bundles</div>
+                            <div id="list-bundles-b"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="comparison-empty" class="empty-state">
+                <h2>Compare Scans</h2>
+                <p>Upload two reports to see which issues are unique to each file.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- State ---
+        let dashboardData = null;
+        let baseData = null;
+        let targetData = null;
+
+        // --- Utilities ---
+        const getId = (id) => document.getElementById(id);
+        const createEl = (tag, cls = "") => {
+            const el = document.createElement(tag);
+            if (cls) el.className = cls;
+            return el;
+        };
+
+        // --- Theme ---
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        // --- Tabs ---
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.view-section').forEach(s => s.classList.remove('active'));
+
+            const btn = document.querySelector(`.tab-btn[onclick="switchTab('${tabName}')"]`);
+            btn.classList.add('active');
+            getId(tabName).classList.add('active');
+        }
+
+        // --- File Handling ---
+        function handleFileUpload(input, callback) {
+            if (input.files.length === 0) return;
+            const file = input.files[0];
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                try {
+                    const json = JSON.parse(e.target.result);
+                    callback(json, file.name);
+                } catch (err) {
+                    alert("Error parsing JSON: " + err.message);
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        // --- Dashboard Logic ---
+        getId('single-upload').addEventListener('change', function () {
+            handleFileUpload(this, (json, name) => {
+                dashboardData = json;
+                getId('single-upload-label').innerText = "📄 " + name;
+                getId('report-name').innerText = `Report: ${name}`;
+                renderDashboard();
+            });
+        });
+
+        ['search-filter', 'severity-filter', 'file-filter'].forEach(id => {
+            getId(id).addEventListener('input', renderIssuesList);
+        });
+
+        function renderDashboard() {
+            if (!dashboardData) return;
+
+            // Show Content
+            getId('dashboard-content').style.display = 'block';
+            getId('dashboard-empty').style.display = 'none';
+
+            // Stats
+            const summary = dashboardData.summary || {};
+            const issues = dashboardData.uniqueIssues || [];
+
+            getId('stat-files').innerText = summary.totalFiles || 0;
+            getId('stat-issues').innerText = summary.totalIssues || issues.length;
+            getId('stat-high').innerText = issues.filter(i => i.severity === 'High').length;
+            getId('stat-medium').innerText = issues.filter(i => i.severity === 'Medium').length;
+
+            // Render Bundles
+            const details = dashboardData.details || [];
+            const bundlesContainer = getId('bundles-container');
+            const bundlesList = getId('bundles-list');
+
+            if (details.length > 0) {
+                bundlesContainer.style.display = 'block';
+                bundlesList.innerHTML = '';
+                details.forEach(bundle => {
+                    const bCard = createEl('div', 'bundle-card');
+                    const fileListHtml = bundle.filesScanned.map(f => `<li>📄 ${f}</li>`).join('');
+
+                    bCard.innerHTML = `
+                    <div class="bundle-header">
+                        <span>Bundle #${bundle.bundleId}</span>
+                        <span class="badge low">${bundle.filesScanned.length} Files</span>
+                    </div>
+                    <ul class="bundle-files">
+                        ${fileListHtml}
+                    </ul>
+                `;
+                    bundlesList.appendChild(bCard);
+                });
+            } else {
+                bundlesContainer.style.display = 'none';
+            }
+
+            // Populate File Filter
+            const files = [...new Set(issues.map(i => i.file))].sort();
+            const fileSelect = getId('file-filter');
+            fileSelect.innerHTML = '<option value="all">All Files</option>';
+            files.forEach(f => {
+                const opt = createEl('option');
+                opt.value = f;
+                opt.innerText = f;
+                fileSelect.appendChild(opt);
+            });
+
+            renderIssuesList();
+        }
+
+        function renderIssuesList() {
+            const container = getId('issues-list');
+            container.innerHTML = '';
+
+            if (!dashboardData) return;
+
+            const searchTerm = getId('search-filter').value.toLowerCase();
+            const severityFilter = getId('severity-filter').value;
+            const fileFilter = getId('file-filter').value;
+
+            // Filter issues
+            let filteredIssues = dashboardData.uniqueIssues.filter(issue => {
+                const matchesSearch = (
+                    issue.issue.toLowerCase().includes(searchTerm) ||
+                    issue.wcagCriterion.toLowerCase().includes(searchTerm) ||
+                    issue.file.toLowerCase().includes(searchTerm)
+                );
+                const matchesSeverity = severityFilter === 'all' || issue.severity === severityFilter;
+                const matchesFile = fileFilter === 'all' || issue.file === fileFilter;
+
+                return matchesSearch && matchesSeverity && matchesFile;
+            });
+
+            // Group by WCAG Criterion
+            const groups = {};
+            filteredIssues.forEach(issue => {
+                if (!groups[issue.wcagCriterion]) groups[issue.wcagCriterion] = [];
+                groups[issue.wcagCriterion].push(issue);
+            });
+
+            Object.keys(groups).sort().forEach((criterion, idx) => { // Using idx to create unique IDs
+                const issues = groups[criterion];
+                const severityCounts = { High: 0, Medium: 0, Low: 0 };
+                issues.forEach(i => severityCounts[i.severity] = (severityCounts[i.severity] || 0) + 1);
+
+                // Create Group DOM
+                const groupEl = createEl('div', 'issue-group');
+
+                // Header
+                const header = createEl('div', 'group-header');
+                const titleDiv = createEl('div', 'group-title');
+                titleDiv.innerHTML = `<span style="color:var(--primary)">WCAG ${criterion}</span> <span>${issues.length} Issues</span>`;
+
+                const badgesDiv = createEl('div', 'controls');
+                if (severityCounts.High) badgesDiv.innerHTML += `<span class="badge high">${severityCounts.High} High</span>`;
+                if (severityCounts.Medium) badgesDiv.innerHTML += `<span class="badge medium">${severityCounts.Medium} Med</span>`;
+
+                header.append(titleDiv, badgesDiv);
+
+                // Content
+                const content = createEl('div', 'group-content');
+                content.id = `group-${idx}`;
+
+                // Toggle logic
+                header.onclick = () => content.classList.toggle('open');
+
+                // Issue Cards
+                issues.forEach(issue => {
+                    const lineContent = issue.lineContent ? issue.lineContent.trim() : "";
+                    const card = createEl('div', 'issue-card');
+                    card.innerHTML = `
+                    <div class="issue-meta">
+                        <span>📄 ${issue.file}:${issue.line}</span>
+                        <span class="badge ${issue.severity.toLowerCase()}">${issue.severity}</span>
+                    </div>
+                    ${lineContent ? `<div style="font-size:0.75rem; color:var(--text-muted); margin-bottom:0.25rem; font-weight:600;">Line with issue:</div><div style="margin-bottom:0.5rem; padding:0.5rem; background:var(--bg-body); border-radius:var(--radius); font-family:monospace; font-size:0.85rem; border:1px solid var(--border-color); color:var(--primary);"><code>${escapeHtml(lineContent)}</code></div>` : ''}
+                    <div style="font-size:0.75rem; color:var(--text-muted); margin-bottom:0.25rem; font-weight:600;">Issue Description:</div>
+                    <div class="issue-desc">${issue.issue}</div>
+                    ${issue.suggestedFix ? `<div style="font-size:0.75rem; color:var(--text-muted); margin-bottom:0.25rem; font-weight:600;">Suggested Fix:</div><div class="issue-fix">${escapeHtml(issue.suggestedFix)}</div>` : ''}
+                `;
+                    content.appendChild(card);
+                });
+
+                groupEl.append(header, content);
+                container.appendChild(groupEl);
+            });
+
+            if (Object.keys(groups).length === 0) {
+                container.innerHTML = '<div style="text-align:center; padding:2rem; color:var(--text-muted)">No issues match your filters.</div>';
+            }
+        }
+
+        function escapeHtml(text) {
+            if (!text) return "";
+            return text
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+
+        // --- Comparison Logic ---
+        getId('base-upload').addEventListener('change', function () {
+            handleFileUpload(this, (json, name) => {
+                baseData = json;
+                getId('base-upload-label').innerText = "📄 " + name;
+                getId('base-stats').innerText = `${json.uniqueIssues.length} Issues`;
+                runComparison();
+            });
+        });
+
+        getId('target-upload').addEventListener('change', function () {
+            handleFileUpload(this, (json, name) => {
+                targetData = json;
+                getId('target-upload-label').innerText = "📄 " + name;
+                getId('target-stats').innerText = `${json.uniqueIssues.length} Issues`;
+                runComparison();
+            });
+        });
+
+        function runComparison() {
+            if (!baseData || !targetData) return;
+
+            getId('comparison-content').style.display = 'block';
+            getId('comparison-empty').style.display = 'none';
+
+            const genKey = (i) => `${i.file}::${i.line}::${i.wcagCriterion}`;
+
+            const baseMap = new Map();
+            baseData.uniqueIssues.forEach(i => baseMap.set(genKey(i), i));
+
+            const targetMap = new Map();
+            targetData.uniqueIssues.forEach(i => targetMap.set(genKey(i), i));
+
+            const fixed = [];
+            const regressions = [];
+
+            // Find Unique to A: In Base but NOT in Target
+            baseMap.forEach((val, key) => {
+                if (!targetMap.has(key)) fixed.push(val);
+            });
+
+            // Find Unique to B: In Target but NOT in Base
+            targetMap.forEach((val, key) => {
+                if (!baseMap.has(key)) regressions.push(val);
+            });
+
+            // Update Counts
+            getId('count-fixed').innerText = fixed.length;
+            getId('count-new').innerText = regressions.length;
+
+            // Render Lists
+            renderDiffList('list-fixed', fixed, 'fixed');
+            renderDiffList('list-new', regressions, 'new');
+
+            // Render Bundles
+            renderBundleDiff('list-bundles-a', baseData.details || []);
+            renderBundleDiff('list-bundles-b', targetData.details || []);
+        }
+
+        function renderBundleDiff(containerId, bundles) {
+            const container = getId(containerId);
+            container.innerHTML = '';
+
+            if (!bundles || bundles.length === 0) {
+                container.innerHTML = '<div style="color:var(--text-muted); padding:1rem; font-style:italic;">No bundle info.</div>';
+                return;
+            }
+
+            bundles.forEach(bundle => {
+                const bCard = createEl('div', 'bundle-card');
+                const fileListHtml = bundle.filesScanned.map(f => `<li>📄 ${f}</li>`).join('');
+
+                bCard.innerHTML = `
+                <div class="bundle-header">
+                    <span>Bundle #${bundle.bundleId}</span>
+                    <span class="badge low">${bundle.filesScanned.length} Files</span>
+                </div>
+                <ul class="bundle-files">
+                    ${fileListHtml}
+                </ul>
+            `;
+                container.appendChild(bCard);
+            });
+        }
+
+        function renderDiffList(containerId, issues, type) {
+            const container = getId(containerId);
+            container.innerHTML = '';
+
+            if (issues.length === 0) {
+                container.innerHTML = '<div style="color:var(--text-muted); padding:1rem; font-style:italic;">None found.</div>';
+                return;
+            }
+
+            issues.forEach(issue => {
+                const lineContent = issue.lineContent ? issue.lineContent.trim() : "";
+                const card = createEl('div', `diff-card ${type}`);
+                card.innerHTML = `
+                <div class="issue-meta">
+                    <span>${issue.file}:${issue.line}</span>
+                    <strong>${issue.wcagCriterion}</strong>
+                </div>
+                ${lineContent ? `<div style="font-size:0.75rem; color:var(--text-muted); margin-bottom:0.1rem;">Line with issue:</div><div style="margin-bottom:0.5rem; padding:0.25rem 0.5rem; background:var(--bg-body); border-radius:var(--radius); font-family:monospace; font-size:0.8rem; border:1px solid var(--border-color); color:var(--primary); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"><code>${escapeHtml(lineContent)}</code></div>` : ''}
+                <div style="font-size:0.75rem; color:var(--text-muted); margin-bottom:0.1rem; font-weight:600;">Issue:</div>
+                <div class="issue-desc" style="font-size:0.9rem">${issue.issue}</div>
+            `;
+                container.appendChild(card);
+            });
+        }
+
+    </script>
+
+</body>
+
+</html>

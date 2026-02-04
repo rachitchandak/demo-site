@@ -1,0 +1,1062 @@
+{
+  "summary": {
+    "totalFiles": 18,
+    "totalBundles": 3,
+    "totalIssues": 56,
+    "status": "completed"
+  },
+  "uniqueIssues": [
+    {
+      "file": "src/components/Header.jsx",
+      "line": 14,
+      "lineContent": "          <span className=\"nav-item\" onClick={() => handleNavClick('rooms')}>Rooms & Suites</span>",
+      "issue": "Interactive navigation item is implemented with a non-interactive <span> and onClick, making it not keyboard accessible and lacking a proper role.",
+      "severity": "High",
+      "wcagCriterion": "2.1.1",
+      "suggestedFix": "Use a semantic control such as a button or link. For example: <button className=\"nav-item\" type=\"button\" onClick={() => handleNavClick('rooms')}>Rooms & Suites</button> or <a className=\"nav-item\" href=\"#rooms\">Rooms & Suites</a>."
+    },
+    {
+      "file": "src/components/Header.jsx",
+      "line": 15,
+      "lineContent": "          <span className=\"nav-item\" onClick={() => handleNavClick('dining')}>Dining</span>",
+      "issue": "Interactive navigation item is implemented with a non-interactive <span> and onClick, making it not keyboard accessible and lacking a proper role.",
+      "severity": "High",
+      "wcagCriterion": "2.1.1",
+      "suggestedFix": "Use a semantic control such as a button or link. For example: <button className=\"nav-item\" type=\"button\" onClick={() => handleNavClick('dining')}>Dining</button> or <a className=\"nav-item\" href=\"#dining\">Dining</a>."
+    },
+    {
+      "file": "src/components/Header.jsx",
+      "line": 16,
+      "lineContent": "          <span className=\"nav-item\" onClick={() => handleNavClick('spa')}>Spa & Wellness</span>",
+      "issue": "Interactive navigation item is implemented with a non-interactive <span> and onClick, making it not keyboard accessible and lacking a proper role.",
+      "severity": "High",
+      "wcagCriterion": "2.1.1",
+      "suggestedFix": "Use a semantic control such as a button or link. For example: <button className=\"nav-item\" type=\"button\" onClick={() => handleNavClick('spa')}>Spa & Wellness</button> or <a className=\"nav-item\" href=\"#spa\">Spa & Wellness</a>."
+    },
+    {
+      "file": "src/components/Header.jsx",
+      "line": 17,
+      "lineContent": "          <span className=\"nav-item\" onClick={() => handleNavClick('experiences')}>Experiences</span>",
+      "issue": "Interactive navigation item is implemented with a non-interactive <span> and onClick, making it not keyboard accessible and lacking a proper role.",
+      "severity": "High",
+      "wcagCriterion": "2.1.1",
+      "suggestedFix": "Use a semantic control such as a button or link. For example: <button className=\"nav-item\" type=\"button\" onClick={() => handleNavClick('experiences')}>Experiences</button> or <a className=\"nav-item\" href=\"#experiences\">Experiences</a>."
+    },
+    {
+      "file": "src/components/Header.jsx",
+      "line": 18,
+      "lineContent": "          <span className=\"nav-item\" onClick={() => handleNavClick('contact')}>Contact</span>",
+      "issue": "Interactive navigation item is implemented with a non-interactive <span> and onClick, making it not keyboard accessible and lacking a proper role.",
+      "severity": "High",
+      "wcagCriterion": "2.1.1",
+      "suggestedFix": "Use a semantic control such as a button or link. For example: <button className=\"nav-item\" type=\"button\" onClick={() => handleNavClick('contact')}>Contact</button> or <a className=\"nav-item\" href=\"#contact\">Contact</a>."
+    },
+    {
+      "file": "src/components/Header.jsx",
+      "line": 20,
+      "lineContent": "        <div className=\"book-btn\" onClick={() => handleNavClick('booking')}>",
+      "issue": "Clickable action is implemented with a non-interactive <div> and onClick, making it not keyboard accessible and lacking a proper role.",
+      "severity": "High",
+      "wcagCriterion": "2.1.1",
+      "suggestedFix": "Use a semantic control such as <button>. For example: <button className=\"book-btn\" type=\"button\" onClick={() => handleNavClick('booking')}>Book Now</button>."
+    },
+    {
+      "file": "src/components/Header.jsx",
+      "line": 13,
+      "lineContent": "        <div className=\"nav-menu\">",
+      "issue": "Navigation is not marked up using semantic landmarks, making relationships harder to determine programmatically.",
+      "severity": "Medium",
+      "wcagCriterion": "1.3.1",
+      "suggestedFix": "Use a <nav> element with an accessible label. For example: <nav className=\"nav-menu\" aria-label=\"Primary navigation\"> ... </nav>."
+    },
+    {
+      "file": "src/components/Header.jsx",
+      "line": 8,
+      "lineContent": "    <div className=\"header\">",
+      "issue": "Header region is not marked up with a semantic <header> landmark, which can hinder landmark navigation.",
+      "severity": "Medium",
+      "wcagCriterion": "1.3.1",
+      "suggestedFix": "Use a semantic header landmark. For example: <header className=\"header\"> ... </header>."
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 14,
+      "lineContent": "                            <img src=\"https://cdn-icons-png.flaticon.com/128/733/733547.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Facebook')} />",
+      "issue": "Functional image used as a control has empty alt text, so its purpose is not conveyed to assistive technologies.",
+      "severity": "High",
+      "wcagCriterion": "1.1.1",
+      "suggestedFix": "Provide an accessible name and use a semantic control. For example: <button className=\"social-icon\" aria-label=\"Facebook\"><img src=\".../733547.png\" alt=\"\" aria-hidden=\"true\" /></button>."
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 14,
+      "lineContent": "                            <img src=\"https://cdn-icons-png.flaticon.com/128/733/733547.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Facebook')} />",
+      "issue": "Clickable image is not keyboard operable and lacks a proper role; <img> is not focusable and only responds to mouse clicks.",
+      "severity": "High",
+      "wcagCriterion": "2.1.1",
+      "suggestedFix": "Use a <button> or <a> element for the control so it is focusable and keyboard operable. Example: <button className=\"social-icon\" aria-label=\"Facebook\" onClick={...}><img src=\"...\" alt=\"\" aria-hidden=\"true\" /></button>."
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 15,
+      "lineContent": "                            <img src=\"https://cdn-icons-png.flaticon.com/128/2111/2111463.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Instagram')} />",
+      "issue": "Functional image used as a control has empty alt text, so its purpose is not conveyed to assistive technologies.",
+      "severity": "High",
+      "wcagCriterion": "1.1.1",
+      "suggestedFix": "Provide an accessible name and use a semantic control. For example: <button className=\"social-icon\" aria-label=\"Instagram\"><img src=\".../2111463.png\" alt=\"\" aria-hidden=\"true\" /></button>."
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 15,
+      "lineContent": "                            <img src=\"https://cdn-icons-png.flaticon.com/128/2111/2111463.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Instagram')} />",
+      "issue": "Clickable image is not keyboard operable and lacks a proper role; <img> is not focusable and only responds to mouse clicks.",
+      "severity": "High",
+      "wcagCriterion": "2.1.1",
+      "suggestedFix": "Use a <button> or <a> element for the control so it is focusable and keyboard operable. Example: <button className=\"social-icon\" aria-label=\"Instagram\" onClick={...}><img src=\"...\" alt=\"\" aria-hidden=\"true\" /></button>."
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 16,
+      "lineContent": "                            <img src=\"https://cdn-icons-png.flaticon.com/128/733/733579.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Twitter')} />",
+      "issue": "Functional image used as a control has empty alt text, so its purpose is not conveyed to assistive technologies.",
+      "severity": "High",
+      "wcagCriterion": "1.1.1",
+      "suggestedFix": "Provide an accessible name and use a semantic control. For example: <button className=\"social-icon\" aria-label=\"Twitter\"><img src=\".../733579.png\" alt=\"\" aria-hidden=\"true\" /></button>."
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 16,
+      "lineContent": "                            <img src=\"https://cdn-icons-png.flaticon.com/128/733/733579.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Twitter')} />",
+      "issue": "Clickable image is not keyboard operable and lacks a proper role; <img> is not focusable and only responds to mouse clicks.",
+      "severity": "High",
+      "wcagCriterion": "2.1.1",
+      "suggestedFix": "Use a <button> or <a> element for the control so it is focusable and keyboard operable. Example: <button className=\"social-icon\" aria-label=\"Twitter\" onClick={...}><img src=\"...\" alt=\"\" aria-hidden=\"true\" /></button>."
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 36,
+      "lineContent": "                    <div className=\"contact-form\">",
+      "issue": "Form controls are not contained within a semantic <form> element, making relationships and submission semantics not programmatically determinable.",
+      "severity": "Medium",
+      "wcagCriterion": "1.3.1",
+      "suggestedFix": "Replace the container with a form element and handle submit via onSubmit. Example: <form className=\"contact-form\" onSubmit={(e) => { e.preventDefault(); handleSubmit(); }}> ... </form>."
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 38,
+      "lineContent": "                            <input type=\"text\" placeholder=\"First Name\" />",
+      "issue": "Input field has no associated label; placeholder text is not a sufficient label.",
+      "severity": "High",
+      "wcagCriterion": "3.3.2",
+      "suggestedFix": "Provide an explicit <label> tied via id/htmlFor. Example: <label htmlFor=\"firstName\">First Name</label><input id=\"firstName\" name=\"firstName\" type=\"text\" placeholder=\"First Name\" />."
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 39,
+      "lineContent": "                            <input type=\"text\" placeholder=\"Last Name\" />",
+      "issue": "Input field has no associated label; placeholder text is not a sufficient label.",
+      "severity": "High",
+      "wcagCriterion": "3.3.2",
+      "suggestedFix": "Provide an explicit <label> tied via id/htmlFor. Example: <label htmlFor=\"lastName\">Last Name</label><input id=\"lastName\" name=\"lastName\" type=\"text\" placeholder=\"Last Name\" />."
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 41,
+      "lineContent": "                        <input type=\"email\" placeholder=\"Email Address\" />",
+      "issue": "Input field has no associated label; placeholder text is not a sufficient label.",
+      "severity": "High",
+      "wcagCriterion": "3.3.2",
+      "suggestedFix": "Provide an explicit <label> tied via id/htmlFor. Example: <label htmlFor=\"email\">Email Address</label><input id=\"email\" name=\"email\" type=\"email\" placeholder=\"Email Address\" />."
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 42,
+      "lineContent": "                        <input type=\"tel\" placeholder=\"Phone Number\" />",
+      "issue": "Input field has no associated label; placeholder text is not a sufficient label.",
+      "severity": "High",
+      "wcagCriterion": "3.3.2",
+      "suggestedFix": "Provide an explicit <label> tied via id/htmlFor. Example: <label htmlFor=\"phone\">Phone Number</label><input id=\"phone\" name=\"phone\" type=\"tel\" placeholder=\"Phone Number\" />."
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 43,
+      "lineContent": "                        <textarea rows=\"5\" placeholder=\"Your Message\"></textarea>",
+      "issue": "Textarea has no associated label; placeholder text is not a sufficient label.",
+      "severity": "High",
+      "wcagCriterion": "3.3.2",
+      "suggestedFix": "Provide an explicit <label> tied via id/htmlFor. Example: <label htmlFor=\"message\">Your Message</label><textarea id=\"message\" name=\"message\" rows=\"5\" placeholder=\"Your Message\"></textarea>."
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 45,
+      "lineContent": "                        <div className=\"submit-btn\" onClick={handleSubmit}>",
+      "issue": "Submit action is implemented with a non-interactive <div> and onClick, preventing keyboard users from activating it.",
+      "severity": "High",
+      "wcagCriterion": "2.1.1",
+      "suggestedFix": "Use a semantic <button type=\"submit\"> inside a <form>. Example: <button className=\"submit-btn\" type=\"submit\">Click Here to Submit</button> and handle submission via the form's onSubmit."
+    },
+    {
+      "file": "src/App.jsx",
+      "line": 10,
+      "lineContent": "    <div className=\"app\">",
+      "issue": "Main content is not identified with a semantic <main> landmark, making it harder for assistive technologies to navigate.",
+      "severity": "Medium",
+      "wcagCriterion": "1.3.1",
+      "suggestedFix": "Wrap the primary page content in a <main> element. Example: <main className=\"app\" id=\"main-content\"> ... </main>."
+    },
+    {
+      "file": "src/App.jsx",
+      "line": 10,
+      "lineContent": "    <div className=\"app\">",
+      "issue": "No mechanism is provided to bypass repeated header content, such as a 'Skip to main content' link.",
+      "severity": "Medium",
+      "wcagCriterion": "2.4.1",
+      "suggestedFix": "Add a visually persistent, keyboard-focusable skip link as the first focusable element. Example: <a className=\"skip-link\" href=\"#main-content\">Skip to main content</a> and ensure the main region has id=\"main-content\"."
+    },
+    {
+      "file": "src/components/Hero.jsx",
+      "line": 21,
+      "lineContent": "                    <div className=\"btn btn-primary\">Click Here</div>",
+      "issue": "Non-interactive element used as a button is not keyboard accessible. Users cannot activate this control via keyboard.",
+      "severity": "High",
+      "wcagCriterion": "2.1.1",
+      "suggestedFix": "Use a semantic button or anchor element so it is focusable and operable by keyboard. For example: <button type=\"button\" className=\"btn btn-primary\">Book Now</button> or <a href=\"/booking\" className=\"btn btn-primary\">Book Now</a>."
+    },
+    {
+      "file": "src/components/Hero.jsx",
+      "line": 21,
+      "lineContent": "                    <div className=\"btn btn-primary\">Click Here</div>",
+      "issue": "Control lacks proper semantic role and accessible name/value when implemented as a div.",
+      "severity": "High",
+      "wcagCriterion": "4.1.2",
+      "suggestedFix": "Replace the div with a native <button> or <a>. If you must keep a non-semantic element, add role=\"button\", tabindex=\"0\", and keyboard handlers for Enter/Space, but prefer <button> for proper semantics."
+    },
+    {
+      "file": "src/components/Hero.jsx",
+      "line": 21,
+      "lineContent": "                    <div className=\"btn btn-primary\">Click Here</div>",
+      "issue": "Non-descriptive control label 'Click Here' does not describe its purpose.",
+      "severity": "Medium",
+      "wcagCriterion": "2.4.6",
+      "suggestedFix": "Use a descriptive label that conveys purpose, e.g., <button type=\"button\" className=\"btn btn-primary\">Book Now</button>."
+    },
+    {
+      "file": "src/components/Hero.jsx",
+      "line": 22,
+      "lineContent": "                    <div className=\"btn btn-outline\">Read More</div>",
+      "issue": "Non-interactive element used as a button is not keyboard accessible. Users cannot activate this control via keyboard.",
+      "severity": "High",
+      "wcagCriterion": "2.1.1",
+      "suggestedFix": "Use a semantic button or anchor element so it is focusable and operable by keyboard. For example: <a href=\"/about\" className=\"btn btn-outline\">Learn more about The Silent Oasis</a>."
+    },
+    {
+      "file": "src/components/Hero.jsx",
+      "line": 22,
+      "lineContent": "                    <div className=\"btn btn-outline\">Read More</div>",
+      "issue": "Control lacks proper semantic role and accessible name/value when implemented as a div.",
+      "severity": "High",
+      "wcagCriterion": "4.1.2",
+      "suggestedFix": "Replace the div with a native <button> or <a>. If you must keep a non-semantic element, add role=\"button\", tabindex=\"0\", and keyboard handlers for Enter/Space, but prefer <button>/<a> for proper semantics."
+    },
+    {
+      "file": "src/components/Hero.jsx",
+      "line": 22,
+      "lineContent": "                    <div className=\"btn btn-outline\">Read More</div>",
+      "issue": "Non-descriptive control label 'Read More' does not make the purpose clear on its own.",
+      "severity": "Medium",
+      "wcagCriterion": "2.4.6",
+      "suggestedFix": "Use a descriptive label that includes the destination/content, e.g., <a href=\"/about\" className=\"btn btn-outline\">Learn more about The Silent Oasis</a>."
+    },
+    {
+      "file": "src/components/PriceList.jsx",
+      "line": 23,
+      "lineContent": "                        <td>Service</td>",
+      "issue": "Table header cell is marked up as <td> instead of <th>, which fails to convey header semantics programmatically.",
+      "severity": "High",
+      "wcagCriterion": "1.3.1",
+      "suggestedFix": "Change to a header cell with scope: <th scope=\"col\">Service</th>."
+    },
+    {
+      "file": "src/components/PriceList.jsx",
+      "line": 24,
+      "lineContent": "                        <td>Weekday</td>",
+      "issue": "Table header cell is marked up as <td> instead of <th>, which fails to convey header semantics programmatically.",
+      "severity": "High",
+      "wcagCriterion": "1.3.1",
+      "suggestedFix": "Change to a header cell with scope: <th scope=\"col\">Weekday</th>."
+    },
+    {
+      "file": "src/components/PriceList.jsx",
+      "line": 25,
+      "lineContent": "                        <td>Weekend</td>",
+      "issue": "Table header cell is marked up as <td> instead of <th>, which fails to convey header semantics programmatically.",
+      "severity": "High",
+      "wcagCriterion": "1.3.1",
+      "suggestedFix": "Change to a header cell with scope: <th scope=\"col\">Weekend</th>."
+    },
+    {
+      "file": "src/components/PriceList.jsx",
+      "line": 26,
+      "lineContent": "                        <td>Holiday</td>",
+      "issue": "Table header cell is marked up as <td> instead of <th>, which fails to convey header semantics programmatically.",
+      "severity": "High",
+      "wcagCriterion": "1.3.1",
+      "suggestedFix": "Change to a header cell with scope: <th scope=\"col\">Holiday</th>."
+    },
+    {
+      "file": "src/components/PriceList.jsx",
+      "line": 30,
+      "lineContent": "                            <td>{item.service}</td>",
+      "issue": "First column cells act as row headers but are marked as <td>, making row relationships unclear to assistive technologies.",
+      "severity": "High",
+      "wcagCriterion": "1.3.1",
+      "suggestedFix": "Use row header cells with scope: <th scope=\"row\">{item.service}</th>."
+    },
+    {
+      "file": "src/components/RoomAvailability.jsx",
+      "line": 63,
+      "lineContent": "                            <img src={room.image} alt=\"\" className=\"room-image\" />",
+      "issue": "Informative images of rooms have empty alt text, so screen reader users miss critical information.",
+      "severity": "High",
+      "wcagCriterion": "1.1.1",
+      "suggestedFix": "Provide meaningful alt text, e.g., alt={room.name} or a short description like alt={`${room.name} room`}."
+    },
+    {
+      "file": "src/components/RoomAvailability.jsx",
+      "line": 67,
+      "lineContent": "                                    <span className={`status-dot ${room.available ? 'status-available' : 'status-booked'}`}></span>",
+      "issue": "Availability is conveyed by a color-only status dot without text, relying on color alone to communicate information.",
+      "severity": "High",
+      "wcagCriterion": "1.4.1",
+      "suggestedFix": "Include a text label (visible or visually hidden) conveying status, e.g., <span aria-live=\"polite\" className=\"sr-only\">{room.available ? 'Available' : 'Booked'}</span> or add aria-label to the dot and include adjacent text."
+    },
+    {
+      "file": "src/components/RoomAvailability.jsx",
+      "line": 71,
+      "lineContent": "                                    <span className=\"room-link\">Read More</span>",
+      "issue": "Non-interactive element used as a link/button is not keyboard accessible.",
+      "severity": "High",
+      "wcagCriterion": "2.1.1",
+      "suggestedFix": "Use a semantic <a> or <button>, e.g., <a href={`/rooms/${room.id}`} className=\"room-link\">Read more about {room.name}</a>."
+    },
+    {
+      "file": "src/components/RoomAvailability.jsx",
+      "line": 71,
+      "lineContent": "                                    <span className=\"room-link\">Read More</span>",
+      "issue": "Control lacks proper semantic role and accessible name/value when implemented as a span.",
+      "severity": "High",
+      "wcagCriterion": "4.1.2",
+      "suggestedFix": "Replace with a native <a> or <button>. If kept as span (not recommended), add role=\"button\", tabindex=\"0\", and keyboard handlers."
+    },
+    {
+      "file": "src/components/RoomAvailability.jsx",
+      "line": 71,
+      "lineContent": "                                    <span className=\"room-link\">Read More</span>",
+      "issue": "Label 'Read More' is not specific and does not clearly describe the purpose.",
+      "severity": "Medium",
+      "wcagCriterion": "2.4.6",
+      "suggestedFix": "Use a descriptive label tied to the room, e.g., <a ...>Read more about {room.name}</a> or add aria-label including the room name."
+    },
+    {
+      "file": "src/components/ContactForm.css",
+      "line": 19,
+      "lineContent": "    color: #c9a962;",
+      "issue": "Small text uses a low-contrast gold color likely failing minimum 4.5:1 contrast against the light background.",
+      "severity": "High",
+      "wcagCriterion": "1.4.3",
+      "suggestedFix": "Increase color contrast by darkening the text color (e.g., #7a5a20 or darker) or using a darker background. Verify with a contrast checker to reach at least 4.5:1 for 12px text."
+    },
+    {
+      "file": "src/components/ContactForm.css",
+      "line": 54,
+      "lineContent": "    color: #c9a962;",
+      "issue": "Small label text uses a low-contrast gold color likely failing minimum 4.5:1 contrast against the light background.",
+      "severity": "High",
+      "wcagCriterion": "1.4.3",
+      "suggestedFix": "Darken the label color or increase font size/weight sufficiently; preferably choose a color that achieves at least 4.5:1 contrast on #faf9f7."
+    },
+    {
+      "file": "src/components/ContactForm.css",
+      "line": 85,
+      "lineContent": "    border-color: #c9a962;",
+      "issue": "Focus indicator for inputs relies on a low-contrast gold border that likely does not meet the 3:1 non-text contrast requirement against adjacent colors.",
+      "severity": "High",
+      "wcagCriterion": "1.4.11",
+      "suggestedFix": "Provide a stronger focus indicator, e.g., outline: 2px solid #5b3a00; outline-offset: 2px; or a thicker border with a darker color that achieves at least 3:1 contrast with the background."
+    },
+    {
+      "file": "src/components/ContactForm.css",
+      "line": 91,
+      "lineContent": "    color: white;",
+      "issue": "White text on a gold gradient background likely fails minimum 4.5:1 contrast.",
+      "severity": "High",
+      "wcagCriterion": "1.4.3",
+      "suggestedFix": "Use a darker text color (e.g., #1a1a1a) on the gold background, or darken the gradient significantly to ensure 4.5:1 contrast with white text."
+    },
+    {
+      "file": "src/components/Footer.css",
+      "line": 69,
+      "lineContent": "    color: #c9a962;",
+      "issue": "Hover state sets link text to a low-contrast gold color on white, likely failing the 4.5:1 requirement.",
+      "severity": "High",
+      "wcagCriterion": "1.4.3",
+      "suggestedFix": "Choose a hover color with sufficient contrast (e.g., a darker shade of gold/brown) or add a contrasting background/underline with sufficient thickness to maintain readability."
+    },
+    {
+      "file": "src/components/Header.css",
+      "line": 45,
+      "lineContent": "    color: #c9a962;",
+      "issue": "Hover state for navigation items uses a low-contrast gold color on a very light header background, likely failing 4.5:1 contrast.",
+      "severity": "High",
+      "wcagCriterion": "1.4.3",
+      "suggestedFix": "Use a darker hover color that meets 4.5:1 contrast against the header background or apply an additional high-contrast indicator (e.g., bold text plus underline) with sufficient contrast."
+    },
+    {
+      "file": "src/components/Header.css",
+      "line": 51,
+      "lineContent": "    color: white;",
+      "issue": "White text on a gold gradient background for the primary action likely fails minimum text contrast.",
+      "severity": "High",
+      "wcagCriterion": "1.4.3",
+      "suggestedFix": "Use a darker text color on the gold background, or darken the gradient background to ensure at least 4.5:1 contrast with white text. Example: background: #8a6a2a; color: #fff; or keep current background and set color: #1a1a1a."
+    },
+    {
+      "file": "src/index.css",
+      "line": 3,
+      "lineContent": "  outline: none !important;",
+      "issue": "Global removal of outlines hides keyboard focus indicators across the site, making it difficult or impossible for keyboard users to determine the current focus.",
+      "severity": "High",
+      "wcagCriterion": "2.4.7",
+      "suggestedFix": "Remove the global outline reset and provide visible focus styles for interactive elements.\nExample:\n/* Remove this rule entirely */\n/* * { outline: none !important; } */\n\n/* Provide accessible focus styles */\n:focus-visible { outline: 3px solid #1a1a1a; outline-offset: 3px; }\n.btn:focus-visible, a:focus-visible, .book-btn:focus-visible { outline: 3px solid #c9a962; outline-offset: 3px; }"
+    },
+    {
+      "file": "src/index.css",
+      "line": 38,
+      "lineContent": "  text-decoration: none;",
+      "issue": "Links are styled without underlines and (combined with color: inherit) become indistinguishable from surrounding text, removing a non-color cue that indicates link functionality.",
+      "severity": "High",
+      "wcagCriterion": "1.4.1",
+      "suggestedFix": "Keep a non-color visual indicator for links (e.g., underline), and ensure sufficient contrast from body text.\nExample:\na { color: #0a66c2; text-decoration: underline; text-underline-offset: 2px; }\na:hover { text-decoration-thickness: 2px; }\n/* If you must remove underlines in some contexts, add another non-color cue like a border, icon, or font-weight change while maintaining contrast. */"
+    },
+    {
+      "file": "src/index.css",
+      "line": 93,
+      "lineContent": "  color: var(--text-low-contrast);",
+      "issue": "Low-contrast text color (#cccccc) on a white background fails minimum contrast requirements for normal text.",
+      "severity": "High",
+      "wcagCriterion": "1.4.3",
+      "suggestedFix": "Use a text color that achieves at least 4.5:1 contrast against the background (or 3:1 for large text). For example:\n:root { --text-low-contrast: #6b7280; /* or use var(--text-dark) */ }\n.low-contrast-text { color: var(--text-dark); }"
+    },
+    {
+      "file": "src/index.css",
+      "line": 105,
+      "lineContent": "  background-color: #22c55e;",
+      "issue": "Status is conveyed solely by color (green dot for \"available\"), which is not accessible to users who cannot perceive color differences.",
+      "severity": "High",
+      "wcagCriterion": "1.4.1",
+      "suggestedFix": "Provide a non-color cue and/or text label with the status dot. For example, add visible text or an icon shape difference and include accessible names:\n/* CSS (supplemental visual cue) */\n.status-available { background-color: #22c55e; border: 2px solid #1a1a1a; }\n.status-booked { background-color: #ef4444; border: 2px dashed #1a1a1a; }\n/* Also include adjacent text like “Available”/“Booked” or add visually hidden text: */\n.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }"
+    },
+    {
+      "file": "src/index.css",
+      "line": 109,
+      "lineContent": "  background-color: #ef4444;",
+      "issue": "Status is conveyed solely by color (red dot for \"booked\"), which is not accessible to users who cannot perceive color differences.",
+      "severity": "High",
+      "wcagCriterion": "1.4.1",
+      "suggestedFix": "Provide a non-color cue and/or text label with the status dot. For example, add visible text or an icon shape difference and include accessible names:\n/* CSS (supplemental visual cue) */\n.status-available { background-color: #22c55e; border: 2px solid #1a1a1a; }\n.status-booked { background-color: #ef4444; border: 2px dashed #1a1a1a; }\n/* Also include adjacent text like “Available”/“Booked” or add visually hidden text: */\n.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }"
+    },
+    {
+      "file": "src/components/PriceList.css",
+      "line": 43,
+      "lineContent": "    color: #c9a962;",
+      "issue": "Gold text (#c9a962) on a white background provides insufficient contrast for normal-sized text in table cells.",
+      "severity": "High",
+      "wcagCriterion": "1.4.3",
+      "suggestedFix": "Use a darker color that achieves at least 4.5:1 contrast against white, or increase the text to large size with sufficient weight and still meet 3:1.\nExample fix:\n.price-table td:not(:first-child) { color: #705327; /* or use var(--primary-dark) */ }"
+    },
+    {
+      "file": "src/components/PriceList.css",
+      "line": 55,
+      "lineContent": "    text-decoration: none;",
+      "issue": "Links inside the price note are styled without underlines and inherit the surrounding text color, making them indistinguishable from body text (no non-color indicator).",
+      "severity": "High",
+      "wcagCriterion": "1.4.1",
+      "suggestedFix": "Retain a non-color visual indicator for links and ensure adequate contrast.\nExample:\n.price-note a { text-decoration: underline; text-underline-offset: 2px; color: #0a66c2; }"
+    },
+    {
+      "file": "src/components/RoomAvailability.css",
+      "line": 17,
+      "lineContent": "    color: #c9a962;",
+      "issue": "Section label uses gold text (#c9a962) on a light cream background (#faf9f7), which is insufficient contrast for small text (12px).",
+      "severity": "High",
+      "wcagCriterion": "1.4.3",
+      "suggestedFix": "Use a darker color that meets at least 4.5:1 against #faf9f7, or increase the text size/weight to qualify as large text while still meeting 3:1.\nExample:\n.section-label { color: #705327; /* or var(--primary-dark) */ }"
+    },
+    {
+      "file": "src/components/RoomAvailability.css",
+      "line": 84,
+      "lineContent": "    color: #c9a962;",
+      "issue": "Room price uses gold text (#c9a962) on white. Even at 24px (large text), it does not meet the minimum 3:1 contrast for large text.",
+      "severity": "High",
+      "wcagCriterion": "1.4.3",
+      "suggestedFix": "Use a darker color for prices that achieves at least 3:1 contrast with white.\nExample:\n.room-price { color: #705327; /* darker gold */ }"
+    },
+    {
+      "file": "src/components/RoomAvailability.css",
+      "line": 104,
+      "lineContent": "    color: #c9a962;",
+      "issue": "Hover state for the room link sets the text to gold (#c9a962) on a white background, which has insufficient contrast for normal-sized link text.",
+      "severity": "Medium",
+      "wcagCriterion": "1.4.3",
+      "suggestedFix": "Use a hover color with sufficient contrast and/or add a non-color cue (underline, background change).\nExample:\n.room-link:hover { color: #1a1a1a; text-decoration: underline; text-underline-offset: 2px; }"
+    }
+  ],
+  "details": [
+    {
+      "bundleId": 1,
+      "filesScanned": [
+        "eslint.config.js",
+        "src/App.css",
+        "src/App.jsx",
+        "src/components/ContactForm.jsx",
+        "src/components/Footer.jsx",
+        "src/components/Header.jsx"
+      ],
+      "complianceIssues": [
+        {
+          "file": "src/components/Header.jsx",
+          "line": 14,
+          "lineContent": "          <span className=\"nav-item\" onClick={() => handleNavClick('rooms')}>Rooms & Suites</span>",
+          "issue": "Interactive navigation item is implemented with a non-interactive <span> and onClick, making it not keyboard accessible and lacking a proper role.",
+          "severity": "High",
+          "wcagCriterion": "2.1.1",
+          "suggestedFix": "Use a semantic control such as a button or link. For example: <button className=\"nav-item\" type=\"button\" onClick={() => handleNavClick('rooms')}>Rooms & Suites</button> or <a className=\"nav-item\" href=\"#rooms\">Rooms & Suites</a>."
+        },
+        {
+          "file": "src/components/Header.jsx",
+          "line": 15,
+          "lineContent": "          <span className=\"nav-item\" onClick={() => handleNavClick('dining')}>Dining</span>",
+          "issue": "Interactive navigation item is implemented with a non-interactive <span> and onClick, making it not keyboard accessible and lacking a proper role.",
+          "severity": "High",
+          "wcagCriterion": "2.1.1",
+          "suggestedFix": "Use a semantic control such as a button or link. For example: <button className=\"nav-item\" type=\"button\" onClick={() => handleNavClick('dining')}>Dining</button> or <a className=\"nav-item\" href=\"#dining\">Dining</a>."
+        },
+        {
+          "file": "src/components/Header.jsx",
+          "line": 16,
+          "lineContent": "          <span className=\"nav-item\" onClick={() => handleNavClick('spa')}>Spa & Wellness</span>",
+          "issue": "Interactive navigation item is implemented with a non-interactive <span> and onClick, making it not keyboard accessible and lacking a proper role.",
+          "severity": "High",
+          "wcagCriterion": "2.1.1",
+          "suggestedFix": "Use a semantic control such as a button or link. For example: <button className=\"nav-item\" type=\"button\" onClick={() => handleNavClick('spa')}>Spa & Wellness</button> or <a className=\"nav-item\" href=\"#spa\">Spa & Wellness</a>."
+        },
+        {
+          "file": "src/components/Header.jsx",
+          "line": 17,
+          "lineContent": "          <span className=\"nav-item\" onClick={() => handleNavClick('experiences')}>Experiences</span>",
+          "issue": "Interactive navigation item is implemented with a non-interactive <span> and onClick, making it not keyboard accessible and lacking a proper role.",
+          "severity": "High",
+          "wcagCriterion": "2.1.1",
+          "suggestedFix": "Use a semantic control such as a button or link. For example: <button className=\"nav-item\" type=\"button\" onClick={() => handleNavClick('experiences')}>Experiences</button> or <a className=\"nav-item\" href=\"#experiences\">Experiences</a>."
+        },
+        {
+          "file": "src/components/Header.jsx",
+          "line": 18,
+          "lineContent": "          <span className=\"nav-item\" onClick={() => handleNavClick('contact')}>Contact</span>",
+          "issue": "Interactive navigation item is implemented with a non-interactive <span> and onClick, making it not keyboard accessible and lacking a proper role.",
+          "severity": "High",
+          "wcagCriterion": "2.1.1",
+          "suggestedFix": "Use a semantic control such as a button or link. For example: <button className=\"nav-item\" type=\"button\" onClick={() => handleNavClick('contact')}>Contact</button> or <a className=\"nav-item\" href=\"#contact\">Contact</a>."
+        },
+        {
+          "file": "src/components/Header.jsx",
+          "line": 20,
+          "lineContent": "        <div className=\"book-btn\" onClick={() => handleNavClick('booking')}>",
+          "issue": "Clickable action is implemented with a non-interactive <div> and onClick, making it not keyboard accessible and lacking a proper role.",
+          "severity": "High",
+          "wcagCriterion": "2.1.1",
+          "suggestedFix": "Use a semantic control such as <button>. For example: <button className=\"book-btn\" type=\"button\" onClick={() => handleNavClick('booking')}>Book Now</button>."
+        },
+        {
+          "file": "src/components/Header.jsx",
+          "line": 13,
+          "lineContent": "        <div className=\"nav-menu\">",
+          "issue": "Navigation is not marked up using semantic landmarks, making relationships harder to determine programmatically.",
+          "severity": "Medium",
+          "wcagCriterion": "1.3.1",
+          "suggestedFix": "Use a <nav> element with an accessible label. For example: <nav className=\"nav-menu\" aria-label=\"Primary navigation\"> ... </nav>."
+        },
+        {
+          "file": "src/components/Header.jsx",
+          "line": 8,
+          "lineContent": "    <div className=\"header\">",
+          "issue": "Header region is not marked up with a semantic <header> landmark, which can hinder landmark navigation.",
+          "severity": "Medium",
+          "wcagCriterion": "1.3.1",
+          "suggestedFix": "Use a semantic header landmark. For example: <header className=\"header\"> ... </header>."
+        },
+        {
+          "file": "src/components/Footer.jsx",
+          "line": 14,
+          "lineContent": "                            <img src=\"https://cdn-icons-png.flaticon.com/128/733/733547.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Facebook')} />",
+          "issue": "Functional image used as a control has empty alt text, so its purpose is not conveyed to assistive technologies.",
+          "severity": "High",
+          "wcagCriterion": "1.1.1",
+          "suggestedFix": "Provide an accessible name and use a semantic control. For example: <button className=\"social-icon\" aria-label=\"Facebook\"><img src=\".../733547.png\" alt=\"\" aria-hidden=\"true\" /></button>."
+        },
+        {
+          "file": "src/components/Footer.jsx",
+          "line": 14,
+          "lineContent": "                            <img src=\"https://cdn-icons-png.flaticon.com/128/733/733547.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Facebook')} />",
+          "issue": "Clickable image is not keyboard operable and lacks a proper role; <img> is not focusable and only responds to mouse clicks.",
+          "severity": "High",
+          "wcagCriterion": "2.1.1",
+          "suggestedFix": "Use a <button> or <a> element for the control so it is focusable and keyboard operable. Example: <button className=\"social-icon\" aria-label=\"Facebook\" onClick={...}><img src=\"...\" alt=\"\" aria-hidden=\"true\" /></button>."
+        },
+        {
+          "file": "src/components/Footer.jsx",
+          "line": 15,
+          "lineContent": "                            <img src=\"https://cdn-icons-png.flaticon.com/128/2111/2111463.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Instagram')} />",
+          "issue": "Functional image used as a control has empty alt text, so its purpose is not conveyed to assistive technologies.",
+          "severity": "High",
+          "wcagCriterion": "1.1.1",
+          "suggestedFix": "Provide an accessible name and use a semantic control. For example: <button className=\"social-icon\" aria-label=\"Instagram\"><img src=\".../2111463.png\" alt=\"\" aria-hidden=\"true\" /></button>."
+        },
+        {
+          "file": "src/components/Footer.jsx",
+          "line": 15,
+          "lineContent": "                            <img src=\"https://cdn-icons-png.flaticon.com/128/2111/2111463.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Instagram')} />",
+          "issue": "Clickable image is not keyboard operable and lacks a proper role; <img> is not focusable and only responds to mouse clicks.",
+          "severity": "High",
+          "wcagCriterion": "2.1.1",
+          "suggestedFix": "Use a <button> or <a> element for the control so it is focusable and keyboard operable. Example: <button className=\"social-icon\" aria-label=\"Instagram\" onClick={...}><img src=\"...\" alt=\"\" aria-hidden=\"true\" /></button>."
+        },
+        {
+          "file": "src/components/Footer.jsx",
+          "line": 16,
+          "lineContent": "                            <img src=\"https://cdn-icons-png.flaticon.com/128/733/733579.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Twitter')} />",
+          "issue": "Functional image used as a control has empty alt text, so its purpose is not conveyed to assistive technologies.",
+          "severity": "High",
+          "wcagCriterion": "1.1.1",
+          "suggestedFix": "Provide an accessible name and use a semantic control. For example: <button className=\"social-icon\" aria-label=\"Twitter\"><img src=\".../733579.png\" alt=\"\" aria-hidden=\"true\" /></button>."
+        },
+        {
+          "file": "src/components/Footer.jsx",
+          "line": 16,
+          "lineContent": "                            <img src=\"https://cdn-icons-png.flaticon.com/128/733/733579.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Twitter')} />",
+          "issue": "Clickable image is not keyboard operable and lacks a proper role; <img> is not focusable and only responds to mouse clicks.",
+          "severity": "High",
+          "wcagCriterion": "2.1.1",
+          "suggestedFix": "Use a <button> or <a> element for the control so it is focusable and keyboard operable. Example: <button className=\"social-icon\" aria-label=\"Twitter\" onClick={...}><img src=\"...\" alt=\"\" aria-hidden=\"true\" /></button>."
+        },
+        {
+          "file": "src/components/ContactForm.jsx",
+          "line": 36,
+          "lineContent": "                    <div className=\"contact-form\">",
+          "issue": "Form controls are not contained within a semantic <form> element, making relationships and submission semantics not programmatically determinable.",
+          "severity": "Medium",
+          "wcagCriterion": "1.3.1",
+          "suggestedFix": "Replace the container with a form element and handle submit via onSubmit. Example: <form className=\"contact-form\" onSubmit={(e) => { e.preventDefault(); handleSubmit(); }}> ... </form>."
+        },
+        {
+          "file": "src/components/ContactForm.jsx",
+          "line": 38,
+          "lineContent": "                            <input type=\"text\" placeholder=\"First Name\" />",
+          "issue": "Input field has no associated label; placeholder text is not a sufficient label.",
+          "severity": "High",
+          "wcagCriterion": "3.3.2",
+          "suggestedFix": "Provide an explicit <label> tied via id/htmlFor. Example: <label htmlFor=\"firstName\">First Name</label><input id=\"firstName\" name=\"firstName\" type=\"text\" placeholder=\"First Name\" />."
+        },
+        {
+          "file": "src/components/ContactForm.jsx",
+          "line": 39,
+          "lineContent": "                            <input type=\"text\" placeholder=\"Last Name\" />",
+          "issue": "Input field has no associated label; placeholder text is not a sufficient label.",
+          "severity": "High",
+          "wcagCriterion": "3.3.2",
+          "suggestedFix": "Provide an explicit <label> tied via id/htmlFor. Example: <label htmlFor=\"lastName\">Last Name</label><input id=\"lastName\" name=\"lastName\" type=\"text\" placeholder=\"Last Name\" />."
+        },
+        {
+          "file": "src/components/ContactForm.jsx",
+          "line": 41,
+          "lineContent": "                        <input type=\"email\" placeholder=\"Email Address\" />",
+          "issue": "Input field has no associated label; placeholder text is not a sufficient label.",
+          "severity": "High",
+          "wcagCriterion": "3.3.2",
+          "suggestedFix": "Provide an explicit <label> tied via id/htmlFor. Example: <label htmlFor=\"email\">Email Address</label><input id=\"email\" name=\"email\" type=\"email\" placeholder=\"Email Address\" />."
+        },
+        {
+          "file": "src/components/ContactForm.jsx",
+          "line": 42,
+          "lineContent": "                        <input type=\"tel\" placeholder=\"Phone Number\" />",
+          "issue": "Input field has no associated label; placeholder text is not a sufficient label.",
+          "severity": "High",
+          "wcagCriterion": "3.3.2",
+          "suggestedFix": "Provide an explicit <label> tied via id/htmlFor. Example: <label htmlFor=\"phone\">Phone Number</label><input id=\"phone\" name=\"phone\" type=\"tel\" placeholder=\"Phone Number\" />."
+        },
+        {
+          "file": "src/components/ContactForm.jsx",
+          "line": 43,
+          "lineContent": "                        <textarea rows=\"5\" placeholder=\"Your Message\"></textarea>",
+          "issue": "Textarea has no associated label; placeholder text is not a sufficient label.",
+          "severity": "High",
+          "wcagCriterion": "3.3.2",
+          "suggestedFix": "Provide an explicit <label> tied via id/htmlFor. Example: <label htmlFor=\"message\">Your Message</label><textarea id=\"message\" name=\"message\" rows=\"5\" placeholder=\"Your Message\"></textarea>."
+        },
+        {
+          "file": "src/components/ContactForm.jsx",
+          "line": 45,
+          "lineContent": "                        <div className=\"submit-btn\" onClick={handleSubmit}>",
+          "issue": "Submit action is implemented with a non-interactive <div> and onClick, preventing keyboard users from activating it.",
+          "severity": "High",
+          "wcagCriterion": "2.1.1",
+          "suggestedFix": "Use a semantic <button type=\"submit\"> inside a <form>. Example: <button className=\"submit-btn\" type=\"submit\">Click Here to Submit</button> and handle submission via the form's onSubmit."
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 10,
+          "lineContent": "    <div className=\"app\">",
+          "issue": "Main content is not identified with a semantic <main> landmark, making it harder for assistive technologies to navigate.",
+          "severity": "Medium",
+          "wcagCriterion": "1.3.1",
+          "suggestedFix": "Wrap the primary page content in a <main> element. Example: <main className=\"app\" id=\"main-content\"> ... </main>."
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 10,
+          "lineContent": "    <div className=\"app\">",
+          "issue": "No mechanism is provided to bypass repeated header content, such as a 'Skip to main content' link.",
+          "severity": "Medium",
+          "wcagCriterion": "2.4.1",
+          "suggestedFix": "Add a visually persistent, keyboard-focusable skip link as the first focusable element. Example: <a className=\"skip-link\" href=\"#main-content\">Skip to main content</a> and ensure the main region has id=\"main-content\"."
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "bundleId": 2,
+      "filesScanned": [
+        "src/components/Hero.jsx",
+        "src/components/PriceList.jsx",
+        "src/components/RoomAvailability.jsx",
+        "src/components/ContactForm.css",
+        "src/components/Footer.css",
+        "src/components/Header.css"
+      ],
+      "complianceIssues": [
+        {
+          "file": "src/components/Hero.jsx",
+          "line": 21,
+          "lineContent": "                    <div className=\"btn btn-primary\">Click Here</div>",
+          "issue": "Non-interactive element used as a button is not keyboard accessible. Users cannot activate this control via keyboard.",
+          "severity": "High",
+          "wcagCriterion": "2.1.1",
+          "suggestedFix": "Use a semantic button or anchor element so it is focusable and operable by keyboard. For example: <button type=\"button\" className=\"btn btn-primary\">Book Now</button> or <a href=\"/booking\" className=\"btn btn-primary\">Book Now</a>."
+        },
+        {
+          "file": "src/components/Hero.jsx",
+          "line": 21,
+          "lineContent": "                    <div className=\"btn btn-primary\">Click Here</div>",
+          "issue": "Control lacks proper semantic role and accessible name/value when implemented as a div.",
+          "severity": "High",
+          "wcagCriterion": "4.1.2",
+          "suggestedFix": "Replace the div with a native <button> or <a>. If you must keep a non-semantic element, add role=\"button\", tabindex=\"0\", and keyboard handlers for Enter/Space, but prefer <button> for proper semantics."
+        },
+        {
+          "file": "src/components/Hero.jsx",
+          "line": 21,
+          "lineContent": "                    <div className=\"btn btn-primary\">Click Here</div>",
+          "issue": "Non-descriptive control label 'Click Here' does not describe its purpose.",
+          "severity": "Medium",
+          "wcagCriterion": "2.4.6",
+          "suggestedFix": "Use a descriptive label that conveys purpose, e.g., <button type=\"button\" className=\"btn btn-primary\">Book Now</button>."
+        },
+        {
+          "file": "src/components/Hero.jsx",
+          "line": 22,
+          "lineContent": "                    <div className=\"btn btn-outline\">Read More</div>",
+          "issue": "Non-interactive element used as a button is not keyboard accessible. Users cannot activate this control via keyboard.",
+          "severity": "High",
+          "wcagCriterion": "2.1.1",
+          "suggestedFix": "Use a semantic button or anchor element so it is focusable and operable by keyboard. For example: <a href=\"/about\" className=\"btn btn-outline\">Learn more about The Silent Oasis</a>."
+        },
+        {
+          "file": "src/components/Hero.jsx",
+          "line": 22,
+          "lineContent": "                    <div className=\"btn btn-outline\">Read More</div>",
+          "issue": "Control lacks proper semantic role and accessible name/value when implemented as a div.",
+          "severity": "High",
+          "wcagCriterion": "4.1.2",
+          "suggestedFix": "Replace the div with a native <button> or <a>. If you must keep a non-semantic element, add role=\"button\", tabindex=\"0\", and keyboard handlers for Enter/Space, but prefer <button>/<a> for proper semantics."
+        },
+        {
+          "file": "src/components/Hero.jsx",
+          "line": 22,
+          "lineContent": "                    <div className=\"btn btn-outline\">Read More</div>",
+          "issue": "Non-descriptive control label 'Read More' does not make the purpose clear on its own.",
+          "severity": "Medium",
+          "wcagCriterion": "2.4.6",
+          "suggestedFix": "Use a descriptive label that includes the destination/content, e.g., <a href=\"/about\" className=\"btn btn-outline\">Learn more about The Silent Oasis</a>."
+        },
+        {
+          "file": "src/components/PriceList.jsx",
+          "line": 23,
+          "lineContent": "                        <td>Service</td>",
+          "issue": "Table header cell is marked up as <td> instead of <th>, which fails to convey header semantics programmatically.",
+          "severity": "High",
+          "wcagCriterion": "1.3.1",
+          "suggestedFix": "Change to a header cell with scope: <th scope=\"col\">Service</th>."
+        },
+        {
+          "file": "src/components/PriceList.jsx",
+          "line": 24,
+          "lineContent": "                        <td>Weekday</td>",
+          "issue": "Table header cell is marked up as <td> instead of <th>, which fails to convey header semantics programmatically.",
+          "severity": "High",
+          "wcagCriterion": "1.3.1",
+          "suggestedFix": "Change to a header cell with scope: <th scope=\"col\">Weekday</th>."
+        },
+        {
+          "file": "src/components/PriceList.jsx",
+          "line": 25,
+          "lineContent": "                        <td>Weekend</td>",
+          "issue": "Table header cell is marked up as <td> instead of <th>, which fails to convey header semantics programmatically.",
+          "severity": "High",
+          "wcagCriterion": "1.3.1",
+          "suggestedFix": "Change to a header cell with scope: <th scope=\"col\">Weekend</th>."
+        },
+        {
+          "file": "src/components/PriceList.jsx",
+          "line": 26,
+          "lineContent": "                        <td>Holiday</td>",
+          "issue": "Table header cell is marked up as <td> instead of <th>, which fails to convey header semantics programmatically.",
+          "severity": "High",
+          "wcagCriterion": "1.3.1",
+          "suggestedFix": "Change to a header cell with scope: <th scope=\"col\">Holiday</th>."
+        },
+        {
+          "file": "src/components/PriceList.jsx",
+          "line": 30,
+          "lineContent": "                            <td>{item.service}</td>",
+          "issue": "First column cells act as row headers but are marked as <td>, making row relationships unclear to assistive technologies.",
+          "severity": "High",
+          "wcagCriterion": "1.3.1",
+          "suggestedFix": "Use row header cells with scope: <th scope=\"row\">{item.service}</th>."
+        },
+        {
+          "file": "src/components/RoomAvailability.jsx",
+          "line": 63,
+          "lineContent": "                            <img src={room.image} alt=\"\" className=\"room-image\" />",
+          "issue": "Informative images of rooms have empty alt text, so screen reader users miss critical information.",
+          "severity": "High",
+          "wcagCriterion": "1.1.1",
+          "suggestedFix": "Provide meaningful alt text, e.g., alt={room.name} or a short description like alt={`${room.name} room`}."
+        },
+        {
+          "file": "src/components/RoomAvailability.jsx",
+          "line": 67,
+          "lineContent": "                                    <span className={`status-dot ${room.available ? 'status-available' : 'status-booked'}`}></span>",
+          "issue": "Availability is conveyed by a color-only status dot without text, relying on color alone to communicate information.",
+          "severity": "High",
+          "wcagCriterion": "1.4.1",
+          "suggestedFix": "Include a text label (visible or visually hidden) conveying status, e.g., <span aria-live=\"polite\" className=\"sr-only\">{room.available ? 'Available' : 'Booked'}</span> or add aria-label to the dot and include adjacent text."
+        },
+        {
+          "file": "src/components/RoomAvailability.jsx",
+          "line": 71,
+          "lineContent": "                                    <span className=\"room-link\">Read More</span>",
+          "issue": "Non-interactive element used as a link/button is not keyboard accessible.",
+          "severity": "High",
+          "wcagCriterion": "2.1.1",
+          "suggestedFix": "Use a semantic <a> or <button>, e.g., <a href={`/rooms/${room.id}`} className=\"room-link\">Read more about {room.name}</a>."
+        },
+        {
+          "file": "src/components/RoomAvailability.jsx",
+          "line": 71,
+          "lineContent": "                                    <span className=\"room-link\">Read More</span>",
+          "issue": "Control lacks proper semantic role and accessible name/value when implemented as a span.",
+          "severity": "High",
+          "wcagCriterion": "4.1.2",
+          "suggestedFix": "Replace with a native <a> or <button>. If kept as span (not recommended), add role=\"button\", tabindex=\"0\", and keyboard handlers."
+        },
+        {
+          "file": "src/components/RoomAvailability.jsx",
+          "line": 71,
+          "lineContent": "                                    <span className=\"room-link\">Read More</span>",
+          "issue": "Label 'Read More' is not specific and does not clearly describe the purpose.",
+          "severity": "Medium",
+          "wcagCriterion": "2.4.6",
+          "suggestedFix": "Use a descriptive label tied to the room, e.g., <a ...>Read more about {room.name}</a> or add aria-label including the room name."
+        },
+        {
+          "file": "src/components/ContactForm.css",
+          "line": 19,
+          "lineContent": "    color: #c9a962;",
+          "issue": "Small text uses a low-contrast gold color likely failing minimum 4.5:1 contrast against the light background.",
+          "severity": "High",
+          "wcagCriterion": "1.4.3",
+          "suggestedFix": "Increase color contrast by darkening the text color (e.g., #7a5a20 or darker) or using a darker background. Verify with a contrast checker to reach at least 4.5:1 for 12px text."
+        },
+        {
+          "file": "src/components/ContactForm.css",
+          "line": 54,
+          "lineContent": "    color: #c9a962;",
+          "issue": "Small label text uses a low-contrast gold color likely failing minimum 4.5:1 contrast against the light background.",
+          "severity": "High",
+          "wcagCriterion": "1.4.3",
+          "suggestedFix": "Darken the label color or increase font size/weight sufficiently; preferably choose a color that achieves at least 4.5:1 contrast on #faf9f7."
+        },
+        {
+          "file": "src/components/ContactForm.css",
+          "line": 85,
+          "lineContent": "    border-color: #c9a962;",
+          "issue": "Focus indicator for inputs relies on a low-contrast gold border that likely does not meet the 3:1 non-text contrast requirement against adjacent colors.",
+          "severity": "High",
+          "wcagCriterion": "1.4.11",
+          "suggestedFix": "Provide a stronger focus indicator, e.g., outline: 2px solid #5b3a00; outline-offset: 2px; or a thicker border with a darker color that achieves at least 3:1 contrast with the background."
+        },
+        {
+          "file": "src/components/ContactForm.css",
+          "line": 91,
+          "lineContent": "    color: white;",
+          "issue": "White text on a gold gradient background likely fails minimum 4.5:1 contrast.",
+          "severity": "High",
+          "wcagCriterion": "1.4.3",
+          "suggestedFix": "Use a darker text color (e.g., #1a1a1a) on the gold background, or darken the gradient significantly to ensure 4.5:1 contrast with white text."
+        },
+        {
+          "file": "src/components/Footer.css",
+          "line": 69,
+          "lineContent": "    color: #c9a962;",
+          "issue": "Hover state sets link text to a low-contrast gold color on white, likely failing the 4.5:1 requirement.",
+          "severity": "High",
+          "wcagCriterion": "1.4.3",
+          "suggestedFix": "Choose a hover color with sufficient contrast (e.g., a darker shade of gold/brown) or add a contrasting background/underline with sufficient thickness to maintain readability."
+        },
+        {
+          "file": "src/components/Header.css",
+          "line": 45,
+          "lineContent": "    color: #c9a962;",
+          "issue": "Hover state for navigation items uses a low-contrast gold color on a very light header background, likely failing 4.5:1 contrast.",
+          "severity": "High",
+          "wcagCriterion": "1.4.3",
+          "suggestedFix": "Use a darker hover color that meets 4.5:1 contrast against the header background or apply an additional high-contrast indicator (e.g., bold text plus underline) with sufficient contrast."
+        },
+        {
+          "file": "src/components/Header.css",
+          "line": 51,
+          "lineContent": "    color: white;",
+          "issue": "White text on a gold gradient background for the primary action likely fails minimum text contrast.",
+          "severity": "High",
+          "wcagCriterion": "1.4.3",
+          "suggestedFix": "Use a darker text color on the gold background, or darken the gradient background to ensure at least 4.5:1 contrast with white text. Example: background: #8a6a2a; color: #fff; or keep current background and set color: #1a1a1a."
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "bundleId": 3,
+      "filesScanned": [
+        "src/components/Hero.css",
+        "src/components/PriceList.css",
+        "src/components/RoomAvailability.css",
+        "src/index.css",
+        "src/main.jsx",
+        "vite.config.js"
+      ],
+      "complianceIssues": [
+        {
+          "file": "src/index.css",
+          "line": 3,
+          "lineContent": "  outline: none !important;",
+          "issue": "Global removal of outlines hides keyboard focus indicators across the site, making it difficult or impossible for keyboard users to determine the current focus.",
+          "severity": "High",
+          "wcagCriterion": "2.4.7",
+          "suggestedFix": "Remove the global outline reset and provide visible focus styles for interactive elements.\nExample:\n/* Remove this rule entirely */\n/* * { outline: none !important; } */\n\n/* Provide accessible focus styles */\n:focus-visible { outline: 3px solid #1a1a1a; outline-offset: 3px; }\n.btn:focus-visible, a:focus-visible, .book-btn:focus-visible { outline: 3px solid #c9a962; outline-offset: 3px; }"
+        },
+        {
+          "file": "src/index.css",
+          "line": 38,
+          "lineContent": "  text-decoration: none;",
+          "issue": "Links are styled without underlines and (combined with color: inherit) become indistinguishable from surrounding text, removing a non-color cue that indicates link functionality.",
+          "severity": "High",
+          "wcagCriterion": "1.4.1",
+          "suggestedFix": "Keep a non-color visual indicator for links (e.g., underline), and ensure sufficient contrast from body text.\nExample:\na { color: #0a66c2; text-decoration: underline; text-underline-offset: 2px; }\na:hover { text-decoration-thickness: 2px; }\n/* If you must remove underlines in some contexts, add another non-color cue like a border, icon, or font-weight change while maintaining contrast. */"
+        },
+        {
+          "file": "src/index.css",
+          "line": 93,
+          "lineContent": "  color: var(--text-low-contrast);",
+          "issue": "Low-contrast text color (#cccccc) on a white background fails minimum contrast requirements for normal text.",
+          "severity": "High",
+          "wcagCriterion": "1.4.3",
+          "suggestedFix": "Use a text color that achieves at least 4.5:1 contrast against the background (or 3:1 for large text). For example:\n:root { --text-low-contrast: #6b7280; /* or use var(--text-dark) */ }\n.low-contrast-text { color: var(--text-dark); }"
+        },
+        {
+          "file": "src/index.css",
+          "line": 105,
+          "lineContent": "  background-color: #22c55e;",
+          "issue": "Status is conveyed solely by color (green dot for \"available\"), which is not accessible to users who cannot perceive color differences.",
+          "severity": "High",
+          "wcagCriterion": "1.4.1",
+          "suggestedFix": "Provide a non-color cue and/or text label with the status dot. For example, add visible text or an icon shape difference and include accessible names:\n/* CSS (supplemental visual cue) */\n.status-available { background-color: #22c55e; border: 2px solid #1a1a1a; }\n.status-booked { background-color: #ef4444; border: 2px dashed #1a1a1a; }\n/* Also include adjacent text like “Available”/“Booked” or add visually hidden text: */\n.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }"
+        },
+        {
+          "file": "src/index.css",
+          "line": 109,
+          "lineContent": "  background-color: #ef4444;",
+          "issue": "Status is conveyed solely by color (red dot for \"booked\"), which is not accessible to users who cannot perceive color differences.",
+          "severity": "High",
+          "wcagCriterion": "1.4.1",
+          "suggestedFix": "Provide a non-color cue and/or text label with the status dot. For example, add visible text or an icon shape difference and include accessible names:\n/* CSS (supplemental visual cue) */\n.status-available { background-color: #22c55e; border: 2px solid #1a1a1a; }\n.status-booked { background-color: #ef4444; border: 2px dashed #1a1a1a; }\n/* Also include adjacent text like “Available”/“Booked” or add visually hidden text: */\n.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }"
+        },
+        {
+          "file": "src/components/PriceList.css",
+          "line": 43,
+          "lineContent": "    color: #c9a962;",
+          "issue": "Gold text (#c9a962) on a white background provides insufficient contrast for normal-sized text in table cells.",
+          "severity": "High",
+          "wcagCriterion": "1.4.3",
+          "suggestedFix": "Use a darker color that achieves at least 4.5:1 contrast against white, or increase the text to large size with sufficient weight and still meet 3:1.\nExample fix:\n.price-table td:not(:first-child) { color: #705327; /* or use var(--primary-dark) */ }"
+        },
+        {
+          "file": "src/components/PriceList.css",
+          "line": 55,
+          "lineContent": "    text-decoration: none;",
+          "issue": "Links inside the price note are styled without underlines and inherit the surrounding text color, making them indistinguishable from body text (no non-color indicator).",
+          "severity": "High",
+          "wcagCriterion": "1.4.1",
+          "suggestedFix": "Retain a non-color visual indicator for links and ensure adequate contrast.\nExample:\n.price-note a { text-decoration: underline; text-underline-offset: 2px; color: #0a66c2; }"
+        },
+        {
+          "file": "src/components/RoomAvailability.css",
+          "line": 17,
+          "lineContent": "    color: #c9a962;",
+          "issue": "Section label uses gold text (#c9a962) on a light cream background (#faf9f7), which is insufficient contrast for small text (12px).",
+          "severity": "High",
+          "wcagCriterion": "1.4.3",
+          "suggestedFix": "Use a darker color that meets at least 4.5:1 against #faf9f7, or increase the text size/weight to qualify as large text while still meeting 3:1.\nExample:\n.section-label { color: #705327; /* or var(--primary-dark) */ }"
+        },
+        {
+          "file": "src/components/RoomAvailability.css",
+          "line": 84,
+          "lineContent": "    color: #c9a962;",
+          "issue": "Room price uses gold text (#c9a962) on white. Even at 24px (large text), it does not meet the minimum 3:1 contrast for large text.",
+          "severity": "High",
+          "wcagCriterion": "1.4.3",
+          "suggestedFix": "Use a darker color for prices that achieves at least 3:1 contrast with white.\nExample:\n.room-price { color: #705327; /* darker gold */ }"
+        },
+        {
+          "file": "src/components/RoomAvailability.css",
+          "line": 104,
+          "lineContent": "    color: #c9a962;",
+          "issue": "Hover state for the room link sets the text to gold (#c9a962) on a white background, which has insufficient contrast for normal-sized link text.",
+          "severity": "Medium",
+          "wcagCriterion": "1.4.3",
+          "suggestedFix": "Use a hover color with sufficient contrast and/or add a non-color cue (underline, background change).\nExample:\n.room-link:hover { color: #1a1a1a; text-decoration: underline; text-underline-offset: 2px; }"
+        }
+      ],
+      "status": "success"
+    }
+  ]
+}

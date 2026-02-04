@@ -1,0 +1,1338 @@
+{
+  "summary": {
+    "totalFiles": 18,
+    "totalBundles": 6,
+    "totalIssues": 70,
+    "status": "completed"
+  },
+  "uniqueIssues": [
+    {
+      "file": "src/App.jsx",
+      "line": 13,
+      "lineContent": "        <h3 className=\"welcome-text\">Welcome to Luxury</h3>",
+      "issue": "A heading element (h3) is being used for decorative text. Misusing headings for non-structural content can confuse assistive technology users who rely on heading navigation.",
+      "severity": "Medium",
+      "wcagCriterion": "1.3.1",
+      "suggestedFix": "If this text is purely decorative, use a non-heading element and hide it from assistive technologies: <p className=\"welcome-text\" aria-hidden=\"true\">Welcome to Luxury</p>. If it conveys structure, choose the correct heading level according to the page hierarchy (e.g., <h2 className=\"welcome-text\">...)."
+    },
+    {
+      "file": "src/App.jsx",
+      "line": 10,
+      "lineContent": "    <div className=\"app\">",
+      "issue": "The main content of the page is not contained within a <main> landmark. Without a main region (or another mechanism), keyboard and screen reader users lack a reliable way to bypass repeated content like the header.",
+      "severity": "High",
+      "wcagCriterion": "2.4.1",
+      "suggestedFix": "Introduce a <main> landmark around the primary content. For example:\n\n<div className=\"app\">\n  <Header />\n  <main id=\"main-content\">\n    <div className=\"welcome-banner\">\n      <p className=\"welcome-text\" aria-hidden=\"true\">Welcome to Luxury</p>\n    </div>\n    <Hero />\n    <RoomAvailability />\n    <PriceList />\n    <ContactForm />\n  </main>\n  <Footer />\n</div>\n\nOptionally pair this with a skip link that targets #main-content."
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 38,
+      "lineContent": "                            <input type=\"text\" placeholder=\"First Name\" />",
+      "issue": "Text input lacks an associated label; relying on placeholder alone does not meet the requirement for clear labels.",
+      "severity": "High",
+      "wcagCriterion": "3.3.2",
+      "suggestedFix": "Provide a programmatically associated label. For example: <label htmlFor=\"firstName\">First Name</label><input id=\"firstName\" type=\"text\" name=\"firstName\" placeholder=\"First Name\" />"
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 39,
+      "lineContent": "                            <input type=\"text\" placeholder=\"Last Name\" />",
+      "issue": "Text input lacks an associated label; relying on placeholder alone does not meet the requirement for clear labels.",
+      "severity": "High",
+      "wcagCriterion": "3.3.2",
+      "suggestedFix": "Provide a programmatically associated label. For example: <label htmlFor=\"lastName\">Last Name</label><input id=\"lastName\" type=\"text\" name=\"lastName\" placeholder=\"Last Name\" />"
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 41,
+      "lineContent": "                        <input type=\"email\" placeholder=\"Email Address\" />",
+      "issue": "Email input lacks an associated label; placeholder text is not an adequate substitute.",
+      "severity": "High",
+      "wcagCriterion": "3.3.2",
+      "suggestedFix": "Provide a programmatically associated label. For example: <label htmlFor=\"email\">Email Address</label><input id=\"email\" type=\"email\" name=\"email\" placeholder=\"Email Address\" />"
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 42,
+      "lineContent": "                        <input type=\"tel\" placeholder=\"Phone Number\" />",
+      "issue": "Telephone input lacks an associated label; placeholder text is not an adequate substitute.",
+      "severity": "High",
+      "wcagCriterion": "3.3.2",
+      "suggestedFix": "Provide a programmatically associated label. For example: <label htmlFor=\"phone\">Phone Number</label><input id=\"phone\" type=\"tel\" name=\"phone\" placeholder=\"Phone Number\" />"
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 43,
+      "lineContent": "                        <textarea rows=\"5\" placeholder=\"Your Message\"></textarea>",
+      "issue": "Textarea lacks an associated label; placeholder text is not an adequate substitute.",
+      "severity": "High",
+      "wcagCriterion": "3.3.2",
+      "suggestedFix": "Provide a programmatically associated label. For example: <label htmlFor=\"message\">Your Message</label><textarea id=\"message\" name=\"message\" rows=\"5\" placeholder=\"Your Message\"></textarea>"
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 45,
+      "lineContent": "                        <div className=\"submit-btn\" onClick={handleSubmit}>",
+      "issue": "Clickable div used as a button is not keyboard-operable by default (not focusable and lacks key handlers).",
+      "severity": "High",
+      "wcagCriterion": "2.1.1",
+      "suggestedFix": "Use a native button within a form for full keyboard and AT support: <form onSubmit={handleSubmit}>...<button type=\"submit\" className=\"submit-btn\">Submit</button></form>. If a non-button is kept, add role=\"button\", tabIndex={0}, and handle Enter/Space via onKeyDown."
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 36,
+      "lineContent": "                    <div className=\"contact-form\">",
+      "issue": "Form controls are not contained within a semantic <form> element, reducing programmatic relationships and native submit behavior (e.g., Enter key to submit).",
+      "severity": "Medium",
+      "wcagCriterion": "1.3.1",
+      "suggestedFix": "Wrap the inputs and submit control in a <form> with an onSubmit handler: <form className=\"contact-form\" onSubmit={handleSubmit}>...</form> and use a <button type=\"submit\">."
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 38,
+      "lineContent": "                            <input type=\"text\" placeholder=\"First Name\" />",
+      "issue": "Common input purpose is not programmatically identifiable; missing appropriate autocomplete token.",
+      "severity": "Medium",
+      "wcagCriterion": "1.3.5",
+      "suggestedFix": "Add an appropriate autocomplete attribute: <input id=\"firstName\" type=\"text\" name=\"firstName\" autocomplete=\"given-name\" placeholder=\"First Name\" />"
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 39,
+      "lineContent": "                            <input type=\"text\" placeholder=\"Last Name\" />",
+      "issue": "Common input purpose is not programmatically identifiable; missing appropriate autocomplete token.",
+      "severity": "Medium",
+      "wcagCriterion": "1.3.5",
+      "suggestedFix": "Add an appropriate autocomplete attribute: <input id=\"lastName\" type=\"text\" name=\"lastName\" autocomplete=\"family-name\" placeholder=\"Last Name\" />"
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 41,
+      "lineContent": "                        <input type=\"email\" placeholder=\"Email Address\" />",
+      "issue": "Common input purpose is not programmatically identifiable; missing appropriate autocomplete token.",
+      "severity": "Medium",
+      "wcagCriterion": "1.3.5",
+      "suggestedFix": "Add an appropriate autocomplete attribute: <input id=\"email\" type=\"email\" name=\"email\" autocomplete=\"email\" placeholder=\"Email Address\" />"
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 42,
+      "lineContent": "                        <input type=\"tel\" placeholder=\"Phone Number\" />",
+      "issue": "Common input purpose is not programmatically identifiable; missing appropriate autocomplete token.",
+      "severity": "Medium",
+      "wcagCriterion": "1.3.5",
+      "suggestedFix": "Add an appropriate autocomplete attribute: <input id=\"phone\" type=\"tel\" name=\"phone\" autocomplete=\"tel\" placeholder=\"Phone Number\" />"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 14,
+      "lineContent": "                            <img src=\"https://cdn-icons-png.flaticon.com/128/733/733547.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Facebook')} />",
+      "issue": "Functional image used as a control has empty alt text, so no accessible name is provided for the control.",
+      "severity": "High",
+      "wcagCriterion": "1.1.1",
+      "suggestedFix": "Provide an accessible name and use a semantic control. Example: <button type=\"button\" className=\"social-icon\" aria-label=\"Facebook\" onClick={...}><img src=\"...\" alt=\"\" /></button> or use <a href=\"https://facebook.com/...\" aria-label=\"Facebook\"><img src=\"...\" alt=\"\" /></a>."
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 14,
+      "lineContent": "                            <img src=\"https://cdn-icons-png.flaticon.com/128/733/733547.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Facebook')} />",
+      "issue": "Interactive image is not keyboard-focusable and lacks keyboard event handling, making it inoperable via keyboard.",
+      "severity": "High",
+      "wcagCriterion": "2.1.1",
+      "suggestedFix": "Use a native interactive element (button or anchor) which is focusable by default, or add role=\"button\", tabIndex={0}, and onKeyDown handlers for Enter/Space."
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 15,
+      "lineContent": "                            <img src=\"https://cdn-icons-png.flaticon.com/128/2111/2111463.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Instagram')} />",
+      "issue": "Functional image used as a control has empty alt text, so no accessible name is provided for the control.",
+      "severity": "High",
+      "wcagCriterion": "1.1.1",
+      "suggestedFix": "Provide an accessible name and use a semantic control. Example: <button type=\"button\" className=\"social-icon\" aria-label=\"Instagram\" onClick={...}><img src=\"...\" alt=\"\" /></button> or use <a href=\"https://instagram.com/...\" aria-label=\"Instagram\"><img src=\"...\" alt=\"\" /></a>."
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 15,
+      "lineContent": "                            <img src=\"https://cdn-icons-png.flaticon.com/128/2111/2111463.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Instagram')} />",
+      "issue": "Interactive image is not keyboard-focusable and lacks keyboard event handling, making it inoperable via keyboard.",
+      "severity": "High",
+      "wcagCriterion": "2.1.1",
+      "suggestedFix": "Use a native interactive element (button or anchor) which is focusable by default, or add role=\"button\", tabIndex={0}, and onKeyDown handlers for Enter/Space."
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 16,
+      "lineContent": "                            <img src=\"https://cdn-icons-png.flaticon.com/128/733/733579.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Twitter')} />",
+      "issue": "Functional image used as a control has empty alt text, so no accessible name is provided for the control.",
+      "severity": "High",
+      "wcagCriterion": "1.1.1",
+      "suggestedFix": "Provide an accessible name and use a semantic control. Example: <button type=\"button\" className=\"social-icon\" aria-label=\"Twitter\" onClick={...}><img src=\"...\" alt=\"\" /></button> or use <a href=\"https://twitter.com/...\" aria-label=\"Twitter\"><img src=\"...\" alt=\"\" /></a>."
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 16,
+      "lineContent": "                            <img src=\"https://cdn-icons-png.flaticon.com/128/733/733579.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Twitter')} />",
+      "issue": "Interactive image is not keyboard-focusable and lacks keyboard event handling, making it inoperable via keyboard.",
+      "severity": "High",
+      "wcagCriterion": "2.1.1",
+      "suggestedFix": "Use a native interactive element (button or anchor) which is focusable by default, or add role=\"button\", tabIndex={0}, and onKeyDown handlers for Enter/Space."
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 56,
+      "lineContent": "                        <a href=\"#\">Read More</a> about our commitment to excellence.",
+      "issue": "Link text 'Read More' is ambiguous when taken out of context and does not clearly describe its destination or purpose.",
+      "severity": "Medium",
+      "wcagCriterion": "2.4.4",
+      "suggestedFix": "Use descriptive link text that conveys purpose, e.g., <a href=\"#\">Read more about our commitment to excellence</a> or <a href=\"#\">Our commitment to excellence</a>."
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 61,
+      "lineContent": "                        <a href=\"#\">Click here</a> to view our full legal disclaimer and privacy practices.",
+      "issue": "Link text 'Click here' is ambiguous and does not describe the link purpose on its own.",
+      "severity": "Medium",
+      "wcagCriterion": "2.4.4",
+      "suggestedFix": "Use descriptive link text, e.g., <a href=\"#\">View our full legal disclaimer and privacy practices</a>."
+    },
+    {
+      "file": "src/components/Header.jsx",
+      "line": 14,
+      "lineContent": "          <span className=\"nav-item\" onClick={() => handleNavClick('rooms')}>Rooms & Suites</span>",
+      "issue": "Clickable span is not keyboard-accessible (not focusable and lacks key handlers).",
+      "severity": "High",
+      "wcagCriterion": "2.1.1",
+      "suggestedFix": "Use a semantic element such as <a href=\"/rooms\" className=\"nav-item\">Rooms & Suites</a> or <button type=\"button\" className=\"nav-item\" onClick={...}>Rooms & Suites</button>. If keeping span, add role=\"button\", tabIndex={0}, and handle Enter/Space in onKeyDown."
+    },
+    {
+      "file": "src/components/Header.jsx",
+      "line": 15,
+      "lineContent": "          <span className=\"nav-item\" onClick={() => handleNavClick('dining')}>Dining</span>",
+      "issue": "Clickable span is not keyboard-accessible (not focusable and lacks key handlers).",
+      "severity": "High",
+      "wcagCriterion": "2.1.1",
+      "suggestedFix": "Use a semantic element such as <a href=\"/dining\" className=\"nav-item\">Dining</a> or <button type=\"button\" className=\"nav-item\" onClick={...}>Dining</button>. If keeping span, add role=\"button\", tabIndex={0}, and handle Enter/Space in onKeyDown."
+    },
+    {
+      "file": "src/components/Header.jsx",
+      "line": 16,
+      "lineContent": "          <span className=\"nav-item\" onClick={() => handleNavClick('spa')}>Spa & Wellness</span>",
+      "issue": "Clickable span is not keyboard-accessible (not focusable and lacks key handlers).",
+      "severity": "High",
+      "wcagCriterion": "2.1.1",
+      "suggestedFix": "Use a semantic element such as <a href=\"/spa\" className=\"nav-item\">Spa & Wellness</a> or <button type=\"button\" className=\"nav-item\" onClick={...}>Spa & Wellness</button>. If keeping span, add role=\"button\", tabIndex={0}, and handle Enter/Space in onKeyDown."
+    },
+    {
+      "file": "src/components/Header.jsx",
+      "line": 17,
+      "lineContent": "          <span className=\"nav-item\" onClick={() => handleNavClick('experiences')}>Experiences</span>",
+      "issue": "Clickable span is not keyboard-accessible (not focusable and lacks key handlers).",
+      "severity": "High",
+      "wcagCriterion": "2.1.1",
+      "suggestedFix": "Use a semantic element such as <a href=\"/experiences\" className=\"nav-item\">Experiences</a> or <button type=\"button\" className=\"nav-item\" onClick={...}>Experiences</button>. If keeping span, add role=\"button\", tabIndex={0}, and handle Enter/Space in onKeyDown."
+    },
+    {
+      "file": "src/components/Header.jsx",
+      "line": 18,
+      "lineContent": "          <span className=\"nav-item\" onClick={() => handleNavClick('contact')}>Contact</span>",
+      "issue": "Clickable span is not keyboard-accessible (not focusable and lacks key handlers).",
+      "severity": "High",
+      "wcagCriterion": "2.1.1",
+      "suggestedFix": "Use a semantic element such as <a href=\"/contact\" className=\"nav-item\">Contact</a> or <button type=\"button\" className=\"nav-item\" onClick={...}>Contact</button>. If keeping span, add role=\"button\", tabIndex={0}, and handle Enter/Space in onKeyDown."
+    },
+    {
+      "file": "src/components/Header.jsx",
+      "line": 20,
+      "lineContent": "        <div className=\"book-btn\" onClick={() => handleNavClick('booking')}>",
+      "issue": "Clickable div is not keyboard-accessible (not focusable and lacks key handlers).",
+      "severity": "High",
+      "wcagCriterion": "2.1.1",
+      "suggestedFix": "Use a semantic button or link: <button type=\"button\" className=\"book-btn\" onClick={...}>Book Now</button> or <a href=\"/booking\" className=\"book-btn\">Book Now</a>. If keeping div, add role=\"button\", tabIndex={0}, and handle Enter/Space in onKeyDown."
+    },
+    {
+      "file": "src/components/Hero.jsx",
+      "line": 21,
+      "lineContent": "                    <div className=\"btn btn-primary\">Click Here</div>",
+      "issue": "Non-semantic element used as a control. A div styled and labeled like a button has no accessible role/name and is not announced correctly by assistive technologies.",
+      "severity": "High",
+      "wcagCriterion": "4.1.2",
+      "suggestedFix": "Replace the div with a semantic button or link and provide an accessible name, for example:\n<button type=\"button\" className=\"btn btn-primary\">Book your stay</button>\n// or if it navigates\n<a href=\"/booking\" className=\"btn btn-primary\">Book your stay</a>"
+    },
+    {
+      "file": "src/components/Hero.jsx",
+      "line": 21,
+      "lineContent": "                    <div className=\"btn btn-primary\">Click Here</div>",
+      "issue": "Ambiguous label. The text 'Click Here' does not convey purpose without surrounding context.",
+      "severity": "Medium",
+      "wcagCriterion": "2.4.4",
+      "suggestedFix": "Use a descriptive label that communicates the action, e.g.: <button type=\"button\" className=\"btn btn-primary\">Book your stay</button> or <a href=\"/offers\" className=\"btn btn-primary\">View current offers</a>."
+    },
+    {
+      "file": "src/components/Hero.jsx",
+      "line": 22,
+      "lineContent": "                    <div className=\"btn btn-outline\">Read More</div>",
+      "issue": "Non-semantic element used as a control. A div styled like a button has no role/name and is not keyboard accessible.",
+      "severity": "High",
+      "wcagCriterion": "4.1.2",
+      "suggestedFix": "Use a semantic link or button, for example:\n<a href=\"/about\" className=\"btn btn-outline\">Learn more about The Silent Oasis</a>\n// or\n<button type=\"button\" className=\"btn btn-outline\">Learn more about The Silent Oasis</button>"
+    },
+    {
+      "file": "src/components/Hero.jsx",
+      "line": 22,
+      "lineContent": "                    <div className=\"btn btn-outline\">Read More</div>",
+      "issue": "Ambiguous label. 'Read More' does not clearly indicate destination or purpose when taken out of context.",
+      "severity": "Medium",
+      "wcagCriterion": "2.4.4",
+      "suggestedFix": "Make the text specific to its destination, e.g.: <a href=\"/about\" className=\"btn btn-outline\">Learn more about The Silent Oasis</a>."
+    },
+    {
+      "file": "src/components/PriceList.jsx",
+      "line": 23,
+      "lineContent": "                        <td>Service</td>",
+      "issue": "Table header cell is marked up as a data cell. Screen readers will not identify this as a column header.",
+      "severity": "High",
+      "wcagCriterion": "1.3.1",
+      "suggestedFix": "Use a th element with scope for column headers, e.g.: <th scope=\"col\">Service</th>."
+    },
+    {
+      "file": "src/components/PriceList.jsx",
+      "line": 24,
+      "lineContent": "                        <td>Weekday</td>",
+      "issue": "Table header cell is marked up as a data cell. Screen readers will not identify this as a column header.",
+      "severity": "High",
+      "wcagCriterion": "1.3.1",
+      "suggestedFix": "Use a th element with scope for column headers, e.g.: <th scope=\"col\">Weekday</th>."
+    },
+    {
+      "file": "src/components/PriceList.jsx",
+      "line": 25,
+      "lineContent": "                        <td>Weekend</td>",
+      "issue": "Table header cell is marked up as a data cell. Screen readers will not identify this as a column header.",
+      "severity": "High",
+      "wcagCriterion": "1.3.1",
+      "suggestedFix": "Use a th element with scope for column headers, e.g.: <th scope=\"col\">Weekend</th>."
+    },
+    {
+      "file": "src/components/PriceList.jsx",
+      "line": 26,
+      "lineContent": "                        <td>Holiday</td>",
+      "issue": "Table header cell is marked up as a data cell. Screen readers will not identify this as a column header.",
+      "severity": "High",
+      "wcagCriterion": "1.3.1",
+      "suggestedFix": "Use a th element with scope for column headers, e.g.: <th scope=\"col\">Holiday</th>."
+    },
+    {
+      "file": "src/components/PriceList.jsx",
+      "line": 41,
+      "lineContent": "                    <a href=\"#\">Click here</a> for full terms.",
+      "issue": "Ambiguous link text does not identify the destination/purpose when taken out of context.",
+      "severity": "Medium",
+      "wcagCriterion": "2.4.4",
+      "suggestedFix": "Provide descriptive link text, e.g.: <a href=\"#\">View full terms and conditions</a>."
+    },
+    {
+      "file": "src/components/RoomAvailability.jsx",
+      "line": 63,
+      "lineContent": "                            <img src={room.image} alt=\"\" className=\"room-image\" />",
+      "issue": "Informative image missing alternative text. Empty alt hides important information (room imagery) from assistive technology.",
+      "severity": "High",
+      "wcagCriterion": "1.1.1",
+      "suggestedFix": "Provide meaningful alt text, e.g.: <img src={room.image} alt={room.name} className=\"room-image\" /> or a brief description like alt={`${room.name} interior`}."
+    },
+    {
+      "file": "src/components/RoomAvailability.jsx",
+      "line": 67,
+      "lineContent": "                                    <span className={`status-dot ${room.available ? 'status-available' : 'status-booked'}`}></span>",
+      "issue": "Availability is conveyed by color alone (status dot) with no textual indicator, which is not accessible to users who cannot perceive color.",
+      "severity": "High",
+      "wcagCriterion": "1.4.1",
+      "suggestedFix": "Include a text label for the status in addition to the dot and hide the dot from assistive tech, e.g.:\n<span className={`status-dot ${room.available ? 'status-available' : 'status-booked'}`} aria-hidden=\"true\"></span>\n<span className=\"status-text\">{room.available ? 'Available' : 'Booked'}</span>"
+    },
+    {
+      "file": "src/components/RoomAvailability.jsx",
+      "line": 71,
+      "lineContent": "                                    <span className=\"room-link\">Read More</span>",
+      "issue": "Non-semantic element used as a link. A span styled to look interactive lacks an accessible role/name and is not keyboard accessible.",
+      "severity": "High",
+      "wcagCriterion": "4.1.2",
+      "suggestedFix": "Use a semantic link/button with an accessible name, e.g.:\n<a className=\"room-link\" href={`/rooms/${room.id}`}>Read more about {room.name}</a>\n// or if it triggers an action\n<button type=\"button\" className=\"room-link\">Read more about {room.name}</button>"
+    },
+    {
+      "file": "src/components/RoomAvailability.jsx",
+      "line": 71,
+      "lineContent": "                                    <span className=\"room-link\">Read More</span>",
+      "issue": "Ambiguous link/control text. 'Read More' does not clearly indicate purpose or destination.",
+      "severity": "Medium",
+      "wcagCriterion": "2.4.4",
+      "suggestedFix": "Make the label specific, e.g.: <a className=\"room-link\" href={`/rooms/${room.id}`}>Read more about {room.name}</a>."
+    },
+    {
+      "file": "src/components/ContactForm.css",
+      "line": 19,
+      "lineContent": "    color: #c9a962;",
+      "issue": "Low contrast text. Gold (#c9a962) on a very light background (#faf9f7) is approximately 2.0:1, below the 4.5:1 minimum for normal text.",
+      "severity": "High",
+      "wcagCriterion": "1.4.3",
+      "suggestedFix": "Use a darker text color that achieves at least 4.5:1 on #faf9f7 (e.g., color: #6b4e00) or increase size/weight to meet large text criterion. Example: .contact-info .section-label { color: #6b4e00; }"
+    },
+    {
+      "file": "src/components/ContactForm.css",
+      "line": 54,
+      "lineContent": "    color: #c9a962;",
+      "issue": "Low contrast text. Gold (#c9a962) used for small labels is approximately 2.0:1 on a light background, below the 4.5:1 minimum for normal text.",
+      "severity": "High",
+      "wcagCriterion": "1.4.3",
+      "suggestedFix": "Choose a darker color for labels (e.g., #6b4e00) or provide a darker background behind the label to achieve ≥4.5:1. Example: .contact-label { color: #6b4e00; }"
+    },
+    {
+      "file": "src/components/ContactForm.css",
+      "line": 77,
+      "lineContent": "    border: 1px solid #e5e5e5;",
+      "issue": "Insufficient non-text contrast for input boundaries. The light gray border (#e5e5e5) against a very light background (~#faf9f7) has ~1.2:1 contrast, below the 3:1 required for UI component boundaries.",
+      "severity": "High",
+      "wcagCriterion": "1.4.11",
+      "suggestedFix": "Use a darker border (≥3:1 against surrounding background), increase thickness, or provide a contrasting fill. Example: .contact-form input, .contact-form textarea { border: 1px solid #767676; }"
+    },
+    {
+      "file": "src/components/ContactForm.css",
+      "line": 85,
+      "lineContent": "    border-color: #c9a962;",
+      "issue": "Focus state for inputs uses gold (#c9a962) which contrasts ~2.0:1 against a very light background, below the 3:1 required for visible UI component indicators.",
+      "severity": "High",
+      "wcagCriterion": "1.4.11",
+      "suggestedFix": "Provide a higher-contrast focus indicator (e.g., 2px outline or border) that meets ≥3:1. Example: .contact-form input:focus-visible, .contact-form textarea:focus-visible { outline: 2px solid #005fcc; outline-offset: 2px; }"
+    },
+    {
+      "file": "src/components/ContactForm.css",
+      "line": 91,
+      "lineContent": "    color: white;",
+      "issue": "White button text on the gold gradient background (#c9a962–#b8944f) yields ~2.1–2.9:1 contrast, below the 4.5:1 minimum for normal text.",
+      "severity": "High",
+      "wcagCriterion": "1.4.3",
+      "suggestedFix": "Either darken the gradient substantially or use a dark text color. Example: .submit-btn { background: linear-gradient(135deg, #6b4e00 0%, #614400 100%); color: #1a1a1a; }"
+    },
+    {
+      "file": "src/components/ContactForm.css",
+      "line": 101,
+      "lineContent": ".submit-btn:hover {",
+      "issue": "Hover state is styled but there is no corresponding visible keyboard focus style, which can make focus difficult to see for keyboard users.",
+      "severity": "Medium",
+      "wcagCriterion": "2.4.7",
+      "suggestedFix": "Add a :focus-visible style that provides a clear focus indicator. Example: .submit-btn:focus-visible { outline: 2px solid #005fcc; outline-offset: 2px; }"
+    },
+    {
+      "file": "src/components/Footer.css",
+      "line": 69,
+      "lineContent": "    color: #c9a962;",
+      "issue": "Low contrast on link hover. Gold (#c9a962) on a white background is ~2.1:1, below the 4.5:1 minimum for normal text.",
+      "severity": "High",
+      "wcagCriterion": "1.4.3",
+      "suggestedFix": "Use a hover color that maintains ≥4.5:1 contrast (e.g., #6b4e00), or add a contrasting background highlight. Example: .link-list a:hover { color: #6b4e00; }"
+    },
+    {
+      "file": "src/components/Footer.css",
+      "line": 68,
+      "lineContent": ".link-list a:hover {",
+      "issue": "Hover state is styled but there is no corresponding :focus-visible style for keyboard users, reducing focus visibility.",
+      "severity": "Medium",
+      "wcagCriterion": "2.4.7",
+      "suggestedFix": "Mirror hover styles for focus. Example: .link-list a:focus-visible { color: #6b4e00; outline: 2px solid #005fcc; outline-offset: 2px; }"
+    },
+    {
+      "file": "src/components/Footer.css",
+      "line": 43,
+      "lineContent": ".social-icon:hover {",
+      "issue": "Hover state is styled but there is no :focus-visible state, making keyboard focus on social icons potentially invisible.",
+      "severity": "Medium",
+      "wcagCriterion": "2.4.7",
+      "suggestedFix": "Provide a visible focus style. Example: .social-icon:focus-visible { outline: 2px solid #005fcc; outline-offset: 3px; opacity: 1; }"
+    },
+    {
+      "file": "src/components/Header.css",
+      "line": 45,
+      "lineContent": "    color: #c9a962;",
+      "issue": "Low contrast on navigation item hover. Gold (#c9a962) over a light header background (~white) is ~2.1:1, below the 4.5:1 minimum for normal text.",
+      "severity": "High",
+      "wcagCriterion": "1.4.3",
+      "suggestedFix": "Use a darker hover color that maintains ≥4.5:1 contrast (e.g., #6b4e00) or add a contrasting background/underline on hover. Example: .nav-item:hover { color: #6b4e00; }"
+    },
+    {
+      "file": "src/components/Header.css",
+      "line": 51,
+      "lineContent": "    color: white;",
+      "issue": "White button text on the gold gradient background (#c9a962–#b8944f) yields ~2.1–2.9:1 contrast, below the 4.5:1 minimum for normal text.",
+      "severity": "High",
+      "wcagCriterion": "1.4.3",
+      "suggestedFix": "Use a darker text color or darken the gradient. Example: .book-btn { background: linear-gradient(135deg, #6b4e00 0%, #614400 100%); color: #1a1a1a; }"
+    },
+    {
+      "file": "src/components/Header.css",
+      "line": 60,
+      "lineContent": ".book-btn:hover {",
+      "issue": "Hover state is styled but no :focus-visible style is provided, which can make keyboard focus hard to detect.",
+      "severity": "Medium",
+      "wcagCriterion": "2.4.7",
+      "suggestedFix": "Add a clear focus style. Example: .book-btn:focus-visible { outline: 2px solid #005fcc; outline-offset: 2px; }"
+    },
+    {
+      "file": "src/components/Header.css",
+      "line": 44,
+      "lineContent": ".nav-item:hover {",
+      "issue": "Hover state is styled but there is no corresponding visible focus style for keyboard users.",
+      "severity": "Medium",
+      "wcagCriterion": "2.4.7",
+      "suggestedFix": "Mirror hover styles for focus and add a clear focus indicator. Example: .nav-item:focus-visible { color: #6b4e00; outline: 2px solid #005fcc; outline-offset: 2px; }"
+    },
+    {
+      "file": "src/components/PriceList.css",
+      "line": 43,
+      "lineContent": "    color: #c9a962;",
+      "issue": "Low text contrast: Gold text (#c9a962) on a white background does not meet the minimum 4.5:1 contrast ratio for normal text. This affects readability of table values in non-header columns.",
+      "severity": "High",
+      "wcagCriterion": "1.4.3",
+      "suggestedFix": "Use a darker text color that achieves at least 4.5:1 contrast on white. For example:\n.price-table td:not(:first-child) {\n    text-align: center;\n    color: #2d2d2d; /* High-contrast on white */\n    font-weight: 600;\n}\nIf brand color is required, choose a darker shade that meets 4.5:1 and verify with a contrast checker."
+    },
+    {
+      "file": "src/components/PriceList.css",
+      "line": 55,
+      "lineContent": "    text-decoration: none;",
+      "issue": "Links are not visually distinguishable from surrounding text. Removing underlines combined with inherited color makes links rely on color (or no difference) alone to convey link state.",
+      "severity": "High",
+      "wcagCriterion": "1.4.1",
+      "suggestedFix": "Provide a non-color visual indicator for links (e.g., underline). For example:\n.price-note a {\n    color: #1a0dab; /* or another distinct color with sufficient contrast */\n    text-decoration: underline;\n}\nAlso consider adding a focus style:\n.price-note a:focus {\n    outline: 2px solid #1a0dab;\n    outline-offset: 2px;\n}"
+    },
+    {
+      "file": "src/components/PriceList.css",
+      "line": 54,
+      "lineContent": "    color: inherit;",
+      "issue": "Links inherit the surrounding text color, removing a key differentiator. Combined with no underline, this causes links to be indistinguishable from body text, relying on color alone (or no difference) to indicate link status.",
+      "severity": "High",
+      "wcagCriterion": "1.4.1",
+      "suggestedFix": "Assign a distinct link style that does not rely only on color. For example:\n.price-note a {\n    color: #1a0dab; /* distinct link color with sufficient contrast */\n    text-decoration: underline;\n    font-weight: 600; /* optional additional non-color cue */\n}"
+    },
+    {
+      "file": "src/components/RoomAvailability.css",
+      "line": 17,
+      "lineContent": "    color: #c9a962;",
+      "issue": "Low text contrast: Gold text (#c9a962) on the light section background (#faf9f7) does not meet the minimum 4.5:1 contrast ratio for normal text (used for the section label).",
+      "severity": "High",
+      "wcagCriterion": "1.4.3",
+      "suggestedFix": "Use a darker color for the section label that meets 4.5:1 against #faf9f7. For example:\n.section-label {\n    color: #2d2d2d;\n}\nIf brand color must be used, choose a darker shade of the brand color that passes 4.5:1 and verify with a contrast checker."
+    },
+    {
+      "file": "src/components/RoomAvailability.css",
+      "line": 84,
+      "lineContent": "    color: #c9a962;",
+      "issue": "Low text contrast: Price text (#c9a962) on white background does not meet contrast requirements. Even as large text (24px), it must meet at least 3:1, which this color does not.",
+      "severity": "High",
+      "wcagCriterion": "1.4.3",
+      "suggestedFix": "Increase contrast for the price text. For example:\n.room-price {\n    color: #2d2d2d; /* High-contrast on white */\n}\nAlternatively, use a darker brand shade that achieves at least 3:1 for large text. Verify with a contrast checker."
+    },
+    {
+      "file": "src/components/RoomAvailability.css",
+      "line": 90,
+      "lineContent": "    color: #999;",
+      "issue": "Low text contrast: Secondary price period text (#999999) on white background does not meet the 4.5:1 ratio for normal text (14px).",
+      "severity": "High",
+      "wcagCriterion": "1.4.3",
+      "suggestedFix": "Use a darker gray for sufficient contrast. For example:\n.price-period {\n    color: #666666; /* or #595959 */\n}\nConfirm with a contrast checker to ensure ≥4.5:1 on white."
+    },
+    {
+      "file": "src/components/RoomAvailability.css",
+      "line": 104,
+      "lineContent": "    color: #c9a962;",
+      "issue": "Low text contrast on hover: Changing link text to #c9a962 on a white background reduces contrast below the required ratio, making the hovered state less readable.",
+      "severity": "High",
+      "wcagCriterion": "1.4.3",
+      "suggestedFix": "Ensure hover state maintains sufficient contrast. For example:\n.room-link:hover {\n    color: #1a1a1a; /* Keep high contrast */\n    text-decoration: underline; /* Optional non-color cue on hover */\n}\nAlternatively, use a darker brand shade that meets contrast requirements."
+    },
+    {
+      "file": "src/index.css",
+      "line": 3,
+      "lineContent": "  outline: none !important;",
+      "issue": "Global removal of focus outlines hides focus indicators for all interactive elements, making keyboard navigation difficult to track.",
+      "severity": "High",
+      "wcagCriterion": "2.4.7",
+      "suggestedFix": "Remove the global outline reset and provide visible focus styles for interactive elements. For example:\n/* Remove outline reset from the universal rule */\n/* * { margin: 0; padding: 0; box-sizing: border-box; } */\n:focus-visible { outline: 3px solid #1a1a1a; outline-offset: 2px; }\na:focus-visible, button:focus-visible, [role=\"button\"]:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid #1a1a1a; outline-offset: 2px; }"
+    },
+    {
+      "file": "src/index.css",
+      "line": 37,
+      "lineContent": "  color: inherit;",
+      "issue": "Links inherit the same color as surrounding text, making them indistinguishable in running text.",
+      "severity": "High",
+      "wcagCriterion": "1.4.1",
+      "suggestedFix": "Provide a distinct, high-contrast link color and/or underline for links. For example:\na { color: #0a66c2; text-decoration: underline; }\na:hover, a:focus { text-decoration-thickness: 2px; }\na:focus-visible { outline: 2px solid #1a1a1a; outline-offset: 2px; }"
+    },
+    {
+      "file": "src/index.css",
+      "line": 38,
+      "lineContent": "  text-decoration: none;",
+      "issue": "Removing link underlines removes a key non-color cue that indicates links, making them hard to detect.",
+      "severity": "High",
+      "wcagCriterion": "1.4.1",
+      "suggestedFix": "Restore underlines for inline links, at least in body copy, and ensure they remain present on focus:\na { text-decoration: underline; }\na:hover, a:focus { text-decoration-thickness: 2px; }"
+    },
+    {
+      "file": "src/index.css",
+      "line": 93,
+      "lineContent": "  color: var(--text-low-contrast);",
+      "issue": "The low-contrast text color (#cccccc) against white background (~2.2:1) fails minimum text contrast requirements.",
+      "severity": "High",
+      "wcagCriterion": "1.4.3",
+      "suggestedFix": "Use a darker color that reaches at least 4.5:1 against white. For example:\n:root { --text-low-contrast: #666666; }\n/* or */\n.low-contrast-text { color: #595959; }"
+    },
+    {
+      "file": "src/index.css",
+      "line": 105,
+      "lineContent": "  background-color: #22c55e;",
+      "issue": "Status indicator relies on color alone (green dot) to convey availability, which is not accessible for users who cannot perceive color differences.",
+      "severity": "High",
+      "wcagCriterion": "1.4.1",
+      "suggestedFix": "Do not rely on color alone. Add a text label (e.g., \"Available\") adjacent to the dot, or use an icon/shape difference in addition to color. Ensure the label is visible and programmatically associated (e.g., include text in the DOM, not only via CSS pseudo-elements)."
+    },
+    {
+      "file": "src/index.css",
+      "line": 109,
+      "lineContent": "  background-color: #ef4444;",
+      "issue": "Status indicator relies on color alone (red dot) to convey a \"booked\" state, which is not accessible for users who cannot perceive color differences.",
+      "severity": "High",
+      "wcagCriterion": "1.4.1",
+      "suggestedFix": "Include a non-color cue such as a text label (e.g., \"Booked\") next to the dot or a distinct icon/shape. Ensure the label is present in the DOM for assistive technologies."
+    },
+    {
+      "file": "src/index.css",
+      "line": 118,
+      "lineContent": "  border: 1px solid #e5e5e5;",
+      "issue": "Form field borders are very low contrast against the white background, making input boundaries hard to discern.",
+      "severity": "Medium",
+      "wcagCriterion": "1.4.11",
+      "suggestedFix": "Use a higher contrast border (>= 3:1 against white) or a thicker/darker outline. For example:\ninput, textarea { border: 1px solid #767676; }\ninput:focus, textarea:focus { border-color: #1a1a1a; outline: 2px solid #1a1a1a; outline-offset: 2px; }"
+    },
+    {
+      "file": "src/index.css",
+      "line": 61,
+      "lineContent": "  color: var(--text-light);",
+      "issue": "White button text on the gold gradient background is unlikely to meet the 4.5:1 contrast ratio for normal-size text.",
+      "severity": "High",
+      "wcagCriterion": "1.4.3",
+      "suggestedFix": "Increase contrast by using darker text or a darker button background. For example:\n.btn-primary { color: #1a1a1a; }\n/* or darken the gradient colors until white text reaches 4.5:1 */"
+    },
+    {
+      "file": "src/index.css",
+      "line": 72,
+      "lineContent": "  color: var(--primary-gold);",
+      "issue": "Gold text on a white (or light) background has insufficient contrast for normal text in outline buttons.",
+      "severity": "High",
+      "wcagCriterion": "1.4.3",
+      "suggestedFix": "Use a higher-contrast text color for outline buttons on light backgrounds. For example:\n.btn-outline { color: #1a1a1a; border-color: #1a1a1a; }\n/* or darken the brand gold significantly until contrast ≥ 4.5:1 */"
+    },
+    {
+      "file": "src/index.css",
+      "line": 77,
+      "lineContent": "  color: var(--text-light);",
+      "issue": "On hover, outline buttons switch to white text on a gold background, which may not meet the 4.5:1 contrast ratio.",
+      "severity": "High",
+      "wcagCriterion": "1.4.3",
+      "suggestedFix": "Ensure hover state maintains sufficient contrast. For example:\n.btn-outline:hover { background: var(--primary-gold); color: #1a1a1a; }\n/* or darken the background color until white text reaches ≥ 4.5:1 */"
+    }
+  ],
+  "details": [
+    {
+      "bundleId": 1,
+      "filesScanned": [
+        "eslint.config.js",
+        "src/App.css",
+        "src/App.jsx"
+      ],
+      "complianceIssues": [
+        {
+          "file": "src/App.jsx",
+          "line": 13,
+          "lineContent": "        <h3 className=\"welcome-text\">Welcome to Luxury</h3>",
+          "issue": "A heading element (h3) is being used for decorative text. Misusing headings for non-structural content can confuse assistive technology users who rely on heading navigation.",
+          "severity": "Medium",
+          "wcagCriterion": "1.3.1",
+          "suggestedFix": "If this text is purely decorative, use a non-heading element and hide it from assistive technologies: <p className=\"welcome-text\" aria-hidden=\"true\">Welcome to Luxury</p>. If it conveys structure, choose the correct heading level according to the page hierarchy (e.g., <h2 className=\"welcome-text\">...)."
+        },
+        {
+          "file": "src/App.jsx",
+          "line": 10,
+          "lineContent": "    <div className=\"app\">",
+          "issue": "The main content of the page is not contained within a <main> landmark. Without a main region (or another mechanism), keyboard and screen reader users lack a reliable way to bypass repeated content like the header.",
+          "severity": "High",
+          "wcagCriterion": "2.4.1",
+          "suggestedFix": "Introduce a <main> landmark around the primary content. For example:\n\n<div className=\"app\">\n  <Header />\n  <main id=\"main-content\">\n    <div className=\"welcome-banner\">\n      <p className=\"welcome-text\" aria-hidden=\"true\">Welcome to Luxury</p>\n    </div>\n    <Hero />\n    <RoomAvailability />\n    <PriceList />\n    <ContactForm />\n  </main>\n  <Footer />\n</div>\n\nOptionally pair this with a skip link that targets #main-content."
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "bundleId": 2,
+      "filesScanned": [
+        "src/components/ContactForm.jsx",
+        "src/components/Footer.jsx",
+        "src/components/Header.jsx"
+      ],
+      "complianceIssues": [
+        {
+          "file": "src/components/ContactForm.jsx",
+          "line": 38,
+          "lineContent": "                            <input type=\"text\" placeholder=\"First Name\" />",
+          "issue": "Text input lacks an associated label; relying on placeholder alone does not meet the requirement for clear labels.",
+          "severity": "High",
+          "wcagCriterion": "3.3.2",
+          "suggestedFix": "Provide a programmatically associated label. For example: <label htmlFor=\"firstName\">First Name</label><input id=\"firstName\" type=\"text\" name=\"firstName\" placeholder=\"First Name\" />"
+        },
+        {
+          "file": "src/components/ContactForm.jsx",
+          "line": 39,
+          "lineContent": "                            <input type=\"text\" placeholder=\"Last Name\" />",
+          "issue": "Text input lacks an associated label; relying on placeholder alone does not meet the requirement for clear labels.",
+          "severity": "High",
+          "wcagCriterion": "3.3.2",
+          "suggestedFix": "Provide a programmatically associated label. For example: <label htmlFor=\"lastName\">Last Name</label><input id=\"lastName\" type=\"text\" name=\"lastName\" placeholder=\"Last Name\" />"
+        },
+        {
+          "file": "src/components/ContactForm.jsx",
+          "line": 41,
+          "lineContent": "                        <input type=\"email\" placeholder=\"Email Address\" />",
+          "issue": "Email input lacks an associated label; placeholder text is not an adequate substitute.",
+          "severity": "High",
+          "wcagCriterion": "3.3.2",
+          "suggestedFix": "Provide a programmatically associated label. For example: <label htmlFor=\"email\">Email Address</label><input id=\"email\" type=\"email\" name=\"email\" placeholder=\"Email Address\" />"
+        },
+        {
+          "file": "src/components/ContactForm.jsx",
+          "line": 42,
+          "lineContent": "                        <input type=\"tel\" placeholder=\"Phone Number\" />",
+          "issue": "Telephone input lacks an associated label; placeholder text is not an adequate substitute.",
+          "severity": "High",
+          "wcagCriterion": "3.3.2",
+          "suggestedFix": "Provide a programmatically associated label. For example: <label htmlFor=\"phone\">Phone Number</label><input id=\"phone\" type=\"tel\" name=\"phone\" placeholder=\"Phone Number\" />"
+        },
+        {
+          "file": "src/components/ContactForm.jsx",
+          "line": 43,
+          "lineContent": "                        <textarea rows=\"5\" placeholder=\"Your Message\"></textarea>",
+          "issue": "Textarea lacks an associated label; placeholder text is not an adequate substitute.",
+          "severity": "High",
+          "wcagCriterion": "3.3.2",
+          "suggestedFix": "Provide a programmatically associated label. For example: <label htmlFor=\"message\">Your Message</label><textarea id=\"message\" name=\"message\" rows=\"5\" placeholder=\"Your Message\"></textarea>"
+        },
+        {
+          "file": "src/components/ContactForm.jsx",
+          "line": 45,
+          "lineContent": "                        <div className=\"submit-btn\" onClick={handleSubmit}>",
+          "issue": "Clickable div used as a button is not keyboard-operable by default (not focusable and lacks key handlers).",
+          "severity": "High",
+          "wcagCriterion": "2.1.1",
+          "suggestedFix": "Use a native button within a form for full keyboard and AT support: <form onSubmit={handleSubmit}>...<button type=\"submit\" className=\"submit-btn\">Submit</button></form>. If a non-button is kept, add role=\"button\", tabIndex={0}, and handle Enter/Space via onKeyDown."
+        },
+        {
+          "file": "src/components/ContactForm.jsx",
+          "line": 36,
+          "lineContent": "                    <div className=\"contact-form\">",
+          "issue": "Form controls are not contained within a semantic <form> element, reducing programmatic relationships and native submit behavior (e.g., Enter key to submit).",
+          "severity": "Medium",
+          "wcagCriterion": "1.3.1",
+          "suggestedFix": "Wrap the inputs and submit control in a <form> with an onSubmit handler: <form className=\"contact-form\" onSubmit={handleSubmit}>...</form> and use a <button type=\"submit\">."
+        },
+        {
+          "file": "src/components/ContactForm.jsx",
+          "line": 38,
+          "lineContent": "                            <input type=\"text\" placeholder=\"First Name\" />",
+          "issue": "Common input purpose is not programmatically identifiable; missing appropriate autocomplete token.",
+          "severity": "Medium",
+          "wcagCriterion": "1.3.5",
+          "suggestedFix": "Add an appropriate autocomplete attribute: <input id=\"firstName\" type=\"text\" name=\"firstName\" autocomplete=\"given-name\" placeholder=\"First Name\" />"
+        },
+        {
+          "file": "src/components/ContactForm.jsx",
+          "line": 39,
+          "lineContent": "                            <input type=\"text\" placeholder=\"Last Name\" />",
+          "issue": "Common input purpose is not programmatically identifiable; missing appropriate autocomplete token.",
+          "severity": "Medium",
+          "wcagCriterion": "1.3.5",
+          "suggestedFix": "Add an appropriate autocomplete attribute: <input id=\"lastName\" type=\"text\" name=\"lastName\" autocomplete=\"family-name\" placeholder=\"Last Name\" />"
+        },
+        {
+          "file": "src/components/ContactForm.jsx",
+          "line": 41,
+          "lineContent": "                        <input type=\"email\" placeholder=\"Email Address\" />",
+          "issue": "Common input purpose is not programmatically identifiable; missing appropriate autocomplete token.",
+          "severity": "Medium",
+          "wcagCriterion": "1.3.5",
+          "suggestedFix": "Add an appropriate autocomplete attribute: <input id=\"email\" type=\"email\" name=\"email\" autocomplete=\"email\" placeholder=\"Email Address\" />"
+        },
+        {
+          "file": "src/components/ContactForm.jsx",
+          "line": 42,
+          "lineContent": "                        <input type=\"tel\" placeholder=\"Phone Number\" />",
+          "issue": "Common input purpose is not programmatically identifiable; missing appropriate autocomplete token.",
+          "severity": "Medium",
+          "wcagCriterion": "1.3.5",
+          "suggestedFix": "Add an appropriate autocomplete attribute: <input id=\"phone\" type=\"tel\" name=\"phone\" autocomplete=\"tel\" placeholder=\"Phone Number\" />"
+        },
+        {
+          "file": "src/components/Footer.jsx",
+          "line": 14,
+          "lineContent": "                            <img src=\"https://cdn-icons-png.flaticon.com/128/733/733547.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Facebook')} />",
+          "issue": "Functional image used as a control has empty alt text, so no accessible name is provided for the control.",
+          "severity": "High",
+          "wcagCriterion": "1.1.1",
+          "suggestedFix": "Provide an accessible name and use a semantic control. Example: <button type=\"button\" className=\"social-icon\" aria-label=\"Facebook\" onClick={...}><img src=\"...\" alt=\"\" /></button> or use <a href=\"https://facebook.com/...\" aria-label=\"Facebook\"><img src=\"...\" alt=\"\" /></a>."
+        },
+        {
+          "file": "src/components/Footer.jsx",
+          "line": 14,
+          "lineContent": "                            <img src=\"https://cdn-icons-png.flaticon.com/128/733/733547.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Facebook')} />",
+          "issue": "Interactive image is not keyboard-focusable and lacks keyboard event handling, making it inoperable via keyboard.",
+          "severity": "High",
+          "wcagCriterion": "2.1.1",
+          "suggestedFix": "Use a native interactive element (button or anchor) which is focusable by default, or add role=\"button\", tabIndex={0}, and onKeyDown handlers for Enter/Space."
+        },
+        {
+          "file": "src/components/Footer.jsx",
+          "line": 15,
+          "lineContent": "                            <img src=\"https://cdn-icons-png.flaticon.com/128/2111/2111463.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Instagram')} />",
+          "issue": "Functional image used as a control has empty alt text, so no accessible name is provided for the control.",
+          "severity": "High",
+          "wcagCriterion": "1.1.1",
+          "suggestedFix": "Provide an accessible name and use a semantic control. Example: <button type=\"button\" className=\"social-icon\" aria-label=\"Instagram\" onClick={...}><img src=\"...\" alt=\"\" /></button> or use <a href=\"https://instagram.com/...\" aria-label=\"Instagram\"><img src=\"...\" alt=\"\" /></a>."
+        },
+        {
+          "file": "src/components/Footer.jsx",
+          "line": 15,
+          "lineContent": "                            <img src=\"https://cdn-icons-png.flaticon.com/128/2111/2111463.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Instagram')} />",
+          "issue": "Interactive image is not keyboard-focusable and lacks keyboard event handling, making it inoperable via keyboard.",
+          "severity": "High",
+          "wcagCriterion": "2.1.1",
+          "suggestedFix": "Use a native interactive element (button or anchor) which is focusable by default, or add role=\"button\", tabIndex={0}, and onKeyDown handlers for Enter/Space."
+        },
+        {
+          "file": "src/components/Footer.jsx",
+          "line": 16,
+          "lineContent": "                            <img src=\"https://cdn-icons-png.flaticon.com/128/733/733579.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Twitter')} />",
+          "issue": "Functional image used as a control has empty alt text, so no accessible name is provided for the control.",
+          "severity": "High",
+          "wcagCriterion": "1.1.1",
+          "suggestedFix": "Provide an accessible name and use a semantic control. Example: <button type=\"button\" className=\"social-icon\" aria-label=\"Twitter\" onClick={...}><img src=\"...\" alt=\"\" /></button> or use <a href=\"https://twitter.com/...\" aria-label=\"Twitter\"><img src=\"...\" alt=\"\" /></a>."
+        },
+        {
+          "file": "src/components/Footer.jsx",
+          "line": 16,
+          "lineContent": "                            <img src=\"https://cdn-icons-png.flaticon.com/128/733/733579.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Twitter')} />",
+          "issue": "Interactive image is not keyboard-focusable and lacks keyboard event handling, making it inoperable via keyboard.",
+          "severity": "High",
+          "wcagCriterion": "2.1.1",
+          "suggestedFix": "Use a native interactive element (button or anchor) which is focusable by default, or add role=\"button\", tabIndex={0}, and onKeyDown handlers for Enter/Space."
+        },
+        {
+          "file": "src/components/Footer.jsx",
+          "line": 56,
+          "lineContent": "                        <a href=\"#\">Read More</a> about our commitment to excellence.",
+          "issue": "Link text 'Read More' is ambiguous when taken out of context and does not clearly describe its destination or purpose.",
+          "severity": "Medium",
+          "wcagCriterion": "2.4.4",
+          "suggestedFix": "Use descriptive link text that conveys purpose, e.g., <a href=\"#\">Read more about our commitment to excellence</a> or <a href=\"#\">Our commitment to excellence</a>."
+        },
+        {
+          "file": "src/components/Footer.jsx",
+          "line": 61,
+          "lineContent": "                        <a href=\"#\">Click here</a> to view our full legal disclaimer and privacy practices.",
+          "issue": "Link text 'Click here' is ambiguous and does not describe the link purpose on its own.",
+          "severity": "Medium",
+          "wcagCriterion": "2.4.4",
+          "suggestedFix": "Use descriptive link text, e.g., <a href=\"#\">View our full legal disclaimer and privacy practices</a>."
+        },
+        {
+          "file": "src/components/Header.jsx",
+          "line": 14,
+          "lineContent": "          <span className=\"nav-item\" onClick={() => handleNavClick('rooms')}>Rooms & Suites</span>",
+          "issue": "Clickable span is not keyboard-accessible (not focusable and lacks key handlers).",
+          "severity": "High",
+          "wcagCriterion": "2.1.1",
+          "suggestedFix": "Use a semantic element such as <a href=\"/rooms\" className=\"nav-item\">Rooms & Suites</a> or <button type=\"button\" className=\"nav-item\" onClick={...}>Rooms & Suites</button>. If keeping span, add role=\"button\", tabIndex={0}, and handle Enter/Space in onKeyDown."
+        },
+        {
+          "file": "src/components/Header.jsx",
+          "line": 15,
+          "lineContent": "          <span className=\"nav-item\" onClick={() => handleNavClick('dining')}>Dining</span>",
+          "issue": "Clickable span is not keyboard-accessible (not focusable and lacks key handlers).",
+          "severity": "High",
+          "wcagCriterion": "2.1.1",
+          "suggestedFix": "Use a semantic element such as <a href=\"/dining\" className=\"nav-item\">Dining</a> or <button type=\"button\" className=\"nav-item\" onClick={...}>Dining</button>. If keeping span, add role=\"button\", tabIndex={0}, and handle Enter/Space in onKeyDown."
+        },
+        {
+          "file": "src/components/Header.jsx",
+          "line": 16,
+          "lineContent": "          <span className=\"nav-item\" onClick={() => handleNavClick('spa')}>Spa & Wellness</span>",
+          "issue": "Clickable span is not keyboard-accessible (not focusable and lacks key handlers).",
+          "severity": "High",
+          "wcagCriterion": "2.1.1",
+          "suggestedFix": "Use a semantic element such as <a href=\"/spa\" className=\"nav-item\">Spa & Wellness</a> or <button type=\"button\" className=\"nav-item\" onClick={...}>Spa & Wellness</button>. If keeping span, add role=\"button\", tabIndex={0}, and handle Enter/Space in onKeyDown."
+        },
+        {
+          "file": "src/components/Header.jsx",
+          "line": 17,
+          "lineContent": "          <span className=\"nav-item\" onClick={() => handleNavClick('experiences')}>Experiences</span>",
+          "issue": "Clickable span is not keyboard-accessible (not focusable and lacks key handlers).",
+          "severity": "High",
+          "wcagCriterion": "2.1.1",
+          "suggestedFix": "Use a semantic element such as <a href=\"/experiences\" className=\"nav-item\">Experiences</a> or <button type=\"button\" className=\"nav-item\" onClick={...}>Experiences</button>. If keeping span, add role=\"button\", tabIndex={0}, and handle Enter/Space in onKeyDown."
+        },
+        {
+          "file": "src/components/Header.jsx",
+          "line": 18,
+          "lineContent": "          <span className=\"nav-item\" onClick={() => handleNavClick('contact')}>Contact</span>",
+          "issue": "Clickable span is not keyboard-accessible (not focusable and lacks key handlers).",
+          "severity": "High",
+          "wcagCriterion": "2.1.1",
+          "suggestedFix": "Use a semantic element such as <a href=\"/contact\" className=\"nav-item\">Contact</a> or <button type=\"button\" className=\"nav-item\" onClick={...}>Contact</button>. If keeping span, add role=\"button\", tabIndex={0}, and handle Enter/Space in onKeyDown."
+        },
+        {
+          "file": "src/components/Header.jsx",
+          "line": 20,
+          "lineContent": "        <div className=\"book-btn\" onClick={() => handleNavClick('booking')}>",
+          "issue": "Clickable div is not keyboard-accessible (not focusable and lacks key handlers).",
+          "severity": "High",
+          "wcagCriterion": "2.1.1",
+          "suggestedFix": "Use a semantic button or link: <button type=\"button\" className=\"book-btn\" onClick={...}>Book Now</button> or <a href=\"/booking\" className=\"book-btn\">Book Now</a>. If keeping div, add role=\"button\", tabIndex={0}, and handle Enter/Space in onKeyDown."
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "bundleId": 3,
+      "filesScanned": [
+        "src/components/Hero.jsx",
+        "src/components/PriceList.jsx",
+        "src/components/RoomAvailability.jsx"
+      ],
+      "complianceIssues": [
+        {
+          "file": "src/components/Hero.jsx",
+          "line": 21,
+          "lineContent": "                    <div className=\"btn btn-primary\">Click Here</div>",
+          "issue": "Non-semantic element used as a control. A div styled and labeled like a button has no accessible role/name and is not announced correctly by assistive technologies.",
+          "severity": "High",
+          "wcagCriterion": "4.1.2",
+          "suggestedFix": "Replace the div with a semantic button or link and provide an accessible name, for example:\n<button type=\"button\" className=\"btn btn-primary\">Book your stay</button>\n// or if it navigates\n<a href=\"/booking\" className=\"btn btn-primary\">Book your stay</a>"
+        },
+        {
+          "file": "src/components/Hero.jsx",
+          "line": 21,
+          "lineContent": "                    <div className=\"btn btn-primary\">Click Here</div>",
+          "issue": "Ambiguous label. The text 'Click Here' does not convey purpose without surrounding context.",
+          "severity": "Medium",
+          "wcagCriterion": "2.4.4",
+          "suggestedFix": "Use a descriptive label that communicates the action, e.g.: <button type=\"button\" className=\"btn btn-primary\">Book your stay</button> or <a href=\"/offers\" className=\"btn btn-primary\">View current offers</a>."
+        },
+        {
+          "file": "src/components/Hero.jsx",
+          "line": 22,
+          "lineContent": "                    <div className=\"btn btn-outline\">Read More</div>",
+          "issue": "Non-semantic element used as a control. A div styled like a button has no role/name and is not keyboard accessible.",
+          "severity": "High",
+          "wcagCriterion": "4.1.2",
+          "suggestedFix": "Use a semantic link or button, for example:\n<a href=\"/about\" className=\"btn btn-outline\">Learn more about The Silent Oasis</a>\n// or\n<button type=\"button\" className=\"btn btn-outline\">Learn more about The Silent Oasis</button>"
+        },
+        {
+          "file": "src/components/Hero.jsx",
+          "line": 22,
+          "lineContent": "                    <div className=\"btn btn-outline\">Read More</div>",
+          "issue": "Ambiguous label. 'Read More' does not clearly indicate destination or purpose when taken out of context.",
+          "severity": "Medium",
+          "wcagCriterion": "2.4.4",
+          "suggestedFix": "Make the text specific to its destination, e.g.: <a href=\"/about\" className=\"btn btn-outline\">Learn more about The Silent Oasis</a>."
+        },
+        {
+          "file": "src/components/PriceList.jsx",
+          "line": 23,
+          "lineContent": "                        <td>Service</td>",
+          "issue": "Table header cell is marked up as a data cell. Screen readers will not identify this as a column header.",
+          "severity": "High",
+          "wcagCriterion": "1.3.1",
+          "suggestedFix": "Use a th element with scope for column headers, e.g.: <th scope=\"col\">Service</th>."
+        },
+        {
+          "file": "src/components/PriceList.jsx",
+          "line": 24,
+          "lineContent": "                        <td>Weekday</td>",
+          "issue": "Table header cell is marked up as a data cell. Screen readers will not identify this as a column header.",
+          "severity": "High",
+          "wcagCriterion": "1.3.1",
+          "suggestedFix": "Use a th element with scope for column headers, e.g.: <th scope=\"col\">Weekday</th>."
+        },
+        {
+          "file": "src/components/PriceList.jsx",
+          "line": 25,
+          "lineContent": "                        <td>Weekend</td>",
+          "issue": "Table header cell is marked up as a data cell. Screen readers will not identify this as a column header.",
+          "severity": "High",
+          "wcagCriterion": "1.3.1",
+          "suggestedFix": "Use a th element with scope for column headers, e.g.: <th scope=\"col\">Weekend</th>."
+        },
+        {
+          "file": "src/components/PriceList.jsx",
+          "line": 26,
+          "lineContent": "                        <td>Holiday</td>",
+          "issue": "Table header cell is marked up as a data cell. Screen readers will not identify this as a column header.",
+          "severity": "High",
+          "wcagCriterion": "1.3.1",
+          "suggestedFix": "Use a th element with scope for column headers, e.g.: <th scope=\"col\">Holiday</th>."
+        },
+        {
+          "file": "src/components/PriceList.jsx",
+          "line": 41,
+          "lineContent": "                    <a href=\"#\">Click here</a> for full terms.",
+          "issue": "Ambiguous link text does not identify the destination/purpose when taken out of context.",
+          "severity": "Medium",
+          "wcagCriterion": "2.4.4",
+          "suggestedFix": "Provide descriptive link text, e.g.: <a href=\"#\">View full terms and conditions</a>."
+        },
+        {
+          "file": "src/components/RoomAvailability.jsx",
+          "line": 63,
+          "lineContent": "                            <img src={room.image} alt=\"\" className=\"room-image\" />",
+          "issue": "Informative image missing alternative text. Empty alt hides important information (room imagery) from assistive technology.",
+          "severity": "High",
+          "wcagCriterion": "1.1.1",
+          "suggestedFix": "Provide meaningful alt text, e.g.: <img src={room.image} alt={room.name} className=\"room-image\" /> or a brief description like alt={`${room.name} interior`}."
+        },
+        {
+          "file": "src/components/RoomAvailability.jsx",
+          "line": 67,
+          "lineContent": "                                    <span className={`status-dot ${room.available ? 'status-available' : 'status-booked'}`}></span>",
+          "issue": "Availability is conveyed by color alone (status dot) with no textual indicator, which is not accessible to users who cannot perceive color.",
+          "severity": "High",
+          "wcagCriterion": "1.4.1",
+          "suggestedFix": "Include a text label for the status in addition to the dot and hide the dot from assistive tech, e.g.:\n<span className={`status-dot ${room.available ? 'status-available' : 'status-booked'}`} aria-hidden=\"true\"></span>\n<span className=\"status-text\">{room.available ? 'Available' : 'Booked'}</span>"
+        },
+        {
+          "file": "src/components/RoomAvailability.jsx",
+          "line": 71,
+          "lineContent": "                                    <span className=\"room-link\">Read More</span>",
+          "issue": "Non-semantic element used as a link. A span styled to look interactive lacks an accessible role/name and is not keyboard accessible.",
+          "severity": "High",
+          "wcagCriterion": "4.1.2",
+          "suggestedFix": "Use a semantic link/button with an accessible name, e.g.:\n<a className=\"room-link\" href={`/rooms/${room.id}`}>Read more about {room.name}</a>\n// or if it triggers an action\n<button type=\"button\" className=\"room-link\">Read more about {room.name}</button>"
+        },
+        {
+          "file": "src/components/RoomAvailability.jsx",
+          "line": 71,
+          "lineContent": "                                    <span className=\"room-link\">Read More</span>",
+          "issue": "Ambiguous link/control text. 'Read More' does not clearly indicate purpose or destination.",
+          "severity": "Medium",
+          "wcagCriterion": "2.4.4",
+          "suggestedFix": "Make the label specific, e.g.: <a className=\"room-link\" href={`/rooms/${room.id}`}>Read more about {room.name}</a>."
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "bundleId": 4,
+      "filesScanned": [
+        "src/components/ContactForm.css",
+        "src/components/Footer.css",
+        "src/components/Header.css"
+      ],
+      "complianceIssues": [
+        {
+          "file": "src/components/ContactForm.css",
+          "line": 19,
+          "lineContent": "    color: #c9a962;",
+          "issue": "Low contrast text. Gold (#c9a962) on a very light background (#faf9f7) is approximately 2.0:1, below the 4.5:1 minimum for normal text.",
+          "severity": "High",
+          "wcagCriterion": "1.4.3",
+          "suggestedFix": "Use a darker text color that achieves at least 4.5:1 on #faf9f7 (e.g., color: #6b4e00) or increase size/weight to meet large text criterion. Example: .contact-info .section-label { color: #6b4e00; }"
+        },
+        {
+          "file": "src/components/ContactForm.css",
+          "line": 54,
+          "lineContent": "    color: #c9a962;",
+          "issue": "Low contrast text. Gold (#c9a962) used for small labels is approximately 2.0:1 on a light background, below the 4.5:1 minimum for normal text.",
+          "severity": "High",
+          "wcagCriterion": "1.4.3",
+          "suggestedFix": "Choose a darker color for labels (e.g., #6b4e00) or provide a darker background behind the label to achieve ≥4.5:1. Example: .contact-label { color: #6b4e00; }"
+        },
+        {
+          "file": "src/components/ContactForm.css",
+          "line": 77,
+          "lineContent": "    border: 1px solid #e5e5e5;",
+          "issue": "Insufficient non-text contrast for input boundaries. The light gray border (#e5e5e5) against a very light background (~#faf9f7) has ~1.2:1 contrast, below the 3:1 required for UI component boundaries.",
+          "severity": "High",
+          "wcagCriterion": "1.4.11",
+          "suggestedFix": "Use a darker border (≥3:1 against surrounding background), increase thickness, or provide a contrasting fill. Example: .contact-form input, .contact-form textarea { border: 1px solid #767676; }"
+        },
+        {
+          "file": "src/components/ContactForm.css",
+          "line": 85,
+          "lineContent": "    border-color: #c9a962;",
+          "issue": "Focus state for inputs uses gold (#c9a962) which contrasts ~2.0:1 against a very light background, below the 3:1 required for visible UI component indicators.",
+          "severity": "High",
+          "wcagCriterion": "1.4.11",
+          "suggestedFix": "Provide a higher-contrast focus indicator (e.g., 2px outline or border) that meets ≥3:1. Example: .contact-form input:focus-visible, .contact-form textarea:focus-visible { outline: 2px solid #005fcc; outline-offset: 2px; }"
+        },
+        {
+          "file": "src/components/ContactForm.css",
+          "line": 91,
+          "lineContent": "    color: white;",
+          "issue": "White button text on the gold gradient background (#c9a962–#b8944f) yields ~2.1–2.9:1 contrast, below the 4.5:1 minimum for normal text.",
+          "severity": "High",
+          "wcagCriterion": "1.4.3",
+          "suggestedFix": "Either darken the gradient substantially or use a dark text color. Example: .submit-btn { background: linear-gradient(135deg, #6b4e00 0%, #614400 100%); color: #1a1a1a; }"
+        },
+        {
+          "file": "src/components/ContactForm.css",
+          "line": 101,
+          "lineContent": ".submit-btn:hover {",
+          "issue": "Hover state is styled but there is no corresponding visible keyboard focus style, which can make focus difficult to see for keyboard users.",
+          "severity": "Medium",
+          "wcagCriterion": "2.4.7",
+          "suggestedFix": "Add a :focus-visible style that provides a clear focus indicator. Example: .submit-btn:focus-visible { outline: 2px solid #005fcc; outline-offset: 2px; }"
+        },
+        {
+          "file": "src/components/Footer.css",
+          "line": 69,
+          "lineContent": "    color: #c9a962;",
+          "issue": "Low contrast on link hover. Gold (#c9a962) on a white background is ~2.1:1, below the 4.5:1 minimum for normal text.",
+          "severity": "High",
+          "wcagCriterion": "1.4.3",
+          "suggestedFix": "Use a hover color that maintains ≥4.5:1 contrast (e.g., #6b4e00), or add a contrasting background highlight. Example: .link-list a:hover { color: #6b4e00; }"
+        },
+        {
+          "file": "src/components/Footer.css",
+          "line": 68,
+          "lineContent": ".link-list a:hover {",
+          "issue": "Hover state is styled but there is no corresponding :focus-visible style for keyboard users, reducing focus visibility.",
+          "severity": "Medium",
+          "wcagCriterion": "2.4.7",
+          "suggestedFix": "Mirror hover styles for focus. Example: .link-list a:focus-visible { color: #6b4e00; outline: 2px solid #005fcc; outline-offset: 2px; }"
+        },
+        {
+          "file": "src/components/Footer.css",
+          "line": 43,
+          "lineContent": ".social-icon:hover {",
+          "issue": "Hover state is styled but there is no :focus-visible state, making keyboard focus on social icons potentially invisible.",
+          "severity": "Medium",
+          "wcagCriterion": "2.4.7",
+          "suggestedFix": "Provide a visible focus style. Example: .social-icon:focus-visible { outline: 2px solid #005fcc; outline-offset: 3px; opacity: 1; }"
+        },
+        {
+          "file": "src/components/Header.css",
+          "line": 45,
+          "lineContent": "    color: #c9a962;",
+          "issue": "Low contrast on navigation item hover. Gold (#c9a962) over a light header background (~white) is ~2.1:1, below the 4.5:1 minimum for normal text.",
+          "severity": "High",
+          "wcagCriterion": "1.4.3",
+          "suggestedFix": "Use a darker hover color that maintains ≥4.5:1 contrast (e.g., #6b4e00) or add a contrasting background/underline on hover. Example: .nav-item:hover { color: #6b4e00; }"
+        },
+        {
+          "file": "src/components/Header.css",
+          "line": 51,
+          "lineContent": "    color: white;",
+          "issue": "White button text on the gold gradient background (#c9a962–#b8944f) yields ~2.1–2.9:1 contrast, below the 4.5:1 minimum for normal text.",
+          "severity": "High",
+          "wcagCriterion": "1.4.3",
+          "suggestedFix": "Use a darker text color or darken the gradient. Example: .book-btn { background: linear-gradient(135deg, #6b4e00 0%, #614400 100%); color: #1a1a1a; }"
+        },
+        {
+          "file": "src/components/Header.css",
+          "line": 60,
+          "lineContent": ".book-btn:hover {",
+          "issue": "Hover state is styled but no :focus-visible style is provided, which can make keyboard focus hard to detect.",
+          "severity": "Medium",
+          "wcagCriterion": "2.4.7",
+          "suggestedFix": "Add a clear focus style. Example: .book-btn:focus-visible { outline: 2px solid #005fcc; outline-offset: 2px; }"
+        },
+        {
+          "file": "src/components/Header.css",
+          "line": 44,
+          "lineContent": ".nav-item:hover {",
+          "issue": "Hover state is styled but there is no corresponding visible focus style for keyboard users.",
+          "severity": "Medium",
+          "wcagCriterion": "2.4.7",
+          "suggestedFix": "Mirror hover styles for focus and add a clear focus indicator. Example: .nav-item:focus-visible { color: #6b4e00; outline: 2px solid #005fcc; outline-offset: 2px; }"
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "bundleId": 5,
+      "filesScanned": [
+        "src/components/Hero.css",
+        "src/components/PriceList.css",
+        "src/components/RoomAvailability.css"
+      ],
+      "complianceIssues": [
+        {
+          "file": "src/components/PriceList.css",
+          "line": 43,
+          "lineContent": "    color: #c9a962;",
+          "issue": "Low text contrast: Gold text (#c9a962) on a white background does not meet the minimum 4.5:1 contrast ratio for normal text. This affects readability of table values in non-header columns.",
+          "severity": "High",
+          "wcagCriterion": "1.4.3",
+          "suggestedFix": "Use a darker text color that achieves at least 4.5:1 contrast on white. For example:\n.price-table td:not(:first-child) {\n    text-align: center;\n    color: #2d2d2d; /* High-contrast on white */\n    font-weight: 600;\n}\nIf brand color is required, choose a darker shade that meets 4.5:1 and verify with a contrast checker."
+        },
+        {
+          "file": "src/components/PriceList.css",
+          "line": 55,
+          "lineContent": "    text-decoration: none;",
+          "issue": "Links are not visually distinguishable from surrounding text. Removing underlines combined with inherited color makes links rely on color (or no difference) alone to convey link state.",
+          "severity": "High",
+          "wcagCriterion": "1.4.1",
+          "suggestedFix": "Provide a non-color visual indicator for links (e.g., underline). For example:\n.price-note a {\n    color: #1a0dab; /* or another distinct color with sufficient contrast */\n    text-decoration: underline;\n}\nAlso consider adding a focus style:\n.price-note a:focus {\n    outline: 2px solid #1a0dab;\n    outline-offset: 2px;\n}"
+        },
+        {
+          "file": "src/components/PriceList.css",
+          "line": 54,
+          "lineContent": "    color: inherit;",
+          "issue": "Links inherit the surrounding text color, removing a key differentiator. Combined with no underline, this causes links to be indistinguishable from body text, relying on color alone (or no difference) to indicate link status.",
+          "severity": "High",
+          "wcagCriterion": "1.4.1",
+          "suggestedFix": "Assign a distinct link style that does not rely only on color. For example:\n.price-note a {\n    color: #1a0dab; /* distinct link color with sufficient contrast */\n    text-decoration: underline;\n    font-weight: 600; /* optional additional non-color cue */\n}"
+        },
+        {
+          "file": "src/components/RoomAvailability.css",
+          "line": 17,
+          "lineContent": "    color: #c9a962;",
+          "issue": "Low text contrast: Gold text (#c9a962) on the light section background (#faf9f7) does not meet the minimum 4.5:1 contrast ratio for normal text (used for the section label).",
+          "severity": "High",
+          "wcagCriterion": "1.4.3",
+          "suggestedFix": "Use a darker color for the section label that meets 4.5:1 against #faf9f7. For example:\n.section-label {\n    color: #2d2d2d;\n}\nIf brand color must be used, choose a darker shade of the brand color that passes 4.5:1 and verify with a contrast checker."
+        },
+        {
+          "file": "src/components/RoomAvailability.css",
+          "line": 84,
+          "lineContent": "    color: #c9a962;",
+          "issue": "Low text contrast: Price text (#c9a962) on white background does not meet contrast requirements. Even as large text (24px), it must meet at least 3:1, which this color does not.",
+          "severity": "High",
+          "wcagCriterion": "1.4.3",
+          "suggestedFix": "Increase contrast for the price text. For example:\n.room-price {\n    color: #2d2d2d; /* High-contrast on white */\n}\nAlternatively, use a darker brand shade that achieves at least 3:1 for large text. Verify with a contrast checker."
+        },
+        {
+          "file": "src/components/RoomAvailability.css",
+          "line": 90,
+          "lineContent": "    color: #999;",
+          "issue": "Low text contrast: Secondary price period text (#999999) on white background does not meet the 4.5:1 ratio for normal text (14px).",
+          "severity": "High",
+          "wcagCriterion": "1.4.3",
+          "suggestedFix": "Use a darker gray for sufficient contrast. For example:\n.price-period {\n    color: #666666; /* or #595959 */\n}\nConfirm with a contrast checker to ensure ≥4.5:1 on white."
+        },
+        {
+          "file": "src/components/RoomAvailability.css",
+          "line": 104,
+          "lineContent": "    color: #c9a962;",
+          "issue": "Low text contrast on hover: Changing link text to #c9a962 on a white background reduces contrast below the required ratio, making the hovered state less readable.",
+          "severity": "High",
+          "wcagCriterion": "1.4.3",
+          "suggestedFix": "Ensure hover state maintains sufficient contrast. For example:\n.room-link:hover {\n    color: #1a1a1a; /* Keep high contrast */\n    text-decoration: underline; /* Optional non-color cue on hover */\n}\nAlternatively, use a darker brand shade that meets contrast requirements."
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "bundleId": 6,
+      "filesScanned": [
+        "src/index.css",
+        "src/main.jsx",
+        "vite.config.js"
+      ],
+      "complianceIssues": [
+        {
+          "file": "src/index.css",
+          "line": 3,
+          "lineContent": "  outline: none !important;",
+          "issue": "Global removal of focus outlines hides focus indicators for all interactive elements, making keyboard navigation difficult to track.",
+          "severity": "High",
+          "wcagCriterion": "2.4.7",
+          "suggestedFix": "Remove the global outline reset and provide visible focus styles for interactive elements. For example:\n/* Remove outline reset from the universal rule */\n/* * { margin: 0; padding: 0; box-sizing: border-box; } */\n:focus-visible { outline: 3px solid #1a1a1a; outline-offset: 2px; }\na:focus-visible, button:focus-visible, [role=\"button\"]:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid #1a1a1a; outline-offset: 2px; }"
+        },
+        {
+          "file": "src/index.css",
+          "line": 37,
+          "lineContent": "  color: inherit;",
+          "issue": "Links inherit the same color as surrounding text, making them indistinguishable in running text.",
+          "severity": "High",
+          "wcagCriterion": "1.4.1",
+          "suggestedFix": "Provide a distinct, high-contrast link color and/or underline for links. For example:\na { color: #0a66c2; text-decoration: underline; }\na:hover, a:focus { text-decoration-thickness: 2px; }\na:focus-visible { outline: 2px solid #1a1a1a; outline-offset: 2px; }"
+        },
+        {
+          "file": "src/index.css",
+          "line": 38,
+          "lineContent": "  text-decoration: none;",
+          "issue": "Removing link underlines removes a key non-color cue that indicates links, making them hard to detect.",
+          "severity": "High",
+          "wcagCriterion": "1.4.1",
+          "suggestedFix": "Restore underlines for inline links, at least in body copy, and ensure they remain present on focus:\na { text-decoration: underline; }\na:hover, a:focus { text-decoration-thickness: 2px; }"
+        },
+        {
+          "file": "src/index.css",
+          "line": 93,
+          "lineContent": "  color: var(--text-low-contrast);",
+          "issue": "The low-contrast text color (#cccccc) against white background (~2.2:1) fails minimum text contrast requirements.",
+          "severity": "High",
+          "wcagCriterion": "1.4.3",
+          "suggestedFix": "Use a darker color that reaches at least 4.5:1 against white. For example:\n:root { --text-low-contrast: #666666; }\n/* or */\n.low-contrast-text { color: #595959; }"
+        },
+        {
+          "file": "src/index.css",
+          "line": 105,
+          "lineContent": "  background-color: #22c55e;",
+          "issue": "Status indicator relies on color alone (green dot) to convey availability, which is not accessible for users who cannot perceive color differences.",
+          "severity": "High",
+          "wcagCriterion": "1.4.1",
+          "suggestedFix": "Do not rely on color alone. Add a text label (e.g., \"Available\") adjacent to the dot, or use an icon/shape difference in addition to color. Ensure the label is visible and programmatically associated (e.g., include text in the DOM, not only via CSS pseudo-elements)."
+        },
+        {
+          "file": "src/index.css",
+          "line": 109,
+          "lineContent": "  background-color: #ef4444;",
+          "issue": "Status indicator relies on color alone (red dot) to convey a \"booked\" state, which is not accessible for users who cannot perceive color differences.",
+          "severity": "High",
+          "wcagCriterion": "1.4.1",
+          "suggestedFix": "Include a non-color cue such as a text label (e.g., \"Booked\") next to the dot or a distinct icon/shape. Ensure the label is present in the DOM for assistive technologies."
+        },
+        {
+          "file": "src/index.css",
+          "line": 118,
+          "lineContent": "  border: 1px solid #e5e5e5;",
+          "issue": "Form field borders are very low contrast against the white background, making input boundaries hard to discern.",
+          "severity": "Medium",
+          "wcagCriterion": "1.4.11",
+          "suggestedFix": "Use a higher contrast border (>= 3:1 against white) or a thicker/darker outline. For example:\ninput, textarea { border: 1px solid #767676; }\ninput:focus, textarea:focus { border-color: #1a1a1a; outline: 2px solid #1a1a1a; outline-offset: 2px; }"
+        },
+        {
+          "file": "src/index.css",
+          "line": 61,
+          "lineContent": "  color: var(--text-light);",
+          "issue": "White button text on the gold gradient background is unlikely to meet the 4.5:1 contrast ratio for normal-size text.",
+          "severity": "High",
+          "wcagCriterion": "1.4.3",
+          "suggestedFix": "Increase contrast by using darker text or a darker button background. For example:\n.btn-primary { color: #1a1a1a; }\n/* or darken the gradient colors until white text reaches 4.5:1 */"
+        },
+        {
+          "file": "src/index.css",
+          "line": 72,
+          "lineContent": "  color: var(--primary-gold);",
+          "issue": "Gold text on a white (or light) background has insufficient contrast for normal text in outline buttons.",
+          "severity": "High",
+          "wcagCriterion": "1.4.3",
+          "suggestedFix": "Use a higher-contrast text color for outline buttons on light backgrounds. For example:\n.btn-outline { color: #1a1a1a; border-color: #1a1a1a; }\n/* or darken the brand gold significantly until contrast ≥ 4.5:1 */"
+        },
+        {
+          "file": "src/index.css",
+          "line": 77,
+          "lineContent": "  color: var(--text-light);",
+          "issue": "On hover, outline buttons switch to white text on a gold background, which may not meet the 4.5:1 contrast ratio.",
+          "severity": "High",
+          "wcagCriterion": "1.4.3",
+          "suggestedFix": "Ensure hover state maintains sufficient contrast. For example:\n.btn-outline:hover { background: var(--primary-gold); color: #1a1a1a; }\n/* or darken the background color until white text reaches ≥ 4.5:1 */"
+        }
+      ],
+      "status": "success"
+    }
+  ]
+}
