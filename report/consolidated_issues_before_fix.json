@@ -1,0 +1,2843 @@
+{
+  "generatedAt": "2026-02-10T15:13:10.828Z",
+  "summary": {
+    "totalBundles": 21,
+    "totalFilesAudited": 75,
+    "totalIssues": 262,
+    "issuesByLevel": {
+      "A": 212,
+      "AA": 50,
+      "AAA": 0
+    },
+    "issuesBySeverity": {
+      "critical": 73,
+      "major": 164,
+      "minor": 25
+    }
+  },
+  "bundleResults": [
+    {
+      "bundleId": "entry-bundle-1",
+      "filesAudited": [
+        "src\\index.js",
+        "src\\App.js",
+        "src\\App.css",
+        "src\\reportWebVitals.js",
+        "src\\App\\store.js",
+        "src\\Features\\Cart\\cartSlice.js",
+        "src\\Features\\Wishlist\\wishListSlice.js",
+        "src\\index.css"
+      ],
+      "issueCount": 0
+    },
+    {
+      "bundleId": "bundle-contact",
+      "filesAudited": [
+        "src\\Pages\\Contact.jsx",
+        "src\\Components\\Contact\\ContactPage.jsx",
+        "src\\Components\\Contact\\ContactPage.css"
+      ],
+      "issueCount": 4
+    },
+    {
+      "bundleId": "bundle-data",
+      "filesAudited": [
+        "src\\Data\\BlogData.js",
+        "src\\Data\\StoreData.js"
+      ],
+      "issueCount": 0
+    },
+    {
+      "bundleId": "bundle-about",
+      "filesAudited": [
+        "src\\Pages\\About.jsx",
+        "src\\Components\\About\\AboutPage.jsx",
+        "src\\Components\\About\\AboutPage.css",
+        "src\\Components\\Home\\Services\\Services.jsx",
+        "src\\Components\\Home\\Services\\Services.css"
+      ],
+      "issueCount": 14
+    },
+    {
+      "bundleId": "bundle-deal",
+      "filesAudited": [
+        "src\\Components\\Home\\Deal\\DealTimer.jsx",
+        "src\\Components\\Home\\Deal\\DealTimer.css"
+      ],
+      "issueCount": 9
+    },
+    {
+      "bundleId": "bundle-shopping-cart",
+      "filesAudited": [
+        "src\\Components\\ShoppingCart\\ShoppingCart.jsx",
+        "src\\Components\\ShoppingCart\\ShoppingCart.css"
+      ],
+      "issueCount": 18
+    },
+    {
+      "bundleId": "bundle-public",
+      "filesAudited": [
+        "public\\index.html"
+      ],
+      "issueCount": 0
+    },
+    {
+      "bundleId": "bundle-popup",
+      "filesAudited": [
+        "src\\Components\\PopupBanner\\Popup.jsx",
+        "src\\Components\\PopupBanner\\Popup.css"
+      ],
+      "issueCount": 4
+    },
+    {
+      "bundleId": "bundle-blog",
+      "filesAudited": [
+        "src\\Pages\\Blog.jsx",
+        "src\\Components\\Blog\\BlogList\\BlogList.jsx",
+        "src\\Components\\Blog\\BlogList\\BlogList.css",
+        "src\\Components\\Blog\\BlogDetails\\BlogDetails.jsx",
+        "src\\Components\\Blog\\BlogDetails\\BlogDetails.css"
+      ],
+      "issueCount": 18
+    },
+    {
+      "bundleId": "bundle-shop",
+      "filesAudited": [
+        "src\\Pages\\Shop.jsx",
+        "src\\Components\\Shop\\ShopDetails\\ShopDetails.jsx",
+        "src\\Components\\Shop\\ShopDetails\\ShopDetails.css",
+        "src\\Components\\Shop\\Filters\\Filter.jsx",
+        "src\\Components\\Shop\\Filters\\Filter.css"
+      ],
+      "issueCount": 37
+    },
+    {
+      "bundleId": "bundle-tests",
+      "filesAudited": [
+        "src\\App.test.js",
+        "src\\setupTests.js"
+      ],
+      "issueCount": 0
+    },
+    {
+      "bundleId": "bundle-scroll",
+      "filesAudited": [
+        "src\\Components\\ScrollButton\\ScrollToTop.jsx",
+        "src\\Components\\ScrollButton\\ScrollToTop.css"
+      ],
+      "issueCount": 2
+    },
+    {
+      "bundleId": "bundle-auth",
+      "filesAudited": [
+        "src\\Pages\\Authentication.jsx",
+        "src\\Components\\Authentication\\LoginSign\\LoginSignUp.jsx",
+        "src\\Components\\Authentication\\LoginSign\\LoginSignUp.css",
+        "src\\Components\\Authentication\\Reset\\ResetPass.jsx",
+        "src\\Components\\Authentication\\Reset\\ResetPass.css"
+      ],
+      "issueCount": 22
+    },
+    {
+      "bundleId": "bundle-trendy-limited",
+      "filesAudited": [
+        "src\\Components\\Home\\Trendy\\Trendy.jsx",
+        "src\\Components\\Home\\Trendy\\Trendy.css",
+        "src\\Components\\Home\\Limited\\LimitedEdition.jsx",
+        "src\\Components\\Home\\Limited\\LimitedEdition.css"
+      ],
+      "issueCount": 2
+    },
+    {
+      "bundleId": "bundle-header",
+      "filesAudited": [
+        "src\\Components\\Header\\Navbar.jsx",
+        "src\\Components\\Header\\Navbar.css"
+      ],
+      "issueCount": 16
+    },
+    {
+      "bundleId": "bundle-notfound",
+      "filesAudited": [
+        "src\\Pages\\NotFound.jsx",
+        "src\\Components\\Error\\Error.jsx",
+        "src\\Components\\Error\\Error.css"
+      ],
+      "issueCount": 5
+    },
+    {
+      "bundleId": "bundle-hero",
+      "filesAudited": [
+        "src\\Components\\Home\\Hero\\HeroSection.jsx",
+        "src\\Components\\Home\\Hero\\HeroSection.css",
+        "src\\Components\\Model\\Model.jsx"
+      ],
+      "issueCount": 9
+    },
+    {
+      "bundleId": "bundle-product-details",
+      "filesAudited": [
+        "src\\Pages\\ProductDetails.jsx",
+        "src\\Components\\Product\\AdditonInfo\\AdditionalInfo.jsx",
+        "src\\Components\\Product\\AdditonInfo\\AdditionalInfo.css",
+        "src\\Components\\Product\\ProductMain\\Product.jsx",
+        "src\\Components\\Product\\ProductMain\\Product.css",
+        "src\\Components\\Product\\RelatedProducts\\RelatedProducts.jsx",
+        "src\\Components\\Product\\RelatedProducts\\RelatedProducts.css"
+      ],
+      "issueCount": 46
+    },
+    {
+      "bundleId": "bundle-footer",
+      "filesAudited": [
+        "src\\Components\\Footer\\Footer.jsx",
+        "src\\Components\\Footer\\Footer.css"
+      ],
+      "issueCount": 17
+    },
+    {
+      "bundleId": "bundle-home-main",
+      "filesAudited": [
+        "src\\Pages\\Home.jsx",
+        "src\\Components\\Home\\Banner\\Banner.jsx",
+        "src\\Components\\Home\\Banner\\Banner.css",
+        "src\\Components\\Home\\Collection\\CollectionBox.jsx",
+        "src\\Components\\Home\\Collection\\CollectionBox.css",
+        "src\\Components\\Home\\Instagram\\Instagram.jsx",
+        "src\\Components\\Home\\Instagram\\Instagram.css"
+      ],
+      "issueCount": 30
+    },
+    {
+      "bundleId": "bundle-terms",
+      "filesAudited": [
+        "src\\Pages\\TermsConditions.jsx",
+        "src\\Components\\Terms\\TermsandConditions.jsx",
+        "src\\Components\\Terms\\TermsandConditions.css"
+      ],
+      "issueCount": 9
+    }
+  ],
+  "issues": [
+    {
+      "file": "src/Components/Contact/ContactPage.jsx",
+      "line": 64,
+      "lineContent": "              <input",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Text input for 'Name' is missing an associated label. Relying on placeholder text does not provide a programmatically associated label.",
+      "recommendation": "Add a visible <label htmlFor=\"name\">Name</label> and give the input an id (e.g., id=\"name\"), or provide an aria-label/aria-labelledby to ensure an accessible name.",
+      "severity": "critical"
+    },
+    {
+      "file": "src/Components/Contact/ContactPage.jsx",
+      "line": 71,
+      "lineContent": "              <input",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Email input is missing an associated label. Placeholder text alone is not sufficient for assistive technologies.",
+      "recommendation": "Add a visible <label htmlFor=\"email\">Email address</label> and give the input an id (e.g., id=\"email\"), or provide an aria-label/aria-labelledby to ensure an accessible name.",
+      "severity": "critical"
+    },
+    {
+      "file": "src/Components/Contact/ContactPage.jsx",
+      "line": 78,
+      "lineContent": "              <textarea",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Textarea for the message is missing an associated label. Placeholder text is not an accessible replacement for a label.",
+      "recommendation": "Add a visible <label htmlFor=\"message\">Your Message</label> and give the textarea an id (e.g., id=\"message\"), or provide an aria-label/aria-labelledby to ensure an accessible name.",
+      "severity": "critical"
+    },
+    {
+      "file": "src/Components/Contact/ContactPage.jsx",
+      "line": 31,
+      "lineContent": "            title=\"uomomap\"",
+      "criterion": "2.4.1",
+      "level": "A",
+      "description": "The iframe title is not descriptive of its content/purpose, which can hinder navigation for screen reader users.",
+      "recommendation": "Use a descriptive title such as title=\"Map showing store location\" or similar that clearly describes the iframe’s content.",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\About\\AboutPage.jsx",
+      "line": 26,
+      "lineContent": "<img src={about1} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Image has empty alt attribute but appears to be informative content",
+      "recommendation": "Provide meaningful alt text describing the image (e.g., alt=\"Team photo at Uomo\"), or confirm it is purely decorative and keep alt=\"\"",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\About\\AboutPage.jsx",
+      "line": 63,
+      "lineContent": "<img src={about2} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Image has empty alt attribute but appears to be informative content",
+      "recommendation": "Provide meaningful alt text describing the image (e.g., alt=\"Office interior of the company\"), or confirm it is purely decorative and keep alt=\"\"",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\About\\AboutPage.jsx",
+      "line": 110,
+      "lineContent": "<img src={brand1} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Brand logo image has empty alt text; logos typically convey the brand name and are informative",
+      "recommendation": "Set alt text to the brand name (e.g., alt=\"Brand 1\") or appropriate brand name",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\About\\AboutPage.jsx",
+      "line": 115,
+      "lineContent": "<img src={brand2} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Brand logo image has empty alt text; logos typically convey the brand name and are informative",
+      "recommendation": "Set alt text to the brand name (e.g., alt=\"Brand 2\") or appropriate brand name",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\About\\AboutPage.jsx",
+      "line": 120,
+      "lineContent": "<img src={brand3} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Brand logo image has empty alt text; logos typically convey the brand name and are informative",
+      "recommendation": "Set alt text to the brand name (e.g., alt=\"Brand 3\") or appropriate brand name",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\About\\AboutPage.jsx",
+      "line": 125,
+      "lineContent": "<img src={brand4} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Brand logo image has empty alt text; logos typically convey the brand name and are informative",
+      "recommendation": "Set alt text to the brand name (e.g., alt=\"Brand 4\") or appropriate brand name",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\About\\AboutPage.jsx",
+      "line": 130,
+      "lineContent": "<img src={brand5} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Brand logo image has empty alt text; logos typically convey the brand name and are informative",
+      "recommendation": "Set alt text to the brand name (e.g., alt=\"Brand 5\") or appropriate brand name",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\About\\AboutPage.jsx",
+      "line": 135,
+      "lineContent": "<img src={brand6} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Brand logo image has empty alt text; logos typically convey the brand name and are informative",
+      "recommendation": "Set alt text to the brand name (e.g., alt=\"Brand 6\") or appropriate brand name",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\About\\AboutPage.jsx",
+      "line": 140,
+      "lineContent": "<img src={brand7} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Brand logo image has empty alt text; logos typically convey the brand name and are informative",
+      "recommendation": "Set alt text to the brand name (e.g., alt=\"Brand 7\") or appropriate brand name",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\About\\AboutPage.jsx",
+      "line": 102,
+      "lineContent": "autoplay={{",
+      "criterion": "2.2.2",
+      "level": "A",
+      "description": "Autoplaying carousel moves content automatically without a visible mechanism to pause, stop, or hide the movement",
+      "recommendation": "Provide keyboard-accessible controls to pause/stop the carousel or disable autoplay by default (e.g., add a Pause/Play button and use Swiper's methods to control Autoplay)",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Services\\Services.jsx",
+      "line": 13,
+      "lineContent": "          <FaCartFlatbedSuitcase size={50} style={{ marginBottom: \"20px\" }} />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Decorative SVG icon is not hidden from assistive technologies and lacks a text alternative.",
+      "recommendation": "If decorative, add aria-hidden=\"true\" to the icon. If informative, provide an accessible name via aria-label (e.g., aria-label=\"Fast and free delivery\") and role=\"img\".",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Services\\Services.jsx",
+      "line": 18,
+      "lineContent": "          <TfiHeadphoneAlt size={50} style={{ marginBottom: \"20px\" }} />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Decorative SVG icon is not hidden from assistive technologies and lacks a text alternative.",
+      "recommendation": "If decorative, add aria-hidden=\"true\" to the icon. If informative, provide an accessible name via aria-label (e.g., aria-label=\"24/7 customer support\") and role=\"img\".",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Services\\Services.jsx",
+      "line": 23,
+      "lineContent": "          <RiShieldCheckLine size={50} style={{ marginBottom: \"20px\" }} />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Decorative SVG icon is not hidden from assistive technologies and lacks a text alternative.",
+      "recommendation": "If decorative, add aria-hidden=\"true\" to the icon. If informative, provide an accessible name via aria-label (e.g., aria-label=\"Money-back guarantee\") and role=\"img\".",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Services\\Services.jsx",
+      "line": 11,
+      "lineContent": "      <div className=\"services\">",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "A set of visually grouped items is presented using generic divs instead of semantic list markup, which may obscure list relationships to assistive technologies.",
+      "recommendation": "Use semantic list markup: change the container to a <ul> and each serviceBox to an <li>, preserving existing classes for styling.",
+      "severity": "minor"
+    },
+    {
+      "file": "src\\Components\\Home\\Deal\\DealTimer.jsx",
+      "line": 81,
+      "lineContent": "                <h4>{timeLeft.days}</h4>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Heading tag used for non-heading content (numeric value).",
+      "recommendation": "Use semantic elements (e.g., <span> or <time>) for numeric values instead of heading tags. Example: <time aria-label='Days remaining'>{timeLeft.days}</time>.",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Deal\\DealTimer.jsx",
+      "line": 84,
+      "lineContent": "              <h4>:</h4>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Heading tag used for non-heading punctuation/decoration.",
+      "recommendation": "Use a non-heading element such as <span> for separators. Example: <span aria-hidden='true'>:</span>.",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Deal\\DealTimer.jsx",
+      "line": 86,
+      "lineContent": "                <h4>{timeLeft.hours}</h4>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Heading tag used for non-heading content (numeric value).",
+      "recommendation": "Use semantic elements (e.g., <span> or <time>) for numeric values instead of heading tags. Example: <time aria-label='Hours remaining'>{timeLeft.hours}</time>.",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Deal\\DealTimer.jsx",
+      "line": 89,
+      "lineContent": "              <h4>:</h4>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Heading tag used for non-heading punctuation/decoration.",
+      "recommendation": "Use a non-heading element such as <span> for separators. Example: <span aria-hidden='true'>:</span>.",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Deal\\DealTimer.jsx",
+      "line": 91,
+      "lineContent": "                <h4>{formatTime(timeLeft.minutes)}</h4>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Heading tag used for non-heading content (numeric value).",
+      "recommendation": "Use semantic elements (e.g., <span> or <time>) for numeric values instead of heading tags. Example: <time aria-label='Minutes remaining'>{formatTime(timeLeft.minutes)}</time>.",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Deal\\DealTimer.jsx",
+      "line": 94,
+      "lineContent": "              <h4>:</h4>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Heading tag used for non-heading punctuation/decoration.",
+      "recommendation": "Use a non-heading element such as <span> for separators. Example: <span aria-hidden='true'>:</span>.",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Deal\\DealTimer.jsx",
+      "line": 96,
+      "lineContent": "                <h4>{formatTime(timeLeft.seconds)}</h4>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Heading tag used for non-heading content (numeric value).",
+      "recommendation": "Use semantic elements (e.g., <span> or <time>) for numeric values instead of heading tags. Example: <time aria-label='Seconds remaining'>{formatTime(timeLeft.seconds)}</time>.",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Deal\\DealTimer.jsx",
+      "line": 21,
+      "lineContent": "    const timer = setInterval(() => {",
+      "criterion": "2.2.2",
+      "level": "A",
+      "description": "Auto-updating content (countdown updates every second) without a mechanism to pause, stop, or hide can be distracting.",
+      "recommendation": "Provide a control to pause/stop the countdown (e.g., a 'Pause timer' button that stops the interval), or allow users to hide the timer. If updates are essential, consider reducing update frequency and ensure the region is not announced repeatedly to assistive tech (e.g., avoid aria-live unless necessary).",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Deal\\DealTimer.css",
+      "line": 64,
+      "lineContent": "  text-decoration: none;",
+      "criterion": "1.4.1",
+      "level": "A",
+      "description": "Links rely on color/hover state to indicate clickability; removing underline can make links indistinguishable from surrounding text.",
+      "recommendation": "Provide a persistent non-color visual indicator for links (e.g., keep text-decoration: underline) and ensure a visible focus style (e.g., :focus with underline or outline) so link purpose is clear without relying on color or hover.",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\ShoppingCart\\ShoppingCart.jsx",
+      "line": 147,
+      "lineContent": "<img src={item.frontImg} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Informative product image has empty alt text",
+      "recommendation": "Provide a meaningful alt attribute, e.g., alt={item.productName}",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\ShoppingCart\\ShoppingCart.jsx",
+      "line": 281,
+      "lineContent": "<img src={item.frontImg} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Informative product image has empty alt text (mobile view)",
+      "recommendation": "Provide a meaningful alt attribute, e.g., alt={item.productName}",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\ShoppingCart\\ShoppingCart.jsx",
+      "line": 133,
+      "lineContent": "<th></th>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Empty table header cell results in unlabeled column",
+      "recommendation": "Provide a descriptive header text or use scope and appropriate markup to ensure each column has a label",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\ShoppingCart\\ShoppingCart.jsx",
+      "line": 137,
+      "lineContent": "<th></th>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Empty table header cell results in unlabeled column",
+      "recommendation": "Provide a descriptive header text or use scope and appropriate markup to ensure each column has a label",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\ShoppingCart\\ShoppingCart.jsx",
+      "line": 212,
+      "lineContent": "<MdOutlineClose\n                                onClick={() =>\n                                  dispatch(removeFromCart(item.productID))\n                                }\n                              />",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "Clickable icon is not a focusable interactive element, not operable by keyboard",
+      "recommendation": "Use a button element with an accessible name (e.g., aria-label=\"Remove item\") or add role=\"button\", tabIndex=\"0\", and keyboard event handlers",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\ShoppingCart\\ShoppingCart.jsx",
+      "line": 327,
+      "lineContent": "<MdOutlineClose\n                                    size={20}\n                                    onClick={() =>\n                                      dispatch(removeFromCart(item.productID))\n                                    }\n                                  />",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "Clickable icon is not a focusable interactive element in mobile view, not operable by keyboard",
+      "recommendation": "Use a button element with an accessible name (e.g., aria-label=\"Remove item\") or add role=\"button\", tabIndex=\"0\", and keyboard event handlers",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\ShoppingCart\\ShoppingCart.jsx",
+      "line": 178,
+      "lineContent": "<input\n                                  type=\"text\"\n                                  min=\"1\"\n                                  max=\"20\"\n                                  value={item.quantity}\n                                  onChange={(e) =>\n                                    handleQuantityChange(\n                                      item.productID,\n                                      parseInt(e.target.value)\n                                    )\n                                  }\n                                />",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Quantity input lacks an associated label",
+      "recommendation": "Add a visible label with a for/id association or an aria-label (e.g., aria-label=\"Quantity\") and consider using type=\"number\"",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\ShoppingCart\\ShoppingCart.jsx",
+      "line": 302,
+      "lineContent": "<input\n                                        type=\"text\"\n                                        min=\"1\"\n                                        max=\"20\"\n                                        value={item.quantity}\n                                        onChange={(e) =>\n                                          handleQuantityChange(\n                                            item.productID,\n                                            parseInt(e.target.value)\n                                          )\n                                        }\n                                      />",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Quantity input in mobile view lacks an associated label",
+      "recommendation": "Add a visible label with a for/id association or an aria-label (e.g., aria-label=\"Quantity\") and consider using type=\"number\"",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\ShoppingCart\\ShoppingCart.jsx",
+      "line": 245,
+      "lineContent": "<input\n                                type=\"text\"\n                                placeholder=\"Coupon Code\"\n                              ></input>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Coupon code input relies on placeholder and lacks an associated label",
+      "recommendation": "Add a visible label (e.g., <label for=\"coupon\">Coupon Code</label>) and set id on the input, or use aria-label",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\ShoppingCart\\ShoppingCart.jsx",
+      "line": 342,
+      "lineContent": "<input\n                                 type=\"text\"\n                                 placeholder=\"Coupon Code\"\n                               ></input>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Coupon code input (mobile view) relies on placeholder and lacks an associated label",
+      "recommendation": "Add a visible label (e.g., <label for=\"coupon-mobile\">Coupon Code</label>) and set id on the input, or use aria-label",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\ShoppingCart\\ShoppingCart.jsx",
+      "line": 234,
+      "lineContent": "<th\n                        colSpan=\"6\"\n                        className=\"shopCartFooter\"\n                        style={{\n                          borderBottom: \"none\",\n                          padding: \"20px 0px\",\n                        }}\n                      >",
+      "criterion": "4.1.1",
+      "level": "A",
+      "description": "Invalid table structure: <th> placed directly inside <tfoot> without a wrapping <tr>",
+      "recommendation": "Wrap footer cells in a <tr> inside <tfoot>, e.g., <tfoot><tr><td colSpan=\"6\">…</td></tr></tfoot>",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\ShoppingCart\\ShoppingCart.jsx",
+      "line": 225,
+      "lineContent": "<Link to=\"/shop\" onClick={scrollToTop}>",
+      "criterion": "4.1.1",
+      "level": "A",
+      "description": "Interactive element nesting: a <button> is placed inside a link",
+      "recommendation": "Use a single interactive element. Either style the <Link> as a button or move the onClick to the button and navigate programmatically",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\ShoppingCart\\ShoppingCart.css",
+      "line": 31,
+      "lineContent": "  outline: none;",
+      "criterion": "2.4.7",
+      "level": "AA",
+      "description": "Focus indicator removed for tab buttons",
+      "recommendation": "Provide a visible focus style (e.g., outline, border, or box-shadow) for :focus and :focus-visible states",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\ShoppingCart\\ShoppingCart.css",
+      "line": 184,
+      "lineContent": "  outline: none;",
+      "criterion": "2.4.7",
+      "level": "AA",
+      "description": "Focus indicator removed for quantity input",
+      "recommendation": "Add a custom focus style using :focus or :focus-visible with sufficient contrast",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\ShoppingCart\\ShoppingCart.css",
+      "line": 301,
+      "lineContent": "  outline: none;",
+      "criterion": "2.4.7",
+      "level": "AA",
+      "description": "Focus indicator removed for coupon input",
+      "recommendation": "Add visible focus styles (e.g., outline or box-shadow) for keyboard focus",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\ShoppingCart\\ShoppingCart.css",
+      "line": 366,
+      "lineContent": "  outline: none;",
+      "criterion": "2.4.7",
+      "level": "AA",
+      "description": "Focus indicator removed for select element",
+      "recommendation": "Provide visible focus styles for the select (e.g., outline or border change on :focus/:focus-visible)",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\ShoppingCart\\ShoppingCart.css",
+      "line": 415,
+      "lineContent": "  outline: none;",
+      "criterion": "2.4.7",
+      "level": "AA",
+      "description": "Focus indicator removed for checkbox inputs",
+      "recommendation": "Ensure custom checkboxes have a clear focus state using :focus-visible",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\ShoppingCart\\ShoppingCart.css",
+      "line": 537,
+      "lineContent": "  outline: none;",
+      "criterion": "2.4.7",
+      "level": "AA",
+      "description": "Focus indicator removed for radio inputs",
+      "recommendation": "Ensure custom radios have a visible focus state using :focus-visible",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\PopupBanner\\Popup.jsx",
+      "line": 20,
+      "lineContent": "<div className={`popup-content ${fadeOut ? \"fade-out\" : \"\"}`}>",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Popup dialog lacks ARIA role and accessible name",
+      "recommendation": "Add role=\"dialog\" and aria-modal=\"true\" to the dialog container and provide an accessible name using aria-labelledby referencing the dialog heading or aria-label",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\PopupBanner\\Popup.jsx",
+      "line": 21,
+      "lineContent": "<button className=\"close-button\" onClick={handleClose}>",
+      "criterion": "2.4.6",
+      "level": "AA",
+      "description": "Close button label is not descriptive; the \"×\" character may not clearly convey purpose to screen reader users",
+      "recommendation": "Add an accessible name such as aria-label=\"Close\" or include visually hidden text \"Close\" inside the button",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\PopupBanner\\Popup.jsx",
+      "line": 34,
+      "lineContent": "<input type=\"email\" placeholder=\"Your email address\" required />",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Form input is missing an associated label",
+      "recommendation": "Add a visible <label> associated via for/id, or use aria-label/aria-labelledby to provide an accessible name; do not rely on placeholder as a label",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\PopupBanner\\Popup.css",
+      "line": 122,
+      "lineContent": "  outline: none;",
+      "criterion": "2.4.7",
+      "level": "AA",
+      "description": "Focus indicator is removed from the input field",
+      "recommendation": "Avoid removing the focus outline; provide a custom visible focus style (e.g., outline or box-shadow) with sufficient contrast",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Blog\\BlogList\\BlogList.jsx",
+      "line": 23,
+      "lineContent": "              <p>ALL</p>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Categories are presented as paragraphs instead of a semantic list, which does not convey the list relationship",
+      "recommendation": "Use a semantic list (<ul><li>) for the category items, or use a group of buttons if they are interactive",
+      "severity": "minor"
+    },
+    {
+      "file": "src\\Components\\Blog\\BlogList\\BlogList.jsx",
+      "line": 36,
+      "lineContent": "                <img src={blogPost.blogThumbnail} alt=\"blogPost\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Image has a non-descriptive alt attribute",
+      "recommendation": "Provide meaningful alt text that describes the thumbnail, e.g., the blog post title; if purely decorative, use alt=\"\"",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Blog\\BlogList\\BlogList.jsx",
+      "line": 56,
+      "lineContent": "                  <Link to=\"/BlogDetails\" onClick={scrollToTop}>",
+      "criterion": "2.4.4",
+      "level": "A",
+      "description": "Link text 'Continue Reading' is ambiguous when listed multiple times and may not be clear out of context",
+      "recommendation": "Make the link purpose clear by including the post title in the link text or add an aria-label, e.g., aria-label={`Continue reading: ${blogPost.blogHeading}`}",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Blog\\BlogList\\BlogList.jsx",
+      "line": 43,
+      "lineContent": "                <div className=\"blogPostContentHeading\">",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Blog post titles are not marked up with semantic heading elements",
+      "recommendation": "Use appropriate heading levels (e.g., <h3>) for post titles and place the Link inside the heading",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Blog\\BlogList\\BlogList.jsx",
+      "line": 64,
+      "lineContent": "        <p className=\"blogListShowMore\" onClick={scrollToTop}>",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "Clickable paragraph with onClick is not focusable or operable with keyboard",
+      "recommendation": "Use a native <button> element for actions, or add role=\"button\", tabIndex=\"0\", and keyboard handlers for Enter/Space",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Blog\\BlogList\\BlogList.jsx",
+      "line": 65,
+      "lineContent": "          Show More",
+      "criterion": "2.4.6",
+      "level": "AA",
+      "description": "Control label does not accurately describe its action (it scrolls to top, not 'Show More')",
+      "recommendation": "Update the label to describe the action (e.g., 'Back to top') or implement actual 'show more' functionality",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Blog\\BlogList\\BlogList.css",
+      "line": 90,
+      "lineContent": "  color: #767676;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Text color #767676 on a light background may not meet the 4.5:1 contrast ratio for 14px text",
+      "recommendation": "Increase contrast by using a darker color (e.g., #595959 or #4d4d4d), or increase font size/weight to qualify as large text",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Blog\\BlogDetails\\BlogDetails.jsx",
+      "line": 36,
+      "lineContent": "            <img src={blogdetail1} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Featured blog image has empty alt text; likely informative content without an accessible name",
+      "recommendation": "Provide meaningful alt text describing the image content (e.g., alt=\"[describe featured image]\"); use alt=\"\" only if the image is purely decorative",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Blog\\BlogDetails\\BlogDetails.jsx",
+      "line": 100,
+      "lineContent": "            <img src={blogimage1} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Informative image has empty alt text",
+      "recommendation": "Add a descriptive alt attribute for the image; if decorative, keep alt=\"\" and ensure it conveys no information",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Blog\\BlogDetails\\BlogDetails.jsx",
+      "line": 101,
+      "lineContent": "            <img src={blogimage2} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Informative image has empty alt text",
+      "recommendation": "Add a descriptive alt attribute for the image; if decorative, keep alt=\"\" and ensure it conveys no information",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Blog\\BlogDetails\\BlogDetails.jsx",
+      "line": 67,
+      "lineContent": "                <p>",
+      "criterion": "4.1.1",
+      "level": "A",
+      "description": "Invalid HTML nesting: a <ul> is placed inside a <p> element, which breaks proper parsing and semantics",
+      "recommendation": "Remove the <p> wrapper around the list. Place the <ul> directly in the container, or wrap both in a semantic container (e.g., a <div>)",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Blog\\BlogDetails\\BlogDetails.jsx",
+      "line": 79,
+      "lineContent": "                <p>",
+      "criterion": "4.1.1",
+      "level": "A",
+      "description": "Invalid HTML nesting: an <ol> is placed inside a <p> element, which breaks proper parsing and semantics",
+      "recommendation": "Remove the <p> wrapper around the list. Place the <ol> directly in the container, or wrap both in a semantic container (e.g., a <div>)",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Blog\\BlogDetails\\BlogDetails.jsx",
+      "line": 146,
+      "lineContent": "                onClick={scrollToTop}",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "Clickable action bound to a non-interactive <div> is not keyboard accessible",
+      "recommendation": "Use a native <button> or <a> element for interactive controls, or add role=\"button\", tabIndex=\"0\", and handle Enter/Space key events",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Blog\\BlogDetails\\BlogDetails.jsx",
+      "line": 146,
+      "lineContent": "                onClick={scrollToTop}",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Non-interactive element used as a control lacks an explicit role and accessible name",
+      "recommendation": "Replace the <div> with a <button> that includes an accessible name (the visible text is sufficient), or add role=\"button\" and ensure it can be programmatically determined and operated",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Blog\\BlogDetails\\BlogDetails.jsx",
+      "line": 156,
+      "lineContent": "                onClick={scrollToTop}",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "Clickable action bound to a non-interactive <div> is not keyboard accessible",
+      "recommendation": "Use a native <button> or <a> element for interactive controls, or add role=\"button\", tabIndex=\"0\", and handle Enter/Space key events",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Blog\\BlogDetails\\BlogDetails.jsx",
+      "line": 156,
+      "lineContent": "                onClick={scrollToTop}",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Non-interactive element used as a control lacks an explicit role and accessible name",
+      "recommendation": "Replace the <div> with a <button> that includes an accessible name (the visible text is sufficient), or add role=\"button\" and ensure it can be programmatically determined and operated",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Blog\\BlogDetails\\BlogDetails.jsx",
+      "line": 138,
+      "lineContent": "            <button className=\"share-button more\">",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Icon-only button has no accessible name, so its purpose is not announced to assistive technologies",
+      "recommendation": "Add a clear accessible name via visible text or aria-label (e.g., aria-label=\"More share options\")",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Blog\\BlogDetails\\BlogDetails.css",
+      "line": 117,
+      "lineContent": "  background-color: #1da1f2;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Insufficient color contrast for Twitter share button text (white on #1da1f2 likely below 4.5:1 for 16px text)",
+      "recommendation": "Increase contrast by darkening the background color or using a darker text color to achieve at least a 4.5:1 ratio (or increase text size/weight to qualify as large text with a 3:1 ratio)",
+      "severity": "major"
+    },
+    {
+      "file": "src/Components/Shop/ShopDetails/ShopDetails.jsx",
+      "line": 127,
+      "lineContent": "alt=\"\"",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Meaningful product image has empty alt attribute",
+      "recommendation": "Provide descriptive alt text for the product image (e.g., alt={product.productName})",
+      "severity": "critical"
+    },
+    {
+      "file": "src/Components/Shop/ShopDetails/ShopDetails.jsx",
+      "line": 132,
+      "lineContent": "alt=\"\"",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Meaningful product image (back view) has empty alt attribute",
+      "recommendation": "Provide descriptive alt text for the product image (e.g., alt={`Back view of ${product.productName}`})",
+      "severity": "critical"
+    },
+    {
+      "file": "src/Components/Shop/ShopDetails/ShopDetails.jsx",
+      "line": 124,
+      "lineContent": "<Link to=\"/Product\" onClick={scrollToTop}>",
+      "criterion": "2.4.4",
+      "level": "A",
+      "description": "Link contains only images with empty alt, resulting in no accessible name",
+      "recommendation": "Ensure images inside the link have meaningful alt text or add aria-label to the link describing its destination",
+      "severity": "critical"
+    },
+    {
+      "file": "src/Components/Shop/ShopDetails/ShopDetails.jsx",
+      "line": 96,
+      "lineContent": "<div className=\"filterLeft\" onClick={toggleDrawer}>",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "Clickable div is not keyboard accessible",
+      "recommendation": "Use a <button> element or add role=\"button\", tabIndex=\"0\", and keyboard event handlers",
+      "severity": "critical"
+    },
+    {
+      "file": "src/Components/Shop/ShopDetails/ShopDetails.jsx",
+      "line": 112,
+      "lineContent": "<div className=\"filterRight\" onClick={toggleDrawer}>",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "Clickable div is not keyboard accessible",
+      "recommendation": "Use a <button> element or add role=\"button\", tabIndex=\"0\", and keyboard event handlers",
+      "severity": "critical"
+    },
+    {
+      "file": "src/Components/Shop/ShopDetails/ShopDetails.jsx",
+      "line": 136,
+      "lineContent": "<h4 onClick={() => handleAddToCart(product)}>",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "Clickable heading used as a button is not keyboard accessible",
+      "recommendation": "Use a semantic <button> with onClick or add role=\"button\", tabIndex=\"0\", and keyboard handlers",
+      "severity": "critical"
+    },
+    {
+      "file": "src/Components/Shop/ShopDetails/ShopDetails.jsx",
+      "line": 141,
+      "lineContent": "<div className=\"sdProductImagesCart\" onClick={() => handleAddToCart(product)}>",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Custom clickable control lacks accessible name and role",
+      "recommendation": "Use a <button aria-label=\"Add to cart\"> or add role=\"button\", tabIndex=\"0\", and aria-label",
+      "severity": "major"
+    },
+    {
+      "file": "src/Components/Shop/ShopDetails/ShopDetails.jsx",
+      "line": 149,
+      "lineContent": "<FiHeart",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "Clickable icon is not focusable or operable via keyboard",
+      "recommendation": "Wrap in a button or add role=\"button\", tabIndex=\"0\", and keyboard handlers; provide an accessible label",
+      "severity": "critical"
+    },
+    {
+      "file": "src/Components/Shop/ShopDetails/ShopDetails.jsx",
+      "line": 152,
+      "lineContent": "color: wishList[product.productID] ? \"red\" : \"#767676\",",
+      "criterion": "1.4.1",
+      "level": "A",
+      "description": "Wishlist state is conveyed only by color",
+      "recommendation": "Provide a non-color indicator (e.g., aria-pressed state, tooltip, or text) and ensure accessible name reflects state",
+      "severity": "major"
+    },
+    {
+      "file": "src/Components/Shop/ShopDetails/ShopDetails.jsx",
+      "line": 183,
+      "lineContent": "<p onClick={scrollToTop}>",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "Clickable pagination control is not keyboard accessible",
+      "recommendation": "Use <button> or <a href> for pagination controls or add role, tabIndex, and keyboard handlers",
+      "severity": "critical"
+    },
+    {
+      "file": "src/Components/Shop/ShopDetails/ShopDetails.jsx",
+      "line": 190,
+      "lineContent": "<p onClick={scrollToTop}>1</p>",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "Clickable pagination number is not keyboard accessible",
+      "recommendation": "Use <button> or <a href> with proper semantics and keyboard support",
+      "severity": "critical"
+    },
+    {
+      "file": "src/Components/Shop/ShopDetails/ShopDetails.jsx",
+      "line": 197,
+      "lineContent": "<p onClick={scrollToTop}>",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "Clickable pagination control is not keyboard accessible",
+      "recommendation": "Use <button> or <a href> for pagination controls or add role, tabIndex, and keyboard handlers",
+      "severity": "critical"
+    },
+    {
+      "file": "src/Components/Shop/ShopDetails/ShopDetails.jsx",
+      "line": 101,
+      "lineContent": "<select name=\"sort\" id=\"sort\">",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Form control is missing an associated label",
+      "recommendation": "Add a visible <label for=\"sort\"> or an aria-label/aria-labelledby for the select control",
+      "severity": "major"
+    },
+    {
+      "file": "src/Components/Shop/ShopDetails/ShopDetails.jsx",
+      "line": 210,
+      "lineContent": "<IoClose onClick={closeDrawer} className=\"closeButton\" size={26} />",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Custom close control lacks role and accessible name and is not focusable",
+      "recommendation": "Use a <button aria-label=\"Close filter\"> or add role=\"button\", tabIndex=\"0\", and aria-label with keyboard support",
+      "severity": "critical"
+    },
+    {
+      "file": "src/Components/Shop/ShopDetails/ShopDetails.css",
+      "line": 71,
+      "lineContent": "outline: none;",
+      "criterion": "2.4.7",
+      "level": "AA",
+      "description": "Focus indicator removed from select control without providing an alternative",
+      "recommendation": "Provide a visible custom focus style (e.g., outline or box-shadow) for keyboard focus on the select",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Shop\\Filters\\Filter.jsx",
+      "line": 87,
+      "lineContent": "id=\"panel1-header\"",
+      "criterion": "4.1.1",
+      "level": "A",
+      "description": "Duplicate id value used on multiple AccordionSummary elements",
+      "recommendation": "Ensure each AccordionSummary has a unique id (e.g., id=\"categories-header\", id=\"colors-header\")",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Shop\\Filters\\Filter.jsx",
+      "line": 86,
+      "lineContent": "aria-controls=\"panel1-content\"",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "aria-controls references a non-existent element id",
+      "recommendation": "Provide a matching id on the controlled AccordionDetails element or remove aria-controls; ensure the reference is unique and valid",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Shop\\Filters\\Filter.jsx",
+      "line": 104,
+      "lineContent": "id=\"panel1-header\"",
+      "criterion": "4.1.1",
+      "level": "A",
+      "description": "Duplicate id value used on multiple AccordionSummary elements",
+      "recommendation": "Ensure each AccordionSummary has a unique id (e.g., id=\"colors-header\")",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Shop\\Filters\\Filter.jsx",
+      "line": 103,
+      "lineContent": "aria-controls=\"panel1-content\"",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "aria-controls references a non-existent element id",
+      "recommendation": "Provide a matching id on the controlled AccordionDetails element or remove aria-controls; ensure the reference is unique and valid",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Shop\\Filters\\Filter.jsx",
+      "line": 134,
+      "lineContent": "id=\"panel1-header\"",
+      "criterion": "4.1.1",
+      "level": "A",
+      "description": "Duplicate id value used on multiple AccordionSummary elements",
+      "recommendation": "Ensure each AccordionSummary has a unique id (e.g., id=\"sizes-header\")",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Shop\\Filters\\Filter.jsx",
+      "line": 133,
+      "lineContent": "aria-controls=\"panel1-content\"",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "aria-controls references a non-existent element id",
+      "recommendation": "Provide a matching id on the controlled AccordionDetails element or remove aria-controls; ensure the reference is unique and valid",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Shop\\Filters\\Filter.jsx",
+      "line": 161,
+      "lineContent": "id=\"panel1-header\"",
+      "criterion": "4.1.1",
+      "level": "A",
+      "description": "Duplicate id value used on multiple AccordionSummary elements",
+      "recommendation": "Ensure each AccordionSummary has a unique id (e.g., id=\"brands-header\")",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Shop\\Filters\\Filter.jsx",
+      "line": 160,
+      "lineContent": "aria-controls=\"panel1-content\"",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "aria-controls references a non-existent element id",
+      "recommendation": "Provide a matching id on the controlled AccordionDetails element or remove aria-controls; ensure the reference is unique and valid",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Shop\\Filters\\Filter.jsx",
+      "line": 211,
+      "lineContent": "id=\"panel1-header\"",
+      "criterion": "4.1.1",
+      "level": "A",
+      "description": "Duplicate id value used on multiple AccordionSummary elements",
+      "recommendation": "Ensure each AccordionSummary has a unique id (e.g., id=\"price-header\")",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Shop\\Filters\\Filter.jsx",
+      "line": 209,
+      "lineContent": "aria-controls=\"panel1-content\"",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "aria-controls references a non-existent element id",
+      "recommendation": "Provide a matching id on the controlled AccordionDetails element or remove aria-controls; ensure the reference is unique and valid",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Shop\\Filters\\Filter.jsx",
+      "line": 113,
+      "lineContent": "<button",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Button has no accessible name (no text or aria-label)",
+      "recommendation": "Provide an accessible name via aria-label (e.g., aria-label=\"Navy blue\") or include hidden text that describes the color",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Shop\\Filters\\Filter.jsx",
+      "line": 113,
+      "lineContent": "<button",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Toggle button does not expose its pressed/selected state to assistive technologies",
+      "recommendation": "Use aria-pressed to indicate selection state (e.g., aria-pressed={selectedColors.includes(color)}) or use role=\"checkbox\" with aria-checked",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Shop\\Filters\\Filter.jsx",
+      "line": 142,
+      "lineContent": "<button",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Toggle button does not expose its pressed/selected state to assistive technologies",
+      "recommendation": "Use aria-pressed to indicate selection state (e.g., aria-pressed={selectedSizes.includes(size)}) or use role=\"checkbox\" with aria-checked",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Shop\\Filters\\Filter.jsx",
+      "line": 170,
+      "lineContent": "<input",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Text input is missing an associated label",
+      "recommendation": "Add a visible <label for> or an aria-label (e.g., aria-label=\"Search brands\") or aria-labelledby to describe the input",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Shop\\Filters\\Filter.jsx",
+      "line": 169,
+      "lineContent": "<BiSearch className=\"searchIcon\" size={20} color={\"#767676\"} />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Decorative search icon is not hidden from assistive technologies",
+      "recommendation": "Mark the icon as decorative with aria-hidden=\"true\" or provide an appropriate accessible name if it conveys information",
+      "severity": "minor"
+    },
+    {
+      "file": "src\\Components\\Shop\\Filters\\Filter.jsx",
+      "line": 217,
+      "lineContent": "getAriaLabel={() => \"Temperature range\"}",
+      "criterion": "2.4.6",
+      "level": "AA",
+      "description": "Slider label is not descriptive for its purpose (price filter)",
+      "recommendation": "Use a descriptive label such as getAriaLabel={() => \"Price range\"} and consider differentiating thumbs (e.g., aria-labels \"Minimum price\" and \"Maximum price\")",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Shop\\Filters\\Filter.jsx",
+      "line": 94,
+      "lineContent": "<p key={index}>{category}</p>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "List of categories is not marked up semantically as a list",
+      "recommendation": "Use semantic list markup (e.g., <ul> with <li> items) for category lists to convey structure to assistive technologies",
+      "severity": "minor"
+    },
+    {
+      "file": "src\\Components\\Shop\\Filters\\Filter.css",
+      "line": 38,
+      "lineContent": "  outline: none;",
+      "criterion": "2.4.7",
+      "level": "AA",
+      "description": "Focus indicator removed for color buttons without providing a visible custom focus style",
+      "recommendation": "Provide a visible :focus or :focus-visible style (e.g., outline or box-shadow) to clearly indicate keyboard focus",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Shop\\Filters\\Filter.css",
+      "line": 70,
+      "lineContent": "  outline: none;",
+      "criterion": "2.4.7",
+      "level": "AA",
+      "description": "Focus indicator removed for size buttons without providing a visible custom focus style",
+      "recommendation": "Provide a visible :focus or :focus-visible style (e.g., outline or box-shadow) to clearly indicate keyboard focus",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Shop\\Filters\\Filter.css",
+      "line": 101,
+      "lineContent": "  outline: none;",
+      "criterion": "2.4.7",
+      "level": "AA",
+      "description": "Focus indicator removed for search input without providing a visible custom focus style",
+      "recommendation": "Provide a visible :focus or :focus-visible style (e.g., outline or border change with sufficient contrast) to clearly indicate keyboard focus",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Shop\\Filters\\Filter.css",
+      "line": 124,
+      "lineContent": "  outline: none;",
+      "criterion": "2.4.7",
+      "level": "AA",
+      "description": "Focus indicator removed for custom checkbox without providing a visible custom focus style",
+      "recommendation": "Add a :focus-visible style (e.g., thicker outline or box-shadow) to the .brandRadio control to indicate keyboard focus",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Shop\\Filters\\Filter.css",
+      "line": 150,
+      "lineContent": "  color: red;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Text color likely fails contrast against white background (pure red ~4.0:1 at normal text size)",
+      "recommendation": "Use a darker red with at least 4.5:1 contrast against white (e.g., #B30000) or increase text size/weight to meet contrast requirements",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\ScrollButton\\ScrollToTop.jsx",
+      "line": 28,
+      "lineContent": "<div className=\"iconStyle\" onClick={goToTop}>",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "Clickable div is not keyboard accessible (non-interactive element with onClick)",
+      "recommendation": "Use a semantic <button> element for the control, or add role=\"button\", tabIndex=\"0\", and keyboard event handlers (e.g., Enter and Space) to ensure full keyboard accessibility.",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\ScrollButton\\ScrollToTop.jsx",
+      "line": 28,
+      "lineContent": "<div className=\"iconStyle\" onClick={goToTop}>",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Custom control lacks an accessible name and role for assistive technologies",
+      "recommendation": "Replace the div with <button type=\"button\" className=\"iconStyle\" aria-label=\"Scroll to top\"> or add role=\"button\" and aria-label=\"Scroll to top\" to the element so screen readers can identify and announce it.",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Authentication\\LoginSign\\LoginSignUp.jsx",
+      "line": 18,
+      "lineContent": "              onClick={() => handleTab(\"tabButton1\")}",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "onClick used on non-interactive <p> element (tab) makes it inaccessible to keyboard users",
+      "recommendation": "Use a semantic <button> for the tab or add role=\"tab\", tabIndex=\"0\", and keyboard handlers for Enter/Space",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Authentication\\LoginSign\\LoginSignUp.jsx",
+      "line": 17,
+      "lineContent": "            <p",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Custom tab control lacks appropriate role and state (no role=\"tab\" and aria-selected)",
+      "recommendation": "Implement tabs with role=\"tab\" on each tab, aria-selected to reflect state, and associate with panels via aria-controls",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Authentication\\LoginSign\\LoginSignUp.jsx",
+      "line": 24,
+      "lineContent": "              onClick={() => handleTab(\"tabButton2\")}",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "onClick used on non-interactive <p> element (tab) makes it inaccessible to keyboard users",
+      "recommendation": "Use a semantic <button> for the tab or add role=\"tab\", tabIndex=\"0\", and keyboard handlers for Enter/Space",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Authentication\\LoginSign\\LoginSignUp.jsx",
+      "line": 23,
+      "lineContent": "            <p",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Custom tab control lacks appropriate role and state (no role=\"tab\" and aria-selected)",
+      "recommendation": "Implement tabs with role=\"tab\" on each tab, aria-selected to reflect state, and associate with panels via aria-controls",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Authentication\\LoginSign\\LoginSignUp.jsx",
+      "line": 52,
+      "lineContent": "                     <span onClick={() => handleTab(\"tabButton2\")}>",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "onClick used on non-interactive <span> makes it inaccessible to keyboard users",
+      "recommendation": "Use a <button> element or add role=\"button\", tabIndex=\"0\", and keyboard handlers for Enter/Space",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Authentication\\LoginSign\\LoginSignUp.jsx",
+      "line": 52,
+      "lineContent": "                     <span onClick={() => handleTab(\"tabButton2\")}>",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Custom control lacks appropriate role and name (no role=\"button\" or aria attributes)",
+      "recommendation": "Use a native <button> or add role=\"button\" and ensure an accessible name; include keyboard support for Enter/Space",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Authentication\\LoginSign\\LoginSignUp.jsx",
+      "line": 36,
+      "lineContent": "                  <input type=\"email\" placeholder=\"Email address *\" required />",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Input field is missing an associated <label>",
+      "recommendation": "Add a visible label associated via htmlFor/id (e.g., <label htmlFor=\"login-email\">Email address *</label><input id=\"login-email\" ... />)",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Authentication\\LoginSign\\LoginSignUp.jsx",
+      "line": 37,
+      "lineContent": "                  <input type=\"password\" placeholder=\"Password *\" required />",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Input field is missing an associated <label>",
+      "recommendation": "Add a visible label associated via htmlFor/id (e.g., <label htmlFor=\"login-password\">Password *</label><input id=\"login-password\" ... />)",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Authentication\\LoginSign\\LoginSignUp.jsx",
+      "line": 65,
+      "lineContent": "                  <input type=\"text\" placeholder=\"Username *\" required />",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Input field is missing an associated <label>",
+      "recommendation": "Add a visible label associated via htmlFor/id (e.g., <label htmlFor=\"reg-username\">Username *</label><input id=\"reg-username\" ... />)",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Authentication\\LoginSign\\LoginSignUp.jsx",
+      "line": 66,
+      "lineContent": "                  <input type=\"email\" placeholder=\"Email address *\" required />",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Input field is missing an associated <label>",
+      "recommendation": "Add a visible label associated via htmlFor/id (e.g., <label htmlFor=\"reg-email\">Email address *</label><input id=\"reg-email\" ... />)",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Authentication\\LoginSign\\LoginSignUp.jsx",
+      "line": 67,
+      "lineContent": "                  <input type=\"password\" placeholder=\"Password *\" required />",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Input field is missing an associated <label>",
+      "recommendation": "Add a visible label associated via htmlFor/id (e.g., <label htmlFor=\"reg-password\">Password *</label><input id=\"reg-password\" ... />)",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Authentication\\LoginSign\\LoginSignUp.jsx",
+      "line": 16,
+      "lineContent": "          <div className=\"loginSignUpTabs\">",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Tab container lacks appropriate role to convey relationships",
+      "recommendation": "Add role=\"tablist\" to the tab container and ensure tabs have role=\"tab\" and panels have role=\"tabpanel\"",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Authentication\\LoginSign\\LoginSignUp.jsx",
+      "line": 34,
+      "lineContent": "              <div className=\"loginSignUpTabsContentLogin\">",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Tab panel lacks appropriate role and association with its tab",
+      "recommendation": "Add role=\"tabpanel\" and id on the panel, and reference it from the controlling tab with aria-controls; also use aria-labelledby on the panel",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Authentication\\LoginSign\\LoginSignUp.jsx",
+      "line": 63,
+      "lineContent": "              <div className=\"loginSignUpTabsContentRegister\">",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Tab panel lacks appropriate role and association with its tab",
+      "recommendation": "Add role=\"tabpanel\" and id on the panel, and reference it from the controlling tab with aria-controls; also use aria-labelledby on the panel",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Authentication\\LoginSign\\LoginSignUp.css",
+      "line": 111,
+      "lineContent": "  outline: none;",
+      "criterion": "2.4.7",
+      "level": "AA",
+      "description": "Focus indicator removed from custom checkbox without providing an alternative focus style",
+      "recommendation": "Provide a visible focus style using :focus or :focus-visible (e.g., outline: 2px solid #000 or a clear box-shadow) instead of removing the outline",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Authentication\\LoginSign\\LoginSignUp.css",
+      "line": 34,
+      "lineContent": "  color: #767676;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Insufficient text contrast for tab labels (#767676 on white is about 4.1:1; requires at least 4.5:1 for normal text)",
+      "recommendation": "Use a darker color to reach at least 4.5:1 contrast (e.g., #595959 or #333333)",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Authentication\\LoginSign\\LoginSignUp.css",
+      "line": 139,
+      "lineContent": "  color: #767676;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Insufficient text contrast for \"Remember me\" text (#767676 on white is about 4.1:1; requires at least 4.5:1 for normal text)",
+      "recommendation": "Use a darker color to reach at least 4.5:1 contrast (e.g., #595959 or #333333)",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Authentication\\LoginSign\\LoginSignUp.css",
+      "line": 160,
+      "lineContent": "  color: #767676;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Insufficient text contrast for helper text under login form (#767676 on white is about 4.1:1; requires at least 4.5:1 for normal text)",
+      "recommendation": "Use a darker color to reach at least 4.5:1 contrast (e.g., #595959 or #333333)",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Authentication\\LoginSign\\LoginSignUp.css",
+      "line": 186,
+      "lineContent": "  color: #767676;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Insufficient text contrast for helper text under register form (#767676 on white is about 4.1:1; requires at least 4.5:1 for normal text)",
+      "recommendation": "Use a darker color to reach at least 4.5:1 contrast (e.g., #595959 or #333333)",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Authentication\\Reset\\ResetPass.jsx",
+      "line": 14,
+      "lineContent": "            <input type=\"email\" placeholder=\"Email address *\" required />",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Form input is missing an explicit, associated label; placeholder is used as the only label",
+      "recommendation": "Add a visible label associated with the input via htmlFor/id (e.g., <label htmlFor=\"email\">Email address</label> and id=\"email\" on the input); do not rely solely on placeholder text for labeling",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Authentication\\Reset\\ResetPass.css",
+      "line": 25,
+      "lineContent": "  color: #767676;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Paragraph text color (#767676) at 14px likely fails the minimum 4.5:1 contrast ratio against a white background",
+      "recommendation": "Use a darker text color (e.g., #595959 or darker) or increase text size/weight to ensure at least 4.5:1 contrast for normal text",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Authentication\\Reset\\ResetPass.css",
+      "line": 53,
+      "lineContent": "  color: #767676;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Paragraph text color (#767676) at 14px likely fails the minimum 4.5:1 contrast ratio against a white background",
+      "recommendation": "Use a darker text color (e.g., #595959 or darker) or increase text size/weight to ensure at least 4.5:1 contrast for normal text",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Limited\\LimitedEdition.css",
+      "line": 36,
+      "lineContent": "  outline: none;",
+      "criterion": "2.4.7",
+      "level": "AA",
+      "description": "Focus indicator removed for interactive SVG control, making keyboard focus not visible",
+      "recommendation": "Do not remove outlines without providing a visible custom focus style. Add a clear focus indicator using :focus and :focus-visible (e.g., outline or box-shadow) for .swiper-button svg",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Limited\\LimitedEdition.css",
+      "line": 219,
+      "lineContent": "    outline: none;",
+      "criterion": "2.4.7",
+      "level": "AA",
+      "description": "Focus indicator removed for interactive SVG control at small viewport, making keyboard focus not visible",
+      "recommendation": "Do not remove outlines without providing a visible custom focus style. Add a clear focus indicator using :focus and :focus-visible (e.g., outline or box-shadow) for .swiper-button svg in this media query",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Header\\Navbar.jsx",
+      "line": 81,
+      "lineContent": "<FiSearch size={22} onClick={scrollToTop} />",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "Clickable icon is not keyboard accessible (non-interactive SVG with onClick handler)",
+      "recommendation": "Use a semantic <button> with an accessible name (e.g., aria-label=\"Search\") or add role=\"button\", tabIndex=\"0\", and keyboard handlers for Enter/Space",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Header\\Navbar.jsx",
+      "line": 82,
+      "lineContent": "<Link to=\"/loginSignUp\" onClick={scrollToTop}>",
+      "criterion": "2.4.4",
+      "level": "A",
+      "description": "Link has no accessible name (icon-only)",
+      "recommendation": "Add visible text or an aria-label describing the destination (e.g., aria-label=\"My Account\"); alternatively include visually hidden text",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Header\\Navbar.jsx",
+      "line": 85,
+      "lineContent": "<Link to=\"/cart\" onClick={scrollToTop}>",
+      "criterion": "2.4.4",
+      "level": "A",
+      "description": "Link has no accessible name (icon-only)",
+      "recommendation": "Add an accessible name such as aria-label=\"Cart\" and consider including the item count (e.g., aria-label=\"Cart, 3 items\") or include visually hidden text",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Header\\Navbar.jsx",
+      "line": 97,
+      "lineContent": "<FiHeart size={22} onClick={scrollToTop} />",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "Clickable icon is not keyboard accessible (non-interactive SVG with onClick handler)",
+      "recommendation": "Use a semantic <button> with an accessible name (e.g., aria-label=\"Wishlist\") or add role=\"button\", tabIndex=\"0\", and keyboard handlers for Enter/Space",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Header\\Navbar.jsx",
+      "line": 106,
+      "lineContent": "<MdOutlineClose size={22} onClick={toggleMobileMenu} />",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "Mobile menu toggle is not keyboard accessible (icon with onClick only)",
+      "recommendation": "Replace with a <button> element or add role=\"button\", tabIndex=\"0\", and keyboard handlers for Enter/Space",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Header\\Navbar.jsx",
+      "line": 106,
+      "lineContent": "<MdOutlineClose size={22} onClick={toggleMobileMenu} />",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Mobile menu toggle lacks accessible name/role and state (aria-expanded, aria-controls)",
+      "recommendation": "Use a <button aria-label=\"Close menu\" aria-expanded={mobileMenuOpen} aria-controls=\"mobile-menu\"> to convey role and state programmatically",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Header\\Navbar.jsx",
+      "line": 108,
+      "lineContent": "<RiMenu2Line size={22} onClick={toggleMobileMenu} />",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "Mobile menu toggle is not keyboard accessible (icon with onClick only)",
+      "recommendation": "Replace with a <button> element or add role=\"button\", tabIndex=\"0\", and keyboard handlers for Enter/Space",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Header\\Navbar.jsx",
+      "line": 108,
+      "lineContent": "<RiMenu2Line size={22} onClick={toggleMobileMenu} />",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Mobile menu toggle lacks accessible name/role and state (aria-expanded, aria-controls)",
+      "recommendation": "Use a <button aria-label=\"Open menu\" aria-expanded={mobileMenuOpen} aria-controls=\"mobile-menu\"> to convey role and state programmatically",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Header\\Navbar.jsx",
+      "line": 115,
+      "lineContent": "<Link to=\"/cart\">",
+      "criterion": "2.4.4",
+      "level": "A",
+      "description": "Link has no accessible name (icon-only)",
+      "recommendation": "Add an accessible name such as aria-label=\"Cart\" (optionally include item count) or include visually hidden text",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Header\\Navbar.jsx",
+      "line": 132,
+      "lineContent": "<input type=\"text\" placeholder=\"Search products\" />",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Input field is missing an associated label",
+      "recommendation": "Add a <label htmlFor> bound to the input’s id (e.g., label \"Search products\") or use aria-label/aria-labelledby",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Header\\Navbar.jsx",
+      "line": 133,
+      "lineContent": "<Link to=\"/shop\">",
+      "criterion": "2.4.4",
+      "level": "A",
+      "description": "Link has no accessible name (icon-only)",
+      "recommendation": "Add an aria-label describing the action (e.g., aria-label=\"Search\") or include visually hidden text",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Header\\Navbar.jsx",
+      "line": 179,
+      "lineContent": "<select name=\"language\" id=\"language\">",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Select field is missing a programmatically associated label",
+      "recommendation": "Add <label htmlFor=\"language\">Language</label> or use aria-label/aria-labelledby for the select",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Header\\Navbar.jsx",
+      "line": 188,
+      "lineContent": "<select name=\"currency\" id=\"currency\">",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Select field is missing a programmatically associated label",
+      "recommendation": "Add <label htmlFor=\"currency\">Currency</label> or use aria-label/aria-labelledby for the select",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Header\\Navbar.css",
+      "line": 150,
+      "lineContent": "  outline: none;",
+      "criterion": "2.4.7",
+      "level": "AA",
+      "description": "Focus indicator removed from input field",
+      "recommendation": "Provide a visible focus style (e.g., outline or box-shadow) rather than removing the outline",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Header\\Navbar.css",
+      "line": 219,
+      "lineContent": "  outline: none;",
+      "criterion": "2.4.7",
+      "level": "AA",
+      "description": "Focus indicator removed from select field (Language)",
+      "recommendation": "Provide a visible focus style for the select (e.g., outline or box-shadow) rather than removing the outline",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Header\\Navbar.css",
+      "line": 232,
+      "lineContent": "  outline: none;",
+      "criterion": "2.4.7",
+      "level": "AA",
+      "description": "Focus indicator removed from select field (Currency)",
+      "recommendation": "Provide a visible focus style for the select (e.g., outline or box-shadow) rather than removing the outline",
+      "severity": "major"
+    },
+    {
+      "file": "src/Components/Error/Error.jsx",
+      "line": 11,
+      "lineContent": "        <h3>Page not found</h3>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Heading level skips from h1 to h3, creating an improper hierarchy",
+      "recommendation": "Use sequential heading levels; change h3 to h2 or make 'Page not found' the h1 and adjust other headings accordingly",
+      "severity": "major"
+    },
+    {
+      "file": "src/Components/Error/Error.jsx",
+      "line": 10,
+      "lineContent": "        <h1>OOPS!</h1>",
+      "criterion": "2.4.6",
+      "level": "AA",
+      "description": "Top-level heading is not descriptive of the page content",
+      "recommendation": "Use a descriptive h1 such as 'Page not found' and move 'OOPS!' to supporting text or remove it",
+      "severity": "major"
+    },
+    {
+      "file": "src/Components/Error/Error.jsx",
+      "line": 17,
+      "lineContent": "        <Link to=\"/\">Go Back</Link>",
+      "criterion": "2.4.4",
+      "level": "A",
+      "description": "Link text 'Go Back' may be ambiguous when taken out of context",
+      "recommendation": "Use clearer link text like 'Go to Home page' or add an aria-label that specifies the destination",
+      "severity": "major"
+    },
+    {
+      "file": "src/Components/Error/Error.css",
+      "line": 8,
+      "lineContent": "  background-image: url(\"../../Assets/pattern_bg.png\");",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Text is placed directly over a background image, which can reduce contrast and readability",
+      "recommendation": "Ensure text maintains at least 4.5:1 contrast by adding a solid background or semi-opaque overlay behind text, adjusting text color, or avoiding text over images",
+      "severity": "major"
+    },
+    {
+      "file": "src/Pages/NotFound.jsx",
+      "line": 5,
+      "lineContent": "  return (",
+      "criterion": "2.4.2",
+      "level": "A",
+      "description": "Page component does not set a descriptive document title",
+      "recommendation": "Set a specific page title (e.g., using document.title or a head manager like react-helmet) such as '404 – Page not found'",
+      "severity": "major"
+    },
+    {
+      "file": "src/Components/Home/Hero/HeroSection.jsx",
+      "line": 37,
+      "lineContent": "          <Canvas",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Canvas-based 3D content lacks a text alternative or accessible name",
+      "recommendation": "If the 3D model conveys information, add role=\"img\" with an aria-label (e.g., aria-label=\"3D rotating T‑shirt model\") or provide fallback text; if decorative, set aria-hidden=\"true\"",
+      "severity": "major"
+    },
+    {
+      "file": "src/Components/Home/Hero/HeroSection.jsx",
+      "line": 48,
+      "lineContent": "            <OrbitControls",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "3D model interaction (rotation) is only operable via pointer and lacks a keyboard alternative",
+      "recommendation": "Provide keyboard-accessible controls (e.g., arrow keys or buttons to rotate/pause) or ensure equivalent non-pointer operation; if interaction is non-essential, disable it or mark content as decorative",
+      "severity": "major"
+    },
+    {
+      "file": "src/Components/Model/Model.jsx",
+      "line": 34,
+      "lineContent": "      modelRef.current.rotation.y += 0.01;",
+      "criterion": "2.2.2",
+      "level": "A",
+      "description": "Auto-rotating content runs continuously without a mechanism to pause, stop, or hide",
+      "recommendation": "Provide a visible control to pause/stop the rotation and honor prefers-reduced-motion by reducing or disabling animation for users who request it",
+      "severity": "major"
+    },
+    {
+      "file": "src/Components/Home/Hero/HeroSection.jsx",
+      "line": 60,
+      "lineContent": "            <button",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Button has no accessible name (empty content)",
+      "recommendation": "Add a text label or an aria-label (e.g., aria-label=\"Select dark gray color\") and consider adding visible text or a visually hidden label for clarity",
+      "severity": "critical"
+    },
+    {
+      "file": "src/Components/Home/Hero/HeroSection.jsx",
+      "line": 64,
+      "lineContent": "            <button",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Button has no accessible name (empty content)",
+      "recommendation": "Add a text label or an aria-label (e.g., aria-label=\"Select gold color\") and consider adding visible text or a visually hidden label for clarity",
+      "severity": "critical"
+    },
+    {
+      "file": "src/Components/Home/Hero/HeroSection.jsx",
+      "line": 68,
+      "lineContent": "            <button",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Button has no accessible name (empty content)",
+      "recommendation": "Add a text label or an aria-label (e.g., aria-label=\"Select purple color\") and consider adding visible text or a visually hidden label for clarity",
+      "severity": "critical"
+    },
+    {
+      "file": "src/Components/Home/Hero/HeroSection.jsx",
+      "line": 72,
+      "lineContent": "            <button",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Button has no accessible name (empty content)",
+      "recommendation": "Add a text label or an aria-label (e.g., aria-label=\"Select red color\") and consider adding visible text or a visually hidden label for clarity",
+      "severity": "critical"
+    },
+    {
+      "file": "src/Components/Home/Hero/HeroSection.jsx",
+      "line": 59,
+      "lineContent": "          <div className=\"heroColorBtn\">",
+      "criterion": "1.4.1",
+      "level": "A",
+      "description": "Color options are conveyed solely by color without additional text or non-color indicators",
+      "recommendation": "Add visible text labels (e.g., ‘Red’, ‘Purple’) or non-color cues (patterns, icons) to identify options; ensure programmatic labels via aria-label are present for screen readers",
+      "severity": "major"
+    },
+    {
+      "file": "src/Components/Home/Hero/HeroSection.jsx",
+      "line": 32,
+      "lineContent": "              <h5>Discover More</h5>",
+      "criterion": "2.4.4",
+      "level": "A",
+      "description": "Link text 'Discover More' may not clearly describe the destination out of context",
+      "recommendation": "Make the link text more descriptive (e.g., 'Shop Summer Sale') or add an aria-label to the Link that clarifies the destination",
+      "severity": "minor"
+    },
+    {
+      "file": "src\\Components\\Product\\AdditonInfo\\AdditionalInfo.jsx",
+      "line": 24,
+      "lineContent": "onClick={() => handleTabClick(\"aiTab1\")}",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "Tab control implemented with a non-interactive <p> and click handler only; not operable via keyboard",
+      "recommendation": "Use a <button> for tabs or add role=\"tab\", tabIndex=\"0\", and handle Enter/Space keys to activate; ensure focus is managed",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Product\\AdditonInfo\\AdditionalInfo.jsx",
+      "line": 30,
+      "lineContent": "onClick={() => handleTabClick(\"aiTab2\")}",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "Tab control implemented with a non-interactive <p> and click handler only; not operable via keyboard",
+      "recommendation": "Use a <button> for tabs or add role=\"tab\", tabIndex=\"0\", and handle Enter/Space keys to activate; ensure focus is managed",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Product\\AdditonInfo\\AdditionalInfo.jsx",
+      "line": 36,
+      "lineContent": "onClick={() => handleTabClick(\"aiTab3\")}",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "Tab control implemented with a non-interactive <p> and click handler only; not operable via keyboard",
+      "recommendation": "Use a <button> for tabs or add role=\"tab\", tabIndex=\"0\", and handle Enter/Space keys to activate; ensure focus is managed",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Product\\AdditonInfo\\AdditionalInfo.jsx",
+      "line": 23,
+      "lineContent": "<p",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Custom tab control lacks semantic roles and accessible state",
+      "recommendation": "Apply proper tab semantics: role=\"tablist\" to the container, role=\"tab\" to each tab, aria-selected for active state, and aria-controls linking to the panel; alternatively use native <button> elements",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Product\\AdditonInfo\\AdditionalInfo.jsx",
+      "line": 69,
+      "lineContent": "<ul>",
+      "criterion": "4.1.1",
+      "level": "A",
+      "description": "Invalid HTML: <ul> nested inside a <p> element",
+      "recommendation": "Do not wrap list elements in <p>; move the <ul> outside of the <p> and use proper semantic structure",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Product\\AdditonInfo\\AdditionalInfo.jsx",
+      "line": 81,
+      "lineContent": "<ol>",
+      "criterion": "4.1.1",
+      "level": "A",
+      "description": "Invalid HTML: <ol> nested inside a <p> element",
+      "recommendation": "Do not wrap list elements in <p>; move the <ol> outside of the <p> and use proper semantic structure",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Product\\AdditonInfo\\AdditionalInfo.jsx",
+      "line": 139,
+      "lineContent": "<img src={user1} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Image has empty alt text; likely conveys user identity",
+      "recommendation": "Provide descriptive alt text (e.g., alt=\"Photo of Janice Miller\") or confirm decorative intent and use alt=\"\" with aria-hidden=\"true\"",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Product\\AdditonInfo\\AdditionalInfo.jsx",
+      "line": 172,
+      "lineContent": "<img src={user2} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Image has empty alt text; likely conveys user identity",
+      "recommendation": "Provide descriptive alt text (e.g., alt=\"Photo of Benjam Porter\") or confirm decorative intent and use alt=\"\" with aria-hidden=\"true\"",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Product\\AdditonInfo\\AdditionalInfo.jsx",
+      "line": 146,
+      "lineContent": "<FaStar color=\"#FEC78A\" size={10} />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Star icons convey rating without an accessible text alternative",
+      "recommendation": "Provide an accessible label for the rating (e.g., aria-label=\"Rated 5 out of 5\") on the container and set decorative icons to aria-hidden=\"true\"",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Product\\AdditonInfo\\AdditionalInfo.jsx",
+      "line": 213,
+      "lineContent": "<label>Your rating *</label>",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Label is not programmatically associated with the Rating component",
+      "recommendation": "Associate the label using htmlFor with a matching id, or set aria-labelledby on the Rating; with MUI Rating, use getLabelText/aria-label to ensure an accessible name",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Product\\AdditonInfo\\AdditionalInfo.jsx",
+      "line": 218,
+      "lineContent": "<textarea",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Textarea lacks an associated label; placeholder is not a sufficient accessible name",
+      "recommendation": "Add a visible <label> linked via htmlFor/id or provide aria-label/aria-labelledby",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Product\\AdditonInfo\\AdditionalInfo.jsx",
+      "line": 223,
+      "lineContent": "<input",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Text input for name lacks an associated label; placeholder is not a sufficient accessible name",
+      "recommendation": "Add a visible <label> linked via htmlFor/id or provide aria-label/aria-labelledby",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Product\\AdditonInfo\\AdditionalInfo.jsx",
+      "line": 229,
+      "lineContent": "<input",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Email input lacks an associated label; placeholder is not a sufficient accessible name",
+      "recommendation": "Add a visible <label> linked via htmlFor/id or provide aria-label/aria-labelledby",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Product\\AdditonInfo\\AdditionalInfo.css",
+      "line": 274,
+      "lineContent": "  outline: none;",
+      "criterion": "2.4.7",
+      "level": "AA",
+      "description": "Focus indicator removed from custom checkbox without providing an accessible replacement",
+      "recommendation": "Provide a visible focus style (e.g., outline or box-shadow) for :focus to ensure keyboard users can see focus",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Product\\ProductMain\\Product.jsx",
+      "line": 139,
+      "lineContent": "<img src={product1} onClick={() => setCurrentImg(0)} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Interactive image has empty alt text",
+      "recommendation": "Provide meaningful alt text describing the thumbnail (e.g., 'Thumbnail: Lightweight Puffer Jacket view 1') or convert to a button with an accessible name",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Product\\ProductMain\\Product.jsx",
+      "line": 139,
+      "lineContent": "<img src={product1} onClick={() => setCurrentImg(0)} alt=\"\" />",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "Clickable image is not keyboard accessible (no role or tabIndex)",
+      "recommendation": "Use a button element or add role=\"button\", tabIndex=\"0\", and keyboard handlers (Enter/Space) to activate; include an accessible name",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Product\\ProductMain\\Product.jsx",
+      "line": 140,
+      "lineContent": "<img src={product2} onClick={() => setCurrentImg(1)} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Interactive image has empty alt text",
+      "recommendation": "Provide meaningful alt text describing the thumbnail or convert to a button with an accessible name",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Product\\ProductMain\\Product.jsx",
+      "line": 140,
+      "lineContent": "<img src={product2} onClick={() => setCurrentImg(1)} alt=\"\" />",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "Clickable image is not keyboard accessible (no role or tabIndex)",
+      "recommendation": "Use a button element or add role=\"button\", tabIndex=\"0\", and keyboard handlers (Enter/Space) to activate; include an accessible name",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Product\\ProductMain\\Product.jsx",
+      "line": 141,
+      "lineContent": "<img src={product3} onClick={() => setCurrentImg(2)} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Interactive image has empty alt text",
+      "recommendation": "Provide meaningful alt text describing the thumbnail or convert to a button with an accessible name",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Product\\ProductMain\\Product.jsx",
+      "line": 141,
+      "lineContent": "<img src={product3} onClick={() => setCurrentImg(2)} alt=\"\" />",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "Clickable image is not keyboard accessible (no role or tabIndex)",
+      "recommendation": "Use a button element or add role=\"button\", tabIndex=\"0\", and keyboard handlers (Enter/Space) to activate; include an accessible name",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Product\\ProductMain\\Product.jsx",
+      "line": 142,
+      "lineContent": "<img src={product4} onClick={() => setCurrentImg(3)} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Interactive image has empty alt text",
+      "recommendation": "Provide meaningful alt text describing the thumbnail or convert to a button with an accessible name",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Product\\ProductMain\\Product.jsx",
+      "line": 142,
+      "lineContent": "<img src={product4} onClick={() => setCurrentImg(3)} alt=\"\" />",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "Clickable image is not keyboard accessible (no role or tabIndex)",
+      "recommendation": "Use a button element or add role=\"button\", tabIndex=\"0\", and keyboard handlers (Enter/Space) to activate; include an accessible name",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Product\\ProductMain\\Product.jsx",
+      "line": 145,
+      "lineContent": "<img src={productImg[currentImg]} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Informative product image has empty alt text",
+      "recommendation": "Add alt text describing the current product image (e.g., 'Lightweight Puffer Jacket, front view')",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Product\\ProductMain\\Product.jsx",
+      "line": 147,
+      "lineContent": "<button onClick={prevImg} className=\"directionBtn\">",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Custom control lacks an accessible name (icon-only button)",
+      "recommendation": "Add aria-label such as aria-label=\"Previous image\" and ensure the icon is aria-hidden",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Product\\ProductMain\\Product.jsx",
+      "line": 150,
+      "lineContent": "<button onClick={nextImg} className=\"directionBtn\">",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Custom control lacks an accessible name (icon-only button)",
+      "recommendation": "Add aria-label such as aria-label=\"Next image\" and ensure the icon is aria-hidden",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Product\\ProductMain\\Product.jsx",
+      "line": 177,
+      "lineContent": "<FaStar color=\"#FEC78A\" size={10} />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Rating conveyed via non-text icons without accessible text",
+      "recommendation": "Provide accessible text like 'Rated 5 out of 5' via aria-label on the container and mark decorative star icons as aria-hidden=\"true\"",
+      "severity": "minor"
+    },
+    {
+      "file": "src\\Components\\Product\\ProductMain\\Product.jsx",
+      "line": 232,
+      "lineContent": "<button",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Color selection button has no accessible name",
+      "recommendation": "Add an aria-label (e.g., aria-label=\"Select color Black\") and use a radio group pattern with role=\"radiogroup\" on the group and role=\"radio\" with aria-checked on each option",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Product\\ProductMain\\Product.jsx",
+      "line": 256,
+      "lineContent": "                <input",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Input field missing associated label",
+      "recommendation": "Add a visible <label> associated via htmlFor/for or provide aria-label/aria-labelledby (e.g., label 'Quantity')",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Product\\ProductMain\\Product.jsx",
+      "line": 255,
+      "lineContent": "                <button onClick={decrement}>-</button>",
+      "criterion": "2.4.6",
+      "level": "AA",
+      "description": "Button label is not descriptive ('-')",
+      "recommendation": "Add an aria-label like aria-label=\"Decrease quantity\" or include visually hidden descriptive text",
+      "severity": "minor"
+    },
+    {
+      "file": "src\\Components\\Product\\ProductMain\\Product.jsx",
+      "line": 261,
+      "lineContent": "                <button onClick={increment}>+</button>",
+      "criterion": "2.4.6",
+      "level": "AA",
+      "description": "Button label is not descriptive ('+')",
+      "recommendation": "Add an aria-label like aria-label=\"Increase quantity\" or include visually hidden descriptive text",
+      "severity": "minor"
+    },
+    {
+      "file": "src\\Components\\Product\\ProductMain\\Product.jsx",
+      "line": 163,
+      "lineContent": "                <Link to=\"/product\">",
+      "criterion": "2.4.4",
+      "level": "A",
+      "description": "Link text 'Prev' does not clearly indicate purpose or destination",
+      "recommendation": "Provide more descriptive link text (e.g., 'Previous product') or include aria-label for screen readers",
+      "severity": "minor"
+    },
+    {
+      "file": "src\\Components\\Product\\ProductMain\\Product.jsx",
+      "line": 167,
+      "lineContent": "                <Link to=\"/product\">",
+      "criterion": "2.4.4",
+      "level": "A",
+      "description": "Link text 'Next' does not clearly indicate purpose or destination",
+      "recommendation": "Provide more descriptive link text (e.g., 'Next product') or include aria-label for screen readers",
+      "severity": "minor"
+    },
+    {
+      "file": "src\\Components\\Product\\ProductMain\\Product.css",
+      "line": 54,
+      "lineContent": "  outline: none;",
+      "criterion": "2.4.7",
+      "level": "AA",
+      "description": "Focus indicator removed from navigation button without a replacement",
+      "recommendation": "Provide a visible custom focus style (e.g., focus outline or box-shadow) for .directionBtn",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Product\\ProductMain\\Product.css",
+      "line": 200,
+      "lineContent": "  outline: none;",
+      "criterion": "2.4.7",
+      "level": "AA",
+      "description": "Focus indicator removed from size option buttons without a replacement",
+      "recommendation": "Provide a visible custom focus style (e.g., :focus state with outline or box-shadow) for .sizeBtn button",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Product\\ProductMain\\Product.css",
+      "line": 220,
+      "lineContent": "  outline: none;",
+      "criterion": "2.4.7",
+      "level": "AA",
+      "description": "Focus indicator removed from color option buttons without a replacement",
+      "recommendation": "Provide a visible custom focus style (e.g., :focus state with outline or box-shadow) for .colorBtn button",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Product\\ProductMain\\Product.css",
+      "line": 269,
+      "lineContent": "  outline: none;",
+      "criterion": "2.4.7",
+      "level": "AA",
+      "description": "Focus indicator removed from quantity input without a replacement",
+      "recommendation": "Provide a visible custom focus style for .productQuantity input (e.g., border change or outline on :focus)",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Product\\ProductMain\\Product.css",
+      "line": 295,
+      "lineContent": "  outline: none;",
+      "criterion": "2.4.7",
+      "level": "AA",
+      "description": "Focus indicator removed from wishlist button without a replacement",
+      "recommendation": "Provide a visible custom focus style for .productWishList button",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Product\\RelatedProducts\\RelatedProducts.jsx",
+      "line": 42,
+      "lineContent": "<div className=\"swiper-button image-swiper-button-next\">",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "Navigation control is not keyboard accessible (non-interactive element used as a button)",
+      "recommendation": "Use a button element or add role=\"button\", tabIndex=\"0\", and keyboard handlers; ensure it has an accessible name",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Product\\RelatedProducts\\RelatedProducts.jsx",
+      "line": 42,
+      "lineContent": "<div className=\"swiper-button image-swiper-button-next\">",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Custom navigation control lacks an accessible name",
+      "recommendation": "Add aria-label (e.g., aria-label=\"Next slide\") or include descriptive text",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Product\\RelatedProducts\\RelatedProducts.jsx",
+      "line": 45,
+      "lineContent": "<div className=\"swiper-button image-swiper-button-prev\">",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "Navigation control is not keyboard accessible (non-interactive element used as a button)",
+      "recommendation": "Use a button element or add role=\"button\", tabIndex=\"0\", and keyboard handlers; ensure it has an accessible name",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Product\\RelatedProducts\\RelatedProducts.jsx",
+      "line": 45,
+      "lineContent": "<div className=\"swiper-button image-swiper-button-prev\">",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Custom navigation control lacks an accessible name",
+      "recommendation": "Add aria-label (e.g., aria-label=\"Previous slide\") or include descriptive text",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Product\\RelatedProducts\\RelatedProducts.jsx",
+      "line": 80,
+      "lineContent": "<div className=\"rpImages\" onClick={scrollToTop}>",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "Clickable container is not keyboard accessible (non-interactive element used as a control)",
+      "recommendation": "Use a link (e.g., <Link>) or a button element; add role, tabIndex and keyboard handlers, and provide an accessible name",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Product\\RelatedProducts\\RelatedProducts.jsx",
+      "line": 108,
+      "lineContent": "<h5 onClick={scrollToTop}>{product.productName}</h5>",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "Heading used as a clickable control is not keyboard accessible",
+      "recommendation": "Use a semantic link (<Link>) to the product or a button with keyboard support and an accessible name",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Product\\RelatedProducts\\RelatedProducts.jsx",
+      "line": 97,
+      "lineContent": "<FiHeart",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Icon used as a control lacks role and accessible name",
+      "recommendation": "Wrap in a button with aria-label (e.g., aria-label=\"Add to wishlist\") and manage state with aria-pressed",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Product\\RelatedProducts\\RelatedProducts.jsx",
+      "line": 97,
+      "lineContent": "<FiHeart",
+      "criterion": "1.4.1",
+      "level": "A",
+      "description": "Wishlist state indicated by color alone (red vs grey)",
+      "recommendation": "Provide a non-color indicator (e.g., text label change, aria-pressed state, or icon fill change with accompanying text) so state is not conveyed by color alone",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Product\\RelatedProducts\\RelatedProducts.jsx",
+      "line": 112,
+      "lineContent": "<FaStar color=\"#FEC78A\" size={10} />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Rating conveyed via non-text icons without accessible text",
+      "recommendation": "Provide accessible text like 'Rated 5 out of 5' via aria-label on the container and mark decorative star icons as aria-hidden=\"true\"",
+      "severity": "minor"
+    },
+    {
+      "file": "src\\Components\\Footer\\Footer.jsx",
+      "line": 34,
+      "lineContent": "              <img src={logo} alt=\"\" Z />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Non-decorative image (site logo) has empty alt text",
+      "recommendation": "Provide meaningful alt text (e.g., alt=\"Uomo logo\") or only use empty alt if the image is purely decorative",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Footer\\Footer.jsx",
+      "line": 136,
+      "lineContent": "              <img src={paymentIcon} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Image conveying information about accepted payment methods has empty alt text",
+      "recommendation": "Add descriptive alt text (e.g., \"Accepted payment methods: Visa, MasterCard, PayPal, ...\") or mark as decorative only if redundant",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Footer\\Footer.jsx",
+      "line": 45,
+      "lineContent": "              <FaFacebookF />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Standalone SVG icon lacks accessible name and is not marked as decorative",
+      "recommendation": "If decorative, add aria-hidden=\"true\"; if interactive, wrap in a link/button and provide an accessible name (e.g., aria-label=\"Facebook\")",
+      "severity": "minor"
+    },
+    {
+      "file": "src\\Components\\Footer\\Footer.jsx",
+      "line": 46,
+      "lineContent": "              <FaXTwitter />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Standalone SVG icon lacks accessible name and is not marked as decorative",
+      "recommendation": "If decorative, add aria-hidden=\"true\"; if interactive, wrap in a link/button and provide an accessible name (e.g., aria-label=\"X/Twitter\")",
+      "severity": "minor"
+    },
+    {
+      "file": "src\\Components\\Footer\\Footer.jsx",
+      "line": 47,
+      "lineContent": "              <FaInstagram />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Standalone SVG icon lacks accessible name and is not marked as decorative",
+      "recommendation": "If decorative, add aria-hidden=\"true\"; if interactive, wrap in a link/button and provide an accessible name (e.g., aria-label=\"Instagram\")",
+      "severity": "minor"
+    },
+    {
+      "file": "src\\Components\\Footer\\Footer.jsx",
+      "line": 48,
+      "lineContent": "              <FaYoutube />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Standalone SVG icon lacks accessible name and is not marked as decorative",
+      "recommendation": "If decorative, add aria-hidden=\"true\"; if interactive, wrap in a link/button and provide an accessible name (e.g., aria-label=\"YouTube\")",
+      "severity": "minor"
+    },
+    {
+      "file": "src\\Components\\Footer\\Footer.jsx",
+      "line": 49,
+      "lineContent": "              <FaPinterest />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Standalone SVG icon lacks accessible name and is not marked as decorative",
+      "recommendation": "If decorative, add aria-hidden=\"true\"; if interactive, wrap in a link/button and provide an accessible name (e.g., aria-label=\"Pinterest\")",
+      "severity": "minor"
+    },
+    {
+      "file": "src\\Components\\Footer\\Footer.jsx",
+      "line": 130,
+      "lineContent": "              <input type=\"email\" placeholder=\"Your email address\" required />",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Form input is missing an associated label; placeholder text is not a sufficient label",
+      "recommendation": "Add a visible <label htmlFor> and matching id on the input or use aria-label/aria-labelledby to provide an accessible name",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Footer\\Footer.jsx",
+      "line": 156,
+      "lineContent": "              <select name=\"language\" id=\"language\">",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Select element is not programmatically associated with a label",
+      "recommendation": "Add a <label htmlFor=\"language\">Language</label> associated to the select instead of using a <p> as a visual label",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Footer\\Footer.jsx",
+      "line": 165,
+      "lineContent": "              <select name=\"currency\" id=\"currency\">",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Select element is not programmatically associated with a label",
+      "recommendation": "Add a <label htmlFor=\"currency\">Currency</label> associated to the select instead of using a <p> as a visual label",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Footer\\Footer.css",
+      "line": 126,
+      "lineContent": "  outline: none;",
+      "criterion": "2.4.7",
+      "level": "AA",
+      "description": "Focus indicator removed from input, reducing keyboard focus visibility",
+      "recommendation": "Provide a visible custom focus style (e.g., outline or box-shadow) instead of removing it (e.g., outline: 2px solid #000 or similar with sufficient contrast)",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Footer\\Footer.css",
+      "line": 181,
+      "lineContent": "  outline: none;",
+      "criterion": "2.4.7",
+      "level": "AA",
+      "description": "Focus indicator removed from language select, reducing keyboard focus visibility",
+      "recommendation": "Restore a visible focus indicator for the select (e.g., outline or box-shadow with sufficient contrast)",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Footer\\Footer.css",
+      "line": 194,
+      "lineContent": "  outline: none;",
+      "criterion": "2.4.7",
+      "level": "AA",
+      "description": "Focus indicator removed from currency select, reducing keyboard focus visibility",
+      "recommendation": "Restore a visible focus indicator for the select (e.g., outline or box-shadow with sufficient contrast)",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Footer\\Footer.jsx",
+      "line": 34,
+      "lineContent": "              <img src={logo} alt=\"\" Z />",
+      "criterion": "4.1.1",
+      "level": "A",
+      "description": "Invalid/unknown attribute \"Z\" may cause parsing or compatibility issues",
+      "recommendation": "Remove the stray attribute \"Z\" from the img element",
+      "severity": "minor"
+    },
+    {
+      "file": "src\\Components\\Footer\\Footer.jsx",
+      "line": 56,
+      "lineContent": "              <ul onClick={scrollToTop}>",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Click handler attached to a non-interactive element without an accessible role or keyboard support",
+      "recommendation": "Avoid placing onClick on non-interactive elements; move the handler to interactive children or add role=\"button\", tabIndex=\"0\", and keyboard event handling if needed",
+      "severity": "minor"
+    },
+    {
+      "file": "src\\Components\\Footer\\Footer.jsx",
+      "line": 78,
+      "lineContent": "              <ul onClick={scrollToTop}>",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Click handler attached to a non-interactive element without an accessible role or keyboard support",
+      "recommendation": "Avoid placing onClick on non-interactive elements; move the handler to interactive children or add role=\"button\", tabIndex=\"0\", and keyboard event handling if needed",
+      "severity": "minor"
+    },
+    {
+      "file": "src\\Components\\Footer\\Footer.jsx",
+      "line": 100,
+      "lineContent": "              <ul onClick={scrollToTop}>",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Click handler attached to a non-interactive element without an accessible role or keyboard support",
+      "recommendation": "Avoid placing onClick on non-interactive elements; move the handler to interactive children or add role=\"button\", tabIndex=\"0\", and keyboard event handling if needed",
+      "severity": "minor"
+    },
+    {
+      "file": "src\\Components\\Home\\Banner\\Banner.jsx",
+      "line": 21,
+      "lineContent": "<Link to=\"/shop\" onClick={scrollToTop} style={{ color: \"white\" }}>",
+      "criterion": "2.4.4",
+      "level": "A",
+      "description": "Link text \"Shop Now\" is not descriptive enough to convey purpose when taken out of context (e.g., in a links list).",
+      "recommendation": "Use more descriptive link text or an aria-label, e.g., \"Shop women's T‑shirts\" for the left banner and \"Shop men's sportswear\" for the right banner.",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Banner\\Banner.jsx",
+      "line": 34,
+      "lineContent": "<Link to=\"/shop\" onClick={scrollToTop} style={{ color: \"black\" }}>",
+      "criterion": "2.4.4",
+      "level": "A",
+      "description": "Link text \"Shop Now\" is not descriptive enough to convey purpose when taken out of context (e.g., in a links list).",
+      "recommendation": "Use more descriptive link text or an aria-label, e.g., \"Shop men's sportswear\" for this banner.",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Banner\\Banner.css",
+      "line": 11,
+      "lineContent": "  background-image: url(\"../../../Assets/Banner/banner_1.jpg\");",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Text is placed directly over a background image without an overlay, risking insufficient color contrast (e.g., white text over light areas).",
+      "recommendation": "Provide a semi-opaque overlay or solid background behind the text, or adjust colors to ensure a minimum 4.5:1 contrast ratio in all states.",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Home\\Banner\\Banner.css",
+      "line": 22,
+      "lineContent": "  background-image: url(\"../../../Assets/Banner/banner_2.jpg\");",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Text is placed directly over a background image without an overlay, risking insufficient color contrast (e.g., black text over dark areas).",
+      "recommendation": "Provide a semi-opaque overlay or solid background behind the text, or adjust colors to ensure a minimum 4.5:1 contrast ratio in all states.",
+      "severity": "critical"
+    },
+    {
+      "file": "src\\Components\\Home\\Banner\\Banner.css",
+      "line": 4,
+      "lineContent": "  height: 24.875rem;",
+      "criterion": "1.4.4",
+      "level": "AA",
+      "description": "Fixed height on a container with text can cause clipping or overlap when users increase text size up to 200%.",
+      "recommendation": "Avoid fixed heights for text containers. Use min-height or allow height to auto-expand and test at 200% zoom.",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Banner\\Banner.css",
+      "line": 77,
+      "lineContent": "    height: 20rem;",
+      "criterion": "1.4.4",
+      "level": "AA",
+      "description": "Fixed height on a container with text can cause clipping or overlap when users increase text size up to 200% at narrower viewports.",
+      "recommendation": "Avoid fixed heights for text containers at all breakpoints. Use responsive min-height or content-driven sizing.",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Banner\\Banner.css",
+      "line": 87,
+      "lineContent": "    height: 35rem;",
+      "criterion": "1.4.4",
+      "level": "AA",
+      "description": "Fixed height on a container with text can cause clipping or overlap when users increase text size up to 200% on small screens.",
+      "recommendation": "Remove fixed heights in favor of auto or min-height and allow content to reflow naturally.",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Banner\\Banner.css",
+      "line": 69,
+      "lineContent": ".bannerh5 a:hover::after {",
+      "criterion": "2.4.7",
+      "level": "AA",
+      "description": "Hover styles are defined for the link underline, but no corresponding focus styles are provided, which may make keyboard focus less apparent.",
+      "recommendation": "Add :focus and/or :focus-visible styles (e.g., underline or outline with sufficient contrast) to make keyboard focus clearly visible.",
+      "severity": "minor"
+    },
+    {
+      "file": "src\\Components\\Home\\Collection\\CollectionBox.css",
+      "line": 109,
+      "lineContent": "text-decoration: none;",
+      "criterion": "1.4.1",
+      "level": "A",
+      "description": "Links are not visually distinguished from surrounding text, relying on color/hover only.",
+      "recommendation": "Restore a non-color cue for links (e.g., underline) in the default state and ensure a clear focus style.",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Collection\\CollectionBox.jsx",
+      "line": 24,
+      "lineContent": "<h5>Shop Now</h5>",
+      "criterion": "2.4.4",
+      "level": "A",
+      "description": "Link text is not descriptive on its own, making purpose unclear when taken out of context.",
+      "recommendation": "Make the link text unique and descriptive (e.g., \"Shop Women Collection\") or add an aria-label to include the context.",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Collection\\CollectionBox.jsx",
+      "line": 36,
+      "lineContent": "<h5>Shop Now</h5>",
+      "criterion": "2.4.4",
+      "level": "A",
+      "description": "Link text is not descriptive on its own, making purpose unclear when taken out of context.",
+      "recommendation": "Make the link text unique and descriptive (e.g., \"Shop Men Collection\") or add an aria-label to include the context.",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Collection\\CollectionBox.jsx",
+      "line": 48,
+      "lineContent": "<h5>Shop Now</h5>",
+      "criterion": "2.4.4",
+      "level": "A",
+      "description": "Link text is not descriptive on its own, making purpose unclear when taken out of context.",
+      "recommendation": "Make the link text unique and descriptive (e.g., \"Shop Kids Collection\") or add an aria-label to include the context.",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Collection\\CollectionBox.jsx",
+      "line": 61,
+      "lineContent": "<h5>Shop Now</h5>",
+      "criterion": "2.4.4",
+      "level": "A",
+      "description": "Link text is not descriptive on its own, making purpose unclear when taken out of context.",
+      "recommendation": "Make the link text unique and descriptive (e.g., \"Shop E‑gift Cards\") or add an aria-label to include the context.",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Collection\\CollectionBox.jsx",
+      "line": 24,
+      "lineContent": "<h5>Shop Now</h5>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Heading element used for non-structural/link text, which misrepresents document structure.",
+      "recommendation": "Use a non-heading element (e.g., span) and apply CSS for styling, keeping headings for actual section titles.",
+      "severity": "minor"
+    },
+    {
+      "file": "src\\Components\\Home\\Collection\\CollectionBox.jsx",
+      "line": 36,
+      "lineContent": "<h5>Shop Now</h5>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Heading element used for non-structural/link text, which misrepresents document structure.",
+      "recommendation": "Use a non-heading element (e.g., span) and apply CSS for styling, keeping headings for actual section titles.",
+      "severity": "minor"
+    },
+    {
+      "file": "src\\Components\\Home\\Collection\\CollectionBox.jsx",
+      "line": 48,
+      "lineContent": "<h5>Shop Now</h5>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Heading element used for non-structural/link text, which misrepresents document structure.",
+      "recommendation": "Use a non-heading element (e.g., span) and apply CSS for styling, keeping headings for actual section titles.",
+      "severity": "minor"
+    },
+    {
+      "file": "src\\Components\\Home\\Collection\\CollectionBox.jsx",
+      "line": 61,
+      "lineContent": "<h5>Shop Now</h5>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Heading element used for non-structural/link text, which misrepresents document structure.",
+      "recommendation": "Use a non-heading element (e.g., span) and apply CSS for styling, keeping headings for actual section titles.",
+      "severity": "minor"
+    },
+    {
+      "file": "src\\Components\\Home\\Instagram\\Instagram.jsx",
+      "line": 23,
+      "lineContent": "<img src={insta1} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Image has empty alt text; likely a content image missing alternative text.",
+      "recommendation": "Provide meaningful alt text describing the image, or keep alt=\"\" only if the image is purely decorative.",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Instagram\\Instagram.jsx",
+      "line": 26,
+      "lineContent": "<img src={insta2} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Image has empty alt text; likely a content image missing alternative text.",
+      "recommendation": "Provide meaningful alt text describing the image, or keep alt=\"\" only if the image is purely decorative.",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Instagram\\Instagram.jsx",
+      "line": 29,
+      "lineContent": "<img src={insta3} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Image has empty alt text; likely a content image missing alternative text.",
+      "recommendation": "Provide meaningful alt text describing the image, or keep alt=\"\" only if the image is purely decorative.",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Instagram\\Instagram.jsx",
+      "line": 32,
+      "lineContent": "<img src={insta4} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Image has empty alt text; likely a content image missing alternative text.",
+      "recommendation": "Provide meaningful alt text describing the image, or keep alt=\"\" only if the image is purely decorative.",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Instagram\\Instagram.jsx",
+      "line": 35,
+      "lineContent": "<img src={insta5} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Image has empty alt text; likely a content image missing alternative text.",
+      "recommendation": "Provide meaningful alt text describing the image, or keep alt=\"\" only if the image is purely decorative.",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Instagram\\Instagram.jsx",
+      "line": 38,
+      "lineContent": "<img src={insta6} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Image has empty alt text; likely a content image missing alternative text.",
+      "recommendation": "Provide meaningful alt text describing the image, or keep alt=\"\" only if the image is purely decorative.",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Instagram\\Instagram.jsx",
+      "line": 41,
+      "lineContent": "<img src={insta7} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Image has empty alt text; likely a content image missing alternative text.",
+      "recommendation": "Provide meaningful alt text describing the image, or keep alt=\"\" only if the image is purely decorative.",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Instagram\\Instagram.jsx",
+      "line": 44,
+      "lineContent": "<img src={insta8} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Image has empty alt text; likely a content image missing alternative text.",
+      "recommendation": "Provide meaningful alt text describing the image, or keep alt=\"\" only if the image is purely decorative.",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Instagram\\Instagram.jsx",
+      "line": 47,
+      "lineContent": "<img src={insta9} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Image has empty alt text; likely a content image missing alternative text.",
+      "recommendation": "Provide meaningful alt text describing the image, or keep alt=\"\" only if the image is purely decorative.",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Instagram\\Instagram.jsx",
+      "line": 50,
+      "lineContent": "<img src={insta10} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Image has empty alt text; likely a content image missing alternative text.",
+      "recommendation": "Provide meaningful alt text describing the image, or keep alt=\"\" only if the image is purely decorative.",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Instagram\\Instagram.jsx",
+      "line": 53,
+      "lineContent": "<img src={insta11} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Image has empty alt text; likely a content image missing alternative text.",
+      "recommendation": "Provide meaningful alt text describing the image, or keep alt=\"\" only if the image is purely decorative.",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Instagram\\Instagram.jsx",
+      "line": 56,
+      "lineContent": "<img src={insta12} alt=\"\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Image has empty alt text; likely a content image missing alternative text.",
+      "recommendation": "Provide meaningful alt text describing the image, or keep alt=\"\" only if the image is purely decorative.",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Home\\Instagram\\Instagram.css",
+      "line": 26,
+      "lineContent": ".instagramtile:hover {",
+      "criterion": "2.4.7",
+      "level": "AA",
+      "description": "Hover-only visual feedback is provided for tiles without a corresponding focus style, which can leave keyboard users without a visible focus indicator if these tiles are interactive.",
+      "recommendation": "Add a :focus or :focus-visible style matching the hover effect (e.g., .instagramtile:focus-visible { opacity: 0.4; }) to ensure keyboard users have a clear focus indicator.",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Terms\\TermsandConditions.jsx",
+      "line": 8,
+      "lineContent": "      <div className=\"termsContainer\">",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Main content is not contained within a landmark region",
+      "recommendation": "Wrap the primary page content in a <main> element (e.g., <main className=\"termsContainer\">) or add role=\"main\" to convey structure to assistive technologies",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Terms\\TermsandConditions.jsx",
+      "line": 9,
+      "lineContent": "        <h2>TERMS & CONDITIONS</h2>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Primary page heading is not marked up as an <h1>",
+      "recommendation": "Use <h1> for the main page title to reflect the correct heading hierarchy",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Terms\\TermsandConditions.jsx",
+      "line": 11,
+      "lineContent": "          <h6>Your use of this is governed by these terms of use</h6>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Improper heading hierarchy: using <h6> for a subsection immediately under the main heading",
+      "recommendation": "Use appropriate heading levels in sequence (e.g., <h2>/<h3>) to maintain a logical structure",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Terms\\TermsandConditions.jsx",
+      "line": 21,
+      "lineContent": "          <h6>Use of the content on this website</h6>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Improper heading hierarchy: using <h6> for a subsection immediately under the main heading",
+      "recommendation": "Use appropriate heading levels in sequence (e.g., <h2>/<h3>) to maintain a logical structure",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Terms\\TermsandConditions.jsx",
+      "line": 31,
+      "lineContent": "          <h6>How long will It take to get my package?</h6>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Improper heading hierarchy: using <h6> for a subsection immediately under the main heading",
+      "recommendation": "Use appropriate heading levels in sequence (e.g., <h2>/<h3>) to maintain a logical structure",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Terms\\TermsandConditions.jsx",
+      "line": 41,
+      "lineContent": "          <h6>Will I receive the same product that see the picture ?</h6>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Improper heading hierarchy: using <h6> for a subsection immediately under the main heading",
+      "recommendation": "Use appropriate heading levels in sequence (e.g., <h2>/<h3>) to maintain a logical structure",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Terms\\TermsandConditions.jsx",
+      "line": 51,
+      "lineContent": "          <h6>Limitation of liability</h6>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Improper heading hierarchy: using <h6> for a subsection immediately under the main heading",
+      "recommendation": "Use appropriate heading levels in sequence (e.g., <h2>/<h3>) to maintain a logical structure",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Components\\Terms\\TermsandConditions.jsx",
+      "line": 61,
+      "lineContent": "          <h6>Governing Law & Jurisdiction</h6>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Improper heading hierarchy: using <h6> for a subsection immediately under the main heading",
+      "recommendation": "Use appropriate heading levels in sequence (e.g., <h2>/<h3>) to maintain a logical structure",
+      "severity": "major"
+    },
+    {
+      "file": "src\\Pages\\TermsConditions.jsx",
+      "line": 4,
+      "lineContent": "const TermsConditions = () => {",
+      "criterion": "2.4.2",
+      "level": "A",
+      "description": "Page does not set a descriptive document title",
+      "recommendation": "Set a unique and descriptive <title> for this page (e.g., using document.title or a library like react-helmet: <Helmet><title>Terms & Conditions</title></Helmet>)",
+      "severity": "major"
+    }
+  ]
+}

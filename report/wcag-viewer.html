@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WCAG Issues Viewer</title>
+    <style>
+        :root {
+            --bg-primary: #0f0f0f;
+            --bg-secondary: #1a1a1a;
+            --bg-card: #222;
+            --bg-hover: #2a2a2a;
+            --text-primary: #f5f5f5;
+            --text-secondary: #a0a0a0;
+            --accent: #6366f1;
+            --accent-hover: #818cf8;
+            --critical: #ef4444;
+            --major: #f59e0b;
+            --minor: #22c55e;
+            --level-a: #3b82f6;
+            --level-aa: #8b5cf6;
+            --level-aaa: #ec4899;
+            --border: #333;
+            --shadow: rgba(0, 0, 0, 0.3);
+
+            --status-new: #ef4444;
+            --status-solved: #22c55e;
+            --status-persisting: #eab308;
+            --status-existing: #a0a0a0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, #252525 100%);
+            padding: 30px;
+            border-radius: 16px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 8px;
+            background: linear-gradient(90deg, var(--accent), #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        header p {
+            color: var(--text-secondary);
+        }
+
+        .upload-section {
+            margin-top: 24px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .file-upload-coord {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .file-upload-coord label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .file-input-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--bg-card);
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .upload-btn {
+            background: var(--bg-hover);
+            color: var(--text-primary);
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+
+        .upload-btn:hover {
+            background: var(--border);
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .file-name {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 200px;
+        }
+
+        .controls-section {
+            margin-top: 20px;
+            display: flex;
+            gap: 12px;
+        }
+
+        .action-btn {
+            background: var(--bg-hover);
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .action-btn.primary {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        .action-btn.primary:hover {
+            background: var(--accent-hover);
+        }
+
+        .action-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            background: var(--bg-card);
+        }
+
+        .secondary-btn {
+            background: transparent;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        /* Summary Cards */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .summary-card {
+            background: var(--bg-secondary);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .summary-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .summary-card .value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .summary-card .label {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .summary-card.critical .value {
+            color: var(--critical);
+        }
+
+        .summary-card.major .value {
+            color: var(--major);
+        }
+
+        .summary-card.minor .value {
+            color: var(--minor);
+        }
+
+        /* Status Badges */
+        .status-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-right: 8px;
+        }
+
+        .status-badge.new {
+            background: rgba(239, 68, 68, 0.2);
+            color: var(--status-new);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .status-badge.solved {
+            background: rgba(34, 197, 94, 0.2);
+            color: var(--status-solved);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+
+        .status-badge.persisting {
+            background: rgba(234, 179, 8, 0.1);
+            color: var(--status-persisting);
+            border: 1px solid rgba(234, 179, 8, 0.2);
+        }
+
+        .status-badge.existing {
+            background: rgba(160, 160, 160, 0.1);
+            color: var(--status-existing);
+            border: 1px solid rgba(160, 160, 160, 0.2);
+        }
+
+        .line-change-info {
+            font-size: 0.8rem;
+            color: var(--status-persisting);
+            margin-left: 8px;
+            font-family: monospace;
+        }
+
+        /* Filters */
+        .filters {
+            background: var(--bg-secondary);
+            padding: 16px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            border: 1px solid var(--border);
+        }
+
+        .filters-row {
+            display: flex;
+            gap: 16px;
+            align-items: flex-end;
+            flex-wrap: wrap;
+        }
+
+        .filter-group {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .filter-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .filter-group input,
+        .filter-group select {
+            width: 100%;
+            padding: 10px;
+            background: var(--bg-primary);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+        }
+
+        .filter-group input:focus,
+        .filter-group select:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .clear-btn {
+            background: transparent;
+            color: var(--text-secondary);
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 0.9rem;
+            text-decoration: underline;
+        }
+
+        .clear-btn:hover {
+            color: var(--text-primary);
+        }
+
+        /* Issues List */
+        .results-info {
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .results-info strong {
+            color: var(--text-primary);
+        }
+
+        .criterion-group {
+            margin-bottom: 16px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            background: var(--bg-card);
+        }
+
+        .criterion-header {
+            padding: 16px;
+            background: var(--bg-secondary);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+
+        .criterion-header:hover {
+            background: var(--bg-hover);
+        }
+
+        .criterion-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .criterion-code {
+            background: var(--bg-primary);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 700;
+            color: var(--accent);
+            font-family: monospace;
+        }
+
+        .criterion-name {
+            font-weight: 600;
+        }
+
+        .criterion-stats {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-secondary);
+        }
+
+        .expand-icon {
+            transition: transform 0.2s;
+        }
+
+        .criterion-group.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+
+        .criterion-issues {
+            display: none;
+            border-top: 1px solid var(--border);
+        }
+
+        .criterion-group.expanded .criterion-issues {
+            display: block;
+        }
+
+        .issue-item {
+            padding: 20px;
+            border-bottom: 1px solid var(--border);
+            background: var(--bg-card);
+        }
+
+        .issue-item:last-child {
+            border-bottom: none;
+        }
+
+        .issue-header {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+        }
+
+        .issue-file {
+            color: var(--text-secondary);
+            font-family: monospace;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .issue-line {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .badge {
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .badge.level-A {
+            background: rgba(59, 130, 246, 0.2);
+            color: var(--level-a);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .badge.level-AA {
+            background: rgba(139, 92, 246, 0.2);
+            color: var(--level-aa);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+        }
+
+        .badge.level-AAA {
+            background: rgba(236, 72, 153, 0.2);
+            color: var(--level-aaa);
+            border: 1px solid rgba(236, 72, 153, 0.3);
+        }
+
+        .badge.severity-critical {
+            background: rgba(239, 68, 68, 0.2);
+            color: var(--critical);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .badge.severity-major {
+            background: rgba(245, 158, 11, 0.2);
+            color: var(--major);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        .badge.severity-minor {
+            background: rgba(34, 197, 94, 0.2);
+            color: var(--minor);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+
+        .issue-description {
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .issue-code {
+            background: #111;
+            padding: 12px;
+            border-radius: 6px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.9rem;
+            color: #d4d4d4;
+            margin-bottom: 12px;
+            border-left: 3px solid var(--accent);
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+
+        .issue-recommendation {
+            background: rgba(99, 102, 241, 0.1);
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            color: #e0e7ff;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-secondary);
+        }
+
+        .empty-state svg {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 16px;
+            opacity: 0.5;
+        }
+
+        .empty-state h2 {
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>WCAG Issues Viewer</h1>
+            <p>Upload a consolidated WCAG report to visualize and filter issues.</p>
+
+            <div class="upload-section">
+                <div class="file-upload-coord">
+                    <label>Original Report (Before)</label>
+                    <div class="file-input-wrapper">
+                        <button class="upload-btn" onclick="document.getElementById('file-input-before').click()">📂
+                            Select Before JSON</button>
+                        <input type="file" id="file-input-before" accept=".json"
+                            onchange="handleFileUpload(event, 'before')">
+                        <span class="file-name" id="file-name-before">No file selected</span>
+                    </div>
+                </div>
+
+                <div class="file-upload-coord">
+                    <label>New Report (After)</label>
+                    <div class="file-input-wrapper">
+                        <button class="upload-btn" onclick="document.getElementById('file-input-after').click()">📂
+                            Select After JSON</button>
+                        <input type="file" id="file-input-after" accept=".json"
+                            onchange="handleFileUpload(event, 'after')">
+                        <span class="file-name" id="file-name-after">No file selected</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls-section">
+                <button id="compare-btn" class="action-btn" onclick="compareReports()" disabled>Compare Reports</button>
+                <button id="view-single-btn" class="secondary-btn" onclick="viewSingleReport()"
+                    style="display:none">View Single Report</button>
+            </div>
+        </header>
+
+        <div id="content">
+            <div class="empty-state">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <h2>No Report Loaded</h2>
+                <p>Import a JSON file to view issues, or import two files to compare.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let beforeData = null;
+        let afterData = null;
+        let currentMode = 'single'; // 'single' or 'compare'
+        let allIssues = []; // Holds the master list of issues for current view
+
+        // WCAG Criterion names mapping
+        const criterionNames = {
+            '1.1.1': 'Non-text Content',
+            '1.2.1': 'Audio-only and Video-only',
+            '1.2.2': 'Captions (Prerecorded)',
+            '1.2.3': 'Audio Description or Media Alternative',
+            '1.2.4': 'Captions (Live)',
+            '1.2.5': 'Audio Description (Prerecorded)',
+            '1.3.1': 'Info and Relationships',
+            '1.3.2': 'Meaningful Sequence',
+            '1.3.3': 'Sensory Characteristics',
+            '1.3.4': 'Orientation',
+            '1.3.5': 'Identify Input Purpose',
+            '1.4.1': 'Use of Color',
+            '1.4.2': 'Audio Control',
+            '1.4.3': 'Contrast (Minimum)',
+            '1.4.4': 'Resize Text',
+            '1.4.5': 'Images of Text',
+            '1.4.10': 'Reflow',
+            '1.4.11': 'Non-text Contrast',
+            '1.4.12': 'Text Spacing',
+            '1.4.13': 'Content on Hover or Focus',
+            '2.1.1': 'Keyboard',
+            '2.1.2': 'No Keyboard Trap',
+            '2.1.4': 'Character Key Shortcuts',
+            '2.2.1': 'Timing Adjustable',
+            '2.2.2': 'Pause, Stop, Hide',
+            '2.3.1': 'Three Flashes or Below',
+            '2.4.1': 'Bypass Blocks',
+            '2.4.2': 'Page Titled',
+            '2.4.3': 'Focus Order',
+            '2.4.4': 'Link Purpose (In Context)',
+            '2.4.5': 'Multiple Ways',
+            '2.4.6': 'Headings and Labels',
+            '2.4.7': 'Focus Visible',
+            '2.5.1': 'Pointer Gestures',
+            '2.5.2': 'Pointer Cancellation',
+            '2.5.3': 'Label in Name',
+            '2.5.4': 'Motion Actuation',
+            '3.1.1': 'Language of Page',
+            '3.1.2': 'Language of Parts',
+            '3.2.1': 'On Focus',
+            '3.2.2': 'On Input',
+            '3.2.3': 'Consistent Navigation',
+            '3.2.4': 'Consistent Identification',
+            '3.3.1': 'Error Identification',
+            '3.3.2': 'Labels or Instructions',
+            '3.3.3': 'Error Suggestion',
+            '3.3.4': 'Error Prevention',
+            '4.1.1': 'Parsing',
+            '4.1.2': 'Name, Role, Value',
+            '4.1.3': 'Status Messages'
+        };
+
+        function handleFileUpload(event, type) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            document.getElementById(`file-name-${type}`).textContent = file.name;
+
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                try {
+                    const data = JSON.parse(e.target.result);
+                    if (type === 'before') {
+                        beforeData = data;
+                    } else {
+                        afterData = data;
+                    }
+                    updateControls();
+
+                    // If only one file is loaded so far, view it as single
+                    if (currentMode === 'single') {
+                        if (type === 'after') {
+                            renderSingleReport(afterData);
+                        } else if (!afterData && type === 'before') {
+                            renderSingleReport(beforeData);
+                        }
+                    }
+                } catch (err) {
+                    alert('Error parsing JSON file: ' + err.message);
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        function updateControls() {
+            const compareBtn = document.getElementById('compare-btn');
+            if (beforeData && afterData) {
+                compareBtn.disabled = false;
+                compareBtn.classList.add('primary');
+            } else {
+                compareBtn.disabled = true;
+                compareBtn.classList.remove('primary');
+            }
+        }
+
+        function viewSingleReport() {
+            currentMode = 'single';
+            document.getElementById('view-single-btn').style.display = 'none';
+            // Prefer 'after' data if available, else 'before'
+            renderSingleReport(afterData || beforeData);
+        }
+
+        function renderSingleReport(data) {
+            if (!data) return;
+            // Copy default issues
+            allIssues = (data.issues || []).map(i => ({ ...i, status: 'existing' }));
+            renderContent(data.summary, false);
+        }
+
+        function compareReports() {
+            if (!beforeData || !afterData) return;
+            currentMode = 'compare';
+            document.getElementById('view-single-btn').style.display = 'inline-block';
+
+            const beforeIssues = [...(beforeData.issues || [])];
+            const afterIssues = [...(afterData.issues || [])];
+
+            const solved = [];
+            const persisting = [];
+            const newIssues = [];
+
+            const bList = [...beforeIssues];
+            const aList = [...afterIssues];
+
+            // 1. Exact matches (including line number)
+            for (let i = aList.length - 1; i >= 0; i--) {
+                const a = aList[i];
+                const bIndex = bList.findIndex(b =>
+                    b.file === a.file &&
+                    b.line === a.line &&
+                    b.criterion === a.criterion &&
+                    b.description === a.description &&
+                    b.lineContent?.trim() === a.lineContent?.trim()
+                );
+
+                if (bIndex !== -1) {
+                    persisting.push({
+                        ...a,
+                        status: 'persisting',
+                        originalLine: bList[bIndex].line
+                    });
+                    aList.splice(i, 1);
+                    bList.splice(bIndex, 1);
+                }
+            }
+
+            // 2. Loose matches (match content, ignore line number)
+            for (let i = aList.length - 1; i >= 0; i--) {
+                const a = aList[i];
+                const bIndex = bList.findIndex(b =>
+                    b.file === a.file &&
+                    b.criterion === a.criterion &&
+                    b.description === a.description
+                );
+
+                if (bIndex !== -1) {
+                    const originalLine = bList[bIndex].line;
+                    const newLine = a.line;
+
+                    persisting.push({
+                        ...a,
+                        status: 'persisting',
+                        originalLine: originalLine,
+                        lineChange: newLine !== originalLine
+                    });
+                    aList.splice(i, 1);
+                    bList.splice(bIndex, 1);
+                }
+            }
+
+            // Remaining in aList are NEW
+            aList.forEach(a => newIssues.push({ ...a, status: 'new' }));
+
+            // Remaining in bList are SOLVED
+            bList.forEach(b => solved.push({ ...b, status: 'solved' }));
+        }
+            };
+
+        renderContent(summary, true);
+        }
+
+        function renderContent(summary, issues, isComparison) {
+            let summaryHtml = '';
+
+            if (isComparison) {
+                const netChange = summary.comparison.netChange;
+                const changeSign = netChange > 0 ? '+' : '';
+                const changeClass = netChange <= 0 ? 'minor' : 'critical';
+
+                summaryHtml = `
+                    <div class="summary-grid">
+                        <div class="summary-card">
+                            <div class="value">${summary.totalIssues}</div>
+                            <div class="label">Current Issues</div>
+                        </div>
+                        <div class="summary-card minor">
+                            <div class="value">-${summary.comparison.solved}</div>
+                            <div class="label">Solved</div>
+                        </div>
+                        <div class="summary-card critical">
+                            <div class="value">+${summary.comparison.new}</div>
+                            <div class="label">New Issues</div>
+                        </div>
+                        <div class="summary-card">
+                            <div class="value">${summary.comparison.persisting}</div>
+                            <div class="label">Persisting</div>
+                        </div>
+                        <div class="summary-card ${changeClass}">
+                            <div class="value">${changeSign}${netChange}</div>
+                            <div class="label">Net Change</div>
+                        </div>
+                    </div>`;
+            } else {
+                summaryHtml = `
+                    <div class="summary-grid">
+                        <div class="summary-card">
+                            <div class="value">${summary.totalIssues || 0}</div>
+                            <div class="label">Total Issues</div>
+                        </div>
+                        <div class="summary-card">
+                            <div class="value">${summary.totalFilesAudited || 0}</div>
+                            <div class="label">Files Audited</div>
+                        </div>
+                        <div class="summary-card critical">
+                            <div class="value">${summary.issuesBySeverity?.critical || 0}</div>
+                            <div class="label">Critical</div>
+                        </div>
+                        <div class="summary-card major">
+                            <div class="value">${summary.issuesBySeverity?.major || 0}</div>
+                            <div class="label">Major</div>
+                        </div>
+                        <div class="summary-card minor">
+                            <div class="value">${summary.issuesBySeverity?.minor || 0}</div>
+                            <div class="label">Minor</div>
+                        </div>
+                    </div>`;
+            }
+
+            const filterHtml = `
+                <div class="filters">
+                    <div class="filters-row">
+                        <div class="filter-group">
+                            <label>Search</label>
+                            <input type="text" id="search" placeholder="Search files, issues..." oninput="applyFilters()">
+                        </div>
+                        <div class="filter-group" style="flex: 0.5; min-width: 150px;">
+                            <label>Status</label>
+                            <select id="status-filter" onchange="applyFilters()">
+                                <option value="">All Statuses</option>
+                                ${isComparison ? `
+                                    <option value="new">New</option>
+                                    <option value="persisting">Persisting</option>
+                                    <option value="solved">Solved</option>
+                                ` : ''}
+                            </select>
+                        </div>
+                        <div class="filter-group" style="flex: 0.5; min-width: 150px;">
+                            <label>Severity</label>
+                            <select id="severity-filter" onchange="applyFilters()">
+                                <option value="">All Severities</option>
+                                <option value="critical">Critical</option>
+                                <option value="major">Major</option>
+                                <option value="minor">Minor</option>
+                            </select>
+                        </div>
+                        <div class="filter-group" style="flex: 0.5; min-width: 150px;">
+                            <label>Criterion</label>
+                            <select id="criterion-filter" onchange="applyFilters()">
+                                <option value="">All Criteria</option>
+                                ${getUniqueCriteria().map(c =>
+                `<option value="${c}">${c} - ${criterionNames[c] || ''}</option>`
+            ).join('')}
+                            </select>
+                        </div>
+                        <button class="clear-btn" onclick="clearFilters()">Clear Filters</button>
+                    </div>
+                </div>`;
+
+            const issuesContainer = '<div class="results-info" id="results-info"></div><div id="issues-container"></div>';
+
+            document.getElementById('content').innerHTML = summaryHtml + filterHtml + issuesContainer;
+            applyFilters();
+        }
+
+        function getUniqueCriteria(issues) {
+            const criteria = [...new Set(issues.map(i => i.criterion))];
+            return criteria.sort((a, b) => {
+                const aParts = a.split('.').map(Number);
+                const bParts = b.split('.').map(Number);
+                for (let i = 0; i < 3; i++) {
+                    if (aParts[i] !== bParts[i]) return aParts[i] - bParts[i];
+                }
+                return 0;
+            });
+        }
+
+        function applyFilters() {
+            const search = document.getElementById('search')?.value.toLowerCase() || '';
+            const status = document.getElementById('status-filter')?.value || '';
+            const severity = document.getElementById('severity-filter')?.value || '';
+            const criterion = document.getElementById('criterion-filter')?.value || '';
+
+            let filtered = displayIssues.filter(issue => {
+                if (status && issue.status !== status) return false;
+                if (severity && issue.severity !== severity) return false;
+                if (criterion && issue.criterion !== criterion) return false;
+
+                if (search) {
+                    const searchStr = [
+                        issue.file,
+                        issue.description,
+                        issue.recommendation,
+                        issue.lineContent,
+                        issue.criterion
+                    ].join(' ').toLowerCase();
+                    if (!searchStr.includes(search)) return false;
+                }
+                return true;
+            });
+
+            // Group by criterion
+            const grouped = {};
+            filtered.forEach(issue => {
+                const key = issue.criterion || 'unknown';
+                if (!grouped[key]) grouped[key] = [];
+                grouped[key].push(issue);
+            });
+
+            // Sort criteria
+            const sortedKeys = Object.keys(grouped).sort((a, b) => {
+                const aParts = a.split('.').map(Number);
+                const bParts = b.split('.').map(Number);
+                for (let i = 0; i < 3; i++) {
+                    if (aParts[i] !== bParts[i]) return (aParts[i] || 0) - (bParts[i] || 0);
+                }
+                return 0;
+            });
+
+            document.getElementById('results-info').innerHTML = `Showing <strong>${filtered.length}</strong> of ${allIssues.length} issues in <strong>${sortedKeys.length}</strong> criteria`;
+
+            const html = sortedKeys.map(key => `
+                <div class="criterion-group" id="group-${key.replace(/\./g, '-')}">
+                    <div class="criterion-header" onclick="toggleGroup('${key.replace(/\./g, '-')}')">
+                        <div class="criterion-title" >
+                            <span class="criterion-code">${key}</span>
+                            <span class="criterion-name">${criterionNames[key] || ''}</span>
+                        </div>
+                        <div class="criterion-stats">
+                            <span class="issue-count">${grouped[key].length} issue${grouped[key].length !== 1 ? 's' : ''}</span>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                    </div>
+                    <div class="criterion-issues">
+                        ${grouped[key].map(issue => renderIssue(issue)).join('')}
+                    </div>
+                </div>
+            `).join('');
+
+            document.getElementById('issues-container').innerHTML = html || '<div class="empty-state"><h2>No issues match your filters</h2><p>Try adjusting your search or filter criteria</p></div>';
+        }
+
+        function renderIssue(issue) {
+            let statusBadge = '';
+            if (issue.status) {
+                statusBadge = `<span class="status-badge ${issue.status}">${issue.status}</span>`;
+            }
+
+            let lineInfo = '';
+            if (issue.line) {
+                lineInfo = `<span class="issue-line">Line ${issue.line}</span>`;
+            }
+
+            if (issue.status === 'persisting' && issue.lineChange) {
+                lineInfo += `<span class="line-change-info">(was Line ${issue.originalLine})</span>`;
+            }
+
+            return `
+                <div class="issue-item">
+                    <div class="issue-header">
+                        ${statusBadge}
+                        <span class="issue-file">${escapeHtml(issue.file || 'unknown')}</span>
+                        ${lineInfo}
+                        <span class="badge level-${issue.level}">Level ${issue.level}</span>
+                        <span class="badge severity-${issue.severity}">${issue.severity}</span>
+                    </div>
+                    <div class="issue-description">${escapeHtml(issue.description)}</div>
+                    ${issue.lineContent ? `<div class="issue-code">${escapeHtml(issue.lineContent)}</div>` : ''}
+                    <div class="issue-recommendation"><strong>Recommendation:</strong> ${escapeHtml(issue.recommendation)}</div>
+                </div>`;
+        }
+
+        function toggleGroup(key) {
+            const group = document.getElementById('group-' + key);
+            if (group) {
+                group.classList.toggle('expanded');
+            }
+        }
+
+        function clearFilters() {
+            if (document.getElementById('search')) document.getElementById('search').value = '';
+            if (document.getElementById('status-filter')) document.getElementById('status-filter').value = '';
+            if (document.getElementById('severity-filter')) document.getElementById('severity-filter').value = '';
+            if (document.getElementById('criterion-filter')) document.getElementById('criterion-filter').value = '';
+            applyFilters();
+        }
+
+        function escapeHtml(text) {
+            if (!text) return '';
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+    </script>
+</body>
+
+</html>
