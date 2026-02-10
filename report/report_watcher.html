@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WCAG Issues Viewer</title>
+    <style>
+        :root {
+            --bg-primary: #0f0f0f;
+            --bg-secondary: #1a1a1a;
+            --bg-card: #222;
+            --bg-hover: #2a2a2a;
+            --text-primary: #f5f5f5;
+            --text-secondary: #a0a0a0;
+            --accent: #6366f1;
+            --accent-hover: #818cf8;
+            --critical: #ef4444;
+            --major: #f59e0b;
+            --minor: #22c55e;
+            --level-a: #3b82f6;
+            --level-aa: #8b5cf6;
+            --level-aaa: #ec4899;
+            --border: #333;
+            --shadow: rgba(0,0,0,0.3);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, #252525 100%);
+            padding: 30px;
+            border-radius: 16px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 8px;
+            background: linear-gradient(90deg, var(--accent), #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        header p {
+            color: var(--text-secondary);
+        }
+
+        .upload-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .upload-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .upload-btn:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        #file-input {
+            display: none;
+        }
+
+        .file-name {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Summary Cards */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .summary-card {
+            background: var(--bg-secondary);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .summary-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .summary-card .value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .summary-card .label {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .summary-card.critical .value { color: var(--critical); }
+        .summary-card.major .value { color: var(--major); }
+        .summary-card.minor .value { color: var(--minor); }
+
+        /* Filters */
+        .filters {
+            background: var(--bg-secondary);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            border: 1px solid var(--border);
+        }
+
+        .filters-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            align-items: flex-end;
+        }
+
+        .filter-group {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .filter-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .filter-group input,
+        .filter-group select {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--bg-card);
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            transition: border-color 0.2s;
+        }
+
+        .filter-group input:focus,
+        .filter-group select:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .filter-group input::placeholder {
+            color: var(--text-secondary);
+        }
+
+        .clear-btn {
+            background: transparent;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .clear-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        /* Results count */
+        .results-info {
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .results-info strong {
+            color: var(--accent);
+        }
+
+        /* Criterion Groups */
+        .criterion-group {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            margin-bottom: 12px;
+            border: 1px solid var(--border);
+            overflow: hidden;
+            transition: all 0.2s;
+        }
+
+        .criterion-group:hover {
+            border-color: #444;
+        }
+
+        .criterion-header {
+            padding: 16px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--bg-card);
+            transition: background 0.2s;
+        }
+
+        .criterion-header:hover {
+            background: var(--bg-hover);
+        }
+
+        .criterion-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .criterion-code {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--accent);
+        }
+
+        .criterion-name {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .criterion-stats {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .issue-count {
+            background: var(--accent);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .expand-icon {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            transition: transform 0.3s;
+        }
+
+        .criterion-group.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+
+        .criterion-issues {
+            display: none;
+            padding: 0;
+        }
+
+        .criterion-group.expanded .criterion-issues {
+            display: block;
+        }
+
+        /* Individual Issues */
+        .issue-item {
+            padding: 16px 20px;
+            border-top: 1px solid var(--border);
+            transition: background 0.2s;
+        }
+
+        .issue-item:hover {
+            background: var(--bg-hover);
+        }
+
+        .issue-header {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+
+        .issue-file {
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.9rem;
+            color: var(--accent);
+            background: rgba(99, 102, 241, 0.1);
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+
+        .issue-line {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .badge {
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .badge.level-A { background: rgba(59, 130, 246, 0.2); color: var(--level-a); }
+        .badge.level-AA { background: rgba(139, 92, 246, 0.2); color: var(--level-aa); }
+        .badge.level-AAA { background: rgba(236, 72, 153, 0.2); color: var(--level-aaa); }
+
+        .badge.severity-critical { background: rgba(239, 68, 68, 0.2); color: var(--critical); }
+        .badge.severity-major { background: rgba(245, 158, 11, 0.2); color: var(--major); }
+        .badge.severity-minor { background: rgba(34, 197, 94, 0.2); color: var(--minor); }
+
+        .issue-description {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .issue-code {
+            background: var(--bg-primary);
+            padding: 10px 14px;
+            border-radius: 6px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+            overflow-x: auto;
+            border-left: 3px solid var(--accent);
+            color: var(--text-secondary);
+        }
+
+        .issue-recommendation {
+            font-size: 0.9rem;
+            color: var(--minor);
+            padding: 10px 14px;
+            background: rgba(34, 197, 94, 0.05);
+            border-radius: 6px;
+            border-left: 3px solid var(--minor);
+        }
+
+        .issue-recommendation strong {
+            color: var(--text-primary);
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-secondary);
+        }
+
+        .empty-state svg {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+        .empty-state h2 {
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 12px;
+            }
+
+            header {
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .filters-row {
+                flex-direction: column;
+            }
+
+            .filter-group {
+                min-width: 100%;
+            }
+
+            .summary-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .summary-card .value {
+                font-size: 1.8rem;
+            }
+
+            .criterion-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            .criterion-stats {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .issue-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔍 WCAG Accessibility Issues Viewer</h1>
+            <p>Import your consolidated_issues.json to view and filter accessibility issues</p>
+            <div class="upload-section">
+                <button class="upload-btn" onclick="document.getElementById('file-input').click()">
+                    📂 Import JSON File
+                </button>
+                <input type="file" id="file-input" accept=".json" onchange="handleFileUpload(event)">
+                <span class="file-name" id="file-name">No file selected</span>
+            </div>
+        </header>
+
+        <div id="content">
+            <div class="empty-state">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <h2>No Data Loaded</h2>
+                <p>Click "Import JSON File" to load your consolidated_issues.json</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let allData = null;
+        let allIssues = [];
+
+        // WCAG Criterion names mapping
+        const criterionNames = {
+            '1.1.1': 'Non-text Content',
+            '1.2.1': 'Audio-only and Video-only',
+            '1.2.2': 'Captions (Prerecorded)',
+            '1.2.3': 'Audio Description or Media Alternative',
+            '1.2.4': 'Captions (Live)',
+            '1.2.5': 'Audio Description (Prerecorded)',
+            '1.3.1': 'Info and Relationships',
+            '1.3.2': 'Meaningful Sequence',
+            '1.3.3': 'Sensory Characteristics',
+            '1.3.4': 'Orientation',
+            '1.3.5': 'Identify Input Purpose',
+            '1.4.1': 'Use of Color',
+            '1.4.2': 'Audio Control',
+            '1.4.3': 'Contrast (Minimum)',
+            '1.4.4': 'Resize Text',
+            '1.4.5': 'Images of Text',
+            '1.4.10': 'Reflow',
+            '1.4.11': 'Non-text Contrast',
+            '1.4.12': 'Text Spacing',
+            '1.4.13': 'Content on Hover or Focus',
+            '2.1.1': 'Keyboard',
+            '2.1.2': 'No Keyboard Trap',
+            '2.1.4': 'Character Key Shortcuts',
+            '2.2.1': 'Timing Adjustable',
+            '2.2.2': 'Pause, Stop, Hide',
+            '2.3.1': 'Three Flashes or Below',
+            '2.4.1': 'Bypass Blocks',
+            '2.4.2': 'Page Titled',
+            '2.4.3': 'Focus Order',
+            '2.4.4': 'Link Purpose (In Context)',
+            '2.4.5': 'Multiple Ways',
+            '2.4.6': 'Headings and Labels',
+            '2.4.7': 'Focus Visible',
+            '2.5.1': 'Pointer Gestures',
+            '2.5.2': 'Pointer Cancellation',
+            '2.5.3': 'Label in Name',
+            '2.5.4': 'Motion Actuation',
+            '3.1.1': 'Language of Page',
+            '3.1.2': 'Language of Parts',
+            '3.2.1': 'On Focus',
+            '3.2.2': 'On Input',
+            '3.2.3': 'Consistent Navigation',
+            '3.2.4': 'Consistent Identification',
+            '3.3.1': 'Error Identification',
+            '3.3.2': 'Labels or Instructions',
+            '3.3.3': 'Error Suggestion',
+            '3.3.4': 'Error Prevention',
+            '4.1.1': 'Parsing',
+            '4.1.2': 'Name, Role, Value',
+            '4.1.3': 'Status Messages'
+        };
+
+        function handleFileUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            document.getElementById('file-name').textContent = file.name;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    allData = JSON.parse(e.target.result);
+                    allIssues = allData.issues || [];
+                    renderContent();
+                } catch (err) {
+                    alert('Error parsing JSON file: ' + err.message);
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        function renderContent() {
+            if (!allData) return;
+
+            const summary = allData.summary || {};
+            const html = `
+                <div class="summary-grid">
+                    <div class="summary-card">
+                        <div class="value">${summary.totalIssues || 0}</div>
+                        <div class="label">Total Issues</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="value">${summary.totalFilesAudited || 0}</div>
+                        <div class="label">Files Audited</div>
+                    </div>
+                    <div class="summary-card critical">
+                        <div class="value">${summary.issuesBySeverity?.critical || 0}</div>
+                        <div class="label">Critical</div>
+                    </div>
+                    <div class="summary-card major">
+                        <div class="value">${summary.issuesBySeverity?.major || 0}</div>
+                        <div class="label">Major</div>
+                    </div>
+                    <div class="summary-card minor">
+                        <div class="value">${summary.issuesBySeverity?.minor || 0}</div>
+                        <div class="label">Minor</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="value">${summary.totalBundles || 0}</div>
+                        <div class="label">Bundles</div>
+                    </div>
+                </div>
+
+                <div class="filters">
+                    <div class="filters-row">
+                        <div class="filter-group">
+                            <label>Search</label>
+                            <input type="text" id="search" placeholder="Search files, issues, recommendations..." oninput="applyFilters()">
+                        </div>
+                        <div class="filter-group" style="flex: 0.5; min-width: 150px;">
+                            <label>Level</label>
+                            <select id="level-filter" onchange="applyFilters()">
+                                <option value="">All Levels</option>
+                                <option value="A">Level A</option>
+                                <option value="AA">Level AA</option>
+                                <option value="AAA">Level AAA</option>
+                            </select>
+                        </div>
+                        <div class="filter-group" style="flex: 0.5; min-width: 150px;">
+                            <label>Severity</label>
+                            <select id="severity-filter" onchange="applyFilters()">
+                                <option value="">All Severities</option>
+                                <option value="critical">Critical</option>
+                                <option value="major">Major</option>
+                                <option value="minor">Minor</option>
+                            </select>
+                        </div>
+                        <div class="filter-group" style="flex: 0.5; min-width: 150px;">
+                            <label>Criterion</label>
+                            <select id="criterion-filter" onchange="applyFilters()">
+                                <option value="">All Criteria</option>
+                                ${getUniqueCriteria().map(c => `<option value="${c}">${c} - ${criterionNames[c] || ''}</option>`).join('')}
+                            </select>
+                        </div>
+                        <button class="clear-btn" onclick="clearFilters()">Clear Filters</button>
+                    </div>
+                </div>
+
+                <div class="results-info" id="results-info"></div>
+                <div id="issues-container"></div>
+            `;
+
+            document.getElementById('content').innerHTML = html;
+            applyFilters();
+        }
+
+        function getUniqueCriteria() {
+            const criteria = [...new Set(allIssues.map(i => i.criterion))];
+            return criteria.sort((a, b) => {
+                const aParts = a.split('.').map(Number);
+                const bParts = b.split('.').map(Number);
+                for (let i = 0; i < 3; i++) {
+                    if (aParts[i] !== bParts[i]) return aParts[i] - bParts[i];
+                }
+                return 0;
+            });
+        }
+
+        function applyFilters() {
+            const search = document.getElementById('search')?.value.toLowerCase() || '';
+            const level = document.getElementById('level-filter')?.value || '';
+            const severity = document.getElementById('severity-filter')?.value || '';
+            const criterion = document.getElementById('criterion-filter')?.value || '';
+
+            let filtered = allIssues.filter(issue => {
+                if (level && issue.level !== level) return false;
+                if (severity && issue.severity !== severity) return false;
+                if (criterion && issue.criterion !== criterion) return false;
+                if (search) {
+                    const searchStr = [
+                        issue.file,
+                        issue.description,
+                        issue.recommendation,
+                        issue.lineContent,
+                        issue.criterion
+                    ].join(' ').toLowerCase();
+                    if (!searchStr.includes(search)) return false;
+                }
+                return true;
+            });
+
+            // Group by criterion
+            const grouped = {};
+            filtered.forEach(issue => {
+                const key = issue.criterion || 'unknown';
+                if (!grouped[key]) grouped[key] = [];
+                grouped[key].push(issue);
+            });
+
+            // Sort criteria
+            const sortedKeys = Object.keys(grouped).sort((a, b) => {
+                const aParts = a.split('.').map(Number);
+                const bParts = b.split('.').map(Number);
+                for (let i = 0; i < 3; i++) {
+                    if (aParts[i] !== bParts[i]) return (aParts[i] || 0) - (bParts[i] || 0);
+                }
+                return 0;
+            });
+
+            document.getElementById('results-info').innerHTML = 
+                `Showing <strong>${filtered.length}</strong> of ${allIssues.length} issues in <strong>${sortedKeys.length}</strong> criteria`;
+
+            const html = sortedKeys.map(key => `
+                <div class="criterion-group" id="group-${key.replace(/\./g, '-')}">
+                    <div class="criterion-header" onclick="toggleGroup('${key.replace(/\./g, '-')}')">
+                        <div class="criterion-title">
+                            <span class="criterion-code">${key}</span>
+                            <span class="criterion-name">${criterionNames[key] || ''}</span>
+                        </div>
+                        <div class="criterion-stats">
+                            <span class="issue-count">${grouped[key].length} issue${grouped[key].length !== 1 ? 's' : ''}</span>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                    </div>
+                    <div class="criterion-issues">
+                        ${grouped[key].map(issue => renderIssue(issue)).join('')}
+                    </div>
+                </div>
+            `).join('');
+
+            document.getElementById('issues-container').innerHTML = html || 
+                '<div class="empty-state"><h2>No issues match your filters</h2><p>Try adjusting your search or filter criteria</p></div>';
+        }
+
+        function renderIssue(issue) {
+            return `
+                <div class="issue-item">
+                    <div class="issue-header">
+                        <span class="issue-file">${escapeHtml(issue.file || 'unknown')}</span>
+                        ${issue.line ? `<span class="issue-line">Line ${issue.line}</span>` : ''}
+                        <span class="badge level-${issue.level}">Level ${issue.level}</span>
+                        <span class="badge severity-${issue.severity}">${issue.severity}</span>
+                    </div>
+                    <div class="issue-description">${escapeHtml(issue.description)}</div>
+                    ${issue.lineContent ? `
+                        <div class="issue-code">${escapeHtml(issue.lineContent)}</div>
+                    ` : ''}
+                    <div class="issue-recommendation">
+                        <strong>Recommendation:</strong> ${escapeHtml(issue.recommendation)}
+                    </div>
+                </div>
+            `;
+        }
+
+        function toggleGroup(key) {
+            const group = document.getElementById('group-' + key);
+            if (group) {
+                group.classList.toggle('expanded');
+            }
+        }
+
+        function clearFilters() {
+            document.getElementById('search').value = '';
+            document.getElementById('level-filter').value = '';
+            document.getElementById('severity-filter').value = '';
+            document.getElementById('criterion-filter').value = '';
+            applyFilters();
+        }
+
+        function escapeHtml(text) {
+            if (!text) return '';
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+    </script>
+</body>
+</html>
