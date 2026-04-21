@@ -1,0 +1,78 @@
+[
+  {
+    "id": "eslint.config.js",
+    "file": "eslint.config.js"
+  },
+  {
+    "id": "index.html",
+    "file": "index.html"
+  },
+  {
+    "id": "src/App.css",
+    "file": "src/App.css"
+  },
+  {
+    "id": "src/App.jsx",
+    "file": "src/App.jsx"
+  },
+  {
+    "id": "src/components/ContactForm.css",
+    "file": "src/components/ContactForm.css"
+  },
+  {
+    "id": "src/components/ContactForm.jsx",
+    "file": "src/components/ContactForm.jsx"
+  },
+  {
+    "id": "src/components/Footer.css",
+    "file": "src/components/Footer.css"
+  },
+  {
+    "id": "src/components/Footer.jsx",
+    "file": "src/components/Footer.jsx"
+  },
+  {
+    "id": "src/components/Header.css",
+    "file": "src/components/Header.css"
+  },
+  {
+    "id": "src/components/Header.jsx",
+    "file": "src/components/Header.jsx"
+  },
+  {
+    "id": "src/components/Hero.css",
+    "file": "src/components/Hero.css"
+  },
+  {
+    "id": "src/components/Hero.jsx",
+    "file": "src/components/Hero.jsx"
+  },
+  {
+    "id": "src/components/PriceList.css",
+    "file": "src/components/PriceList.css"
+  },
+  {
+    "id": "src/components/PriceList.jsx",
+    "file": "src/components/PriceList.jsx"
+  },
+  {
+    "id": "src/components/RoomAvailability.css",
+    "file": "src/components/RoomAvailability.css"
+  },
+  {
+    "id": "src/components/RoomAvailability.jsx",
+    "file": "src/components/RoomAvailability.jsx"
+  },
+  {
+    "id": "src/index.css",
+    "file": "src/index.css"
+  },
+  {
+    "id": "src/main.jsx",
+    "file": "src/main.jsx"
+  },
+  {
+    "id": "vite.config.js",
+    "file": "vite.config.js"
+  }
+]

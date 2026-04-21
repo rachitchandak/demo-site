@@ -16,15 +16,15 @@ function Header() {
           <span className="logo-text">The Silent Oasis</span>
         </div>
         <div className="nav-menu">
-          <a className="nav-item" href="#" onClick={(event) => handleLinkClick(event, 'rooms')}>Rooms & Suites</a>
-          <a className="nav-item" href="#" onClick={(event) => handleLinkClick(event, 'dining')}>Dining</a>
-          <a className="nav-item" href="#" onClick={(event) => handleLinkClick(event, 'spa')}>Spa & Wellness</a>
-          <a className="nav-item" href="#" onClick={(event) => handleLinkClick(event, 'experiences')}>Experiences</a>
-          <a className="nav-item" href="#" onClick={(event) => handleLinkClick(event, 'contact')}>Contact</a>
+          <a className="nav-item" href="#">Rooms & Suites</a>
+          <a className="nav-item" href="#">Dining</a>
+          <a className="nav-item" href="#">Spa & Wellness</a>
+          <a className="nav-item" href="#">Experiences</a>
+          <a className="nav-item" href="#">Contact</a>
         </div>
-        <a className="book-btn" href="#" onClick={(event) => handleLinkClick(event, 'booking')}>
+        <button className="book-btn" onClick={(event) => handleLinkClick(event, 'booking')}>
           Book Now
-        </a>
+        </button>
       </div>
     </div>
   )

@@ -1,0 +1,940 @@
+{
+  "src/App.jsx": [
+    {
+      "file": "src/App.jsx",
+      "line": 12,
+      "oldContent": "      <div className=\"welcome-banner\">",
+      "newContent": "      <main>\n        <div className=\"welcome-banner\">",
+      "wcagGuideline": "1.3.1",
+      "description": "Introduced a semantic main landmark to wrap the primary content for better structure.",
+      "keep": true,
+      "id": "7e699208-b770-4dc2-b9b8-67f2fcf5f98a"
+    },
+    {
+      "file": "src/App.jsx",
+      "line": 24,
+      "oldContent": "      <Footer />",
+      "newContent": "      </main>\n      <Footer />",
+      "wcagGuideline": "1.3.1",
+      "description": "Closed the main landmark before the footer to properly scope the primary content region.",
+      "keep": true,
+      "id": "68bfa348-dc66-4039-95cc-b66e4d6d10be"
+    },
+    {
+      "file": "src/App.jsx",
+      "line": 13,
+      "oldContent": "        <h3 className=\"welcome-text\">Welcome to Luxury</h3>",
+      "newContent": "        <h2 className=\"welcome-text\">Welcome to Luxury</h2>",
+      "wcagGuideline": "1.3.1",
+      "description": "Adjusted heading level to maintain a logical hierarchy within the main content.",
+      "keep": true,
+      "id": "882b0201-bc4f-4480-8274-ae97637a9ed9"
+    }
+  ],
+  "src/components/ContactForm.css": [
+    {
+      "file": "src/components/ContactForm.css",
+      "line": 19,
+      "oldContent": "    color: #c9a962;",
+      "newContent": "    color: #7a5a1a;",
+      "wcagGuideline": "1.4.3",
+      "description": "Increased contrast for small section label text to meet 4.5:1 against light background.",
+      "keep": true,
+      "id": "bf5c096e-fe6b-4823-b480-1df6fe94aff9"
+    },
+    {
+      "file": "src/components/ContactForm.css",
+      "line": 54,
+      "oldContent": "    color: #c9a962;",
+      "newContent": "    color: #7a5a1a;",
+      "wcagGuideline": "1.4.3",
+      "description": "Increased contrast for small contact label text to meet 4.5:1 against light background.",
+      "keep": true,
+      "id": "bf010810-19d0-4962-a3f4-4119e027576e"
+    },
+    {
+      "file": "src/components/ContactForm.css",
+      "line": 77,
+      "oldContent": "    border: 1px solid #e5e5e5;",
+      "newContent": "    border: 1px solid #767676;",
+      "wcagGuideline": "1.4.11",
+      "description": "Darkened input borders to achieve at least 3:1 non-text contrast for control boundaries.",
+      "keep": true,
+      "id": "5e22bb7b-a913-4fdf-acbb-cc61771dd8fb"
+    },
+    {
+      "file": "src/components/ContactForm.css",
+      "line": 85,
+      "oldContent": "    border-color: #c9a962;",
+      "newContent": "    border-color: #7a5a1a;",
+      "wcagGuideline": "1.4.11",
+      "description": "Strengthened focus indicator color to provide ≥3:1 contrast against adjacent colors.",
+      "keep": true,
+      "id": "c31e6ac4-40eb-4bec-b0dd-d9d2aa889991"
+    },
+    {
+      "file": "src/components/ContactForm.css",
+      "line": 93,
+      "oldContent": "    color: white;",
+      "newContent": "    color: #2d2d2d;",
+      "wcagGuideline": "1.4.3",
+      "description": "Changed button text to a dark color to ensure sufficient contrast over light gradient for small text.",
+      "keep": true,
+      "id": "8441c6de-4092-47bb-ad16-3918662c623a"
+    }
+  ],
+  "src/components/Footer.css": [
+    {
+      "file": "src/components/Footer.css",
+      "line": 69,
+      "oldContent": "    color: #c9a962;",
+      "newContent": "    color: #8b6b22;",
+      "wcagGuideline": "1.4.3",
+      "description": "Adjusted hover link color to a darker gold (#8b6b22) that meets the 4.5:1 contrast ratio against white.",
+      "keep": true,
+      "id": "227ce025-20ac-4c4c-9325-c05a45a4ed2b"
+    }
+  ],
+  "src/components/Header.css": [
+    {
+      "file": "src/components/Header.css",
+      "line": 46,
+      "oldContent": "    color: #c9a962;",
+      "newContent": "    color: #8a6b2b;",
+      "wcagGuideline": "1.4.3",
+      "description": "Set a darker hover color for navigation items to meet 4.5:1 contrast against the white background.",
+      "keep": true,
+      "id": "405cb9c3-2195-4366-a797-f92ac8abb52b"
+    },
+    {
+      "file": "src/components/Header.css",
+      "line": 53,
+      "oldContent": "    color: white;",
+      "newContent": "    color: #1a1a1a;",
+      "wcagGuideline": "1.4.3",
+      "description": "Changed button text to a dark color to ensure sufficient contrast against the light gold gradient.",
+      "keep": true,
+      "id": "f615493a-e56d-4fda-9cc8-f0971dfb7c1c"
+    }
+  ],
+  "src/components/ContactForm.jsx": [
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 13,
+      "oldContent": "                        <span className=\"section-label\">Get in Touch</span>",
+      "newContent": "                        <span className=\"section-label\" style={{ color: '#5c4b1a' }}>Get in Touch</span>",
+      "wcagGuideline": "1.4.3",
+      "description": "Increased text color contrast for section label to meet AA requirements on light background",
+      "keep": true,
+      "id": "af9e548b-557b-4084-90d5-f7d126e77b31"
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 22,
+      "oldContent": "                                <span className=\"contact-label\">Address</span>",
+      "newContent": "                                <span className=\"contact-label\" style={{ color: '#5c4b1a' }}>Address</span>",
+      "wcagGuideline": "1.4.3",
+      "description": "Increased text color contrast for contact label to meet AA requirements on light background",
+      "keep": true,
+      "id": "368016a7-522a-4af5-ad53-238ce8ac6174"
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 26,
+      "oldContent": "                                <span className=\"contact-label\">Phone</span>",
+      "newContent": "                                <span className=\"contact-label\" style={{ color: '#5c4b1a' }}>Phone</span>",
+      "wcagGuideline": "1.4.3",
+      "description": "Increased text color contrast for contact label to meet AA requirements on light background",
+      "keep": true,
+      "id": "c1871fba-9ccd-450a-8cb3-7071add6c17e"
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 30,
+      "oldContent": "                                <span className=\"contact-label\">Email</span>",
+      "newContent": "                                <span className=\"contact-label\" style={{ color: '#5c4b1a' }}>Email</span>",
+      "wcagGuideline": "1.4.3",
+      "description": "Increased text color contrast for contact label to meet AA requirements on light background",
+      "keep": true,
+      "id": "9a8beda6-771a-4edc-bbf4-ddac014db0ab"
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 36,
+      "oldContent": "                    <div className=\"contact-form\">",
+      "newContent": "                    <form className=\"contact-form\" onSubmit={handleSubmit}>",
+      "wcagGuideline": "1.3.1",
+      "description": "Wrapped inputs in a semantic form and moved handling to onSubmit for proper programmatic relationships",
+      "keep": true,
+      "id": "f1acf22c-993e-4d49-99c4-e6a0e5587558"
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 37,
+      "oldContent": "                        <input type=\"text\" placeholder=\"Name\" />",
+      "newContent": "                        <input type=\"text\" placeholder=\"Name\" aria-label=\"Name\" autocomplete=\"name\" />",
+      "wcagGuideline": "4.1.2",
+      "description": "Added accessible name via aria-label and input purpose via autocomplete to satisfy labeling and identification (also addresses 1.3.5)",
+      "keep": true,
+      "id": "6453b48a-ceee-4182-a2d4-c4d85595a5c5"
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 38,
+      "oldContent": "                        <input type=\"email\" placeholder=\"Email Address\" />",
+      "newContent": "                        <input type=\"email\" placeholder=\"Email Address\" aria-label=\"Email address\" autocomplete=\"email\" />",
+      "wcagGuideline": "4.1.2",
+      "description": "Added accessible name via aria-label and input purpose via autocomplete to satisfy labeling and identification (also addresses 1.3.5)",
+      "keep": true,
+      "id": "cea0b886-e065-4553-ac44-bd6a78e29534"
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 39,
+      "oldContent": "                        <input type=\"tel\" placeholder=\"Phone Number\" />",
+      "newContent": "                        <input type=\"tel\" placeholder=\"Phone Number\" aria-label=\"Phone number\" autocomplete=\"tel\" />",
+      "wcagGuideline": "4.1.2",
+      "description": "Added accessible name via aria-label and input purpose via autocomplete to satisfy labeling and identification (also addresses 1.3.5)",
+      "keep": true,
+      "id": "ffc7aa4b-1d19-46e1-a2eb-117f258cb363"
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 40,
+      "oldContent": "                        <textarea rows=\"5\" placeholder=\"Your Message\"></textarea>",
+      "newContent": "                        <textarea rows=\"5\" placeholder=\"Your Message\" aria-label=\"Your message\"></textarea>",
+      "wcagGuideline": "4.1.2",
+      "description": "Added accessible name via aria-label for the textarea since placeholder alone is insufficient",
+      "keep": true,
+      "id": "c21b2943-e0e1-413f-a55d-011e05ae7964"
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 42,
+      "oldContent": "                        <button type=\"button\" className=\"submit-btn\" onClick={handleSubmit}>",
+      "newContent": "                        <button type=\"submit\" className=\"submit-btn\">",
+      "wcagGuideline": "1.3.1",
+      "description": "Use submit button within the form and rely on form onSubmit for semantics and programmatic association",
+      "keep": true,
+      "id": "2b1a1415-fbf2-4f7d-bce5-c1294cf310c2"
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 45,
+      "oldContent": "                    </div>",
+      "newContent": "                    </form>",
+      "wcagGuideline": "1.3.1",
+      "description": "Closed the semantic form element to properly contain form controls",
+      "keep": true,
+      "id": "eba61d21-7a0f-435a-930f-c8479720d86d"
+    }
+  ],
+  "src/components/Header.jsx": [
+    {
+      "file": "src/components/Header.jsx",
+      "line": 19,
+      "oldContent": "          <a className=\"nav-item\" href=\"#\" onClick={(event) => handleLinkClick(event, 'rooms')}>Rooms & Suites</a>",
+      "newContent": "          <button type=\"button\" className=\"nav-item\" onClick={(event) => handleLinkClick(event, 'rooms')}>Rooms & Suites</button>",
+      "wcagGuideline": "1.3.1",
+      "description": "Replaced anchor used for an action with a semantic button to ensure correct control semantics.",
+      "keep": true,
+      "id": "2b36e2d5-9c05-4d76-83a2-54ffa5fb2e32"
+    },
+    {
+      "file": "src/components/Header.jsx",
+      "line": 20,
+      "oldContent": "          <a className=\"nav-item\" href=\"#\" onClick={(event) => handleLinkClick(event, 'dining')}>Dining</a>",
+      "newContent": "          <button type=\"button\" className=\"nav-item\" onClick={(event) => handleLinkClick(event, 'dining')}>Dining</button>",
+      "wcagGuideline": "1.3.1",
+      "description": "Replaced anchor used for an action with a semantic button to ensure correct control semantics.",
+      "keep": true,
+      "id": "3ef7ae9b-3550-4c9a-97ea-1454c32526b8"
+    },
+    {
+      "file": "src/components/Header.jsx",
+      "line": 21,
+      "oldContent": "          <a className=\"nav-item\" href=\"#\" onClick={(event) => handleLinkClick(event, 'spa')}>Spa & Wellness</a>",
+      "newContent": "          <button type=\"button\" className=\"nav-item\" onClick={(event) => handleLinkClick(event, 'spa')}>Spa & Wellness</button>",
+      "wcagGuideline": "1.3.1",
+      "description": "Replaced anchor used for an action with a semantic button to ensure correct control semantics.",
+      "keep": true,
+      "id": "deaadd28-9710-4b90-95f2-721aa43ee2d0"
+    },
+    {
+      "file": "src/components/Header.jsx",
+      "line": 22,
+      "oldContent": "          <a className=\"nav-item\" href=\"#\" onClick={(event) => handleLinkClick(event, 'experiences')}>Experiences</a>",
+      "newContent": "          <button type=\"button\" className=\"nav-item\" onClick={(event) => handleLinkClick(event, 'experiences')}>Experiences</button>",
+      "wcagGuideline": "1.3.1",
+      "description": "Replaced anchor used for an action with a semantic button to ensure correct control semantics.",
+      "keep": true,
+      "id": "32982e0e-e4a9-426c-8343-86f3bcd3aafe"
+    },
+    {
+      "file": "src/components/Header.jsx",
+      "line": 23,
+      "oldContent": "          <a className=\"nav-item\" href=\"#\" onClick={(event) => handleLinkClick(event, 'contact')}>Contact</a>",
+      "newContent": "          <button type=\"button\" className=\"nav-item\" onClick={(event) => handleLinkClick(event, 'contact')}>Contact</button>",
+      "wcagGuideline": "1.3.1",
+      "description": "Replaced anchor used for an action with a semantic button to ensure correct control semantics.",
+      "keep": true,
+      "id": "cfabfbb4-fdb5-4f3d-9068-91694430df0b"
+    },
+    {
+      "file": "src/components/Header.jsx",
+      "line": 25,
+      "oldContent": "        <a className=\"book-btn\" href=\"#\" onClick={(event) => handleLinkClick(event, 'booking')}>",
+      "newContent": "        <button type=\"button\" className=\"book-btn\" onClick={(event) => handleLinkClick(event, 'booking')}>",
+      "wcagGuideline": "1.3.1",
+      "description": "Replaced anchor used for an action with a semantic button to ensure correct control semantics.",
+      "keep": true,
+      "id": "34797e09-8377-404f-8ea8-77f8b15a1f94"
+    },
+    {
+      "file": "src/components/Header.jsx",
+      "line": 27,
+      "oldContent": "        </a>",
+      "newContent": "        </button>",
+      "wcagGuideline": "1.3.1",
+      "description": "Updated closing tag to match button element for proper semantics.",
+      "keep": true,
+      "id": "3c2392f1-e070-4deb-be40-a7d558d09f0b"
+    }
+  ],
+  "src/components/Footer.jsx": [
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 14,
+      "oldContent": "                            <img src=\"https://cdn-icons-png.flaticon.com/128/733/733547.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Facebook')} />",
+      "newContent": "                            <button type=\"button\" className=\"social-icon\" aria-label=\"Facebook\" onClick={() => console.log('Facebook')}><img src=\"https://cdn-icons-png.flaticon.com/128/733/733547.png\" alt=\"\" /></button>",
+      "wcagGuideline": "2.1.1",
+      "description": "Replaced non-semantic clickable image with a keyboard-accessible button and provided an accessible name.",
+      "keep": true,
+      "id": "36e2c29c-7b80-4428-8709-89c3a7958e1a"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 15,
+      "oldContent": "                            <img src=\"https://cdn-icons-png.flaticon.com/128/2111/2111463.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Instagram')} />",
+      "newContent": "                            <button type=\"button\" className=\"social-icon\" aria-label=\"Instagram\" onClick={() => console.log('Instagram')}><img src=\"https://cdn-icons-png.flaticon.com/128/2111/2111463.png\" alt=\"\" /></button>",
+      "wcagGuideline": "2.1.1",
+      "description": "Replaced non-semantic clickable image with a keyboard-accessible button and provided an accessible name.",
+      "keep": true,
+      "id": "8a8abadf-1eaa-4700-8b33-6d3441c94ce3"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 16,
+      "oldContent": "                            <img src=\"https://cdn-icons-png.flaticon.com/128/733/733579.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Twitter')} />",
+      "newContent": "                            <button type=\"button\" className=\"social-icon\" aria-label=\"Twitter\" onClick={() => console.log('Twitter')}><img src=\"https://cdn-icons-png.flaticon.com/128/733/733579.png\" alt=\"\" /></button>",
+      "wcagGuideline": "2.1.1",
+      "description": "Replaced non-semantic clickable image with a keyboard-accessible button and provided an accessible name.",
+      "keep": true,
+      "id": "49c23701-1731-42df-8871-5b3888d7a05f"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 21,
+      "oldContent": "                        <span className=\"footer-heading\">Quick Links</span>",
+      "newContent": "                        <h2 className=\"footer-heading\">Quick Links</h2>",
+      "wcagGuideline": "1.3.1",
+      "description": "Replaced non-semantic span with a semantic heading element to convey structure.",
+      "keep": true,
+      "id": "314049fd-a9a1-46c1-bff9-bb624cf05d2e"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 22,
+      "oldContent": "                        <div className=\"link-list low-contrast-text\">",
+      "newContent": "                        <ul className=\"link-list low-contrast-text\">",
+      "wcagGuideline": "1.3.1",
+      "description": "Converted link group container to a semantic list.",
+      "keep": true,
+      "id": "69592081-f23f-4c80-9d8b-45fa468a1517"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 23,
+      "oldContent": "                            <a href=\"#\">About Us</a>",
+      "newContent": "                            <li><a href=\"#\">About Us</a></li>",
+      "wcagGuideline": "1.3.1",
+      "description": "Wrapped link in a list item to convey list structure.",
+      "keep": true,
+      "id": "ecc9a79c-43c6-488c-a5b7-41062bdf25c3"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 24,
+      "oldContent": "                            <a href=\"#\">Our Rooms</a>",
+      "newContent": "                            <li><a href=\"#\">Our Rooms</a></li>",
+      "wcagGuideline": "1.3.1",
+      "description": "Wrapped link in a list item to convey list structure.",
+      "keep": true,
+      "id": "24f1ec1a-a371-49ee-9ed5-c59c79fa8432"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 25,
+      "oldContent": "                            <a href=\"#\">Dining</a>",
+      "newContent": "                            <li><a href=\"#\">Dining</a></li>",
+      "wcagGuideline": "1.3.1",
+      "description": "Wrapped link in a list item to convey list structure.",
+      "keep": true,
+      "id": "4b71079b-b9c6-45f3-94c0-83f4e602689d"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 26,
+      "oldContent": "                            <a href=\"#\">Spa Services</a>",
+      "newContent": "                            <li><a href=\"#\">Spa Services</a></li>",
+      "wcagGuideline": "1.3.1",
+      "description": "Wrapped link in a list item to convey list structure.",
+      "keep": true,
+      "id": "067a3142-099b-41f3-9ca6-8d20b2a83abb"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 27,
+      "oldContent": "                            <a href=\"#\">Contact</a>",
+      "newContent": "                            <li><a href=\"#\">Contact</a></li>",
+      "wcagGuideline": "1.3.1",
+      "description": "Wrapped link in a list item to convey list structure.",
+      "keep": true,
+      "id": "2872674d-db02-4a4e-9207-830cf18d7ed0"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 28,
+      "oldContent": "                        </div>",
+      "newContent": "                        </ul>",
+      "wcagGuideline": "1.3.1",
+      "description": "Closed the semantic list container.",
+      "keep": true,
+      "id": "0adb2b73-1679-4207-b98a-b1d30dd38c0e"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 32,
+      "oldContent": "                        <span className=\"footer-heading\">Services</span>",
+      "newContent": "                        <h2 className=\"footer-heading\">Services</h2>",
+      "wcagGuideline": "1.3.1",
+      "description": "Replaced non-semantic span with a semantic heading element to convey structure.",
+      "keep": true,
+      "id": "2c7781a5-788d-4795-9fb2-7e64ddf9d04d"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 33,
+      "oldContent": "                        <div className=\"link-list low-contrast-text\">",
+      "newContent": "                        <ul className=\"link-list low-contrast-text\">",
+      "wcagGuideline": "1.3.1",
+      "description": "Converted link group container to a semantic list.",
+      "keep": true,
+      "id": "89d7cdfe-c1a0-4a0c-abcd-d96c8c708c09"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 34,
+      "oldContent": "                            <a href=\"#\">Concierge</a>",
+      "newContent": "                            <li><a href=\"#\">Concierge</a></li>",
+      "wcagGuideline": "1.3.1",
+      "description": "Wrapped link in a list item to convey list structure.",
+      "keep": true,
+      "id": "7b2ab92c-c613-4c37-8c66-63cc061288c4"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 35,
+      "oldContent": "                            <a href=\"#\">Airport Transfer</a>",
+      "newContent": "                            <li><a href=\"#\">Airport Transfer</a></li>",
+      "wcagGuideline": "1.3.1",
+      "description": "Wrapped link in a list item to convey list structure.",
+      "keep": true,
+      "id": "4cc7bdd8-f0f8-4eb3-a01a-dce854f4e6ad"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 36,
+      "oldContent": "                            <a href=\"#\">Private Events</a>",
+      "newContent": "                            <li><a href=\"#\">Private Events</a></li>",
+      "wcagGuideline": "1.3.1",
+      "description": "Wrapped link in a list item to convey list structure.",
+      "keep": true,
+      "id": "e5b1385e-26b3-4210-90de-332ccbf79805"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 37,
+      "oldContent": "                            <a href=\"#\">Gift Cards</a>",
+      "newContent": "                            <li><a href=\"#\">Gift Cards</a></li>",
+      "wcagGuideline": "1.3.1",
+      "description": "Wrapped link in a list item to convey list structure.",
+      "keep": true,
+      "id": "d8d9d9e0-67fd-4ea6-8dd1-d472745c8f65"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 38,
+      "oldContent": "                            <a href=\"#\">Loyalty Program</a>",
+      "newContent": "                            <li><a href=\"#\">Loyalty Program</a></li>",
+      "wcagGuideline": "1.3.1",
+      "description": "Wrapped link in a list item to convey list structure.",
+      "keep": true,
+      "id": "a21f7080-4aa8-47c5-af3d-33c0e39be6e4"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 39,
+      "oldContent": "                        </div>",
+      "newContent": "                        </ul>",
+      "wcagGuideline": "1.3.1",
+      "description": "Closed the semantic list container.",
+      "keep": true,
+      "id": "75d7b32b-c7c8-4f80-9da8-6bf50813168b"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 43,
+      "oldContent": "                        <span className=\"footer-heading\">Legal</span>",
+      "newContent": "                        <h2 className=\"footer-heading\">Legal</h2>",
+      "wcagGuideline": "1.3.1",
+      "description": "Replaced non-semantic span with a semantic heading element to convey structure.",
+      "keep": true,
+      "id": "14d72bd9-2335-480f-b2a3-cdfa42ebb630"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 44,
+      "oldContent": "                        <div className=\"link-list low-contrast-text\">",
+      "newContent": "                        <ul className=\"link-list low-contrast-text\">",
+      "wcagGuideline": "1.3.1",
+      "description": "Converted link group container to a semantic list.",
+      "keep": true,
+      "id": "0c075e2a-6877-4107-b1ad-f75be2f8bb9d"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 45,
+      "oldContent": "                            <a href=\"#\">Privacy Policy</a>",
+      "newContent": "                            <li><a href=\"#\">Privacy Policy</a></li>",
+      "wcagGuideline": "1.3.1",
+      "description": "Wrapped link in a list item to convey list structure.",
+      "keep": true,
+      "id": "651a7a43-b13e-47b0-9540-8c5e7c97072e"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 46,
+      "oldContent": "                            <a href=\"#\">Terms of Service</a>",
+      "newContent": "                            <li><a href=\"#\">Terms of Service</a></li>",
+      "wcagGuideline": "1.3.1",
+      "description": "Wrapped link in a list item to convey list structure.",
+      "keep": true,
+      "id": "b77acfb5-7d1a-43f9-9e34-cae87cfffeba"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 47,
+      "oldContent": "                            <a href=\"#\">Cookie Policy</a>",
+      "newContent": "                            <li><a href=\"#\">Cookie Policy</a></li>",
+      "wcagGuideline": "1.3.1",
+      "description": "Wrapped link in a list item to convey list structure.",
+      "keep": true,
+      "id": "3ae00218-ffc5-4807-a28c-3db3482983e4"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 48,
+      "oldContent": "                            <a href=\"#\">Accessibility</a>",
+      "newContent": "                            <li><a href=\"#\">Accessibility</a></li>",
+      "wcagGuideline": "1.3.1",
+      "description": "Wrapped link in a list item to convey list structure.",
+      "keep": true,
+      "id": "61c02e24-494e-4926-9366-8641c8f94101"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 49,
+      "oldContent": "                        </div>",
+      "newContent": "                        </ul>",
+      "wcagGuideline": "1.3.1",
+      "description": "Closed the semantic list container.",
+      "keep": true,
+      "id": "cf5eaac3-5a41-48f2-ad34-4dcb54cf6944"
+    }
+  ],
+  "src/components/Hero.jsx": [
+    {
+      "file": "src/components/Hero.jsx",
+      "line": 21,
+      "oldContent": "                    <div className=\"btn btn-primary\">Click Here</div>",
+      "newContent": "                    <button className=\"btn btn-primary\" style={{ color: '#1a1a1a' }}>Book Now</button>",
+      "wcagGuideline": "4.1.2, 2.1.1, 1.4.3, 2.4.6",
+      "description": "Replaced non-semantic div with a native button for proper role and keyboard operability, provided a descriptive label, and added inline text color to meet contrast requirements.",
+      "keep": true,
+      "id": "7643caa0-fe07-4292-85a2-4bfa00c7cc56"
+    },
+    {
+      "file": "src/components/Hero.jsx",
+      "line": 22,
+      "oldContent": "                    <div className=\"btn btn-outline\">Read More</div>",
+      "newContent": "                    <button className=\"btn btn-outline\">Learn More About The Silent Oasis</button>",
+      "wcagGuideline": "4.1.2, 2.1.1, 2.4.6",
+      "description": "Replaced non-semantic div with a native button for proper role and keyboard operability and made the label more descriptive.",
+      "keep": true,
+      "id": "0d00f405-1a2c-4b62-b5d3-308822f8d10d"
+    }
+  ],
+  "src/components/PriceList.css": [
+    {
+      "file": "src/components/PriceList.css",
+      "line": 13,
+      "oldContent": "    border-bottom: 1px solid #eee;",
+      "newContent": "    border-bottom: 1px solid #8c8c8c;",
+      "wcagGuideline": "1.4.11",
+      "description": "Increased row divider contrast to meet non-text contrast requirements.",
+      "keep": true,
+      "id": "6048a8fe-4955-41fe-9b36-a56fe83fca33"
+    },
+    {
+      "file": "src/components/PriceList.css",
+      "line": 43,
+      "oldContent": "    color: #c9a962;",
+      "newContent": "    color: #6d5a00;",
+      "wcagGuideline": "1.4.3",
+      "description": "Darkened accent text color to achieve at least 4.5:1 contrast on white background.",
+      "keep": true,
+      "id": "31c1efd2-7655-447b-9bc6-b99a686e147d"
+    },
+    {
+      "file": "src/components/PriceList.css",
+      "line": 55,
+      "oldContent": "    text-decoration: none;",
+      "newContent": "    text-decoration: underline;",
+      "wcagGuideline": "1.4.1",
+      "description": "Restored underline on inline links to ensure a non-color cue for link identification.",
+      "keep": true,
+      "id": "577af5e4-683a-434b-a1ff-7e3937e363cf"
+    }
+  ],
+  "src/components/RoomAvailability.css": [
+    {
+      "file": "src/components/RoomAvailability.css",
+      "line": 17,
+      "oldContent": "    color: #c9a962;",
+      "newContent": "    color: #6b4e16;",
+      "wcagGuideline": "1.4.3",
+      "description": "Increased text contrast for small text in .section-label against light background.",
+      "keep": true,
+      "id": "800b7e4a-9ae4-44ae-82ef-d8b36f7e6a8f"
+    },
+    {
+      "file": "src/components/RoomAvailability.css",
+      "line": 84,
+      "oldContent": "    color: #c9a962;",
+      "newContent": "    color: #6b4e16;",
+      "wcagGuideline": "1.4.3",
+      "description": "Increased text contrast for large text in .room-price against white background to meet 3:1.",
+      "keep": true,
+      "id": "23fe6703-ab49-4d1a-8bcd-10b85002c235"
+    },
+    {
+      "file": "src/components/RoomAvailability.css",
+      "line": 90,
+      "oldContent": "    color: #999;",
+      "newContent": "    color: #595959;",
+      "wcagGuideline": "1.4.3",
+      "description": "Adjusted gray to meet minimum 4.5:1 contrast for normal text in .price-period.",
+      "keep": true,
+      "id": "d5a89189-19cd-4c2b-aaf3-673c8bcc17d4"
+    },
+    {
+      "file": "src/components/RoomAvailability.css",
+      "line": 104,
+      "oldContent": "    color: #c9a962;",
+      "newContent": "    color: #6b4e16;",
+      "wcagGuideline": "1.4.3",
+      "description": "Updated hover color for .room-link to maintain sufficient contrast on light/white backgrounds.",
+      "keep": true,
+      "id": "b3ecea7e-266e-4313-a701-5a8e9465f75e"
+    }
+  ],
+  "src/components/Hero.css": [
+    {
+      "file": "src/components/Hero.css",
+      "line": 3,
+      "oldContent": "    height: 100vh;",
+      "newContent": "    height: auto;",
+      "wcagGuideline": "1.4.10",
+      "description": "Replaced fixed viewport height with auto to allow content to reflow and avoid clipping on small screens or when zoomed.",
+      "keep": true,
+      "id": "e98131be-3434-41ad-b961-bef4076b874f"
+    },
+    {
+      "file": "src/components/Hero.css",
+      "line": 8,
+      "oldContent": "    overflow: hidden;",
+      "newContent": "    overflow: visible;",
+      "wcagGuideline": "1.4.10",
+      "description": "Removed hidden overflow so content is not clipped and can scroll vertically as needed.",
+      "keep": true,
+      "id": "3930d4e9-4612-45da-a1b9-77944e3b2881"
+    },
+    {
+      "file": "src/components/Hero.css",
+      "line": 27,
+      "oldContent": "            rgba(0, 0, 0, 0.3) 0%,",
+      "newContent": "            rgba(0, 0, 0, 0.85) 0%,",
+      "wcagGuideline": "1.4.3",
+      "description": "Darkened the hero overlay to improve text contrast against variable image backgrounds.",
+      "keep": true,
+      "id": "7819623f-fae7-4e6e-9f19-1d5767217a16"
+    },
+    {
+      "file": "src/components/Hero.css",
+      "line": 28,
+      "oldContent": "            rgba(0, 0, 0, 0.5) 100%);",
+      "newContent": "            rgba(0, 0, 0, 0.9) 100%);",
+      "wcagGuideline": "1.4.3",
+      "description": "Further increased overlay darkness to ensure subtitle and other normal text maintain at least 4.5:1 contrast.",
+      "keep": true,
+      "id": "861771bc-780e-480b-b62a-72d5452ad7f1"
+    },
+    {
+      "file": "src/components/Hero.css",
+      "line": 46,
+      "oldContent": "    color: #c9a962;",
+      "newContent": "    color: white;",
+      "wcagGuideline": "1.4.3",
+      "description": "Adjusted tagline color to ensure sufficient contrast for small text over the darkened background.",
+      "keep": true,
+      "id": "c41749d1-1305-4fb4-80ff-68023ba5734c"
+    }
+  ],
+  "src/components/PriceList.jsx": [
+    {
+      "file": "src/components/PriceList.jsx",
+      "line": 18,
+      "oldContent": "                    <span className=\"section-label\">Rates</span>",
+      "newContent": "                    <span className=\"section-label\" style={{ color: '#6b5400' }}>Rates</span>",
+      "wcagGuideline": "1.4.3",
+      "description": "Increased contrast of the section label text to meet minimum contrast requirements.",
+      "keep": true,
+      "id": "fda30202-2c9f-4661-a995-734f5a66d82c"
+    },
+    {
+      "file": "src/components/PriceList.jsx",
+      "line": 22,
+      "oldContent": "                    <tr className=\"table-header-row\">",
+      "newContent": "                    <tr className=\"table-header-row\" style={{ color: '#FFFFFF' }}>",
+      "wcagGuideline": "1.4.3",
+      "description": "Set high-contrast text color for header row on dark background.",
+      "keep": true,
+      "id": "db10f0e0-ad4f-40ba-8532-361eee4a4f3e"
+    },
+    {
+      "file": "src/components/PriceList.jsx",
+      "line": 23,
+      "oldContent": "                        <td>Service</td>",
+      "newContent": "                        <th scope=\"col\">Service</th>",
+      "wcagGuideline": "1.3.1",
+      "description": "Converted data cell to column header to properly convey table semantics.",
+      "keep": true,
+      "id": "1f49cebd-9e98-470d-99b9-439a546d5e9a"
+    },
+    {
+      "file": "src/components/PriceList.jsx",
+      "line": 24,
+      "oldContent": "                        <td>Weekday</td>",
+      "newContent": "                        <th scope=\"col\">Weekday</th>",
+      "wcagGuideline": "1.3.1",
+      "description": "Converted data cell to column header to properly convey table semantics.",
+      "keep": true,
+      "id": "29870dc7-474a-4a66-8d8b-8d658e749c41"
+    },
+    {
+      "file": "src/components/PriceList.jsx",
+      "line": 25,
+      "oldContent": "                        <td>Weekend</td>",
+      "newContent": "                        <th scope=\"col\">Weekend</th>",
+      "wcagGuideline": "1.3.1",
+      "description": "Converted data cell to column header to properly convey table semantics.",
+      "keep": true,
+      "id": "19a47cbd-efce-4e46-a72c-bbd80980b4c3"
+    },
+    {
+      "file": "src/components/PriceList.jsx",
+      "line": 26,
+      "oldContent": "                        <td>Holiday</td>",
+      "newContent": "                        <th scope=\"col\">Holiday</th>",
+      "wcagGuideline": "1.3.1",
+      "description": "Converted data cell to column header to properly convey table semantics.",
+      "keep": true,
+      "id": "862976f1-0eac-4479-9491-a76034f94062"
+    },
+    {
+      "file": "src/components/PriceList.jsx",
+      "line": 38,
+      "oldContent": "                <p className=\"price-note low-contrast-text\">",
+      "newContent": "                <p className=\"price-note\">",
+      "wcagGuideline": "1.4.3",
+      "description": "Removed low-contrast text class to ensure sufficient text contrast.",
+      "keep": true,
+      "id": "6e41ec1b-8bea-485d-bbed-08841093f7c3"
+    },
+    {
+      "file": "src/components/PriceList.jsx",
+      "line": 41,
+      "oldContent": "                    <a href=\"#\">Click here</a> for full terms.",
+      "newContent": "                    <a href=\"#\">Read full terms</a>.",
+      "wcagGuideline": "2.4.4",
+      "description": "Replaced non-descriptive link text with meaningful text that describes the destination.",
+      "keep": true,
+      "id": "f40cda87-5f16-4b32-b545-6596dcdcd5f5"
+    }
+  ],
+  "src/components/RoomAvailability.jsx": [
+    {
+      "file": "src/components/RoomAvailability.jsx",
+      "line": 52,
+      "oldContent": "<span className=\"section-label\">Accommodations</span>",
+      "newContent": "<span className=\"section-label\" style={{ color: '#6b4f1d' }}>Accommodations</span>",
+      "wcagGuideline": "1.4.3",
+      "description": "Increased text color contrast for the section label to meet minimum contrast requirements.",
+      "keep": true,
+      "id": "f0f050d2-0608-4cd3-96c1-7a12e4f759e3"
+    },
+    {
+      "file": "src/components/RoomAvailability.jsx",
+      "line": 63,
+      "oldContent": "<img src={room.image} alt=\"\" className=\"room-image\" />",
+      "newContent": "<img src={room.image} alt={`Photo of ${room.name}`} className=\"room-image\" />",
+      "wcagGuideline": "1.1.1",
+      "description": "Provided descriptive alt text for informative room images.",
+      "keep": true,
+      "id": "ded10c76-3662-4397-a10c-7ae9cabcc19e"
+    },
+    {
+      "file": "src/components/RoomAvailability.jsx",
+      "line": 67,
+      "oldContent": "<span className={`status-dot ${room.available ? 'status-available' : 'status-booked'}`}></span>",
+      "newContent": "<span className=\"room-status\"><span className={`status-dot ${room.available ? 'status-available' : 'status-booked'}`} aria-hidden=\"true\" style={{ border: `2px solid ${room.available ? '#166534' : '#991b1b'}` }}></span><span className=\"status-text\">{room.available ? 'Available' : 'Booked'}</span></span>",
+      "wcagGuideline": "1.4.1",
+      "description": "Added visible status text so availability is not conveyed by color alone and added a high-contrast border to the status dot to improve non-text contrast (also addressing 1.4.11).",
+      "keep": true,
+      "id": "1d4aa635-2293-4de4-9ac5-a7bb501a6544"
+    },
+    {
+      "file": "src/components/RoomAvailability.jsx",
+      "line": 70,
+      "oldContent": "<span className=\"room-price\">{room.price}<span className=\"price-period\">/night</span></span>",
+      "newContent": "<span className=\"room-price\" style={{ color: '#6b4f1d' }}>{room.price}<span className=\"price-period\" style={{ color: '#4a4a4a' }}>/night</span></span>",
+      "wcagGuideline": "1.4.3",
+      "description": "Increased text color contrast for price and period to meet minimum contrast requirements.",
+      "keep": true,
+      "id": "52fb9b3b-ff93-4b48-8305-c239d1743d88"
+    }
+  ],
+  "src/index.css": [
+    {
+      "file": "src/index.css",
+      "line": 3,
+      "oldContent": "  outline: none !important;",
+      "newContent": "  /* outline not removed to maintain focus visibility */",
+      "wcagGuideline": "2.4.7",
+      "description": "Removed global outline reset to ensure focus indicators remain visible for keyboard users.",
+      "keep": true,
+      "id": "fbbaec9d-d4b8-4f05-bffd-53324ea3fed5"
+    },
+    {
+      "file": "src/index.css",
+      "line": 38,
+      "oldContent": "  text-decoration: none;",
+      "newContent": "  text-decoration: underline;",
+      "wcagGuideline": "1.4.1",
+      "description": "Restored underline on links to make them visually distinguishable from surrounding text.",
+      "keep": true,
+      "id": "bfb9df0a-8d8f-4833-810b-6161940a5f41"
+    },
+    {
+      "file": "src/index.css",
+      "line": 16,
+      "oldContent": "  --text-low-contrast: #cccccc;",
+      "newContent": "  --text-low-contrast: #767676;",
+      "wcagGuideline": "1.4.3",
+      "description": "Increased low-contrast text color to meet minimum contrast requirements against light backgrounds.",
+      "keep": true,
+      "id": "e843cc53-c96e-4dd8-87ad-8c423b65a6ef"
+    },
+    {
+      "file": "src/index.css",
+      "line": 61,
+      "oldContent": "  color: var(--text-light);",
+      "newContent": "  color: var(--primary-dark);",
+      "wcagGuideline": "1.4.3",
+      "description": "Changed primary button text to a darker color for sufficient contrast on gold background.",
+      "keep": true,
+      "id": "22849cf5-e7db-41f9-9484-4601e2265daa"
+    },
+    {
+      "file": "src/index.css",
+      "line": 72,
+      "oldContent": "  color: var(--primary-gold);",
+      "newContent": "  color: var(--primary-dark);",
+      "wcagGuideline": "1.4.3",
+      "description": "Updated outline button text to a darker color for sufficient contrast on light/transparent background.",
+      "keep": true,
+      "id": "78df7f40-a1f2-47a8-b7ac-ca685c0ce1d3"
+    },
+    {
+      "file": "src/index.css",
+      "line": 77,
+      "oldContent": "  color: var(--text-light);",
+      "newContent": "  color: var(--primary-dark);",
+      "wcagGuideline": "1.4.3",
+      "description": "Adjusted outline button hover text to darker color for sufficient contrast on gold background.",
+      "keep": true,
+      "id": "65ddda12-8292-4cbf-bae2-f6360ede1dc9"
+    },
+    {
+      "file": "src/index.css",
+      "line": 105,
+      "oldContent": "  background-color: #22c55e;",
+      "newContent": "  background-color: #22c55e; border: 2px solid var(--primary-dark);",
+      "wcagGuideline": "1.4.1",
+      "description": "Added solid border to 'available' status dot to provide a non-color cue in addition to color.",
+      "keep": true,
+      "id": "a0fec502-13ad-40a5-9c43-7b329938e4e7"
+    },
+    {
+      "file": "src/index.css",
+      "line": 109,
+      "oldContent": "  background-color: #ef4444;",
+      "newContent": "  background-color: #ef4444; border: 2px dashed var(--primary-dark);",
+      "wcagGuideline": "1.4.1",
+      "description": "Added dashed border to 'booked' status dot to differentiate status without relying on color alone.",
+      "keep": true,
+      "id": "7d1689d9-07b0-43a8-86cf-a1ad91f7d60d"
+    },
+    {
+      "file": "src/index.css",
+      "line": 118,
+      "oldContent": "  border: 1px solid #e5e5e5;",
+      "newContent": "  border: 1px solid #8a8a8a;",
+      "wcagGuideline": "1.4.11",
+      "description": "Increased input border contrast to meet non-text contrast for perceivable control boundaries.",
+      "keep": true,
+      "id": "638b9a00-a3fc-4c8e-a321-e35d6835f8cd"
+    },
+    {
+      "file": "src/index.css",
+      "line": 124,
+      "oldContent": "  border-color: var(--primary-gold);",
+      "newContent": "  border-color: var(--primary-dark);",
+      "wcagGuideline": "1.4.11",
+      "description": "Strengthened focus indication on inputs with a higher-contrast border color.",
+      "keep": true,
+      "id": "bc760ca5-374b-4ccc-a625-da1ad002ea22"
+    }
+  ]
+}

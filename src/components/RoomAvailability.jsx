@@ -68,7 +68,7 @@ function RoomAvailability() {
                                 </div>
                                 <div className="room-details">
                                     <span className="room-price">{room.price}<span className="price-period">/night</span></span>
-                                    <span className="room-link">Read More</span>
+                                    <a href="#" className="room-link">Read More</a>
                                 </div>
                             </div>
                         </div>

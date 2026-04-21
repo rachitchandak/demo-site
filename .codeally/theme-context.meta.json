@@ -1,0 +1,46 @@
+{
+  "includeDirectories": [],
+  "styleFiles": [
+    {
+      "path": "src/App.css",
+      "mtimeMs": 1776757437105.9685,
+      "size": 352
+    },
+    {
+      "path": "src/components/ContactForm.css",
+      "mtimeMs": 1776757913150.3135,
+      "size": 2222
+    },
+    {
+      "path": "src/components/Footer.css",
+      "mtimeMs": 1776757437107.9758,
+      "size": 1649
+    },
+    {
+      "path": "src/components/Header.css",
+      "mtimeMs": 1776757913149.3025,
+      "size": 1412
+    },
+    {
+      "path": "src/components/Hero.css",
+      "mtimeMs": 1776757437109.9685,
+      "size": 1762
+    },
+    {
+      "path": "src/components/PriceList.css",
+      "mtimeMs": 1776757437110.9712,
+      "size": 1055
+    },
+    {
+      "path": "src/components/RoomAvailability.css",
+      "mtimeMs": 1776757437111.9758,
+      "size": 2026
+    },
+    {
+      "path": "src/index.css",
+      "mtimeMs": 1776757437112.969,
+      "size": 2844
+    }
+  ],
+  "tailwindConfigPath": null
+}

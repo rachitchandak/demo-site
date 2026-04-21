@@ -11,9 +11,9 @@ function Footer() {
                             hospitality in our exclusive retreat.
                         </p>
                         <div className="social-icons">
-                            <img src="https://cdn-icons-png.flaticon.com/128/733/733547.png" alt="" className="social-icon" onClick={() => console.log('Facebook')} />
-                            <img src="https://cdn-icons-png.flaticon.com/128/2111/2111463.png" alt="" className="social-icon" onClick={() => console.log('Instagram')} />
-                            <img src="https://cdn-icons-png.flaticon.com/128/733/733579.png" alt="" className="social-icon" onClick={() => console.log('Twitter')} />
+                            <img src="https://cdn-icons-png.flaticon.com/128/733/733547.png" alt="" className="social-icon"/>
+                            <img src="https://cdn-icons-png.flaticon.com/128/2111/2111463.png" alt="" className="social-icon"/>
+                            <img src="https://cdn-icons-png.flaticon.com/128/733/733579.png" alt="" className="social-icon"/>
                         </div>
                     </div>
 

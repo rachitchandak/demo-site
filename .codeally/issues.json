@@ -1,0 +1,870 @@
+{
+  "src/App.jsx": [
+    {
+      "file": "src/App.jsx",
+      "line": 10,
+      "lineContent": "    <div className=\"app\">",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Primary content is not contained within a semantic main landmark, making it harder for assistive technologies to identify the main content region.",
+      "recommendation": "Wrap the primary content (e.g., welcome banner, Hero, RoomAvailability, PriceList, ContactForm) in a <main> element or add role=\"main\" to a container between Header and Footer.",
+      "severity": "major"
+    },
+    {
+      "file": "src/App.jsx",
+      "line": 13,
+      "lineContent": "        <h3 className=\"welcome-text\">Welcome to Luxury</h3>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Heading level may skip hierarchy (h3 used without clear preceding h1/h2 within this component), which can impair conveying structure to assistive technologies.",
+      "recommendation": "Use heading levels that reflect the document structure and avoid skipping levels. If this is the first heading in the content region, consider h1 or h2, and use CSS for visual styling.",
+      "severity": "minor"
+    }
+  ],
+  "src/components/Footer.css": [
+    {
+      "file": "src/components/Footer.css",
+      "line": 69,
+      "lineContent": "    color: #c9a962;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Hover state for link text uses a low-contrast color (#c9a962) against a white background, which does not meet the minimum 4.5:1 contrast ratio for normal text.",
+      "recommendation": "Use a darker hover color that meets at least a 4.5:1 contrast ratio against white (e.g., a darker gold/brown), or provide an alternative visual indicator such as underline or a background change that maintains sufficient contrast.",
+      "severity": "major"
+    }
+  ],
+  "src/components/Footer.jsx": [
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 14,
+      "lineContent": "<img src=\"https://cdn-icons-png.flaticon.com/128/733/733547.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Facebook')} />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Interactive image used as a control has an empty alt attribute, providing no text alternative.",
+      "recommendation": "Provide a meaningful alt (e.g., alt=\"Facebook\") and use a semantic button or link for activation, or add an aria-label if necessary.",
+      "severity": "critical"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 14,
+      "lineContent": "<img src=\"https://cdn-icons-png.flaticon.com/128/733/733547.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Facebook')} />",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "Image with onClick handler is not focusable or operable with a keyboard.",
+      "recommendation": "Use a native <button> or <a> element for the control so it is keyboard accessible, or add tabindex=\"0\" plus keyboard event handlers and appropriate ARIA role.",
+      "severity": "critical"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 14,
+      "lineContent": "<img src=\"https://cdn-icons-png.flaticon.com/128/733/733547.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Facebook')} />",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Custom interactive element does not expose appropriate role and accessible name.",
+      "recommendation": "Replace with a semantic <button> or <a>, or add role=\"button\" and an accessible name (e.g., aria-label=\"Facebook\") if using a non-semantic element.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 15,
+      "lineContent": "<img src=\"https://cdn-icons-png.flaticon.com/128/2111/2111463.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Instagram')} />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Interactive image used as a control has an empty alt attribute, providing no text alternative.",
+      "recommendation": "Provide a meaningful alt (e.g., alt=\"Instagram\") and use a semantic button or link for activation, or add an aria-label if necessary.",
+      "severity": "critical"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 15,
+      "lineContent": "<img src=\"https://cdn-icons-png.flaticon.com/128/2111/2111463.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Instagram')} />",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "Image with onClick handler is not focusable or operable with a keyboard.",
+      "recommendation": "Use a native <button> or <a> element for the control so it is keyboard accessible, or add tabindex=\"0\" plus keyboard event handlers and appropriate ARIA role.",
+      "severity": "critical"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 15,
+      "lineContent": "<img src=\"https://cdn-icons-png.flaticon.com/128/2111/2111463.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Instagram')} />",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Custom interactive element does not expose appropriate role and accessible name.",
+      "recommendation": "Replace with a semantic <button> or <a>, or add role=\"button\" and an accessible name (e.g., aria-label=\"Instagram\") if using a non-semantic element.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 16,
+      "lineContent": "<img src=\"https://cdn-icons-png.flaticon.com/128/733/733579.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Twitter')} />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Interactive image used as a control has an empty alt attribute, providing no text alternative.",
+      "recommendation": "Provide a meaningful alt (e.g., alt=\"Twitter\") and use a semantic button or link for activation, or add an aria-label if necessary.",
+      "severity": "critical"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 16,
+      "lineContent": "<img src=\"https://cdn-icons-png.flaticon.com/128/733/733579.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Twitter')} />",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "Image with onClick handler is not focusable or operable with a keyboard.",
+      "recommendation": "Use a native <button> or <a> element for the control so it is keyboard accessible, or add tabindex=\"0\" plus keyboard event handlers and appropriate ARIA role.",
+      "severity": "critical"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 16,
+      "lineContent": "<img src=\"https://cdn-icons-png.flaticon.com/128/733/733579.png\" alt=\"\" className=\"social-icon\" onClick={() => console.log('Twitter')} />",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Custom interactive element does not expose appropriate role and accessible name.",
+      "recommendation": "Replace with a semantic <button> or <a>, or add role=\"button\" and an accessible name (e.g., aria-label=\"Twitter\") if using a non-semantic element.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 21,
+      "lineContent": "<span className=\"footer-heading\">Quick Links</span>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Heading-like text is marked up with a non-semantic span, so heading structure is not conveyed.",
+      "recommendation": "Use semantic heading elements (e.g., <h2>/<h3>) or add role=\"heading\" with an appropriate aria-level.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 32,
+      "lineContent": "<span className=\"footer-heading\">Services</span>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Heading-like text is marked up with a non-semantic span, so heading structure is not conveyed.",
+      "recommendation": "Use semantic heading elements (e.g., <h2>/<h3>) or add role=\"heading\" with an appropriate aria-level.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 43,
+      "lineContent": "<span className=\"footer-heading\">Legal</span>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Heading-like text is marked up with a non-semantic span, so heading structure is not conveyed.",
+      "recommendation": "Use semantic heading elements (e.g., <h2>/<h3>) or add role=\"heading\" with an appropriate aria-level.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 22,
+      "lineContent": "<div className=\"link-list low-contrast-text\">",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "A list of related navigation links is not marked up as a semantic list.",
+      "recommendation": "Use <ul> with <li> elements to group related links and convey list structure.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 33,
+      "lineContent": "<div className=\"link-list low-contrast-text\">",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "A list of related navigation links is not marked up as a semantic list.",
+      "recommendation": "Use <ul> with <li> elements to group related links and convey list structure.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 44,
+      "lineContent": "<div className=\"link-list low-contrast-text\">",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "A list of related navigation links is not marked up as a semantic list.",
+      "recommendation": "Use <ul> with <li> elements to group related links and convey list structure.",
+      "severity": "major"
+    }
+  ],
+  "src/components/ContactForm.css": [
+    {
+      "file": "src/components/ContactForm.css",
+      "line": 19,
+      "lineContent": "    color: #c9a962;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Low contrast small text: section label color (#c9a962) on very light background likely < 4.5:1 for 12px text.",
+      "recommendation": "Increase contrast to at least 4.5:1 by using a darker text color or a darker background, or increase text to large size (≥18.66px regular or ≥14px bold) to meet 3:1.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/ContactForm.css",
+      "line": 54,
+      "lineContent": "    color: #c9a962;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Low contrast small text: contact label color (#c9a962) on very light background likely < 4.5:1 for 12px text.",
+      "recommendation": "Use a darker text color with sufficient contrast against the background or increase the text size/weight to qualify as large text and meet the 3:1 contrast requirement.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/ContactForm.css",
+      "line": 93,
+      "lineContent": "    color: white;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Button text has insufficient contrast: white text over a light gradient background (#c9a962 → #b8944f) likely < 4.5:1 for 13px text.",
+      "recommendation": "Increase contrast by darkening the gradient, using a darker text color, or increasing button text size to meet contrast requirements.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/ContactForm.css",
+      "line": 77,
+      "lineContent": "    border: 1px solid #e5e5e5;",
+      "criterion": "1.4.11",
+      "level": "AA",
+      "description": "Input borders (UI component boundaries) have insufficient non-text contrast against white background (< 3:1), making fields hard to perceive.",
+      "recommendation": "Use a darker border color (or add a contrasting background) that achieves at least 3:1 contrast against the adjacent background for control boundaries.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/ContactForm.css",
+      "line": 85,
+      "lineContent": "    border-color: #c9a962;",
+      "criterion": "1.4.11",
+      "level": "AA",
+      "description": "Focus indicator on inputs/textarea uses a light border color (#c9a962) with < 3:1 contrast against white, reducing focus visibility.",
+      "recommendation": "Provide a stronger focus indicator (e.g., a darker 2px outline/border or background change) with at least 3:1 contrast against adjacent colors.",
+      "severity": "major"
+    }
+  ],
+  "src/components/Header.jsx": [
+    {
+      "file": "src/components/Header.jsx",
+      "line": 19,
+      "lineContent": "<a className=\"nav-item\" href=\"#\" onClick={(event) => handleLinkClick(event, 'rooms')}>Rooms & Suites</a>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Anchor element with href=\"#\" is being used to trigger a JavaScript action (preventDefault), exposing link semantics instead of button semantics.",
+      "recommendation": "Use a semantic button for actions: <button type=\"button\" className=\"nav-item\" onClick={...}>…</button>. If this is true navigation, provide a real href to the target (e.g., \"#rooms\") and do not prevent default. Ensure activation by both Enter and Space.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/Header.jsx",
+      "line": 20,
+      "lineContent": "<a className=\"nav-item\" href=\"#\" onClick={(event) => handleLinkClick(event, 'dining')}>Dining</a>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Anchor element with href=\"#\" is being used to trigger a JavaScript action (preventDefault), exposing link semantics instead of button semantics.",
+      "recommendation": "Use a semantic button for actions: <button type=\"button\" className=\"nav-item\" onClick={...}>…</button>. If this is true navigation, provide a real href to the target (e.g., \"#dining\") and do not prevent default. Ensure activation by both Enter and Space.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/Header.jsx",
+      "line": 21,
+      "lineContent": "<a className=\"nav-item\" href=\"#\" onClick={(event) => handleLinkClick(event, 'spa')}>Spa & Wellness</a>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Anchor element with href=\"#\" is being used to trigger a JavaScript action (preventDefault), exposing link semantics instead of button semantics.",
+      "recommendation": "Use a semantic button for actions: <button type=\"button\" className=\"nav-item\" onClick={...}>…</button>. If this is true navigation, provide a real href to the target (e.g., \"#spa\") and do not prevent default. Ensure activation by both Enter and Space.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/Header.jsx",
+      "line": 22,
+      "lineContent": "<a className=\"nav-item\" href=\"#\" onClick={(event) => handleLinkClick(event, 'experiences')}>Experiences</a>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Anchor element with href=\"#\" is being used to trigger a JavaScript action (preventDefault), exposing link semantics instead of button semantics.",
+      "recommendation": "Use a semantic button for actions: <button type=\"button\" className=\"nav-item\" onClick={...}>…</button>. If this is true navigation, provide a real href to the target (e.g., \"#experiences\") and do not prevent default. Ensure activation by both Enter and Space.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/Header.jsx",
+      "line": 23,
+      "lineContent": "<a className=\"nav-item\" href=\"#\" onClick={(event) => handleLinkClick(event, 'contact')}>Contact</a>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Anchor element with href=\"#\" is being used to trigger a JavaScript action (preventDefault), exposing link semantics instead of button semantics.",
+      "recommendation": "Use a semantic button for actions: <button type=\"button\" className=\"nav-item\" onClick={...}>…</button>. If this is true navigation, provide a real href to the target (e.g., \"#contact\") and do not prevent default. Ensure activation by both Enter and Space.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/Header.jsx",
+      "line": 25,
+      "lineContent": "<a className=\"book-btn\" href=\"#\" onClick={(event) => handleLinkClick(event, 'booking')}>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Anchor element with href=\"#\" is being used to trigger a JavaScript action (preventDefault), exposing link semantics instead of button semantics.",
+      "recommendation": "Use a semantic button for actions: <button type=\"button\" className=\"book-btn\" onClick={...}>Book Now</button>. If this is true navigation, provide a real href to the target (e.g., \"#booking\") and do not prevent default. Ensure activation by both Enter and Space.",
+      "severity": "major"
+    }
+  ],
+  "src/components/Header.css": [
+    {
+      "file": "src/components/Header.css",
+      "line": 46,
+      "lineContent": "    color: #c9a962;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Hovered navigation text color (#c9a962) on a white background has insufficient contrast (~2.25:1), below the required 4.5:1 for normal text.",
+      "recommendation": "Use a darker hover text color (or adjust background) that achieves at least a 4.5:1 contrast ratio against white; verify with a contrast checker.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/Header.css",
+      "line": 53,
+      "lineContent": "    color: white;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Button text color (white) on the light gold gradient background (#c9a962 to #b8944f) has insufficient contrast (~2.25:1–2.84:1), below the required 4.5:1 for 12px text.",
+      "recommendation": "Use a darker text color on the button or darken the gradient background so the text/background contrast is at least 4.5:1; confirm with a contrast checker.",
+      "severity": "major"
+    }
+  ],
+  "src/components/ContactForm.jsx": [
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 13,
+      "lineContent": "<span className=\"section-label\">Get in Touch</span>",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Text color #c9a962 on background #faf9f7 has insufficient contrast (~2.14:1) for normal text",
+      "recommendation": "Increase text color contrast to at least 4.5:1 (e.g., use a darker color) or adjust background color",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 22,
+      "lineContent": "<span className=\"contact-label\">Address</span>",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Text color #c9a962 on background #faf9f7 has insufficient contrast (~2.14:1) for normal text",
+      "recommendation": "Increase text color contrast to at least 4.5:1 (e.g., use a darker color) or adjust background color",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 26,
+      "lineContent": "<span className=\"contact-label\">Phone</span>",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Text color #c9a962 on background #faf9f7 has insufficient contrast (~2.14:1) for normal text",
+      "recommendation": "Increase text color contrast to at least 4.5:1 (e.g., use a darker color) or adjust background color",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 30,
+      "lineContent": "<span className=\"contact-label\">Email</span>",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Text color #c9a962 on background #faf9f7 has insufficient contrast (~2.14:1) for normal text",
+      "recommendation": "Increase text color contrast to at least 4.5:1 (e.g., use a darker color) or adjust background color",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 36,
+      "lineContent": "<div className=\"contact-form\">",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Form controls are not contained within a semantic <form> element, reducing programmatic identification of form relationships",
+      "recommendation": "Wrap inputs and submit control in a <form> element and handle submission via onSubmit; use type=\"submit\" on the button",
+      "severity": "minor"
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 37,
+      "lineContent": "<input type=\"text\" placeholder=\"Name\" />",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Form field has no accessible name (no associated label, aria-label, or aria-labelledby). Placeholder alone is not a sufficient label",
+      "recommendation": "Provide a visible <label for> and matching id, or add aria-label/aria-labelledby to convey the field’s purpose",
+      "severity": "critical"
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 37,
+      "lineContent": "<input type=\"text\" placeholder=\"Name\" />",
+      "criterion": "1.3.5",
+      "level": "AA",
+      "description": "Input missing appropriate autocomplete attribute to identify input purpose",
+      "recommendation": "Add autocomplete=\"name\" (or split into given-name/family-name if applicable)",
+      "severity": "minor"
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 38,
+      "lineContent": "<input type=\"email\" placeholder=\"Email Address\" />",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Form field has no accessible name (no associated label, aria-label, or aria-labelledby). Placeholder alone is not a sufficient label",
+      "recommendation": "Provide a visible <label for> and matching id, or add aria-label/aria-labelledby to convey the field’s purpose",
+      "severity": "critical"
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 38,
+      "lineContent": "<input type=\"email\" placeholder=\"Email Address\" />",
+      "criterion": "1.3.5",
+      "level": "AA",
+      "description": "Input missing appropriate autocomplete attribute to identify input purpose",
+      "recommendation": "Add autocomplete=\"email\"",
+      "severity": "minor"
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 39,
+      "lineContent": "<input type=\"tel\" placeholder=\"Phone Number\" />",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Form field has no accessible name (no associated label, aria-label, or aria-labelledby). Placeholder alone is not a sufficient label",
+      "recommendation": "Provide a visible <label for> and matching id, or add aria-label/aria-labelledby to convey the field’s purpose",
+      "severity": "critical"
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 39,
+      "lineContent": "<input type=\"tel\" placeholder=\"Phone Number\" />",
+      "criterion": "1.3.5",
+      "level": "AA",
+      "description": "Input missing appropriate autocomplete attribute to identify input purpose",
+      "recommendation": "Add autocomplete=\"tel\"",
+      "severity": "minor"
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 40,
+      "lineContent": "<textarea rows=\"5\" placeholder=\"Your Message\"></textarea>",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Form field has no accessible name (no associated label, aria-label, or aria-labelledby). Placeholder alone is not a sufficient label",
+      "recommendation": "Provide a visible <label for> and matching id, or add aria-label/aria-labelledby to convey the field’s purpose",
+      "severity": "critical"
+    }
+  ],
+  "src/components/Hero.jsx": [
+    {
+      "file": "src/components/Hero.jsx",
+      "line": 21,
+      "lineContent": "<div className=\"btn btn-primary\">Click Here</div>",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Non-semantic element used as a button without exposing accessible role, name, and state.",
+      "recommendation": "Use a semantic <button> element or add role=\"button\", tabindex=\"0\", and keyboard handlers (Enter/Space) to the element. Ensure an accessible name is provided.",
+      "severity": "critical"
+    },
+    {
+      "file": "src/components/Hero.jsx",
+      "line": 22,
+      "lineContent": "<div className=\"btn btn-outline\">Read More</div>",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Non-semantic element used as a button without exposing accessible role, name, and state.",
+      "recommendation": "Use a semantic <button> or <a> element as appropriate, or add role=\"button\", tabindex=\"0\", and keyboard handlers (Enter/Space). Ensure an accessible name is provided.",
+      "severity": "critical"
+    },
+    {
+      "file": "src/components/Hero.jsx",
+      "line": 21,
+      "lineContent": "<div className=\"btn btn-primary\">Click Here</div>",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "Interactive control is not keyboard operable because it is a non-focusable <div>.",
+      "recommendation": "Use a native <button> element or add tabindex=\"0\" and keyboard event handlers to support activation via Enter and Space.",
+      "severity": "critical"
+    },
+    {
+      "file": "src/components/Hero.jsx",
+      "line": 22,
+      "lineContent": "<div className=\"btn btn-outline\">Read More</div>",
+      "criterion": "2.1.1",
+      "level": "A",
+      "description": "Interactive control is not keyboard operable because it is a non-focusable <div>.",
+      "recommendation": "Use a native <button> or <a> element and ensure it is focusable and operable via keyboard (Enter/Space).",
+      "severity": "critical"
+    },
+    {
+      "file": "src/components/Hero.jsx",
+      "line": 21,
+      "lineContent": "<div className=\"btn btn-primary\">Click Here</div>",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Insufficient color contrast: white text on #c9a962 background has a contrast ratio of approximately 2.25:1, below the required 4.5:1 for normal text and 3:1 for large text.",
+      "recommendation": "Increase contrast by darkening the background color or using a darker text color to achieve at least 4.5:1 (or 3:1 for large text).",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/Hero.jsx",
+      "line": 21,
+      "lineContent": "<div className=\"btn btn-primary\">Click Here</div>",
+      "criterion": "2.4.6",
+      "level": "AA",
+      "description": "Button label is not descriptive; “Click Here” does not convey purpose.",
+      "recommendation": "Use a specific, descriptive label such as “Book Now” or “Explore Rooms” that clearly indicates the action.",
+      "severity": "minor"
+    },
+    {
+      "file": "src/components/Hero.jsx",
+      "line": 22,
+      "lineContent": "<div className=\"btn btn-outline\">Read More</div>",
+      "criterion": "2.4.6",
+      "level": "AA",
+      "description": "Button label is vague; “Read More” does not clearly indicate the destination or action by itself.",
+      "recommendation": "Make the label specific to the content, e.g., “Read More About The Silent Oasis” or “Learn About Our Amenities.”",
+      "severity": "minor"
+    }
+  ],
+  "src/components/PriceList.css": [
+    {
+      "file": "src/components/PriceList.css",
+      "line": 43,
+      "lineContent": "    color: #c9a962;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Text color #c9a962 on a white or near-white background provides insufficient contrast (approx. 2.3:1) for 15px text.",
+      "recommendation": "Use a darker text color that achieves at least 4.5:1 contrast against the background, or increase the text to large text (≥18.66px bold or ≥24px regular) to meet 3:1.",
+      "severity": "critical"
+    },
+    {
+      "file": "src/components/PriceList.css",
+      "line": 55,
+      "lineContent": "    text-decoration: none;",
+      "criterion": "1.4.1",
+      "level": "A",
+      "description": "Inline links in .price-note have their underline removed and inherit the surrounding text color, making them not visually distinguishable from non-link text.",
+      "recommendation": "Provide a non-color visual cue for links (e.g., underline by default, and ensure clear focus/hover styles). If relying on color, ensure a 3:1 contrast difference with surrounding text in addition to another visual cue.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/PriceList.css",
+      "line": 13,
+      "lineContent": "    border-bottom: 1px solid #eee;",
+      "criterion": "1.4.11",
+      "level": "AA",
+      "description": "Low-contrast row dividers (#eee on white) may be essential to perceive table row boundaries; contrast is approximately 1.16:1, below the required 3:1 for non-text graphical objects.",
+      "recommendation": "Increase the contrast of row separators (e.g., use a darker border color) so the divider has at least a 3:1 contrast ratio with the adjacent background.",
+      "severity": "minor"
+    }
+  ],
+  "src/components/PriceList.jsx": [
+    {
+      "file": "src/components/PriceList.jsx",
+      "line": 22,
+      "lineContent": "<tr className=\"table-header-row\">",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Table header row uses a very dark background (#1a1a1a) but no contrasting text color is set; default black text results in insufficient contrast.",
+      "recommendation": "Set a high-contrast text color for header cells (e.g., color: #FFFFFF) or adjust background to ensure at least 4.5:1 contrast.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/PriceList.jsx",
+      "line": 23,
+      "lineContent": "                        <td>Service</td>",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Table header cells are marked up as td instead of th, so header relationships are not conveyed to assistive technologies.",
+      "recommendation": "Use <th scope=\"col\"> for column headers (Service, Weekday, Weekend, Holiday) and consider adding <thead> for proper semantics.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/PriceList.jsx",
+      "line": 38,
+      "lineContent": "                <p className=\"price-note low-contrast-text\">",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Text color #cccccc likely on a light background has insufficient contrast for normal text.",
+      "recommendation": "Increase text color contrast (e.g., use a darker text color) or adjust background to achieve at least 4.5:1 contrast for body text.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/PriceList.jsx",
+      "line": 41,
+      "lineContent": "                    <a href=\"#\">Click here</a> for full terms.",
+      "criterion": "2.4.4",
+      "level": "A",
+      "description": "Link text \"Click here\" is not descriptive of its destination or purpose.",
+      "recommendation": "Use meaningful link text that describes the destination, e.g., <a href=\"#\">Read full terms</a>.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/PriceList.jsx",
+      "line": 18,
+      "lineContent": "                    <span className=\"section-label\">Rates</span>",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "The section label color (#c9a962) likely lacks sufficient contrast against a light background.",
+      "recommendation": "Choose a text color that meets at least a 4.5:1 contrast ratio against the background or increase font size/weight to qualify as large text with 3:1.",
+      "severity": "minor"
+    }
+  ],
+  "src/components/Hero.css": [
+    {
+      "file": "src/components/Hero.css",
+      "line": 55,
+      "lineContent": "    color: white;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Hero title text is white over a variable image background with only a 30%–50% black overlay, which can result in insufficient contrast (even large text can fail when the underlying image is light).",
+      "recommendation": "Ensure a minimum 3:1 contrast for large text by increasing the overlay darkness (e.g., >= 0.7–0.8), adding a solid/semi-opaque background behind the text, or otherwise ensuring the background under the title is dark enough across all images.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/Hero.css",
+      "line": 63,
+      "lineContent": "    color: rgba(255, 255, 255, 0.9);",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Hero subtitle text (near-white) over a variable image background with only a 30%–50% black overlay can fall below the required 4.5:1 contrast for normal text in lighter image areas.",
+      "recommendation": "Increase contrast by darkening the overlay further, placing the subtitle on a solid/semi-opaque background, or ensuring the image area behind the subtitle is consistently dark enough to maintain at least 4.5:1.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/Hero.css",
+      "line": 46,
+      "lineContent": "    color: #c9a962;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Hero tagline uses #c9a962 over a variable image background; this gold color can have low contrast against lighter areas even with a 30%–50% black overlay.",
+      "recommendation": "Use a darker text color, increase overlay opacity, or add a solid/semi-opaque background chip behind the tagline to ensure at least 4.5:1 contrast for normal-sized text.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/Hero.css",
+      "line": 75,
+      "lineContent": "    color: white;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Button text is white on a transparent background over a variable image; contrast with the image (even darkened by only 30%–50%) may not meet 4.5:1.",
+      "recommendation": "Provide a sufficiently dark solid/semi-opaque button background in the default state or ensure a stronger overlay behind buttons to maintain at least 4.5:1 contrast for the button label.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/Hero.css",
+      "line": 74,
+      "lineContent": "    border-color: white;",
+      "criterion": "1.4.11",
+      "level": "AA",
+      "description": "The button’s white border may not have 3:1 contrast against lighter image areas, making the component boundary hard to perceive.",
+      "recommendation": "Use a darker/high-contrast border or add a contrasting fill so the button boundary/shape has at least 3:1 contrast against adjacent background in all states.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/Hero.css",
+      "line": 79,
+      "lineContent": "    background: white;",
+      "criterion": "1.4.11",
+      "level": "AA",
+      "description": "On hover the button background becomes white; against light parts of the image (with only a 30%–50% black overlay) the component’s boundary/fill may not reach the required 3:1 non-text contrast with the surrounding background.",
+      "recommendation": "Ensure the hovered button has a sufficiently contrasting outline or a darker adjacent background so the component is perceivable with at least 3:1 contrast.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/Hero.css",
+      "line": 8,
+      "lineContent": "    overflow: hidden;",
+      "criterion": "1.4.10",
+      "level": "AA",
+      "description": "Fixed viewport height (100vh) with a large min-height (700px) and overflow hidden can cause text/content to be clipped or inaccessible on small screens or when users zoom/reflow content.",
+      "recommendation": "Avoid fixed heights for text containers and remove overflow: hidden on content containers; allow content to wrap and scroll vertically so it reflows without loss at 320px width and 200% zoom.",
+      "severity": "major"
+    }
+  ],
+  "src/components/RoomAvailability.css": [
+    {
+      "file": "src/components/RoomAvailability.css",
+      "line": 17,
+      "lineContent": "    color: #c9a962;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Insufficient text contrast for small text (.section-label). #c9a962 on a very light background (~#faf9f7) is approximately 2.1:1, below the required 4.5:1 for normal text.",
+      "recommendation": "Use a darker color that achieves at least 4.5:1 against the background (or significantly increase size/weight and still ensure at least 3:1 for large text).",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/RoomAvailability.css",
+      "line": 84,
+      "lineContent": "    color: #c9a962;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Insufficient text contrast for large text (.room-price). #c9a962 on white is ~2.23:1, below the required 3:1 for large text.",
+      "recommendation": "Choose a darker text color that reaches at least 3:1 contrast against white, or adjust background to increase contrast.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/RoomAvailability.css",
+      "line": 90,
+      "lineContent": "    color: #999;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Insufficient text contrast for normal text (.price-period). #999999 on white is ~2.85:1, below the required 4.5:1.",
+      "recommendation": "Use a darker gray (e.g., around #595959 or darker) to meet at least 4.5:1 contrast on white.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/RoomAvailability.css",
+      "line": 104,
+      "lineContent": "    color: #c9a962;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Insufficient contrast for interactive state (.room-link:hover). Hover color #c9a962 on white/light background is ~2.1–2.2:1, below 4.5:1 for normal text.",
+      "recommendation": "Use a hover/focus color that maintains at least 4.5:1 contrast with the background (and ensure focus state uses the same or better contrast).",
+      "severity": "major"
+    }
+  ],
+  "src/components/RoomAvailability.jsx": [
+    {
+      "file": "src/components/RoomAvailability.jsx",
+      "line": 63,
+      "lineContent": "<img src={room.image} alt=\"\" className=\"room-image\" />",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Informative room image is marked as decorative with empty alt text, providing no alternative for screen reader users.",
+      "recommendation": "Provide a descriptive alt attribute, e.g., alt={`${room.name}`} or alt={`Photo of ${room.name}`}.",
+      "severity": "critical"
+    },
+    {
+      "file": "src/components/RoomAvailability.jsx",
+      "line": 67,
+      "lineContent": "<span className={`status-dot ${room.available ? 'status-available' : 'status-booked'}`}></span>",
+      "criterion": "1.4.1",
+      "level": "A",
+      "description": "Availability is conveyed by color alone via a status dot with no accompanying text.",
+      "recommendation": "Add visible text such as “Available”/“Booked”, or include an accessible name via aria-label and ensure a non-color cue (e.g., text or icon) is present.",
+      "severity": "critical"
+    },
+    {
+      "file": "src/components/RoomAvailability.jsx",
+      "line": 67,
+      "lineContent": "<span className={`status-dot ${room.available ? 'status-available' : 'status-booked'}`}></span>",
+      "criterion": "1.4.11",
+      "level": "AA",
+      "description": "Green status indicator (#22c55e) likely fails non-text contrast against the background (#faf9f7) at approximately 2.16:1 (< 3:1).",
+      "recommendation": "Increase contrast for the status indicator (e.g., darken the green color or add a high-contrast outline) to at least 3:1 against its background.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/RoomAvailability.jsx",
+      "line": 52,
+      "lineContent": "<span className=\"section-label\">Accommodations</span>",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Text color #c9a962 on background #faf9f7 has insufficient contrast (~2.13:1).",
+      "recommendation": "Use a darker text color or increase weight/size to qualify as large text; ensure contrast ratio is at least 4.5:1 for normal text.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/RoomAvailability.jsx",
+      "line": 70,
+      "lineContent": "<span className=\"room-price\">{room.price}<span className=\"price-period\">/night</span></span>",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Price text color #c9a962 on background #faf9f7 has insufficient contrast (~2.13:1).",
+      "recommendation": "Choose a darker color for the price text or adjust styling to meet at least a 4.5:1 contrast ratio for normal text.",
+      "severity": "major"
+    },
+    {
+      "file": "src/components/RoomAvailability.jsx",
+      "line": 70,
+      "lineContent": "<span className=\"room-price\">{room.price}<span className=\"price-period\">/night</span></span>",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "“/night” text color #999999 on background #faf9f7 has insufficient contrast (~2.71:1).",
+      "recommendation": "Use a darker gray or different color to achieve at least a 4.5:1 contrast ratio for normal text.",
+      "severity": "major"
+    }
+  ],
+  "src/index.css": [
+    {
+      "file": "src/index.css",
+      "line": 3,
+      "lineContent": "  outline: none !important;",
+      "criterion": "2.4.7",
+      "level": "AA",
+      "description": "Global removal of outlines hides focus indicators for keyboard users, making focus not visibly apparent.",
+      "recommendation": "Remove the global outline reset and provide clear :focus/:focus-visible styles for interactive elements with at least 3:1 contrast against adjacent colors.",
+      "severity": "critical"
+    },
+    {
+      "file": "src/index.css",
+      "line": 38,
+      "lineContent": "  text-decoration: none;",
+      "criterion": "1.4.1",
+      "level": "A",
+      "description": "Links are indistinguishable from surrounding text (underline removed and color inherited), relying on no visual distinction.",
+      "recommendation": "Restore underlines for inline links or provide a non-color cue (e.g., underline) plus a distinct color that also meets contrast, and add visible focus styles.",
+      "severity": "major"
+    },
+    {
+      "file": "src/index.css",
+      "line": 93,
+      "lineContent": "  color: var(--text-low-contrast);",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Low contrast text color (#cccccc) likely used on light backgrounds results in insufficient contrast (e.g., ~1.6:1 vs #ffffff).",
+      "recommendation": "Increase text color contrast to at least 4.5:1 against the background (e.g., use a darker gray such as #767676 on white or adjust background).",
+      "severity": "major"
+    },
+    {
+      "file": "src/index.css",
+      "line": 61,
+      "lineContent": "  color: var(--text-light);",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Button text (#ffffff) on gold gradient background (e.g., #c9a962 to #b8944f) has insufficient contrast (~2.2–2.8:1).",
+      "recommendation": "Use a darker text color (e.g., #1a1a1a) on the gold background or darken the background until text contrast reaches at least 4.5:1 (3:1 for large text).",
+      "severity": "major"
+    },
+    {
+      "file": "src/index.css",
+      "line": 72,
+      "lineContent": "  color: var(--primary-gold);",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Outline button text color (#c9a962) on white/transparent background has insufficient contrast (~2.23:1 vs #ffffff).",
+      "recommendation": "Use a darker text color against light backgrounds (or a darker background) to reach at least 4.5:1 contrast.",
+      "severity": "major"
+    },
+    {
+      "file": "src/index.css",
+      "line": 77,
+      "lineContent": "  color: var(--text-light);",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "On hover, outline button uses white text on gold background, which still has insufficient contrast (~2.2–2.8:1).",
+      "recommendation": "Change hover state to use a darker text color or darken the hover background to achieve at least 4.5:1 contrast.",
+      "severity": "major"
+    },
+    {
+      "file": "src/index.css",
+      "line": 105,
+      "lineContent": "  background-color: #22c55e;",
+      "criterion": "1.4.1",
+      "level": "A",
+      "description": "Status is conveyed using color alone between .status-available and .status-booked, which is not accessible to users with color vision deficiencies.",
+      "recommendation": "Provide a non-color cue (e.g., adjacent text label, icon shape/pattern differences) and ensure accessible names/ARIA labels communicate status.",
+      "severity": "major"
+    },
+    {
+      "file": "src/index.css",
+      "line": 118,
+      "lineContent": "  border: 1px solid #e5e5e5;",
+      "criterion": "1.4.11",
+      "level": "AA",
+      "description": "Input borders have low contrast against white background (~1.2:1), making control boundaries hard to perceive.",
+      "recommendation": "Increase control boundary contrast to at least 3:1 (e.g., use a darker border like #8a8a8a or a tinted background for inputs).",
+      "severity": "major"
+    },
+    {
+      "file": "src/index.css",
+      "line": 124,
+      "lineContent": "  border-color: var(--primary-gold);",
+      "criterion": "1.4.11",
+      "level": "AA",
+      "description": "Focus indication on inputs relies on a 1px gold border (~2.23:1 vs white), which may not meet non-text contrast requirements.",
+      "recommendation": "Provide a more prominent focus indicator with at least 3:1 contrast (e.g., thicker outline, darker color, or background highlight) and consider :focus-visible.",
+      "severity": "major"
+    }
+  ]
+}
