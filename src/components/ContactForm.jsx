@@ -34,17 +34,14 @@ function ContactForm() {
                     </div>
 
                     <div className="contact-form">
-                        <div className="form-row">
-                            <input type="text" placeholder="First Name" />
-                            <input type="text" placeholder="Last Name" />
-                        </div>
+                        <input type="text" placeholder="Name" />
                         <input type="email" placeholder="Email Address" />
                         <input type="tel" placeholder="Phone Number" />
                         <textarea rows="5" placeholder="Your Message"></textarea>
 
-                        <div className="submit-btn" onClick={handleSubmit}>
+                        <button type="button" className="submit-btn" onClick={handleSubmit}>
                             Click Here to Submit
-                        </div>
+                        </button>
                     </div>
                 </div>
             </div>

@@ -3,42 +3,42 @@ const rooms = [
     {
         id: 1,
         name: 'Ocean View Suite',
-        image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&q=80',
+        image: '/rooms/ocean-view-suite.jpg',
         price: '$850',
         available: true
     },
     {
         id: 2,
         name: 'Royal Penthouse',
-        image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80',
+        image: '/rooms/royal-penthouse.jpg',
         price: '$2,400',
         available: false
     },
     {
         id: 3,
         name: 'Garden Villa',
-        image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80',
+        image: '/rooms/garden-villa.jpg',
         price: '$1,200',
         available: true
     },
     {
         id: 4,
         name: 'Presidential Suite',
-        image: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=600&q=80',
+        image: '/rooms/presidential-suite.jpg',
         price: '$3,500',
         available: false
     },
     {
         id: 5,
         name: 'Spa Retreat Room',
-        image: 'https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=600&q=80',
+        image: '/rooms/spa-retreat-room.jpg',
         price: '$650',
         available: true
     },
     {
         id: 6,
         name: 'Sunset Terrace Suite',
-        image: 'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=600&q=80',
+        image: '/rooms/sunset-terrace-suite.jpg',
         price: '$980',
         available: false
     }
