@@ -1,0 +1,251 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 4 /Kids [4 0 R 6 0 R 8 0 R 10 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 3892 >>
+stream
+BT /F1 11 Tf 48 778 Td (Accessibility Conformance Report \(VPAT\) — Draft) Tj ET
+BT /F1 11 Tf 48 764 Td (Workspace: demo-site) Tj ET
+BT /F1 11 Tf 48 750 Td (Target URL: http://localhost:5173) Tj ET
+BT /F1 11 Tf 48 736 Td (Generated: 6/10/2026, 9:19:58 AM) Tj ET
+BT /F1 11 Tf 48 722 Td (Levels covered: A, AA) Tj ET
+BT /F1 11 Tf 48 708 Td () Tj ET
+BT /F1 11 Tf 48 694 Td (Automated draft. Rows marked "To be reviewed" require manual confirmation.) Tj ET
+BT /F1 11 Tf 48 680 Td () Tj ET
+BT /F1 11 Tf 48 666 Td (Supports: 3 | Partially Supports: 6 | Does Not Support: 1 | Not Applicable: 45 | To be) Tj ET
+BT /F1 11 Tf 48 652 Td (reviewed: 8) Tj ET
+BT /F1 11 Tf 48 638 Td () Tj ET
+BT /F1 11 Tf 48 624 Td (Level A Success Criteria) Tj ET
+BT /F1 11 Tf 48 610 Td (1.1.1 Non-text Content \(Level A\)) Tj ET
+BT /F1 11 Tf 48 596 Td (Conformance: Supports) Tj ET
+BT /F1 11 Tf 48 582 Td (Remarks: All detected issues were fixed. 4 issues fixed.) Tj ET
+BT /F1 11 Tf 48 568 Td (1.2.1 Audio-only and Video-only \(Prerecorded\) \(Level A\)) Tj ET
+BT /F1 11 Tf 48 554 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 540 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 526 Td (1.2.2 Captions \(Prerecorded\) \(Level A\)) Tj ET
+BT /F1 11 Tf 48 512 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 498 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 484 Td (1.2.3 Audio Description or Media Alternative \(Prerecorded\) \(Level A\)) Tj ET
+BT /F1 11 Tf 48 470 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 456 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 442 Td (1.3.1 Info and Relationships \(Level A\)) Tj ET
+BT /F1 11 Tf 48 428 Td (Conformance: Partially Supports) Tj ET
+BT /F1 11 Tf 48 414 Td (Remarks: ⚠ To be reviewed: 6 issues fixed. Detection confidence was low; verify the fix) Tj ET
+BT /F1 11 Tf 48 400 Td (resolves the criterion.) Tj ET
+BT /F1 11 Tf 48 386 Td (1.3.2 Meaningful Sequence \(Level A\)) Tj ET
+BT /F1 11 Tf 48 372 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 358 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 344 Td (1.3.3 Sensory Characteristics \(Level A\)) Tj ET
+BT /F1 11 Tf 48 330 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 316 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 302 Td (1.4.1 Use of Color \(Level A\)) Tj ET
+BT /F1 11 Tf 48 288 Td (Conformance: Partially Supports) Tj ET
+BT /F1 11 Tf 48 274 Td (Remarks: ⚠ To be reviewed: 5 issues fixed. Detection confidence was low; verify the fix) Tj ET
+BT /F1 11 Tf 48 260 Td (resolves the criterion.) Tj ET
+BT /F1 11 Tf 48 246 Td (1.4.2 Audio Control \(Level A\)) Tj ET
+BT /F1 11 Tf 48 232 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 218 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 204 Td (2.1.1 Keyboard \(Level A\)) Tj ET
+BT /F1 11 Tf 48 190 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 176 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 162 Td (2.1.2 No Keyboard Trap \(Level A\)) Tj ET
+BT /F1 11 Tf 48 148 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 134 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 120 Td (2.1.4 Character Key Shortcuts \(Level A\)) Tj ET
+BT /F1 11 Tf 48 106 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 92 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 78 Td (2.2.1 Timing Adjustable \(Level A\)) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 4092 >>
+stream
+BT /F1 11 Tf 48 778 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 764 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 750 Td (2.2.2 Pause, Stop, Hide \(Level A\)) Tj ET
+BT /F1 11 Tf 48 736 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 722 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 708 Td (2.3.1 Three Flashes or Below Threshold \(Level A\)) Tj ET
+BT /F1 11 Tf 48 694 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 680 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 666 Td (2.4.1 Bypass Blocks \(Level A\)) Tj ET
+BT /F1 11 Tf 48 652 Td (Conformance: Partially Supports) Tj ET
+BT /F1 11 Tf 48 638 Td (Remarks: ⚠ To be reviewed: 1 issue fixed. Detection confidence was low; verify the fix) Tj ET
+BT /F1 11 Tf 48 624 Td (resolves the criterion.) Tj ET
+BT /F1 11 Tf 48 610 Td (2.4.2 Page Titled \(Level A\)) Tj ET
+BT /F1 11 Tf 48 596 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 582 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 568 Td (2.4.3 Focus Order \(Level A\)) Tj ET
+BT /F1 11 Tf 48 554 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 540 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 526 Td (2.4.4 Link Purpose \(In Context\) \(Level A\)) Tj ET
+BT /F1 11 Tf 48 512 Td (Conformance: Partially Supports) Tj ET
+BT /F1 11 Tf 48 498 Td (Remarks: ⚠ To be reviewed: 2 issues fixed. Detection confidence was low; verify the fix) Tj ET
+BT /F1 11 Tf 48 484 Td (resolves the criterion.) Tj ET
+BT /F1 11 Tf 48 470 Td (2.5.1 Pointer Gestures \(Level A\)) Tj ET
+BT /F1 11 Tf 48 456 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 442 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 428 Td (2.5.2 Pointer Cancellation \(Level A\)) Tj ET
+BT /F1 11 Tf 48 414 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 400 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 386 Td (2.5.3 Label in Name \(Level A\)) Tj ET
+BT /F1 11 Tf 48 372 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 358 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 344 Td (2.5.4 Motion Actuation \(Level A\)) Tj ET
+BT /F1 11 Tf 48 330 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 316 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 302 Td (3.1.1 Language of Page \(Level A\)) Tj ET
+BT /F1 11 Tf 48 288 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 274 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 260 Td (3.2.1 On Focus \(Level A\)) Tj ET
+BT /F1 11 Tf 48 246 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 232 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 218 Td (3.2.2 On Input \(Level A\)) Tj ET
+BT /F1 11 Tf 48 204 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 190 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 176 Td (3.2.6 Consistent Help \(Level A\)) Tj ET
+BT /F1 11 Tf 48 162 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 148 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 134 Td (3.3.1 Error Identification \(Level A\)) Tj ET
+BT /F1 11 Tf 48 120 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 106 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 92 Td (3.3.2 Labels or Instructions \(Level A\)) Tj ET
+BT /F1 11 Tf 48 78 Td (Conformance: Does Not Support) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 9 0 R >>
+endobj
+9 0 obj
+<< /Length 3997 >>
+stream
+BT /F1 11 Tf 48 778 Td (Remarks: ⚠ To be reviewed: 4 issues outstanding.) Tj ET
+BT /F1 11 Tf 48 764 Td (3.3.7 Redundant Entry \(Level A\)) Tj ET
+BT /F1 11 Tf 48 750 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 736 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 722 Td (4.1.1 Parsing \(Level A\)) Tj ET
+BT /F1 11 Tf 48 708 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 694 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 680 Td (4.1.2 Name, Role, Value \(Level A\)) Tj ET
+BT /F1 11 Tf 48 666 Td (Conformance: Supports) Tj ET
+BT /F1 11 Tf 48 652 Td (Remarks: All detected issues were fixed. 4 issues fixed.) Tj ET
+BT /F1 11 Tf 48 638 Td () Tj ET
+BT /F1 11 Tf 48 624 Td (Level AA Success Criteria) Tj ET
+BT /F1 11 Tf 48 610 Td (1.2.4 Captions \(Live\) \(Level AA\)) Tj ET
+BT /F1 11 Tf 48 596 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 582 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 568 Td (1.2.5 Audio Description \(Prerecorded\) \(Level AA\)) Tj ET
+BT /F1 11 Tf 48 554 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 540 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 526 Td (1.3.4 Orientation \(Level AA\)) Tj ET
+BT /F1 11 Tf 48 512 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 498 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 484 Td (1.3.5 Identify Input Purpose \(Level AA\)) Tj ET
+BT /F1 11 Tf 48 470 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 456 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 442 Td (1.4.3 Contrast \(Minimum\) \(Level AA\)) Tj ET
+BT /F1 11 Tf 48 428 Td (Conformance: Partially Supports) Tj ET
+BT /F1 11 Tf 48 414 Td (Remarks: ⚠ To be reviewed: 50 issues fixed. Detection confidence was low; verify the fix) Tj ET
+BT /F1 11 Tf 48 400 Td (resolves the criterion.) Tj ET
+BT /F1 11 Tf 48 386 Td (1.4.4 Resize Text \(Level AA\)) Tj ET
+BT /F1 11 Tf 48 372 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 358 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 344 Td (1.4.5 Images of Text \(Level AA\)) Tj ET
+BT /F1 11 Tf 48 330 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 316 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 302 Td (1.4.10 Reflow \(Level AA\)) Tj ET
+BT /F1 11 Tf 48 288 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 274 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 260 Td (1.4.11 Non-text Contrast \(Level AA\)) Tj ET
+BT /F1 11 Tf 48 246 Td (Conformance: Partially Supports) Tj ET
+BT /F1 11 Tf 48 232 Td (Remarks: ⚠ To be reviewed: Some issues were fixed while others remain. 10 issues fixed, 1) Tj ET
+BT /F1 11 Tf 48 218 Td (issue outstanding.) Tj ET
+BT /F1 11 Tf 48 204 Td (1.4.12 Text Spacing \(Level AA\)) Tj ET
+BT /F1 11 Tf 48 190 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 176 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 162 Td (1.4.13 Content on Hover or Focus \(Level AA\)) Tj ET
+BT /F1 11 Tf 48 148 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 134 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 120 Td (2.4.5 Multiple Ways \(Level AA\)) Tj ET
+BT /F1 11 Tf 48 106 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 92 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 78 Td (2.4.6 Headings and Labels \(Level AA\)) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 11 0 R >>
+endobj
+11 0 obj
+<< /Length 3028 >>
+stream
+BT /F1 11 Tf 48 778 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 764 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 750 Td (2.4.7 Focus Visible \(Level AA\)) Tj ET
+BT /F1 11 Tf 48 736 Td (Conformance: Supports) Tj ET
+BT /F1 11 Tf 48 722 Td (Remarks: All detected issues were fixed. 1 issue fixed.) Tj ET
+BT /F1 11 Tf 48 708 Td (2.4.11 Focus Not Obscured \(Minimum\) \(Level AA\)) Tj ET
+BT /F1 11 Tf 48 694 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 680 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 666 Td (2.5.7 Dragging Movements \(Level AA\)) Tj ET
+BT /F1 11 Tf 48 652 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 638 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 624 Td (2.5.8 Target Size \(Minimum\) \(Level AA\)) Tj ET
+BT /F1 11 Tf 48 610 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 596 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 582 Td (3.1.2 Language of Parts \(Level AA\)) Tj ET
+BT /F1 11 Tf 48 568 Td (Conformance: To be reviewed) Tj ET
+BT /F1 11 Tf 48 554 Td (Remarks: ⚠ To be reviewed: applicable content was detected but the automated audit recorded) Tj ET
+BT /F1 11 Tf 48 540 Td (no finding. Confirm conformance manually.) Tj ET
+BT /F1 11 Tf 48 526 Td (3.2.3 Consistent Navigation \(Level AA\)) Tj ET
+BT /F1 11 Tf 48 512 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 498 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 484 Td (3.2.4 Consistent Identification \(Level AA\)) Tj ET
+BT /F1 11 Tf 48 470 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 456 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 442 Td (3.3.3 Error Suggestion \(Level AA\)) Tj ET
+BT /F1 11 Tf 48 428 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 414 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 400 Td (3.3.4 Error Prevention \(Legal, Financial, Data\) \(Level AA\)) Tj ET
+BT /F1 11 Tf 48 386 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 372 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 358 Td (3.3.8 Accessible Authentication \(Minimum\) \(Level AA\)) Tj ET
+BT /F1 11 Tf 48 344 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 330 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 316 Td (4.1.3 Status Messages \(Level AA\)) Tj ET
+BT /F1 11 Tf 48 302 Td (Conformance: Not Applicable) Tj ET
+BT /F1 11 Tf 48 288 Td (Remarks: No applicable content for this criterion was detected during runtime analysis.) Tj ET
+BT /F1 11 Tf 48 274 Td () Tj ET
+endstream
+endobj
+xref
+0 12
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000134 00000 n 
+0000000204 00000 n 
+0000000330 00000 n 
+0000004274 00000 n 
+0000004400 00000 n 
+0000008544 00000 n 
+0000008670 00000 n 
+0000012719 00000 n 
+0000012847 00000 n 
+trailer
+<< /Size 12 /Root 1 0 R >>
+startxref
+15928
+%%EOF

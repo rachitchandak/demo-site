@@ -14,7 +14,7 @@
     font-weight: 600;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: #c9a962;
+    color: #8a6e2f;
     margin-bottom: 16px;
 }
 
@@ -81,13 +81,13 @@
 .room-price {
     font-size: 24px;
     font-weight: 600;
-    color: #c9a962;
+    color: #8a6e2f;
 }
 
 .price-period {
     font-size: 14px;
     font-weight: 400;
-    color: #999;
+    color: #666;
 }
 
 .room-link {
@@ -101,7 +101,7 @@
 }
 
 .room-link:hover {
-    color: #c9a962;
+    color: #8a6e2f;
 }
 
 @media (max-width: 1024px) {

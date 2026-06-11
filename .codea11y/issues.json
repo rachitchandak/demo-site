@@ -1,0 +1,2184 @@
+{
+  "src/App.css": [
+    {
+      "file": "src/App.css",
+      "line": 19,
+      "lineContent": "  color: rgba(255, 255, 255, 0.7);",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Semi-transparent text color may yield insufficient contrast against unspecified backgrounds for small text.",
+      "reasoning": "Semi-transparent text color may yield insufficient contrast against unspecified backgrounds for small text.",
+      "recommendation": "Use an opaque text color that achieves ≥4.5:1 contrast with the defined background, or adjust text size/weight or background to meet contrast.",
+      "severity": "major",
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.3962375125216416,
+        "confidence": "medium",
+        "maxSimilarity": 0.8808121160196802,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    }
+  ],
+  "src/components/Footer.css": [
+    {
+      "file": "src/components/Footer.css",
+      "line": 69,
+      "lineContent": "color: #c9a962;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Hover link color #c9a962 on white (~2.3:1) fails minimum 4.5:1 contrast for normal text.",
+      "reasoning": "Hover link color #c9a962 on white (~2.3:1) fails minimum 4.5:1 contrast for normal text.",
+      "recommendation": "Use a darker hover color or add a non-color indicator (e.g., underline) that meets ≥4.5:1 contrast on white.",
+      "severity": "major",
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.2588191641804933,
+        "confidence": "medium",
+        "maxSimilarity": 0.3295764437914052,
+        "matchedFailureCondition": "F24: F24: Failure of Success Criterion 1.4.3, 1.4.6 and 1.4.8 due to specifying foreground colors without specifying background colors or vice versa — Users with vision loss or cognitive, language and learning challenges often prefer specific foreground and background color combinations. In some cases, individuals with low vision will find it much easier to see a web page that has white text on a black background, and they may have set their user agent to present this contrast. Many user agents make it possible for users to choose a preference about the foreground or background colors they would like to see without overriding all author-specified styles. This makes it possible for users to view pages where colors have not been specified by the author in their preferred color combination.\n\nUnless an author specifies both foreground and background colors, then they (the author) can no longer guarantee that the user will get a contrast that meets the contrast requirements. If, for example, the author specifies, that text should be grey, then it may override the settings of the user agent and render a page that has grey text (specified by the author) on a light grey background (that was set by the user in their user agent). This principle also works in reverse. If the author forces the background to be white, then the white background specified by the author could be similar in color to the text color preference expressed by the user in their user agent settings, thus rendering the page unusable to the user. Because an author can not predict how a user may have configured their preferences, if the author specifies a foreground text color then they should also specify a background color which has sufficient contrast with the foreground and vice versa.\n\nIt is not necessary that the foreground and background colors both be defined on the same CSS rule. Since CSS color properties inherit from ancestor elements, it is sufficient if both foreground and background colors are defined either directly or through inheritance by the time that color is applied to a given element.\n\nNote\n\nBest practice is to include all states of the text. For example, text, link text, visited link text, link text with hover and keyboard focus, etc.",
+        "wcagLevel": "AA"
+      }
+    }
+  ],
+  "src/components/ContactForm.jsx": [
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 13,
+      "lineContent": "<span className=\"section-label\">Get in Touch</span>",
+      "artifactId": "component-12",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Low contrast text (#c9a962) on background (#faf9f7) ≈ 2.1:1 (<4.5:1) for normal text",
+      "reasoning": "Low contrast text (#c9a962) on background (#faf9f7) ≈ 2.1:1 (<4.5:1) for normal text",
+      "recommendation": "Use a darker text color or adjust background to achieve at least 4.5:1 contrast",
+      "severity": "major",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-12.png",
+        "mimeType": "image/png",
+        "width": 536,
+        "height": 58
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.4891633595364884,
+        "confidence": "high",
+        "maxSimilarity": 0.9018566644595625,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 22,
+      "lineContent": "<span className=\"contact-label\">Address</span>",
+      "artifactId": "component-16",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Low contrast text (#c9a962) on background (#faf9f7) ≈ 2.1:1 (<4.5:1) for normal text",
+      "reasoning": "Low contrast text (#c9a962) on background (#faf9f7) ≈ 2.1:1 (<4.5:1) for normal text",
+      "recommendation": "Use a darker text color or adjust background to achieve at least 4.5:1 contrast",
+      "severity": "major",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-16.png",
+        "mimeType": "image/png",
+        "width": 536,
+        "height": 86
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.4891633595364884,
+        "confidence": "high",
+        "maxSimilarity": 0.9018566644595625,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 26,
+      "lineContent": "<span className=\"contact-label\">Phone</span>",
+      "artifactId": "component-16",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Low contrast text (#c9a962) on background (#faf9f7) ≈ 2.1:1 (<4.5:1) for normal text",
+      "reasoning": "Low contrast text (#c9a962) on background (#faf9f7) ≈ 2.1:1 (<4.5:1) for normal text",
+      "recommendation": "Use a darker text color or adjust background to achieve at least 4.5:1 contrast",
+      "severity": "major",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-16.png",
+        "mimeType": "image/png",
+        "width": 536,
+        "height": 86
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.4891633595364884,
+        "confidence": "high",
+        "maxSimilarity": 0.9018566644595625,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 30,
+      "lineContent": "<span className=\"contact-label\">Email</span>",
+      "artifactId": "component-44",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Low contrast text (#c9a962) on background (#faf9f7) ≈ 2.1:1 (<4.5:1) for normal text",
+      "reasoning": "Low contrast text (#c9a962) on background (#faf9f7) ≈ 2.1:1 (<4.5:1) for normal text",
+      "recommendation": "Use a darker text color or adjust background to achieve at least 4.5:1 contrast",
+      "severity": "major",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-44.png",
+        "mimeType": "image/png",
+        "width": 536,
+        "height": 52
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.4891633595364884,
+        "confidence": "high",
+        "maxSimilarity": 0.9018566644595625,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 37,
+      "lineContent": "<input type=\"text\" placeholder=\"Name\" />",
+      "artifactId": "component-45",
+      "criterion": "3.3.2",
+      "level": "A",
+      "description": "Text input lacks a visible label or instructions",
+      "reasoning": "Text input lacks a visible label or instructions",
+      "recommendation": "Add a <label> associated via htmlFor/id or use aria-label/aria-labelledby",
+      "severity": "critical",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-45.png",
+        "mimeType": "image/png",
+        "width": 536,
+        "height": 57
+      },
+      "guardrail": {
+        "flag": "review",
+        "sourceAction": "flag",
+        "actionReason": "Moderate alignment but low layer agreement — review recommended",
+        "compositeScore": 0.2182775211168945,
+        "confidence": "low",
+        "maxSimilarity": 0.06100318294227602,
+        "matchedFailureCondition": "F82: F82: Failure of Success Criterion 3.3.2 by visually formatting a set of phone number fields but not including a text label — This failure ensures that people with visual or cognitive disabilities will recognize phone number fields and understand what information to provide to fill in the fields. Phone numbers are frequently formatted in fixed, distinctive ways, and authors may feel that just providing visual formatting of the fields will be sufficient to identify them. However, even if all the fields have programmatically determined names, a text label must also identify the set of fields as a phone number.",
+        "wcagLevel": "A"
+      }
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 37,
+      "lineContent": "<input type=\"text\" placeholder=\"Name\" />",
+      "artifactId": "component-45",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Form control has no programmatic accessible name; placeholder is not a reliable name",
+      "reasoning": "Form control has no programmatic accessible name; placeholder is not a reliable name",
+      "recommendation": "Provide an accessible name using a <label>, aria-label, or aria-labelledby",
+      "severity": "critical",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-45.png",
+        "mimeType": "image/png",
+        "width": 536,
+        "height": 57
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.5612687711168686,
+        "confidence": "medium",
+        "maxSimilarity": 0.7618544070784592,
+        "matchedFailureCondition": "F111: F111: Failure of Success Criteria 1.3.1, 2.5.3, and 4.1.2 due to a control with visible label text but no accessible name — The objective of this Failure is to describe situations where speech input users cannot reliably speak the name of a control because although it has a visible label, it lacks an accessible name.\n\nWhen speech input users interact with a web page, they usually speak a command followed by the reference to some visible label (like the text in a button or a link, or the text labelling some input). If the control lacks an accessible name, speech users won't be able to activate the control using its visible label.",
+        "wcagLevel": "A"
+      }
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 38,
+      "lineContent": "<input type=\"email\" placeholder=\"Email Address\" />",
+      "artifactId": "component-46",
+      "criterion": "3.3.2",
+      "level": "A",
+      "description": "Email input lacks a visible label or instructions",
+      "reasoning": "Email input lacks a visible label or instructions",
+      "recommendation": "Add a <label> associated via htmlFor/id or use aria-label/aria-labelledby",
+      "severity": "critical",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-46.png",
+        "mimeType": "image/png",
+        "width": 536,
+        "height": 57
+      },
+      "guardrail": {
+        "flag": "review",
+        "sourceAction": "flag",
+        "actionReason": "Moderate alignment but low layer agreement — review recommended",
+        "compositeScore": 0.2051604340060134,
+        "confidence": "low",
+        "maxSimilarity": 0.042314410318010795,
+        "matchedFailureCondition": "F82: F82: Failure of Success Criterion 3.3.2 by visually formatting a set of phone number fields but not including a text label — This failure ensures that people with visual or cognitive disabilities will recognize phone number fields and understand what information to provide to fill in the fields. Phone numbers are frequently formatted in fixed, distinctive ways, and authors may feel that just providing visual formatting of the fields will be sufficient to identify them. However, even if all the fields have programmatically determined names, a text label must also identify the set of fields as a phone number.",
+        "wcagLevel": "A"
+      }
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 38,
+      "lineContent": "<input type=\"email\" placeholder=\"Email Address\" />",
+      "artifactId": "component-46",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Form control has no programmatic accessible name; placeholder is not a reliable name",
+      "reasoning": "Form control has no programmatic accessible name; placeholder is not a reliable name",
+      "recommendation": "Provide an accessible name using a <label>, aria-label, or aria-labelledby",
+      "severity": "critical",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-46.png",
+        "mimeType": "image/png",
+        "width": 536,
+        "height": 57
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.5612687711168686,
+        "confidence": "medium",
+        "maxSimilarity": 0.7618544070784592,
+        "matchedFailureCondition": "F111: F111: Failure of Success Criteria 1.3.1, 2.5.3, and 4.1.2 due to a control with visible label text but no accessible name — The objective of this Failure is to describe situations where speech input users cannot reliably speak the name of a control because although it has a visible label, it lacks an accessible name.\n\nWhen speech input users interact with a web page, they usually speak a command followed by the reference to some visible label (like the text in a button or a link, or the text labelling some input). If the control lacks an accessible name, speech users won't be able to activate the control using its visible label.",
+        "wcagLevel": "A"
+      }
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 39,
+      "lineContent": "<input type=\"tel\" placeholder=\"Phone Number\" />",
+      "artifactId": "component-47",
+      "criterion": "3.3.2",
+      "level": "A",
+      "description": "Telephone input lacks a visible label or instructions",
+      "reasoning": "Telephone input lacks a visible label or instructions",
+      "recommendation": "Add a <label> associated via htmlFor/id or use aria-label/aria-labelledby",
+      "severity": "critical",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-47.png",
+        "mimeType": "image/png",
+        "width": 536,
+        "height": 57
+      },
+      "guardrail": {
+        "flag": "review",
+        "sourceAction": "flag",
+        "actionReason": "Moderate alignment but low layer agreement — review recommended",
+        "compositeScore": 0.20477518983496573,
+        "confidence": "low",
+        "maxSimilarity": 0.04204787558536438,
+        "matchedFailureCondition": "F82: F82: Failure of Success Criterion 3.3.2 by visually formatting a set of phone number fields but not including a text label — This failure ensures that people with visual or cognitive disabilities will recognize phone number fields and understand what information to provide to fill in the fields. Phone numbers are frequently formatted in fixed, distinctive ways, and authors may feel that just providing visual formatting of the fields will be sufficient to identify them. However, even if all the fields have programmatically determined names, a text label must also identify the set of fields as a phone number.",
+        "wcagLevel": "A"
+      }
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 39,
+      "lineContent": "<input type=\"tel\" placeholder=\"Phone Number\" />",
+      "artifactId": "component-47",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Form control has no programmatic accessible name; placeholder is not a reliable name",
+      "reasoning": "Form control has no programmatic accessible name; placeholder is not a reliable name",
+      "recommendation": "Provide an accessible name using a <label>, aria-label, or aria-labelledby",
+      "severity": "critical",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-47.png",
+        "mimeType": "image/png",
+        "width": 536,
+        "height": 57
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.5612687711168686,
+        "confidence": "medium",
+        "maxSimilarity": 0.7618544070784592,
+        "matchedFailureCondition": "F111: F111: Failure of Success Criteria 1.3.1, 2.5.3, and 4.1.2 due to a control with visible label text but no accessible name — The objective of this Failure is to describe situations where speech input users cannot reliably speak the name of a control because although it has a visible label, it lacks an accessible name.\n\nWhen speech input users interact with a web page, they usually speak a command followed by the reference to some visible label (like the text in a button or a link, or the text labelling some input). If the control lacks an accessible name, speech users won't be able to activate the control using its visible label.",
+        "wcagLevel": "A"
+      }
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 40,
+      "lineContent": "<textarea rows=\"5\" placeholder=\"Your Message\"></textarea>",
+      "artifactId": "component-48",
+      "criterion": "3.3.2",
+      "level": "A",
+      "description": "Textarea lacks a visible label or instructions",
+      "reasoning": "Textarea lacks a visible label or instructions",
+      "recommendation": "Add a <label> associated via htmlFor/id or use aria-label/aria-labelledby",
+      "severity": "critical",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-48.png",
+        "mimeType": "image/png",
+        "width": 536,
+        "height": 133
+      },
+      "guardrail": {
+        "flag": "review",
+        "sourceAction": "flag",
+        "actionReason": "Moderate alignment but low layer agreement — review recommended",
+        "compositeScore": 0.20078812179036312,
+        "confidence": "low",
+        "maxSimilarity": 0.041554787372048284,
+        "matchedFailureCondition": "F82: F82: Failure of Success Criterion 3.3.2 by visually formatting a set of phone number fields but not including a text label — This failure ensures that people with visual or cognitive disabilities will recognize phone number fields and understand what information to provide to fill in the fields. Phone numbers are frequently formatted in fixed, distinctive ways, and authors may feel that just providing visual formatting of the fields will be sufficient to identify them. However, even if all the fields have programmatically determined names, a text label must also identify the set of fields as a phone number.",
+        "wcagLevel": "A"
+      }
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "line": 40,
+      "lineContent": "<textarea rows=\"5\" placeholder=\"Your Message\"></textarea>",
+      "artifactId": "component-48",
+      "criterion": "4.1.2",
+      "level": "A",
+      "description": "Form control has no programmatic accessible name; placeholder is not a reliable name",
+      "reasoning": "Form control has no programmatic accessible name; placeholder is not a reliable name",
+      "recommendation": "Provide an accessible name using a <label>, aria-label, or aria-labelledby",
+      "severity": "critical",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-48.png",
+        "mimeType": "image/png",
+        "width": 536,
+        "height": 133
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.5612687711168686,
+        "confidence": "medium",
+        "maxSimilarity": 0.7618544070784592,
+        "matchedFailureCondition": "F111: F111: Failure of Success Criteria 1.3.1, 2.5.3, and 4.1.2 due to a control with visible label text but no accessible name — The objective of this Failure is to describe situations where speech input users cannot reliably speak the name of a control because although it has a visible label, it lacks an accessible name.\n\nWhen speech input users interact with a web page, they usually speak a command followed by the reference to some visible label (like the text in a button or a link, or the text labelling some input). If the control lacks an accessible name, speech users won't be able to activate the control using its visible label.",
+        "wcagLevel": "A"
+      }
+    }
+  ],
+  "src/components/ContactForm.css": [
+    {
+      "file": "src/components/ContactForm.css",
+      "line": 19,
+      "lineContent": "    color: #c9a962;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Gold label text (#c9a962) on #faf9f7 is ~2.14:1, below 4.5:1 minimum for normal text.",
+      "reasoning": "Gold label text (#c9a962) on #faf9f7 is ~2.14:1, below 4.5:1 minimum for normal text.",
+      "recommendation": "Use a darker text color or darker background so label contrast is ≥4.5:1.",
+      "severity": "major",
+      "guardrail": {
+        "flag": "review",
+        "sourceAction": "flag",
+        "actionReason": "Moderate alignment but low layer agreement — review recommended",
+        "compositeScore": 0.1783427418213463,
+        "confidence": "low",
+        "maxSimilarity": 0.098746472260628,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/ContactForm.css",
+      "line": 54,
+      "lineContent": "    color: #c9a962;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Gold label text (#c9a962) on #faf9f7 is ~2.14:1, below 4.5:1 minimum for normal text.",
+      "reasoning": "Gold label text (#c9a962) on #faf9f7 is ~2.14:1, below 4.5:1 minimum for normal text.",
+      "recommendation": "Use a darker text color or darker background so label contrast is ≥4.5:1.",
+      "severity": "major",
+      "guardrail": {
+        "flag": "review",
+        "sourceAction": "flag",
+        "actionReason": "Moderate alignment but low layer agreement — review recommended",
+        "compositeScore": 0.1783427418213463,
+        "confidence": "low",
+        "maxSimilarity": 0.098746472260628,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/ContactForm.css",
+      "line": 93,
+      "lineContent": "    color: white;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "White button text on gold gradient (#c9a962–#b8944f) provides ~2.25–2.84:1, below 4.5:1.",
+      "reasoning": "White button text on gold gradient (#c9a962–#b8944f) provides ~2.25–2.84:1, below 4.5:1.",
+      "recommendation": "Use a darker text color or darken the button background to achieve ≥4.5:1.",
+      "severity": "critical",
+      "guardrail": {
+        "flag": "ignore",
+        "sourceAction": "reject",
+        "actionReason": "Reasoning has no detectable alignment with WCAG failure conditions",
+        "compositeScore": 0.07371672276872586,
+        "confidence": "low",
+        "maxSimilarity": 0.07149708996663308,
+        "matchedFailureCondition": "F24: F24: Failure of Success Criterion 1.4.3, 1.4.6 and 1.4.8 due to specifying foreground colors without specifying background colors or vice versa — Users with vision loss or cognitive, language and learning challenges often prefer specific foreground and background color combinations. In some cases, individuals with low vision will find it much easier to see a web page that has white text on a black background, and they may have set their user agent to present this contrast. Many user agents make it possible for users to choose a preference about the foreground or background colors they would like to see without overriding all author-specified styles. This makes it possible for users to view pages where colors have not been specified by the author in their preferred color combination.\n\nUnless an author specifies both foreground and background colors, then they (the author) can no longer guarantee that the user will get a contrast that meets the contrast requirements. If, for example, the author specifies, that text should be grey, then it may override the settings of the user agent and render a page that has grey text (specified by the author) on a light grey background (that was set by the user in their user agent). This principle also works in reverse. If the author forces the background to be white, then the white background specified by the author could be similar in color to the text color preference expressed by the user in their user agent settings, thus rendering the page unusable to the user. Because an author can not predict how a user may have configured their preferences, if the author specifies a foreground text color then they should also specify a background color which has sufficient contrast with the foreground and vice versa.\n\nIt is not necessary that the foreground and background colors both be defined on the same CSS rule. Since CSS color properties inherit from ancestor elements, it is sufficient if both foreground and background colors are defined either directly or through inheritance by the time that color is applied to a given element.\n\nNote\n\nBest practice is to include all states of the text. For example, text, link text, visited link text, link text with hover and keyboard focus, etc.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/ContactForm.css",
+      "line": 77,
+      "lineContent": "    border: 1px solid #e5e5e5;",
+      "criterion": "1.4.11",
+      "level": "AA",
+      "description": "Input border (#e5e5e5) on white has ~1.26:1 contrast, below the 3:1 required to identify the control boundary.",
+      "reasoning": "Input border (#e5e5e5) on white has ~1.26:1 contrast, below the 3:1 required to identify the control boundary.",
+      "recommendation": "Increase border contrast (darker color or thicker high-contrast outline) to ≥3:1 against white.",
+      "severity": "major",
+      "guardrail": {
+        "flag": "review",
+        "sourceAction": "flag",
+        "actionReason": "Moderate alignment but low layer agreement — review recommended",
+        "compositeScore": 0.18071694842720673,
+        "confidence": "low",
+        "maxSimilarity": 0,
+        "matchedFailureCondition": "F78: F78: Failure of Success Criterion 1.4.11, 2.4.7 and 2.4.13 due to styling element outlines and borders in a way that removes or renders non-visible the visual focus indicator — This describes a failure condition that occurs when the user agent's default visual indication of keyboard focus is turned off or rendered non-visible by other styling on the page without providing an author-supplied visual focus indicator. Turning off the focus indicator instructs the user agent not to present the focus indicator. Other styling may make it difficult to see the focus indicator even though it is present, such as outlines that look the same as the focus outline, or thick borders that are the same color as the focus indicator so it cannot be seen against them.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/ContactForm.css",
+      "line": 85,
+      "lineContent": "    border-color: #c9a962;",
+      "criterion": "1.4.11",
+      "level": "AA",
+      "description": "Focused input border (#c9a962) on white has ~2.25:1 contrast, below the 3:1 required for focus/active state visibility.",
+      "reasoning": "Focused input border (#c9a962) on white has ~2.25:1 contrast, below the 3:1 required for focus/active state visibility.",
+      "recommendation": "Use a higher-contrast focus indicator (e.g., 2px outline in a darker color) achieving ≥3:1.",
+      "severity": "major",
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.20672746319572113,
+        "confidence": "medium",
+        "maxSimilarity": 0.1557155728754925,
+        "matchedFailureCondition": "F78: F78: Failure of Success Criterion 1.4.11, 2.4.7 and 2.4.13 due to styling element outlines and borders in a way that removes or renders non-visible the visual focus indicator — This describes a failure condition that occurs when the user agent's default visual indication of keyboard focus is turned off or rendered non-visible by other styling on the page without providing an author-supplied visual focus indicator. Turning off the focus indicator instructs the user agent not to present the focus indicator. Other styling may make it difficult to see the focus indicator even though it is present, such as outlines that look the same as the focus outline, or thick borders that are the same color as the focus indicator so it cannot be seen against them.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/ContactForm.css",
+      "line": 92,
+      "lineContent": "    background: linear-gradient(135deg, #c9a962 0%, #b8944f 100%);",
+      "criterion": "1.4.11",
+      "level": "AA",
+      "description": "Button fill contrasts ~2.14–2.84:1 against the page background (#faf9f7), below the 3:1 required to visually identify the component.",
+      "reasoning": "Button fill contrasts ~2.14–2.84:1 against the page background (#faf9f7), below the 3:1 required to visually identify the component.",
+      "recommendation": "Darken the button background or add a high-contrast outline so the component stands out at ≥3:1 against #faf9f7.",
+      "severity": "major",
+      "guardrail": {
+        "flag": "review",
+        "sourceAction": "flag",
+        "actionReason": "Moderate alignment but low layer agreement — review recommended",
+        "compositeScore": 0.1552365770165222,
+        "confidence": "low",
+        "maxSimilarity": 0.027634469268554254,
+        "matchedFailureCondition": "F78: F78: Failure of Success Criterion 1.4.11, 2.4.7 and 2.4.13 due to styling element outlines and borders in a way that removes or renders non-visible the visual focus indicator — This describes a failure condition that occurs when the user agent's default visual indication of keyboard focus is turned off or rendered non-visible by other styling on the page without providing an author-supplied visual focus indicator. Turning off the focus indicator instructs the user agent not to present the focus indicator. Other styling may make it difficult to see the focus indicator even though it is present, such as outlines that look the same as the focus outline, or thick borders that are the same color as the focus indicator so it cannot be seen against them.",
+        "wcagLevel": "AA"
+      }
+    }
+  ],
+  "src/components/Header.jsx": [
+    {
+      "file": "src/components/Header.jsx",
+      "line": 18,
+      "lineContent": "        <div className=\"nav-menu\">",
+      "artifactId": "menu-bar-1",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Navigation container lacks a semantic landmark (<nav>) to convey structure programmatically.",
+      "reasoning": "Navigation container lacks a semantic landmark (<nav>) to convey structure programmatically.",
+      "recommendation": "Mark up the navigation as <nav> (or role=\"navigation\") and, optionally, wrap links in a <ul> list.",
+      "severity": "major",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/widget-menu-bar-1.png",
+        "mimeType": "image/png",
+        "width": 631,
+        "height": 21
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.35440989311741455,
+        "confidence": "medium",
+        "maxSimilarity": 0.15334738609402168,
+        "matchedFailureCondition": "F92: F92: Failure of Success Criterion 1.3.1 due to the use of role presentation on content which conveys semantic information — This failure occurs when a role of presentation is applied to an element whose purpose is to convey information or relationships in the content. Elements such as table, can convey information about the content contained in them via their semantic markup. The WAI-ARIA role of presentation on the other hand, is intended to suppress semantic information of content from the accessibility API and prevent user agents from conveying that information to the user. Use of role=\"presentation\" for content which should convey semantic information may prevent the user from understanding that content.",
+        "wcagLevel": "A"
+      }
+    },
+    {
+      "file": "src/components/Header.jsx",
+      "line": 18,
+      "lineContent": "        <div className=\"nav-menu\">",
+      "artifactId": "menu-bar-1",
+      "criterion": "2.4.1",
+      "level": "A",
+      "description": "No mechanism provided to bypass repeated navigation.",
+      "reasoning": "No mechanism provided to bypass repeated navigation.",
+      "recommendation": "Add a visible 'Skip to main content' link before the navigation and ensure a <main> landmark is present.",
+      "severity": "major",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/widget-menu-bar-1.png",
+        "mimeType": "image/png",
+        "width": 631,
+        "height": 21
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.21081541490729064,
+        "confidence": "medium",
+        "maxSimilarity": 0.3224112412982851,
+        "matchedFailureCondition": "SYNTH-SCR28: Failure to implement SCR28: Using an expandable and collapsible menu to bypass block of content — This technique allows users to skip repeated material by placing that material in a menu that can be expanded or collapsed under user control. The user can skip the repeated material by collapsing the menu. The user invokes a user interface control to hide or remove the elements of the menu. The resources section lists several techniques for menus, toolbars and trees, any of which can be used to provide a mechanism for skipping navigation.\n\nNote\n\nSimilar approaches can be implemented using server-side scripting and reloading a modified version of the web page. — The page does not implement this sufficient technique. This technique allows users to skip repeated material by placing that material in a menu that can be expanded or collapsed under user control. The user can skip the repeated material by collapsing the menu. The user invokes a user interface control to hide or remove the elements of the menu. The resources section lists several techniques for menus, toolbars and trees, any of which can be used to provide a mechanism for skipping navigation.\n\nNote\n\nSimilar approaches can be implemented using server-side scripting and reloading a modified version of the web page. Without this technique, the success criterion may not be met.",
+        "wcagLevel": "A"
+      }
+    }
+  ],
+  "src/components/Footer.jsx": [
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 9,
+      "lineContent": "<p className=\"footer-tagline low-contrast-text\">",
+      "artifactId": "component-17",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Text color #cccccc has insufficient contrast against background (approx 1.6:1 < 4.5:1).",
+      "reasoning": "Text color #cccccc has insufficient contrast against background (approx 1.6:1 < 4.5:1).",
+      "recommendation": "Use a higher-contrast text color or adjust background to achieve at least 4.5:1.",
+      "severity": "critical",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-17.png",
+        "mimeType": "image/png",
+        "width": 389,
+        "height": 50
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.48764071534492287,
+        "confidence": "high",
+        "maxSimilarity": 0.8962877348159999,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 14,
+      "lineContent": "<img src=\"https://cdn-icons-png.flaticon.com/128/733/733547.png\" alt=\"\" className=\"social-icon\"/>",
+      "artifactId": "component-4",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Empty alt on social icon image; non-decorative image lacks a text alternative.",
+      "reasoning": "Empty alt on social icon image; non-decorative image lacks a text alternative.",
+      "recommendation": "Provide descriptive alt text (e.g., 'Facebook') or mark as decorative only if purely decorative.",
+      "severity": "major",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-4.png",
+        "mimeType": "image/png",
+        "width": 24,
+        "height": 24
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.5479895877160249,
+        "confidence": "high",
+        "maxSimilarity": 0.6905410632387513,
+        "matchedFailureCondition": "F38: F38: Failure of Success Criterion 1.1.1 due to not marking up decorative images in HTML in a way that allows assistive technology to ignore them — This describes a failure condition for text alternatives for images that should be ignored by AT. If there is no alt attribute at all assistive technologies are not able to ignore the non-text content. The alt attribute must be provided and have a null value (i.e., alt=\"\" ) to avoid a failure of this Success Criterion.\n\nThis describes a failure condition for text alternatives for images that should be ignored by assistive technology (AT). If an image has the attribute role=\"presentation\", it will be ignored by AT. However, if it does not have role=\"presentation\", and if there is no alt attribute at all assistive technologies are not able to ignore the image. For decorative images which need to be ignored by AT, either role=\"presentation\" must be used or the alt attribute must be provided and have a null value (i.e., alt=\"\") to avoid a failure of this success criterion.",
+        "wcagLevel": "A"
+      }
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 15,
+      "lineContent": "<img src=\"https://cdn-icons-png.flaticon.com/128/2111/2111463.png\" alt=\"\" className=\"social-icon\"/>",
+      "artifactId": "component-5",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Empty alt on social icon image; non-decorative image lacks a text alternative.",
+      "reasoning": "Empty alt on social icon image; non-decorative image lacks a text alternative.",
+      "recommendation": "Provide descriptive alt text (e.g., 'Instagram') or mark as decorative only if purely decorative.",
+      "severity": "major",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-5.png",
+        "mimeType": "image/png",
+        "width": 24,
+        "height": 24
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.5479895877160249,
+        "confidence": "high",
+        "maxSimilarity": 0.6905410632387513,
+        "matchedFailureCondition": "F38: F38: Failure of Success Criterion 1.1.1 due to not marking up decorative images in HTML in a way that allows assistive technology to ignore them — This describes a failure condition for text alternatives for images that should be ignored by AT. If there is no alt attribute at all assistive technologies are not able to ignore the non-text content. The alt attribute must be provided and have a null value (i.e., alt=\"\" ) to avoid a failure of this Success Criterion.\n\nThis describes a failure condition for text alternatives for images that should be ignored by assistive technology (AT). If an image has the attribute role=\"presentation\", it will be ignored by AT. However, if it does not have role=\"presentation\", and if there is no alt attribute at all assistive technologies are not able to ignore the image. For decorative images which need to be ignored by AT, either role=\"presentation\" must be used or the alt attribute must be provided and have a null value (i.e., alt=\"\") to avoid a failure of this success criterion.",
+        "wcagLevel": "A"
+      }
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 16,
+      "lineContent": "<img src=\"https://cdn-icons-png.flaticon.com/128/733/733579.png\" alt=\"\" className=\"social-icon\"/>",
+      "artifactId": "component-6",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Empty alt on social icon image; non-decorative image lacks a text alternative.",
+      "reasoning": "Empty alt on social icon image; non-decorative image lacks a text alternative.",
+      "recommendation": "Provide descriptive alt text (e.g., 'Twitter') or mark as decorative only if purely decorative.",
+      "severity": "major",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-6.png",
+        "mimeType": "image/png",
+        "width": 24,
+        "height": 24
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.5479895877160249,
+        "confidence": "high",
+        "maxSimilarity": 0.6905410632387513,
+        "matchedFailureCondition": "F38: F38: Failure of Success Criterion 1.1.1 due to not marking up decorative images in HTML in a way that allows assistive technology to ignore them — This describes a failure condition for text alternatives for images that should be ignored by AT. If there is no alt attribute at all assistive technologies are not able to ignore the non-text content. The alt attribute must be provided and have a null value (i.e., alt=\"\" ) to avoid a failure of this Success Criterion.\n\nThis describes a failure condition for text alternatives for images that should be ignored by assistive technology (AT). If an image has the attribute role=\"presentation\", it will be ignored by AT. However, if it does not have role=\"presentation\", and if there is no alt attribute at all assistive technologies are not able to ignore the image. For decorative images which need to be ignored by AT, either role=\"presentation\" must be used or the alt attribute must be provided and have a null value (i.e., alt=\"\") to avoid a failure of this success criterion.",
+        "wcagLevel": "A"
+      }
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 21,
+      "lineContent": "<span className=\"footer-heading\">Quick Links</span>",
+      "artifactId": "component-27",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Visual heading is marked up with a span, so the heading relationship is not programmatically determinable.",
+      "reasoning": "Visual heading is marked up with a span, so the heading relationship is not programmatically determinable.",
+      "recommendation": "Use a semantic heading element (e.g., <h2>) or role=\"heading\" with an appropriate aria-level.",
+      "severity": "major",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-27.png",
+        "mimeType": "image/png",
+        "width": 194,
+        "height": 22
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.3260165709533607,
+        "confidence": "high",
+        "maxSimilarity": 0.26962072288038025,
+        "matchedFailureCondition": "F91: F91: Failure of Success Criterion 1.3.1 for not correctly marking up table headers — This failure occurs when data tables do not use header elements (th) or other appropriate table mark-up (the scope attribute, headers and id or the ARIA columnheader and rowheader) roles to make the headers programmatically determinable from within table content. Making headers programmatically determinable is especially important when data cells are only intelligible together with header information. When screen reader users navigate through the table content horizontally or vertically, the headers that change can be read out to provide the necessary context for the information in the data cells.",
+        "wcagLevel": "A"
+      }
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 23,
+      "lineContent": "<a href=\"#\">About Us</a>",
+      "artifactId": "component-27",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Link text inherits #cccccc from parent, providing insufficient contrast (approx 1.6:1).",
+      "reasoning": "Link text inherits #cccccc from parent, providing insufficient contrast (approx 1.6:1).",
+      "recommendation": "Set link color to meet at least 4.5:1 contrast against the background.",
+      "severity": "critical",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-27.png",
+        "mimeType": "image/png",
+        "width": 194,
+        "height": 22
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.5638730481504524,
+        "confidence": "high",
+        "maxSimilarity": 0.8501299012019422,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 24,
+      "lineContent": "<a href=\"#\">Our Rooms</a>",
+      "artifactId": "component-28",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Link text inherits #cccccc from parent, providing insufficient contrast (approx 1.6:1).",
+      "reasoning": "Link text inherits #cccccc from parent, providing insufficient contrast (approx 1.6:1).",
+      "recommendation": "Set link color to meet at least 4.5:1 contrast against the background.",
+      "severity": "critical",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-28.png",
+        "mimeType": "image/png",
+        "width": 194,
+        "height": 22
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.5638730481504524,
+        "confidence": "high",
+        "maxSimilarity": 0.8501299012019422,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 25,
+      "lineContent": "<a href=\"#\">Dining</a>",
+      "artifactId": "component-29",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Link text inherits #cccccc from parent, providing insufficient contrast (approx 1.6:1).",
+      "reasoning": "Link text inherits #cccccc from parent, providing insufficient contrast (approx 1.6:1).",
+      "recommendation": "Set link color to meet at least 4.5:1 contrast against the background.",
+      "severity": "critical",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-29.png",
+        "mimeType": "image/png",
+        "width": 194,
+        "height": 22
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.5638730481504524,
+        "confidence": "high",
+        "maxSimilarity": 0.8501299012019422,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 26,
+      "lineContent": "<a href=\"#\">Spa Services</a>",
+      "artifactId": "component-30",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Link text inherits #cccccc from parent, providing insufficient contrast (approx 1.6:1).",
+      "reasoning": "Link text inherits #cccccc from parent, providing insufficient contrast (approx 1.6:1).",
+      "recommendation": "Set link color to meet at least 4.5:1 contrast against the background.",
+      "severity": "critical",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-30.png",
+        "mimeType": "image/png",
+        "width": 194,
+        "height": 22
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.5638730481504524,
+        "confidence": "high",
+        "maxSimilarity": 0.8501299012019422,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 27,
+      "lineContent": "<a href=\"#\">Contact</a>",
+      "artifactId": "component-31",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Link text inherits #cccccc from parent, providing insufficient contrast (approx 1.6:1).",
+      "reasoning": "Link text inherits #cccccc from parent, providing insufficient contrast (approx 1.6:1).",
+      "recommendation": "Set link color to meet at least 4.5:1 contrast against the background.",
+      "severity": "critical",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-31.png",
+        "mimeType": "image/png",
+        "width": 194,
+        "height": 22
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.5638730481504524,
+        "confidence": "high",
+        "maxSimilarity": 0.8501299012019422,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 32,
+      "lineContent": "<span className=\"footer-heading\">Services</span>",
+      "artifactId": "component-32",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Visual heading is marked up with a span, so the heading relationship is not programmatically determinable.",
+      "reasoning": "Visual heading is marked up with a span, so the heading relationship is not programmatically determinable.",
+      "recommendation": "Use a semantic heading element (e.g., <h2>) or role=\"heading\" with an appropriate aria-level.",
+      "severity": "major",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-32.png",
+        "mimeType": "image/png",
+        "width": 194,
+        "height": 22
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.3260165709533607,
+        "confidence": "high",
+        "maxSimilarity": 0.26962072288038025,
+        "matchedFailureCondition": "F91: F91: Failure of Success Criterion 1.3.1 for not correctly marking up table headers — This failure occurs when data tables do not use header elements (th) or other appropriate table mark-up (the scope attribute, headers and id or the ARIA columnheader and rowheader) roles to make the headers programmatically determinable from within table content. Making headers programmatically determinable is especially important when data cells are only intelligible together with header information. When screen reader users navigate through the table content horizontally or vertically, the headers that change can be read out to provide the necessary context for the information in the data cells.",
+        "wcagLevel": "A"
+      }
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 34,
+      "lineContent": "<a href=\"#\">Concierge</a>",
+      "artifactId": "component-32",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Link text inherits #cccccc from parent, providing insufficient contrast (approx 1.6:1).",
+      "reasoning": "Link text inherits #cccccc from parent, providing insufficient contrast (approx 1.6:1).",
+      "recommendation": "Set link color to meet at least 4.5:1 contrast against the background.",
+      "severity": "critical",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-32.png",
+        "mimeType": "image/png",
+        "width": 194,
+        "height": 22
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.5638730481504524,
+        "confidence": "high",
+        "maxSimilarity": 0.8501299012019422,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 35,
+      "lineContent": "<a href=\"#\">Airport Transfer</a>",
+      "artifactId": "component-33",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Link text inherits #cccccc from parent, providing insufficient contrast (approx 1.6:1).",
+      "reasoning": "Link text inherits #cccccc from parent, providing insufficient contrast (approx 1.6:1).",
+      "recommendation": "Set link color to meet at least 4.5:1 contrast against the background.",
+      "severity": "critical",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-33.png",
+        "mimeType": "image/png",
+        "width": 194,
+        "height": 22
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.5638730481504524,
+        "confidence": "high",
+        "maxSimilarity": 0.8501299012019422,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 36,
+      "lineContent": "<a href=\"#\">Private Events</a>",
+      "artifactId": "component-34",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Link text inherits #cccccc from parent, providing insufficient contrast (approx 1.6:1).",
+      "reasoning": "Link text inherits #cccccc from parent, providing insufficient contrast (approx 1.6:1).",
+      "recommendation": "Set link color to meet at least 4.5:1 contrast against the background.",
+      "severity": "critical",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-34.png",
+        "mimeType": "image/png",
+        "width": 194,
+        "height": 22
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.5638730481504524,
+        "confidence": "high",
+        "maxSimilarity": 0.8501299012019422,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 37,
+      "lineContent": "<a href=\"#\">Gift Cards</a>",
+      "artifactId": "component-35",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Link text inherits #cccccc from parent, providing insufficient contrast (approx 1.6:1).",
+      "reasoning": "Link text inherits #cccccc from parent, providing insufficient contrast (approx 1.6:1).",
+      "recommendation": "Set link color to meet at least 4.5:1 contrast against the background.",
+      "severity": "critical",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-35.png",
+        "mimeType": "image/png",
+        "width": 194,
+        "height": 22
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.5638730481504524,
+        "confidence": "high",
+        "maxSimilarity": 0.8501299012019422,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 38,
+      "lineContent": "<a href=\"#\">Loyalty Program</a>",
+      "artifactId": "component-36",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Link text inherits #cccccc from parent, providing insufficient contrast (approx 1.6:1).",
+      "reasoning": "Link text inherits #cccccc from parent, providing insufficient contrast (approx 1.6:1).",
+      "recommendation": "Set link color to meet at least 4.5:1 contrast against the background.",
+      "severity": "critical",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-36.png",
+        "mimeType": "image/png",
+        "width": 194,
+        "height": 22
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.5638730481504524,
+        "confidence": "high",
+        "maxSimilarity": 0.8501299012019422,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 43,
+      "lineContent": "<span className=\"footer-heading\">Legal</span>",
+      "artifactId": "component-37",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Visual heading is marked up with a span, so the heading relationship is not programmatically determinable.",
+      "reasoning": "Visual heading is marked up with a span, so the heading relationship is not programmatically determinable.",
+      "recommendation": "Use a semantic heading element (e.g., <h2>) or role=\"heading\" with an appropriate aria-level.",
+      "severity": "major",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-37.png",
+        "mimeType": "image/png",
+        "width": 194,
+        "height": 22
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.3260165709533607,
+        "confidence": "high",
+        "maxSimilarity": 0.26962072288038025,
+        "matchedFailureCondition": "F91: F91: Failure of Success Criterion 1.3.1 for not correctly marking up table headers — This failure occurs when data tables do not use header elements (th) or other appropriate table mark-up (the scope attribute, headers and id or the ARIA columnheader and rowheader) roles to make the headers programmatically determinable from within table content. Making headers programmatically determinable is especially important when data cells are only intelligible together with header information. When screen reader users navigate through the table content horizontally or vertically, the headers that change can be read out to provide the necessary context for the information in the data cells.",
+        "wcagLevel": "A"
+      }
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 45,
+      "lineContent": "<a href=\"#\">Privacy Policy</a>",
+      "artifactId": "component-37",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Link text inherits #cccccc from parent, providing insufficient contrast (approx 1.6:1).",
+      "reasoning": "Link text inherits #cccccc from parent, providing insufficient contrast (approx 1.6:1).",
+      "recommendation": "Set link color to meet at least 4.5:1 contrast against the background.",
+      "severity": "critical",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-37.png",
+        "mimeType": "image/png",
+        "width": 194,
+        "height": 22
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.5638730481504524,
+        "confidence": "high",
+        "maxSimilarity": 0.8501299012019422,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 46,
+      "lineContent": "<a href=\"#\">Terms of Service</a>",
+      "artifactId": "component-38",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Link text inherits #cccccc from parent, providing insufficient contrast (approx 1.6:1).",
+      "reasoning": "Link text inherits #cccccc from parent, providing insufficient contrast (approx 1.6:1).",
+      "recommendation": "Set link color to meet at least 4.5:1 contrast against the background.",
+      "severity": "critical",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-38.png",
+        "mimeType": "image/png",
+        "width": 194,
+        "height": 22
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.5638730481504524,
+        "confidence": "high",
+        "maxSimilarity": 0.8501299012019422,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 47,
+      "lineContent": "<a href=\"#\">Cookie Policy</a>",
+      "artifactId": "component-39",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Link text inherits #cccccc from parent, providing insufficient contrast (approx 1.6:1).",
+      "reasoning": "Link text inherits #cccccc from parent, providing insufficient contrast (approx 1.6:1).",
+      "recommendation": "Set link color to meet at least 4.5:1 contrast against the background.",
+      "severity": "critical",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-39.png",
+        "mimeType": "image/png",
+        "width": 194,
+        "height": 22
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.5638730481504524,
+        "confidence": "high",
+        "maxSimilarity": 0.8501299012019422,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 48,
+      "lineContent": "<a href=\"#\">Accessibility</a>",
+      "artifactId": "component-40",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Link text inherits #cccccc from parent, providing insufficient contrast (approx 1.6:1).",
+      "reasoning": "Link text inherits #cccccc from parent, providing insufficient contrast (approx 1.6:1).",
+      "recommendation": "Set link color to meet at least 4.5:1 contrast against the background.",
+      "severity": "critical",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-40.png",
+        "mimeType": "image/png",
+        "width": 194,
+        "height": 22
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.5638730481504524,
+        "confidence": "high",
+        "maxSimilarity": 0.8501299012019422,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 54,
+      "lineContent": "<p className=\"copyright low-contrast-text\">",
+      "artifactId": "component-18",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Text color #cccccc has insufficient contrast against background (approx 1.6:1 < 4.5:1).",
+      "reasoning": "Text color #cccccc has insufficient contrast against background (approx 1.6:1 < 4.5:1).",
+      "recommendation": "Use a higher-contrast text color or adjust background to achieve at least 4.5:1.",
+      "severity": "critical",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-18.png",
+        "mimeType": "image/png",
+        "width": 1152,
+        "height": 21
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.48764071534492287,
+        "confidence": "high",
+        "maxSimilarity": 0.8962877348159999,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 56,
+      "lineContent": "<a href=\"#\">Read More</a> about our commitment to excellence.",
+      "artifactId": "component-41",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Link text inherits #cccccc from parent, providing insufficient contrast (approx 1.6:1).",
+      "reasoning": "Link text inherits #cccccc from parent, providing insufficient contrast (approx 1.6:1).",
+      "recommendation": "Set link color to meet at least 4.5:1 contrast against the background.",
+      "severity": "critical",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-41.png",
+        "mimeType": "image/png",
+        "width": 67,
+        "height": 16
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.5638730481504524,
+        "confidence": "high",
+        "maxSimilarity": 0.8501299012019422,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 59,
+      "lineContent": "<p className=\"terms low-contrast-text\">",
+      "artifactId": "component-19",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Text color #cccccc has insufficient contrast against background (approx 1.6:1 < 4.5:1).",
+      "reasoning": "Text color #cccccc has insufficient contrast against background (approx 1.6:1 < 4.5:1).",
+      "recommendation": "Use a higher-contrast text color or adjust background to achieve at least 4.5:1.",
+      "severity": "critical",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-19.png",
+        "mimeType": "image/png",
+        "width": 800,
+        "height": 43
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.48764071534492287,
+        "confidence": "high",
+        "maxSimilarity": 0.8962877348159999,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 61,
+      "lineContent": "<a href=\"#\">Click here</a> to view our full legal disclaimer and privacy practices.",
+      "artifactId": "component-42",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Link text inherits #cccccc from parent, providing insufficient contrast (approx 1.6:1).",
+      "reasoning": "Link text inherits #cccccc from parent, providing insufficient contrast (approx 1.6:1).",
+      "recommendation": "Set link color to meet at least 4.5:1 contrast against the background.",
+      "severity": "critical",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-42.png",
+        "mimeType": "image/png",
+        "width": 57,
+        "height": 15
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.5638730481504524,
+        "confidence": "high",
+        "maxSimilarity": 0.8501299012019422,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    }
+  ],
+  "src/components/Hero.jsx": [
+    {
+      "file": "src/components/Hero.jsx",
+      "line": 21,
+      "lineContent": "                    <div className=\"btn btn-primary\">Click Here</div>",
+      "artifactId": "component-13",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Text (#FFFFFF) on #C9A962 in btn-primary has ~2.25:1 contrast, below 4.5:1 for normal text.",
+      "reasoning": "Text (#FFFFFF) on #C9A962 in btn-primary has ~2.25:1 contrast, below 4.5:1 for normal text.",
+      "recommendation": "Increase contrast by darkening the background or using a darker text color to achieve at least 4.5:1.",
+      "severity": "major",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-13.png",
+        "mimeType": "image/png",
+        "width": 752,
+        "height": 65
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.2738681422754029,
+        "confidence": "medium",
+        "maxSimilarity": 0.36939652459425915,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    }
+  ],
+  "src/components/Hero.css": [
+    {
+      "file": "src/components/Hero.css",
+      "line": 55,
+      "lineContent": "    color: white;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "White hero-title text over an image with only 30–50% black overlay may drop below 3:1 contrast for large text.",
+      "reasoning": "White hero-title text over an image with only 30–50% black overlay may drop below 3:1 contrast for large text.",
+      "recommendation": "Ensure ≥3:1 contrast by increasing overlay opacity, adding a solid text background, or adjusting text color.",
+      "severity": "major",
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.21407945539625606,
+        "confidence": "medium",
+        "maxSimilarity": 0.33477256028095614,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/Hero.css",
+      "line": 63,
+      "lineContent": "    color: rgba(255, 255, 255, 0.9);",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Semi-transparent subtitle text over variable image background may reduce contrast below 4.5:1.",
+      "reasoning": "Semi-transparent subtitle text over variable image background may reduce contrast below 4.5:1.",
+      "recommendation": "Use opaque text color and/or a darker overlay or text background to maintain ≥4.5:1 contrast.",
+      "severity": "major",
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.19313218930221704,
+        "confidence": "medium",
+        "maxSimilarity": 0.29581800688316257,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/Hero.css",
+      "line": 46,
+      "lineContent": "    color: #c9a962;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Gold tagline text over image with 30–50% black overlay can fall well below 4.5:1 contrast.",
+      "reasoning": "Gold tagline text over image with 30–50% black overlay can fall well below 4.5:1 contrast.",
+      "recommendation": "Darken the background behind the tagline or choose a higher-contrast text color to meet ≥4.5:1.",
+      "severity": "major",
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.20923567744525107,
+        "confidence": "medium",
+        "maxSimilarity": 0.3368377064328402,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/Hero.css",
+      "line": 75,
+      "lineContent": "    color: white;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Outline button text (white on transparent) over light image areas may fail 4.5:1 contrast.",
+      "reasoning": "Outline button text (white on transparent) over light image areas may fail 4.5:1 contrast.",
+      "recommendation": "Provide a higher-contrast label by using a darker text color or a solid high-contrast button background.",
+      "severity": "critical",
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.19541933878758516,
+        "confidence": "medium",
+        "maxSimilarity": 0.2964986102422001,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/Hero.css",
+      "line": 74,
+      "lineContent": "    border-color: white;",
+      "criterion": "1.4.11",
+      "level": "AA",
+      "description": "Outline button border (white) may not reach 3:1 non-text contrast against lighter background areas.",
+      "reasoning": "Outline button border (white) may not reach 3:1 non-text contrast against lighter background areas.",
+      "recommendation": "Increase border contrast (darker border or thicker stroke) or use a filled high-contrast button style.",
+      "severity": "major",
+      "guardrail": {
+        "flag": "review",
+        "sourceAction": "flag",
+        "actionReason": "Moderate alignment but low layer agreement — review recommended",
+        "compositeScore": 0.35313458865060543,
+        "confidence": "low",
+        "maxSimilarity": 0.0197108858658681,
+        "matchedFailureCondition": "F78: F78: Failure of Success Criterion 1.4.11, 2.4.7 and 2.4.13 due to styling element outlines and borders in a way that removes or renders non-visible the visual focus indicator — This describes a failure condition that occurs when the user agent's default visual indication of keyboard focus is turned off or rendered non-visible by other styling on the page without providing an author-supplied visual focus indicator. Turning off the focus indicator instructs the user agent not to present the focus indicator. Other styling may make it difficult to see the focus indicator even though it is present, such as outlines that look the same as the focus outline, or thick borders that are the same color as the focus indicator so it cannot be seen against them.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/Hero.css",
+      "line": 79,
+      "lineContent": "    background: white;",
+      "criterion": "1.4.11",
+      "level": "AA",
+      "description": "Hover state with white button fill may not achieve 3:1 non-text contrast against light background imagery.",
+      "reasoning": "Hover state with white button fill may not achieve 3:1 non-text contrast against light background imagery.",
+      "recommendation": "Use a darker button fill or add a contrasting outline/shadow to ensure ≥3:1 component contrast.",
+      "severity": "major",
+      "guardrail": {
+        "flag": "review",
+        "sourceAction": "flag",
+        "actionReason": "Moderate alignment but low layer agreement — review recommended",
+        "compositeScore": 0.35140457832704275,
+        "confidence": "low",
+        "maxSimilarity": 0.013195474758754783,
+        "matchedFailureCondition": "F78: F78: Failure of Success Criterion 1.4.11, 2.4.7 and 2.4.13 due to styling element outlines and borders in a way that removes or renders non-visible the visual focus indicator — This describes a failure condition that occurs when the user agent's default visual indication of keyboard focus is turned off or rendered non-visible by other styling on the page without providing an author-supplied visual focus indicator. Turning off the focus indicator instructs the user agent not to present the focus indicator. Other styling may make it difficult to see the focus indicator even though it is present, such as outlines that look the same as the focus outline, or thick borders that are the same color as the focus indicator so it cannot be seen against them.",
+        "wcagLevel": "AA"
+      }
+    }
+  ],
+  "src/components/PriceList.css": [
+    {
+      "file": "src/components/PriceList.css",
+      "line": 43,
+      "lineContent": "    color: #c9a962;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Text color #c9a962 on white/light background is ~2.2:1, below 4.5:1 minimum for non-large text.",
+      "reasoning": "Text color #c9a962 on white/light background is ~2.2:1, below 4.5:1 minimum for non-large text.",
+      "recommendation": "Use a darker text color or a darker background to achieve at least 4.5:1 contrast.",
+      "severity": "major",
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.2626561827456029,
+        "confidence": "medium",
+        "maxSimilarity": 0.36513138796223565,
+        "matchedFailureCondition": "F24: F24: Failure of Success Criterion 1.4.3, 1.4.6 and 1.4.8 due to specifying foreground colors without specifying background colors or vice versa — Users with vision loss or cognitive, language and learning challenges often prefer specific foreground and background color combinations. In some cases, individuals with low vision will find it much easier to see a web page that has white text on a black background, and they may have set their user agent to present this contrast. Many user agents make it possible for users to choose a preference about the foreground or background colors they would like to see without overriding all author-specified styles. This makes it possible for users to view pages where colors have not been specified by the author in their preferred color combination.\n\nUnless an author specifies both foreground and background colors, then they (the author) can no longer guarantee that the user will get a contrast that meets the contrast requirements. If, for example, the author specifies, that text should be grey, then it may override the settings of the user agent and render a page that has grey text (specified by the author) on a light grey background (that was set by the user in their user agent). This principle also works in reverse. If the author forces the background to be white, then the white background specified by the author could be similar in color to the text color preference expressed by the user in their user agent settings, thus rendering the page unusable to the user. Because an author can not predict how a user may have configured their preferences, if the author specifies a foreground text color then they should also specify a background color which has sufficient contrast with the foreground and vice versa.\n\nIt is not necessary that the foreground and background colors both be defined on the same CSS rule. Since CSS color properties inherit from ancestor elements, it is sufficient if both foreground and background colors are defined either directly or through inheritance by the time that color is applied to a given element.\n\nNote\n\nBest practice is to include all states of the text. For example, text, link text, visited link text, link text with hover and keyboard focus, etc.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/PriceList.css",
+      "line": 13,
+      "lineContent": "    border-bottom: 1px solid #eee;",
+      "criterion": "1.4.11",
+      "level": "AA",
+      "description": "Row divider (#eee) against white background is ~1.1:1, below 3:1 required for graphical boundaries.",
+      "reasoning": "Row divider (#eee) against white background is ~1.1:1, below 3:1 required for graphical boundaries.",
+      "recommendation": "Increase divider contrast to at least 3:1 (e.g., use a darker border color).",
+      "severity": "major",
+      "guardrail": {
+        "flag": "review",
+        "sourceAction": "flag",
+        "actionReason": "Moderate alignment but low layer agreement — review recommended",
+        "compositeScore": 0.16700870270812215,
+        "confidence": "low",
+        "maxSimilarity": 0.026215218547452828,
+        "matchedFailureCondition": "F78: F78: Failure of Success Criterion 1.4.11, 2.4.7 and 2.4.13 due to styling element outlines and borders in a way that removes or renders non-visible the visual focus indicator — This describes a failure condition that occurs when the user agent's default visual indication of keyboard focus is turned off or rendered non-visible by other styling on the page without providing an author-supplied visual focus indicator. Turning off the focus indicator instructs the user agent not to present the focus indicator. Other styling may make it difficult to see the focus indicator even though it is present, such as outlines that look the same as the focus outline, or thick borders that are the same color as the focus indicator so it cannot be seen against them.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/PriceList.css",
+      "line": 55,
+      "lineContent": "    text-decoration: none;",
+      "criterion": "1.4.1",
+      "level": "A",
+      "description": "Removing underline and inheriting color can make links indistinguishable from surrounding text.",
+      "reasoning": "Removing underline and inheriting color can make links indistinguishable from surrounding text.",
+      "recommendation": "Restore a non-color identifier (e.g., underline) and provide clear focus/hover cues.",
+      "severity": "major",
+      "guardrail": {
+        "flag": "review",
+        "sourceAction": "flag",
+        "actionReason": "Moderate alignment but low layer agreement — review recommended",
+        "compositeScore": 0.1628058925560997,
+        "confidence": "low",
+        "maxSimilarity": 0.3337947020082986,
+        "matchedFailureCondition": "F73: F73: Failure of Success Criterion 1.4.1 due to creating links that are not visually evident without color vision — The objective of this failure is to avoid situations in which people who cannot perceive color differences cannot identify links (when people with color vision can identify links). Link underlines or some other non-color visual distinction are required (when the links are discernible to those with color vision).\n\nWhile some links may be visually evident from page design and context, such as navigational links, links within text are often visually understood only from their own display attributes. Removing the underline and leaving only the color difference for such links would be a failure because there would be no other visual indication (besides color) that it is a link.\n\nNote\n\nRed and pink are the same color (hue) but they have different lightness (which is not color). So red and pink would pass the requirement for \"not distinguished by color (hue) alone\" since they differ by lightness (which is not color) - as long as the difference in lightness (contrast) is 3:1 or greater. For example, if surrounding text is red and the link is pink it would pass. Similarly a light green and a dark red differ both by color and by lightness so they would pass if the contrast (lightness) difference is 3:1 or greater before focus or pointing.\n\nThere is no requirement that links be identifiable by people who cannot perceive color if they are not perceivable for those with color vision. (e.g. if the links are hidden for everyone – as in a game or test).\n\nIf the non-color cue only happens when the mouse hovers over the link or when the link receives focus, it is still a failure.\n\nIf the link is a different color and bold it would not fail because the boldness is not color dependent.",
+        "wcagLevel": "A"
+      }
+    }
+  ],
+  "src/components/PriceList.jsx": [
+    {
+      "file": "src/components/PriceList.jsx",
+      "line": 23,
+      "lineContent": "                        <td>Service</td>",
+      "artifactId": "component-49",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Header cells are coded as <td> instead of <th>, so table headers are not programmatically conveyed.",
+      "reasoning": "Header cells are coded as <td> instead of <th>, so table headers are not programmatically conveyed.",
+      "recommendation": "Use <thead> with <th scope=\"col\"> for column headers and <tbody> for data rows.",
+      "severity": "major",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-49.png",
+        "mimeType": "image/png",
+        "width": 436,
+        "height": 65
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.5962507790955227,
+        "confidence": "high",
+        "maxSimilarity": 0.7451626166174422,
+        "matchedFailureCondition": "F91: F91: Failure of Success Criterion 1.3.1 for not correctly marking up table headers — This failure occurs when data tables do not use header elements (th) or other appropriate table mark-up (the scope attribute, headers and id or the ARIA columnheader and rowheader) roles to make the headers programmatically determinable from within table content. Making headers programmatically determinable is especially important when data cells are only intelligible together with header information. When screen reader users navigate through the table content horizontally or vertically, the headers that change can be read out to provide the necessary context for the information in the data cells.",
+        "wcagLevel": "A"
+      }
+    },
+    {
+      "file": "src/components/PriceList.jsx",
+      "line": 22,
+      "lineContent": "                    <tr className=\"table-header-row\">",
+      "artifactId": "component-57",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Dark header background (#1a1a1a) without a contrasting text color causes insufficient contrast for header text.",
+      "reasoning": "Dark header background (#1a1a1a) without a contrasting text color causes insufficient contrast for header text.",
+      "recommendation": "Set header text color to a light color (e.g., #FFFFFF) or lighten the background to achieve at least 4.5:1 contrast.",
+      "severity": "major",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-57.png",
+        "mimeType": "image/png",
+        "width": 1152,
+        "height": 65
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.6884839846922097,
+        "confidence": "high",
+        "maxSimilarity": 0.8813466926807674,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/PriceList.jsx",
+      "line": 38,
+      "lineContent": "                <p className=\"price-note low-contrast-text\">",
+      "artifactId": "component-15",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Paragraph text color #cccccc on a white background has ~1.6:1 contrast, below 4.5:1.",
+      "reasoning": "Paragraph text color #cccccc on a white background has ~1.6:1 contrast, below 4.5:1.",
+      "recommendation": "Use a darker text color (e.g., #595959 or darker) or adjust background to meet ≥4.5:1 contrast.",
+      "severity": "major",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-15.png",
+        "mimeType": "image/png",
+        "width": 1152,
+        "height": 23
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.3344559345771974,
+        "confidence": "medium",
+        "maxSimilarity": 0.5501735089102651,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/PriceList.jsx",
+      "line": 41,
+      "lineContent": "                    <a href=\"#\">Click here</a> for full terms.",
+      "artifactId": "component-26",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Link inherits low-contrast color #cccccc on white background (~1.6:1), below 4.5:1.",
+      "reasoning": "Link inherits low-contrast color #cccccc on white background (~1.6:1), below 4.5:1.",
+      "recommendation": "Ensure link text color meets ≥4.5:1 against the background (e.g., set color to #0050B3 or #000000).",
+      "severity": "major",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-26.png",
+        "mimeType": "image/png",
+        "width": 62,
+        "height": 16
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.48823137673815914,
+        "confidence": "high",
+        "maxSimilarity": 0.898369102595151,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/PriceList.jsx",
+      "line": 41,
+      "lineContent": "                    <a href=\"#\">Click here</a> for full terms.",
+      "artifactId": "component-26",
+      "criterion": "2.4.4",
+      "level": "A",
+      "description": "Non-descriptive link text 'Click here' does not convey purpose when taken out of context.",
+      "reasoning": "Non-descriptive link text 'Click here' does not convey purpose when taken out of context.",
+      "recommendation": "Use descriptive link text that reflects the destination (e.g., 'View full terms').",
+      "severity": "minor",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-26.png",
+        "mimeType": "image/png",
+        "width": 62,
+        "height": 16
+      },
+      "guardrail": {
+        "flag": "review",
+        "sourceAction": "flag",
+        "actionReason": "Moderate alignment but low layer agreement — review recommended",
+        "compositeScore": 0.4254848988745645,
+        "confidence": "low",
+        "maxSimilarity": 0.48096349851362635,
+        "matchedFailureCondition": "F63: F63: Failure of Success Criterion 2.4.4 due to providing link context only in content that is not related to the link — This describes a failure condition when the context needed for understanding the purpose of a link is located in content that is not programmatically determined link context. If the context for the link is not provided in one of the following ways:\n\nthen the user will not be able to find out where the link is going with any ease. If the user must leave the link to search for the context, the context is not programmatically determined link context and this failure condition occurs.",
+        "wcagLevel": "A"
+      }
+    }
+  ],
+  "src/components/Header.css": [
+    {
+      "file": "src/components/Header.css",
+      "line": 46,
+      "lineContent": "    color: #c9a962;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Hover text color (#c9a962) on near-white header background has ~2.25:1 contrast, below 4.5:1 for normal text.",
+      "reasoning": "Hover text color (#c9a962) on near-white header background has ~2.25:1 contrast, below 4.5:1 for normal text.",
+      "recommendation": "Use a darker hover color or adjust background to achieve at least 4.5:1 contrast.",
+      "severity": "major",
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.29507654939881495,
+        "confidence": "medium",
+        "maxSimilarity": 0.40271032866303086,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/Header.css",
+      "line": 53,
+      "lineContent": "    color: white;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "White button text on light gold gradient background (#c9a962–#b8944f) yields ~2.3:1–2.8:1 contrast, below 4.5:1 for 12px text.",
+      "reasoning": "White button text on light gold gradient background (#c9a962–#b8944f) yields ~2.3:1–2.8:1 contrast, below 4.5:1 for 12px text.",
+      "recommendation": "Use a darker text color or darken the gradient (or increase text to large size) to meet ≥4.5:1 contrast.",
+      "severity": "major",
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.3023544979940304,
+        "confidence": "medium",
+        "maxSimilarity": 0.4641762281054194,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    }
+  ],
+  "src/components/RoomAvailability.css": [
+    {
+      "file": "src/components/RoomAvailability.css",
+      "line": 17,
+      "lineContent": "    color: #c9a962;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Text color #c9a962 has insufficient contrast (~2.1:1) against section background #faf9f7; minimum 4.5:1 required for normal text.",
+      "reasoning": "Text color #c9a962 has insufficient contrast (~2.1:1) against section background #faf9f7; minimum 4.5:1 required for normal text.",
+      "recommendation": "Use a darker text color or a darker background to achieve at least 4.5:1 contrast.",
+      "severity": "major",
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.48574117103718967,
+        "confidence": "high",
+        "maxSimilarity": 0.8902851149069807,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/RoomAvailability.css",
+      "line": 84,
+      "lineContent": "    color: #c9a962;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Text color #c9a962 for price has insufficient contrast (~2.2:1) on white; large text requires at least 3:1.",
+      "reasoning": "Text color #c9a962 for price has insufficient contrast (~2.2:1) on white; large text requires at least 3:1.",
+      "recommendation": "Use a darker color for the price text or adjust background to reach ≥3:1 contrast.",
+      "severity": "major",
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.4826878663875916,
+        "confidence": "high",
+        "maxSimilarity": 0.873290009907851,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/RoomAvailability.css",
+      "line": 90,
+      "lineContent": "    color: #999;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Text color #999999 has insufficient contrast (~2.85:1) on white; minimum 4.5:1 required for normal text.",
+      "reasoning": "Text color #999999 has insufficient contrast (~2.85:1) on white; minimum 4.5:1 required for normal text.",
+      "recommendation": "Use a darker gray for this text to achieve at least 4.5:1 contrast on the background.",
+      "severity": "major",
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.46379391477232385,
+        "confidence": "high",
+        "maxSimilarity": 0.8784950285683968,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/RoomAvailability.css",
+      "line": 104,
+      "lineContent": "    color: #c9a962;",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Hover state color #c9a962 yields insufficient contrast (~2.1–2.2:1) on light backgrounds for 13px link text (requires ≥4.5:1).",
+      "reasoning": "Hover state color #c9a962 yields insufficient contrast (~2.1–2.2:1) on light backgrounds for 13px link text (requires ≥4.5:1).",
+      "recommendation": "Set a hover color that maintains ≥4.5:1 contrast or add a high-contrast underline/background on hover.",
+      "severity": "minor",
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.5599446792833649,
+        "confidence": "high",
+        "maxSimilarity": 0.8394467981625635,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    }
+  ],
+  "src/components/RoomAvailability.jsx": [
+    {
+      "file": "src/components/RoomAvailability.jsx",
+      "line": 63,
+      "lineContent": "                            <img src={room.image} alt=\"\" className=\"room-image\" />",
+      "artifactId": "component-3",
+      "criterion": "1.1.1",
+      "level": "A",
+      "description": "Informative room image has empty alt text",
+      "reasoning": "Informative room image has empty alt text",
+      "recommendation": "Provide meaningful alt text (e.g., use room.name) or mark as decorative if truly non-informative.",
+      "severity": "critical",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-3.png",
+        "mimeType": "image/png",
+        "width": 363,
+        "height": 280
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.5236097318475105,
+        "confidence": "medium",
+        "maxSimilarity": 0.6945534309678325,
+        "matchedFailureCondition": "F38: F38: Failure of Success Criterion 1.1.1 due to not marking up decorative images in HTML in a way that allows assistive technology to ignore them — This describes a failure condition for text alternatives for images that should be ignored by AT. If there is no alt attribute at all assistive technologies are not able to ignore the non-text content. The alt attribute must be provided and have a null value (i.e., alt=\"\" ) to avoid a failure of this Success Criterion.\n\nThis describes a failure condition for text alternatives for images that should be ignored by assistive technology (AT). If an image has the attribute role=\"presentation\", it will be ignored by AT. However, if it does not have role=\"presentation\", and if there is no alt attribute at all assistive technologies are not able to ignore the image. For decorative images which need to be ignored by AT, either role=\"presentation\" must be used or the alt attribute must be provided and have a null value (i.e., alt=\"\") to avoid a failure of this success criterion.",
+        "wcagLevel": "A"
+      }
+    },
+    {
+      "file": "src/components/RoomAvailability.jsx",
+      "line": 67,
+      "lineContent": "                                    <span className={`status-dot ${room.available ? 'status-available' : 'status-booked'}`}></span>",
+      "artifactId": "component-10",
+      "criterion": "1.4.1",
+      "level": "A",
+      "description": "Availability conveyed solely by color of status dot",
+      "reasoning": "Availability conveyed solely by color of status dot",
+      "recommendation": "Add visible text (e.g., \"Available\"/\"Booked\") or an accessible name to avoid relying on color alone.",
+      "severity": "major",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-10.png",
+        "mimeType": "image/png",
+        "width": 168,
+        "height": 24
+      },
+      "guardrail": {
+        "flag": "review",
+        "sourceAction": "flag",
+        "actionReason": "Moderate alignment but low layer agreement — review recommended",
+        "compositeScore": 0.17734642243187032,
+        "confidence": "low",
+        "maxSimilarity": 0.2859020384113026,
+        "matchedFailureCondition": "F13: F13: Failure of Success Criterion 1.1.1 and 1.4.1 due to having a text alternative that does not include information that is conveyed by color differences in the image — The objective of this technique is to describe the failure that occurs when an image uses color differences to convey information, but the text alternative for the image does not convey that information. This can cause problems for people who are blind, have low vision, or have color vision deficiency, because they will not be able to perceive the information conveyed by the color differences.",
+        "wcagLevel": "A"
+      }
+    },
+    {
+      "file": "src/components/RoomAvailability.jsx",
+      "line": 67,
+      "lineContent": "                                    <span className={`status-dot ${room.available ? 'status-available' : 'status-booked'}`}></span>",
+      "artifactId": "tooltip-2",
+      "criterion": "1.4.11",
+      "level": "AA",
+      "description": "Green status indicator (#22c55e) lacks 3:1 contrast against background (#faf9f7) (~2.17:1)",
+      "reasoning": "Green status indicator (#22c55e) lacks 3:1 contrast against background (#faf9f7) (~2.17:1)",
+      "recommendation": "Darken the green, add a high-contrast border, or include text to meet 3:1 non-text contrast.",
+      "severity": "major",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/widget-tooltip-2.png",
+        "mimeType": "image/png",
+        "width": 100,
+        "height": 38
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.35146494028060243,
+        "confidence": "medium",
+        "maxSimilarity": 0.1311379771284483,
+        "matchedFailureCondition": "F78: F78: Failure of Success Criterion 1.4.11, 2.4.7 and 2.4.13 due to styling element outlines and borders in a way that removes or renders non-visible the visual focus indicator — This describes a failure condition that occurs when the user agent's default visual indication of keyboard focus is turned off or rendered non-visible by other styling on the page without providing an author-supplied visual focus indicator. Turning off the focus indicator instructs the user agent not to present the focus indicator. Other styling may make it difficult to see the focus indicator even though it is present, such as outlines that look the same as the focus outline, or thick borders that are the same color as the focus indicator so it cannot be seen against them.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/RoomAvailability.jsx",
+      "line": 52,
+      "lineContent": "                    <span className=\"section-label\">Accommodations</span>",
+      "artifactId": "component-9",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Low text contrast (#c9a962 on #faf9f7 ~2.14:1) for section label",
+      "reasoning": "Low text contrast (#c9a962 on #faf9f7 ~2.14:1) for section label",
+      "recommendation": "Increase contrast to at least 4.5:1 for normal text (adjust text color or background).",
+      "severity": "major",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-9.png",
+        "mimeType": "image/png",
+        "width": 1152,
+        "height": 58
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.4847787830398331,
+        "confidence": "high",
+        "maxSimilarity": 0.8830646598336732,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/RoomAvailability.jsx",
+      "line": 70,
+      "lineContent": "                                    <span className=\"room-price\">{room.price}<span className=\"price-period\">/night</span></span>",
+      "artifactId": "tooltip-2",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Low text contrast for price value (#c9a962 on #faf9f7 ~2.14:1)",
+      "reasoning": "Low text contrast for price value (#c9a962 on #faf9f7 ~2.14:1)",
+      "recommendation": "Use a darker color or different background to achieve at least 4.5:1 contrast.",
+      "severity": "major",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/widget-tooltip-2.png",
+        "mimeType": "image/png",
+        "width": 100,
+        "height": 38
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.48328355575536547,
+        "confidence": "high",
+        "maxSimilarity": 0.8788565431311791,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/RoomAvailability.jsx",
+      "line": 70,
+      "lineContent": "                                    <span className=\"room-price\">{room.price}<span className=\"price-period\">/night</span></span>",
+      "artifactId": "tooltip-2",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Low text contrast for \"/night\" (#999999 on #faf9f7 ~2.72:1)",
+      "reasoning": "Low text contrast for \"/night\" (#999999 on #faf9f7 ~2.72:1)",
+      "recommendation": "Increase the text color contrast to at least 4.5:1 for normal text.",
+      "severity": "major",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/widget-tooltip-2.png",
+        "mimeType": "image/png",
+        "width": 100,
+        "height": 38
+      },
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.48760158360683,
+        "confidence": "high",
+        "maxSimilarity": 0.8910090535303263,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/components/RoomAvailability.jsx",
+      "line": 71,
+      "lineContent": "                                    <a href=\"#\" className=\"room-link\">Read More</a>",
+      "artifactId": "component-25",
+      "criterion": "2.4.4",
+      "level": "A",
+      "description": "Generic link text \"Read More\" does not identify purpose when multiple instances exist",
+      "reasoning": "Generic link text \"Read More\" does not identify purpose when multiple instances exist",
+      "recommendation": "Include the room name in the link text or use an aria-label to make purpose clear (e.g., \"Read more about Ocean View Suite\").",
+      "severity": "major",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-25.png",
+        "mimeType": "image/png",
+        "width": 85,
+        "height": 21
+      },
+      "guardrail": {
+        "flag": "review",
+        "sourceAction": "flag",
+        "actionReason": "Moderate alignment but low layer agreement — review recommended",
+        "compositeScore": 0.3867729717567288,
+        "confidence": "low",
+        "maxSimilarity": 0.37961797971510564,
+        "matchedFailureCondition": "F63: F63: Failure of Success Criterion 2.4.4 due to providing link context only in content that is not related to the link — This describes a failure condition when the context needed for understanding the purpose of a link is located in content that is not programmatically determined link context. If the context for the link is not provided in one of the following ways:\n\nthen the user will not be able to find out where the link is going with any ease. If the user must leave the link to search for the context, the context is not programmatically determined link context and this failure condition occurs.",
+        "wcagLevel": "A"
+      }
+    },
+    {
+      "file": "src/components/RoomAvailability.jsx",
+      "line": 60,
+      "lineContent": "                <div className=\"rooms-grid\">",
+      "artifactId": "component-3",
+      "criterion": "1.3.1",
+      "level": "A",
+      "description": "Collection of room cards presented with divs lacks list semantics",
+      "reasoning": "Collection of room cards presented with divs lacks list semantics",
+      "recommendation": "Use semantic list markup (ul/li) or ARIA list roles to convey the set of items.",
+      "severity": "major",
+      "screenshot": {
+        "path": ".codea11y/artifacts/applicability/component-component-3.png",
+        "mimeType": "image/png",
+        "width": 363,
+        "height": 280
+      },
+      "guardrail": {
+        "flag": "review",
+        "sourceAction": "flag",
+        "actionReason": "Moderate alignment but low layer agreement — review recommended",
+        "compositeScore": 0.20678743116301976,
+        "confidence": "low",
+        "maxSimilarity": 0.10607589342895034,
+        "matchedFailureCondition": "F43: F43: Failure of Success Criterion 1.3.1 due to using structural markup in a way that does not represent relationships in the content — The objective of this technique is to describe a failure that occurs when structural markup is used to achieve a presentational effect, but indicates relationships that do not exist in the content. This is disorienting to users who are depending on those relationships to navigate the content or to understand the relationship of one piece of the content to another. Note that the use of HTML tables for layout is not an example of this failure as long as the layout table does not include improper structural markup such as <th> or <caption> elements.\n\nNote\n\nThough an element's semantic meaning is generally exposed to AT, the WAI-ARIA presentation role can be used to suppress the native semantics of an element so that they are not mapped to the accessibility API. Setting an element's role to presentation may avoid this failure by hiding that element's semantics from the user.",
+        "wcagLevel": "A"
+      }
+    }
+  ],
+  "src/index.css": [
+    {
+      "file": "src/index.css",
+      "line": 3,
+      "lineContent": "  outline: none !important;",
+      "criterion": "2.4.7",
+      "level": "AA",
+      "description": "Global removal of focus outlines hides keyboard focus indicators.",
+      "reasoning": "Global removal of focus outlines hides keyboard focus indicators.",
+      "recommendation": "Remove the global outline reset and provide visible focus styles for interactive elements.",
+      "severity": "critical",
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.5390144193425427,
+        "confidence": "high",
+        "maxSimilarity": 0.803950176348605,
+        "matchedFailureCondition": "F55: F55: Failure of Success Criteria 2.1.1, 2.4.7, 2.4.13, and 3.2.1 due to using script to remove focus when focus is received — Content that normally receives focus when the content is accessed by keyboard may have this focus removed by scripting. This is sometimes done when designer considers the system focus indicator to be unsightly. However, the system focus indicator is an important part of accessibility for keyboard users. In addition, this practice removes focus from the content entirely, which means that the content can only be operated by a pointing device such as a mouse.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/index.css",
+      "line": 38,
+      "lineContent": "  text-decoration: none;",
+      "criterion": "1.4.1",
+      "level": "A",
+      "description": "Links are not visually distinguishable from surrounding text (no underline and inherited color).",
+      "reasoning": "Links are not visually distinguishable from surrounding text (no underline and inherited color).",
+      "recommendation": "Provide a non-color cue for links (e.g., underline) or ensure 3:1 color contrast with surrounding text.",
+      "severity": "major",
+      "guardrail": {
+        "flag": "review",
+        "sourceAction": "flag",
+        "actionReason": "Moderate alignment but low layer agreement — review recommended",
+        "compositeScore": 0.2839455252898124,
+        "confidence": "low",
+        "maxSimilarity": 0.3231626365351445,
+        "matchedFailureCondition": "F73: F73: Failure of Success Criterion 1.4.1 due to creating links that are not visually evident without color vision — The objective of this failure is to avoid situations in which people who cannot perceive color differences cannot identify links (when people with color vision can identify links). Link underlines or some other non-color visual distinction are required (when the links are discernible to those with color vision).\n\nWhile some links may be visually evident from page design and context, such as navigational links, links within text are often visually understood only from their own display attributes. Removing the underline and leaving only the color difference for such links would be a failure because there would be no other visual indication (besides color) that it is a link.\n\nNote\n\nRed and pink are the same color (hue) but they have different lightness (which is not color). So red and pink would pass the requirement for \"not distinguished by color (hue) alone\" since they differ by lightness (which is not color) - as long as the difference in lightness (contrast) is 3:1 or greater. For example, if surrounding text is red and the link is pink it would pass. Similarly a light green and a dark red differ both by color and by lightness so they would pass if the contrast (lightness) difference is 3:1 or greater before focus or pointing.\n\nThere is no requirement that links be identifiable by people who cannot perceive color if they are not perceivable for those with color vision. (e.g. if the links are hidden for everyone – as in a game or test).\n\nIf the non-color cue only happens when the mouse hovers over the link or when the link receives focus, it is still a failure.\n\nIf the link is a different color and bold it would not fail because the boldness is not color dependent.",
+        "wcagLevel": "A"
+      }
+    },
+    {
+      "file": "src/index.css",
+      "line": 93,
+      "lineContent": "  color: var(--text-low-contrast);",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Text color #cccccc on white (~1.6:1) fails minimum contrast.",
+      "reasoning": "Text color #cccccc on white (~1.6:1) fails minimum contrast.",
+      "recommendation": "Use a darker text color that achieves at least 4.5:1 contrast against the background.",
+      "severity": "major",
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.4851419809709463,
+        "confidence": "high",
+        "maxSimilarity": 0.881990186203151,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/index.css",
+      "line": 105,
+      "lineContent": "  background-color: #22c55e;",
+      "criterion": "1.4.1",
+      "level": "A",
+      "description": "Status is conveyed solely by color with no additional cue.",
+      "reasoning": "Status is conveyed solely by color with no additional cue.",
+      "recommendation": "Add a text label, icon, or pattern to convey status in addition to color.",
+      "severity": "major",
+      "guardrail": {
+        "flag": "review",
+        "sourceAction": "flag",
+        "actionReason": "Moderate alignment but low layer agreement — review recommended",
+        "compositeScore": 0.28561379091054506,
+        "confidence": "low",
+        "maxSimilarity": 0.22259578957660234,
+        "matchedFailureCondition": "F13: F13: Failure of Success Criterion 1.1.1 and 1.4.1 due to having a text alternative that does not include information that is conveyed by color differences in the image — The objective of this technique is to describe the failure that occurs when an image uses color differences to convey information, but the text alternative for the image does not convey that information. This can cause problems for people who are blind, have low vision, or have color vision deficiency, because they will not be able to perceive the information conveyed by the color differences.",
+        "wcagLevel": "A"
+      }
+    },
+    {
+      "file": "src/index.css",
+      "line": 109,
+      "lineContent": "  background-color: #ef4444;",
+      "criterion": "1.4.1",
+      "level": "A",
+      "description": "Status is conveyed solely by color with no additional cue.",
+      "reasoning": "Status is conveyed solely by color with no additional cue.",
+      "recommendation": "Add a text label, icon, or pattern to convey status in addition to color.",
+      "severity": "major",
+      "guardrail": {
+        "flag": "review",
+        "sourceAction": "flag",
+        "actionReason": "Moderate alignment but low layer agreement — review recommended",
+        "compositeScore": 0.28561379091054506,
+        "confidence": "low",
+        "maxSimilarity": 0.22259578957660234,
+        "matchedFailureCondition": "F13: F13: Failure of Success Criterion 1.1.1 and 1.4.1 due to having a text alternative that does not include information that is conveyed by color differences in the image — The objective of this technique is to describe the failure that occurs when an image uses color differences to convey information, but the text alternative for the image does not convey that information. This can cause problems for people who are blind, have low vision, or have color vision deficiency, because they will not be able to perceive the information conveyed by the color differences.",
+        "wcagLevel": "A"
+      }
+    },
+    {
+      "file": "src/index.css",
+      "line": 61,
+      "lineContent": "  color: var(--text-light);",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "White text on gold gradient background (~2.3–2.8:1) fails minimum contrast.",
+      "reasoning": "White text on gold gradient background (~2.3–2.8:1) fails minimum contrast.",
+      "recommendation": "Use darker text or darken the background to achieve at least 4.5:1 (or ≥3:1 for large text).",
+      "severity": "major",
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.4392766128754044,
+        "confidence": "high",
+        "maxSimilarity": 0.8933772941898329,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/index.css",
+      "line": 60,
+      "lineContent": "  background: linear-gradient(135deg, var(--primary-gold) 0%, #b8944f 100%);",
+      "criterion": "1.4.11",
+      "level": "AA",
+      "description": "Button background has <3:1 contrast against page background, reducing component visibility.",
+      "reasoning": "Button background has <3:1 contrast against page background, reducing component visibility.",
+      "recommendation": "Increase button background contrast against the page to at least 3:1.",
+      "severity": "major",
+      "guardrail": {
+        "flag": "review",
+        "sourceAction": "flag",
+        "actionReason": "Low confidence alignment — manual review required",
+        "compositeScore": 0.14839809500630038,
+        "confidence": "low",
+        "maxSimilarity": 0.04174520879057875,
+        "matchedFailureCondition": "F78: F78: Failure of Success Criterion 1.4.11, 2.4.7 and 2.4.13 due to styling element outlines and borders in a way that removes or renders non-visible the visual focus indicator — This describes a failure condition that occurs when the user agent's default visual indication of keyboard focus is turned off or rendered non-visible by other styling on the page without providing an author-supplied visual focus indicator. Turning off the focus indicator instructs the user agent not to present the focus indicator. Other styling may make it difficult to see the focus indicator even though it is present, such as outlines that look the same as the focus outline, or thick borders that are the same color as the focus indicator so it cannot be seen against them.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/index.css",
+      "line": 72,
+      "lineContent": "  color: var(--primary-gold);",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "Gold text on white (~2.25:1) fails minimum contrast.",
+      "reasoning": "Gold text on white (~2.25:1) fails minimum contrast.",
+      "recommendation": "Use a darker text color or a darker background to reach at least 4.5:1 contrast.",
+      "severity": "major",
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.4364927240251816,
+        "confidence": "high",
+        "maxSimilarity": 0.8796991863099893,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/index.css",
+      "line": 71,
+      "lineContent": "  border: 1px solid var(--primary-gold);",
+      "criterion": "1.4.11",
+      "level": "AA",
+      "description": "Button border (~2.25:1 against white) lacks 3:1 contrast for UI component boundaries.",
+      "reasoning": "Button border (~2.25:1 against white) lacks 3:1 contrast for UI component boundaries.",
+      "recommendation": "Use a higher-contrast border or a filled background to achieve ≥3:1 against adjacent colors.",
+      "severity": "major",
+      "guardrail": {
+        "flag": "review",
+        "sourceAction": "flag",
+        "actionReason": "Moderate alignment but low layer agreement — review recommended",
+        "compositeScore": 0.25236128023668003,
+        "confidence": "low",
+        "maxSimilarity": 0.019402044022470324,
+        "matchedFailureCondition": "F78: F78: Failure of Success Criterion 1.4.11, 2.4.7 and 2.4.13 due to styling element outlines and borders in a way that removes or renders non-visible the visual focus indicator — This describes a failure condition that occurs when the user agent's default visual indication of keyboard focus is turned off or rendered non-visible by other styling on the page without providing an author-supplied visual focus indicator. Turning off the focus indicator instructs the user agent not to present the focus indicator. Other styling may make it difficult to see the focus indicator even though it is present, such as outlines that look the same as the focus outline, or thick borders that are the same color as the focus indicator so it cannot be seen against them.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/index.css",
+      "line": 77,
+      "lineContent": "  color: var(--text-light);",
+      "criterion": "1.4.3",
+      "level": "AA",
+      "description": "White text on gold hover background (~2.3–2.8:1) fails minimum contrast.",
+      "reasoning": "White text on gold hover background (~2.3–2.8:1) fails minimum contrast.",
+      "recommendation": "Adjust hover colors to meet at least 4.5:1 (or ≥3:1 for large text).",
+      "severity": "major",
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.43962638112739183,
+        "confidence": "high",
+        "maxSimilarity": 0.8943656402924324,
+        "matchedFailureCondition": "F83: F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text) — This failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.\n\nTo satisfy Success Criterion 1.4.3 Contrast (Minimum) and 1.4.6 Contrast (Enhanced), there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/index.css",
+      "line": 118,
+      "lineContent": "  border: 1px solid #e5e5e5;",
+      "criterion": "1.4.11",
+      "level": "AA",
+      "description": "Input boundary (~1.3:1 against white) lacks 3:1 contrast for UI components.",
+      "reasoning": "Input boundary (~1.3:1 against white) lacks 3:1 contrast for UI components.",
+      "recommendation": "Increase control boundary contrast (e.g., darker border or background fill) to ≥3:1.",
+      "severity": "major",
+      "guardrail": {
+        "flag": "review",
+        "sourceAction": "flag",
+        "actionReason": "Moderate alignment but low layer agreement — review recommended",
+        "compositeScore": 0.24559644574464115,
+        "confidence": "low",
+        "maxSimilarity": 0.02235852464071876,
+        "matchedFailureCondition": "F78: F78: Failure of Success Criterion 1.4.11, 2.4.7 and 2.4.13 due to styling element outlines and borders in a way that removes or renders non-visible the visual focus indicator — This describes a failure condition that occurs when the user agent's default visual indication of keyboard focus is turned off or rendered non-visible by other styling on the page without providing an author-supplied visual focus indicator. Turning off the focus indicator instructs the user agent not to present the focus indicator. Other styling may make it difficult to see the focus indicator even though it is present, such as outlines that look the same as the focus outline, or thick borders that are the same color as the focus indicator so it cannot be seen against them.",
+        "wcagLevel": "AA"
+      }
+    },
+    {
+      "file": "src/index.css",
+      "line": 124,
+      "lineContent": "  border-color: var(--primary-gold);",
+      "criterion": "1.4.11",
+      "level": "AA",
+      "description": "Focus indicator uses low-contrast border (~2.25:1 against white), failing non-text contrast.",
+      "reasoning": "Focus indicator uses low-contrast border (~2.25:1 against white), failing non-text contrast.",
+      "recommendation": "Provide a higher-contrast focus style (≥3:1) such as a thicker/darker outline or background change.",
+      "severity": "major",
+      "guardrail": {
+        "flag": "accurate",
+        "sourceAction": "accept",
+        "compositeScore": 0.4862400454786964,
+        "confidence": "high",
+        "maxSimilarity": 0.37108527313659145,
+        "matchedFailureCondition": "F78: F78: Failure of Success Criterion 1.4.11, 2.4.7 and 2.4.13 due to styling element outlines and borders in a way that removes or renders non-visible the visual focus indicator — This describes a failure condition that occurs when the user agent's default visual indication of keyboard focus is turned off or rendered non-visible by other styling on the page without providing an author-supplied visual focus indicator. Turning off the focus indicator instructs the user agent not to present the focus indicator. Other styling may make it difficult to see the focus indicator even though it is present, such as outlines that look the same as the focus outline, or thick borders that are the same color as the focus indicator so it cannot be seen against them.",
+        "wcagLevel": "AA"
+      }
+    }
+  ]
+}

@@ -18,7 +18,7 @@ function Hero() {
                 </p>
 
                 <div className="hero-buttons">
-                    <div className="btn btn-primary">Click Here</div>
+                    <div className="btn btn-primary" style={{ color: '#000000' }}>Click Here</div>
                     <div className="btn btn-outline">Read More</div>
                 </div>
             </div>

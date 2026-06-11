@@ -1,0 +1,722 @@
+{
+  "eslint.config.js": {
+    "version": 1,
+    "fileHash": "f6477b521c0d4c5ab0ac73d8cc8ce484795d23bece7cbbd0cd2a9f4301337532",
+    "issuesHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "edits": []
+  },
+  "index.html": {
+    "version": 1,
+    "fileHash": "16ce4649b10c3550773d8f68314e2f4966cdea68c5ab8715a50300e30a66bc31",
+    "issuesHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "edits": []
+  },
+  "src/App.jsx": {
+    "version": 1,
+    "fileHash": "81c08a34fcbc9c10a28b312e9c1e76081738dd2cfe9adf3834462b01abd31b10",
+    "issuesHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "edits": []
+  },
+  "src/App.css": {
+    "version": 1,
+    "fileHash": "5f5e07dde76497997953ff7691d7e066f3dd50588b82407b77aa1c7115bf7a64",
+    "issuesHash": "ec2ce014511db1a7dd81a6b5fc26daf0bb482cbf4c528845e95c048a072bfd27",
+    "edits": [
+      {
+        "file": "src/App.css",
+        "line": 19,
+        "oldContent": "  color: rgba(255, 255, 255, 0.7);",
+        "newContent": "  color: #ffffff;",
+        "wcagGuideline": "1.4.3",
+        "description": "Replaced semi-transparent text color with opaque white to prevent contrast loss from alpha blending on varying backgrounds."
+      }
+    ]
+  },
+  "src/components/Footer.css": {
+    "version": 1,
+    "fileHash": "7d1b783ddfce81c380796f8ac5197be8c403be55d4384a7d8b644ec165f9b41d",
+    "issuesHash": "55fe3ce5973cfbc848b1ca5597296847e7e43b1034a6b72cd5a2221ae8b15c96",
+    "edits": [
+      {
+        "file": "src/components/Footer.css",
+        "line": 69,
+        "oldContent": "    color: #c9a962;",
+        "newContent": "    color: #7a5a00;",
+        "wcagGuideline": "1.4.3",
+        "description": "Set a darker hover link color to meet ≥4.5:1 contrast on white."
+      }
+    ]
+  },
+  "src/components/ContactForm.jsx": {
+    "version": 1,
+    "fileHash": "c780afa2a58915f9571e07fee9e58cfe7fd16f08307e4812a790a9fbf7035649",
+    "issuesHash": "acdc824eec52445e9aae7a57284a1a9a4464f698434f2cd2baa79efdb1fb137b",
+    "edits": [
+      {
+        "file": "src/components/ContactForm.jsx",
+        "line": 13,
+        "oldContent": "<span className=\"section-label\">Get in Touch</span>",
+        "newContent": "<span className=\"section-label\" style={{ color: '#6b5b2a' }}>Get in Touch</span>",
+        "wcagGuideline": "1.4.3",
+        "description": "Increased text contrast by applying a darker inline color."
+      },
+      {
+        "file": "src/components/ContactForm.jsx",
+        "line": 22,
+        "oldContent": "<span className=\"contact-label\">Address</span>",
+        "newContent": "<span className=\"contact-label\" style={{ color: '#6b5b2a' }}>Address</span>",
+        "wcagGuideline": "1.4.3",
+        "description": "Increased text contrast by applying a darker inline color."
+      },
+      {
+        "file": "src/components/ContactForm.jsx",
+        "line": 26,
+        "oldContent": "<span className=\"contact-label\">Phone</span>",
+        "newContent": "<span className=\"contact-label\" style={{ color: '#6b5b2a' }}>Phone</span>",
+        "wcagGuideline": "1.4.3",
+        "description": "Increased text contrast by applying a darker inline color."
+      },
+      {
+        "file": "src/components/ContactForm.jsx",
+        "line": 30,
+        "oldContent": "<span className=\"contact-label\">Email</span>",
+        "newContent": "<span className=\"contact-label\" style={{ color: '#6b5b2a' }}>Email</span>",
+        "wcagGuideline": "1.4.3",
+        "description": "Increased text contrast by applying a darker inline color."
+      },
+      {
+        "file": "src/components/ContactForm.jsx",
+        "line": 37,
+        "oldContent": "<input type=\"text\" placeholder=\"Name\" />",
+        "newContent": "<input type=\"text\" placeholder=\"Name\" aria-label=\"Name\" />",
+        "wcagGuideline": "4.1.2",
+        "description": "Added aria-label to provide an accessible name for the text input."
+      },
+      {
+        "file": "src/components/ContactForm.jsx",
+        "line": 38,
+        "oldContent": "<input type=\"email\" placeholder=\"Email Address\" />",
+        "newContent": "<input type=\"email\" placeholder=\"Email Address\" aria-label=\"Email address\" />",
+        "wcagGuideline": "4.1.2",
+        "description": "Added aria-label to provide an accessible name for the email input."
+      },
+      {
+        "file": "src/components/ContactForm.jsx",
+        "line": 39,
+        "oldContent": "<input type=\"tel\" placeholder=\"Phone Number\" />",
+        "newContent": "<input type=\"tel\" placeholder=\"Phone Number\" aria-label=\"Phone number\" />",
+        "wcagGuideline": "4.1.2",
+        "description": "Added aria-label to provide an accessible name for the telephone input."
+      },
+      {
+        "file": "src/components/ContactForm.jsx",
+        "line": 40,
+        "oldContent": "<textarea rows=\"5\" placeholder=\"Your Message\"></textarea>",
+        "newContent": "<textarea rows=\"5\" placeholder=\"Your Message\" aria-label=\"Your message\"></textarea>",
+        "wcagGuideline": "4.1.2",
+        "description": "Added aria-label to provide an accessible name for the textarea."
+      }
+    ]
+  },
+  "src/components/Footer.jsx": {
+    "version": 1,
+    "fileHash": "dd66df31703d97fcf9b4a14372427ca935f1a27b36a5dc624d89960870489258",
+    "issuesHash": "35247e0d706fc5dcb56c5f206ed96b81123334cf145e5cabbb28309ee208fc03",
+    "edits": [
+      {
+        "file": "src/components/Footer.jsx",
+        "line": 9,
+        "oldContent": "<p className=\"footer-tagline low-contrast-text\">",
+        "newContent": "<p className=\"footer-tagline\">",
+        "wcagGuideline": "1.4.3",
+        "description": "Removed low-contrast class to improve text contrast."
+      },
+      {
+        "file": "src/components/Footer.jsx",
+        "line": 14,
+        "oldContent": "<img src=\"https://cdn-icons-png.flaticon.com/128/733/733547.png\" alt=\"\" className=\"social-icon\"/>",
+        "newContent": "<img src=\"https://cdn-icons-png.flaticon.com/128/733/733547.png\" alt=\"Facebook\" className=\"social-icon\"/>",
+        "wcagGuideline": "1.1.1",
+        "description": "Provided descriptive alt text for social icon."
+      },
+      {
+        "file": "src/components/Footer.jsx",
+        "line": 15,
+        "oldContent": "<img src=\"https://cdn-icons-png.flaticon.com/128/2111/2111463.png\" alt=\"\" className=\"social-icon\"/>",
+        "newContent": "<img src=\"https://cdn-icons-png.flaticon.com/128/2111/2111463.png\" alt=\"Instagram\" className=\"social-icon\"/>",
+        "wcagGuideline": "1.1.1",
+        "description": "Provided descriptive alt text for social icon."
+      },
+      {
+        "file": "src/components/Footer.jsx",
+        "line": 16,
+        "oldContent": "<img src=\"https://cdn-icons-png.flaticon.com/128/733/733579.png\" alt=\"\" className=\"social-icon\"/>",
+        "newContent": "<img src=\"https://cdn-icons-png.flaticon.com/128/733/733579.png\" alt=\"Twitter\" className=\"social-icon\"/>",
+        "wcagGuideline": "1.1.1",
+        "description": "Provided descriptive alt text for social icon."
+      },
+      {
+        "file": "src/components/Footer.jsx",
+        "line": 21,
+        "oldContent": "<span className=\"footer-heading\">Quick Links</span>",
+        "newContent": "<h2 className=\"footer-heading\">Quick Links</h2>",
+        "wcagGuideline": "1.3.1",
+        "description": "Replaced visual heading span with semantic h2."
+      },
+      {
+        "file": "src/components/Footer.jsx",
+        "line": 22,
+        "oldContent": "<div className=\"link-list low-contrast-text\">",
+        "newContent": "<div className=\"link-list\">",
+        "wcagGuideline": "1.4.3",
+        "description": "Removed low-contrast class to ensure sufficient link contrast."
+      },
+      {
+        "file": "src/components/Footer.jsx",
+        "line": 32,
+        "oldContent": "<span className=\"footer-heading\">Services</span>",
+        "newContent": "<h2 className=\"footer-heading\">Services</h2>",
+        "wcagGuideline": "1.3.1",
+        "description": "Replaced visual heading span with semantic h2."
+      },
+      {
+        "file": "src/components/Footer.jsx",
+        "line": 33,
+        "oldContent": "<div className=\"link-list low-contrast-text\">",
+        "newContent": "<div className=\"link-list\">",
+        "wcagGuideline": "1.4.3",
+        "description": "Removed low-contrast class to ensure sufficient link contrast."
+      },
+      {
+        "file": "src/components/Footer.jsx",
+        "line": 43,
+        "oldContent": "<span className=\"footer-heading\">Legal</span>",
+        "newContent": "<h2 className=\"footer-heading\">Legal</h2>",
+        "wcagGuideline": "1.3.1",
+        "description": "Replaced visual heading span with semantic h2."
+      },
+      {
+        "file": "src/components/Footer.jsx",
+        "line": 44,
+        "oldContent": "<div className=\"link-list low-contrast-text\">",
+        "newContent": "<div className=\"link-list\">",
+        "wcagGuideline": "1.4.3",
+        "description": "Removed low-contrast class to ensure sufficient link contrast."
+      },
+      {
+        "file": "src/components/Footer.jsx",
+        "line": 54,
+        "oldContent": "<p className=\"copyright low-contrast-text\">",
+        "newContent": "<p className=\"copyright\">",
+        "wcagGuideline": "1.4.3",
+        "description": "Removed low-contrast class to improve text contrast."
+      },
+      {
+        "file": "src/components/Footer.jsx",
+        "line": 59,
+        "oldContent": "<p className=\"terms low-contrast-text\">",
+        "newContent": "<p className=\"terms\">",
+        "wcagGuideline": "1.4.3",
+        "description": "Removed low-contrast class to improve text contrast."
+      }
+    ]
+  },
+  "src/components/Header.css": {
+    "version": 1,
+    "fileHash": "77fe05827747f945218501d93aeb2af3188b36baff37824a47e47fea44d635f0",
+    "issuesHash": "b833d7bc4f6c2fc1b876873cd41f5d59cf612fb1ab31d20d27f4ba3f3d6c3a4e",
+    "edits": [
+      {
+        "file": "src/components/Header.css",
+        "line": 46,
+        "oldContent": "    color: #c9a962;",
+        "newContent": "    color: #8a6c2f;",
+        "wcagGuideline": "1.4.3",
+        "description": "Darkened hover color to ensure ≥4.5:1 contrast against near-white header background."
+      },
+      {
+        "file": "src/components/Header.css",
+        "line": 53,
+        "oldContent": "    color: white;",
+        "newContent": "    color: #1a1a1a;",
+        "wcagGuideline": "1.4.3",
+        "description": "Switched button text to dark color to achieve ≥4.5:1 contrast across the gold gradient."
+      }
+    ]
+  },
+  "src/components/Hero.jsx": {
+    "version": 1,
+    "fileHash": "c4ef15d83abcc1aebd237bb04eaf0f4ca5a1a2749c6be6ae507828121b24b958",
+    "issuesHash": "42f52c55a3a79c3d51d4f3265fed46ba3ddbbec7786f27f9b61ab8ef7ff933bb",
+    "edits": [
+      {
+        "file": "src/components/Hero.jsx",
+        "line": 21,
+        "oldContent": "                    <div className=\"btn btn-primary\">Click Here</div>",
+        "newContent": "                    <div className=\"btn btn-primary\" style={{ color: '#000000' }}>Click Here</div>",
+        "wcagGuideline": "1.4.3",
+        "description": "Set button text color to black to achieve sufficient contrast against #C9A962 background."
+      }
+    ]
+  },
+  "src/components/ContactForm.css": {
+    "version": 1,
+    "fileHash": "743ca00f033a9e043c40b864221a820529074b5d8db922e39dfdb6e69fbfc80a",
+    "issuesHash": "ff5972574954064ac0b12d6be3bc3a68b4793297ddf417e88135ebdb5280c37d",
+    "edits": [
+      {
+        "file": "src/components/ContactForm.css",
+        "line": 19,
+        "oldContent": "    color: #c9a962;",
+        "newContent": "    color: #806a2e;",
+        "wcagGuideline": "1.4.3",
+        "description": "Increased section label text contrast against #faf9f7 to meet ≥4.5:1."
+      },
+      {
+        "file": "src/components/ContactForm.css",
+        "line": 54,
+        "oldContent": "    color: #c9a962;",
+        "newContent": "    color: #806a2e;",
+        "wcagGuideline": "1.4.3",
+        "description": "Increased contact label text contrast against #faf9f7 to meet ≥4.5:1."
+      },
+      {
+        "file": "src/components/ContactForm.css",
+        "line": 77,
+        "oldContent": "    border: 1px solid #e5e5e5;",
+        "newContent": "    border: 1px solid #8a8a8a;",
+        "wcagGuideline": "1.4.11",
+        "description": "Raised default input border contrast to ≥3:1 against white for component identification."
+      },
+      {
+        "file": "src/components/ContactForm.css",
+        "line": 85,
+        "oldContent": "    border-color: #c9a962;",
+        "newContent": "    border-color: #806a2e;",
+        "wcagGuideline": "1.4.11",
+        "description": "Increased focus border color contrast to ≥3:1 for clear focus indication."
+      },
+      {
+        "file": "src/components/ContactForm.css",
+        "line": 89,
+        "oldContent": "    border: none;",
+        "newContent": "    border: 1px solid #806a2e;",
+        "wcagGuideline": "1.4.11",
+        "description": "Added high-contrast button border so the component boundary is ≥3:1 against #faf9f7."
+      },
+      {
+        "file": "src/components/ContactForm.css",
+        "line": 93,
+        "oldContent": "    color: white;",
+        "newContent": "    color: #1f1f1f;",
+        "wcagGuideline": "1.4.3",
+        "description": "Changed button text to dark color achieving ≥4.5:1 against the gold gradient."
+      }
+    ]
+  },
+  "src/components/Header.jsx": {
+    "version": 1,
+    "fileHash": "386305748b6a77f53aacbbf194505a93a0a9f4915e54dd2698022574ddb9339c",
+    "issuesHash": "9bba3890e5c507dd0896acbe97d614839c1ef5fe621722d106eb1929cbde6fd6",
+    "edits": [
+      {
+        "file": "src/components/Header.jsx",
+        "line": 14,
+        "oldContent": "      <div className=\"header-container\">",
+        "newContent": "      <div className=\"header-container\">\\n        <a className=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+        "wcagGuideline": "2.4.1",
+        "description": "Added a visible 'Skip to main content' link before the navigation to provide a bypass mechanism."
+      },
+      {
+        "file": "src/components/Header.jsx",
+        "line": 18,
+        "oldContent": "        <div className=\"nav-menu\">",
+        "newContent": "        <nav className=\"nav-menu\" aria-label=\"Primary\">",
+        "wcagGuideline": "1.3.1",
+        "description": "Replaced generic div with semantic nav landmark to convey structure programmatically."
+      },
+      {
+        "file": "src/components/Header.jsx",
+        "line": 24,
+        "oldContent": "        </div>",
+        "newContent": "        </nav>",
+        "wcagGuideline": "1.3.1",
+        "description": "Updated closing tag to match the new nav element."
+      }
+    ]
+  },
+  "src/components/PriceList.css": {
+    "version": 1,
+    "fileHash": "477885065f2630978d397b2145629b35605c7607998876d2057c659c1cb9aec2",
+    "issuesHash": "deecb96b8f0e4f063dd2f0d832e4515433987a5bd5fd766e362832e87a09bed7",
+    "edits": [
+      {
+        "file": "src/components/PriceList.css",
+        "line": 13,
+        "oldContent": "    border-bottom: 1px solid #eee;",
+        "newContent": "    border-bottom: 1px solid #767676;",
+        "wcagGuideline": "1.4.11",
+        "description": "Increased row divider contrast to meet 3:1 non-text contrast requirement."
+      },
+      {
+        "file": "src/components/PriceList.css",
+        "line": 43,
+        "oldContent": "    color: #c9a962;",
+        "newContent": "    color: #8c6d1f;",
+        "wcagGuideline": "1.4.3",
+        "description": "Darkened gold text to achieve at least 4.5:1 contrast on light backgrounds."
+      },
+      {
+        "file": "src/components/PriceList.css",
+        "line": 55,
+        "oldContent": "    text-decoration: none;",
+        "newContent": "    text-decoration: underline;",
+        "wcagGuideline": "1.4.1",
+        "description": "Restored underlines so links are not identified by color alone."
+      }
+    ]
+  },
+  "src/components/Hero.css": {
+    "version": 1,
+    "fileHash": "5da46e7fa089cfe33c59d8d615c2f47b236a641c93e7e58b8cb33e771cd4b16a",
+    "issuesHash": "8b089ae97c9a848a6246965f25311f80a798ca81b5f6f90fa3cac0497c9aa13b",
+    "edits": [
+      {
+        "file": "src/components/Hero.css",
+        "line": 27,
+        "oldContent": "            rgba(0, 0, 0, 0.3) 0%,",
+        "newContent": "            rgba(0, 0, 0, 0.85) 0%,",
+        "wcagGuideline": "1.4.3",
+        "description": "Increased overlay opacity to provide a consistently darker background behind text for sufficient contrast over images."
+      },
+      {
+        "file": "src/components/Hero.css",
+        "line": 28,
+        "oldContent": "            rgba(0, 0, 0, 0.5) 100%);",
+        "newContent": "            rgba(0, 0, 0, 0.9) 100%);",
+        "wcagGuideline": "1.4.11",
+        "description": "Further darkened overlay to ensure button borders/fills and text maintain required component and text contrast over imagery."
+      },
+      {
+        "file": "src/components/Hero.css",
+        "line": 63,
+        "oldContent": "    color: rgba(255, 255, 255, 0.9);",
+        "newContent": "    color: white;",
+        "wcagGuideline": "1.4.3",
+        "description": "Made subtitle text opaque to prevent transparency from reducing contrast below 4.5:1."
+      },
+      {
+        "file": "src/components/Hero.css",
+        "line": 46,
+        "oldContent": "    color: #c9a962;",
+        "newContent": "    color: white;",
+        "wcagGuideline": "1.4.3",
+        "description": "Set tagline to white to meet ≥4.5:1 contrast against the darkened overlay background."
+      }
+    ]
+  },
+  "src/main.jsx": {
+    "version": 1,
+    "fileHash": "ae81f1c01f2c8018a1ba5cf73171921c8982d90b049bb6b039ea82f8e1dec958",
+    "issuesHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "edits": []
+  },
+  "vite.config.js": {
+    "version": 1,
+    "fileHash": "5cabb639b6b62e19064337abc9f5b4fda0f83e50a47396ca9a3bba388abfdd13",
+    "issuesHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "edits": []
+  },
+  "src/components/RoomAvailability.css": {
+    "version": 1,
+    "fileHash": "2f7f600a82f391ffcbb931566257f9a5f390703089916efc1a1a3e789791283a",
+    "issuesHash": "de0829c7a029f8c6bd3fed00cc42d0c256a536a3e5c07744701cffde90951fd7",
+    "edits": [
+      {
+        "file": "src/components/RoomAvailability.css",
+        "line": 17,
+        "oldContent": "    color: #c9a962;",
+        "newContent": "    color: #8a6e2f;",
+        "wcagGuideline": "1.4.3",
+        "description": "Darkened section label color to achieve ≥4.5:1 contrast against #faf9f7."
+      },
+      {
+        "file": "src/components/RoomAvailability.css",
+        "line": 84,
+        "oldContent": "    color: #c9a962;",
+        "newContent": "    color: #8a6e2f;",
+        "wcagGuideline": "1.4.3",
+        "description": "Darkened price color to meet ≥3:1 contrast for large text on white."
+      },
+      {
+        "file": "src/components/RoomAvailability.css",
+        "line": 90,
+        "oldContent": "    color: #999;",
+        "newContent": "    color: #666;",
+        "wcagGuideline": "1.4.3",
+        "description": "Darkened secondary text to ensure ≥4.5:1 contrast on white."
+      },
+      {
+        "file": "src/components/RoomAvailability.css",
+        "line": 104,
+        "oldContent": "    color: #c9a962;",
+        "newContent": "    color: #8a6e2f;",
+        "wcagGuideline": "1.4.3",
+        "description": "Adjusted hover color to maintain ≥4.5:1 contrast for 13px link text."
+      }
+    ]
+  },
+  "src/components/PriceList.jsx": {
+    "version": 1,
+    "fileHash": "7a361b16eb48b525cecfcbaf0010bbd3ff7102ee90ef6f78ce51ed93424892ee",
+    "issuesHash": "4551a93df0bfec6d30dd886497bb5cb8c1d60b9873d70f7ca4f03b13d46a6a0b",
+    "edits": [
+      {
+        "file": "src/components/PriceList.jsx",
+        "line": 22,
+        "oldContent": "                    <tr className=\"table-header-row\">",
+        "newContent": "                    <thead>\n                        <tr className=\"table-header-row\" style={{ color: '#FFFFFF' }}>",
+        "wcagGuideline": "1.4.3",
+        "description": "Introduced thead and set header text color to white to ensure sufficient contrast on dark background."
+      },
+      {
+        "file": "src/components/PriceList.jsx",
+        "line": 23,
+        "oldContent": "                        <td>Service</td>",
+        "newContent": "                        <th scope=\"col\">Service</th>",
+        "wcagGuideline": "1.3.1",
+        "description": "Converted data cell to column header with scope for proper table semantics."
+      },
+      {
+        "file": "src/components/PriceList.jsx",
+        "line": 24,
+        "oldContent": "                        <td>Weekday</td>",
+        "newContent": "                        <th scope=\"col\">Weekday</th>",
+        "wcagGuideline": "1.3.1",
+        "description": "Converted data cell to column header with scope for proper table semantics."
+      },
+      {
+        "file": "src/components/PriceList.jsx",
+        "line": 25,
+        "oldContent": "                        <td>Weekend</td>",
+        "newContent": "                        <th scope=\"col\">Weekend</th>",
+        "wcagGuideline": "1.3.1",
+        "description": "Converted data cell to column header with scope for proper table semantics."
+      },
+      {
+        "file": "src/components/PriceList.jsx",
+        "line": 26,
+        "oldContent": "                        <td>Holiday</td>",
+        "newContent": "                        <th scope=\"col\">Holiday</th>",
+        "wcagGuideline": "1.3.1",
+        "description": "Converted data cell to column header with scope for proper table semantics."
+      },
+      {
+        "file": "src/components/PriceList.jsx",
+        "line": 27,
+        "oldContent": "                    </tr>",
+        "newContent": "                        </tr>\n                    </thead>",
+        "wcagGuideline": "1.3.1",
+        "description": "Closed header row within thead for correct table structure."
+      },
+      {
+        "file": "src/components/PriceList.jsx",
+        "line": 28,
+        "oldContent": "                    {services.map((item, index) => (",
+        "newContent": "                    <tbody>\n                        {services.map((item, index) => (",
+        "wcagGuideline": "1.3.1",
+        "description": "Wrapped data rows in tbody to properly distinguish header and data sections."
+      },
+      {
+        "file": "src/components/PriceList.jsx",
+        "line": 35,
+        "oldContent": "                    ))}",
+        "newContent": "                    ))}\n                    </tbody>",
+        "wcagGuideline": "1.3.1",
+        "description": "Closed tbody to complete data section structure."
+      },
+      {
+        "file": "src/components/PriceList.jsx",
+        "line": 38,
+        "oldContent": "                <p className=\"price-note low-contrast-text\">",
+        "newContent": "                <p className=\"price-note\">",
+        "wcagGuideline": "1.4.3",
+        "description": "Removed low-contrast class to ensure paragraph text meets minimum contrast."
+      },
+      {
+        "file": "src/components/PriceList.jsx",
+        "line": 41,
+        "oldContent": "                    <a href=\"#\">Click here</a> for full terms.",
+        "newContent": "                    <a href=\"#\">View full terms</a>.",
+        "wcagGuideline": "2.4.4",
+        "description": "Replaced non-descriptive link text with meaningful text indicating destination."
+      }
+    ]
+  },
+  "src/components/RoomAvailability.jsx": {
+    "version": 1,
+    "fileHash": "0a4eaffeab54c4e1b19384be09a498e68805afa62d7c51ad63fb8e8b60d9ca6b",
+    "issuesHash": "d6387bd3140f7fc6eb4eb731b955c2d14fa56cf60aa78aa67c3b56e56942b9b6",
+    "edits": [
+      {
+        "file": "src/components/RoomAvailability.jsx",
+        "line": 63,
+        "oldContent": "                            <img src={room.image} alt=\"\" className=\"room-image\" />",
+        "newContent": "                            <img src={room.image} alt={room.name} className=\"room-image\" />",
+        "wcagGuideline": "1.1.1",
+        "description": "Provided meaningful alt text using room name."
+      },
+      {
+        "file": "src/components/RoomAvailability.jsx",
+        "line": 67,
+        "oldContent": "                                    <span className={`status-dot ${room.available ? 'status-available' : 'status-booked'}`}></span>",
+        "newContent": "                                    <span className={`status-dot ${room.available ? 'status-available' : 'status-booked'}`}></span><span className=\"status-text\">{room.available ? 'Available' : 'Booked'}</span>",
+        "wcagGuideline": "1.4.1",
+        "description": "Added visible status text so availability is not conveyed by color alone and mitigates non-text contrast concerns."
+      },
+      {
+        "file": "src/components/RoomAvailability.jsx",
+        "line": 52,
+        "oldContent": "                    <span className=\"section-label\">Accommodations</span>",
+        "newContent": "                    <span className=\"section-label\" style={{color: '#2d2d2d'}}>Accommodations</span>",
+        "wcagGuideline": "1.4.3",
+        "description": "Increased text contrast for the section label to meet minimum contrast."
+      },
+      {
+        "file": "src/components/RoomAvailability.jsx",
+        "line": 70,
+        "oldContent": "                                    <span className=\"room-price\">{room.price}<span className=\"price-period\">/night</span></span>",
+        "newContent": "                                    <span className=\"room-price\" style={{color: '#2d2d2d'}}>{room.price}<span className=\"price-period\" style={{color: '#2d2d2d'}}>/night</span></span>",
+        "wcagGuideline": "1.4.3",
+        "description": "Increased contrast for price and period text to meet 4.5:1."
+      },
+      {
+        "file": "src/components/RoomAvailability.jsx",
+        "line": 71,
+        "oldContent": "                                    <a href=\"#\" className=\"room-link\">Read More</a>",
+        "newContent": "                                    <a href=\"#\" className=\"room-link\" aria-label={`Read more about ${room.name}`}>Read More</a>",
+        "wcagGuideline": "2.4.4",
+        "description": "Added aria-label to make link purpose clear in context."
+      },
+      {
+        "file": "src/components/RoomAvailability.jsx",
+        "line": 60,
+        "oldContent": "                <div className=\"rooms-grid\">",
+        "newContent": "                <div className=\"rooms-grid\" role=\"list\">",
+        "wcagGuideline": "1.3.1",
+        "description": "Added list role to convey collection semantics."
+      },
+      {
+        "file": "src/components/RoomAvailability.jsx",
+        "line": 62,
+        "oldContent": "                        <div key={room.id} className=\"room-card\">",
+        "newContent": "                        <div key={room.id} className=\"room-card\" role=\"listitem\">",
+        "wcagGuideline": "1.3.1",
+        "description": "Added listitem role to each room card to provide list semantics."
+      }
+    ]
+  },
+  "src/index.css": {
+    "version": 1,
+    "fileHash": "16d5f9f0a60bf6df8898cfc7ed31a9ddf0f36925237319ac2fce5f1ec8d075bf",
+    "issuesHash": "46e83891d94cd44b285d69fdb0031a6b77ce879c25cc181fd1a16917ce60f276",
+    "edits": [
+      {
+        "file": "src/index.css",
+        "line": 3,
+        "oldContent": "  outline: none !important;",
+        "newContent": "  /* removed to preserve focus visibility */",
+        "wcagGuideline": "2.4.7",
+        "description": "Removed global outline reset to restore keyboard focus indicators."
+      },
+      {
+        "file": "src/index.css",
+        "line": 38,
+        "oldContent": "  text-decoration: none;",
+        "newContent": "  text-decoration: underline;",
+        "wcagGuideline": "1.4.1",
+        "description": "Underlined links so they are visually distinguishable from surrounding text."
+      },
+      {
+        "file": "src/index.css",
+        "line": 54,
+        "oldContent": "  border: none;",
+        "newContent": "  border: 1px solid #8a6d2f;",
+        "wcagGuideline": "1.4.11",
+        "description": "Added a higher-contrast border to ensure button boundaries are visible against white."
+      },
+      {
+        "file": "src/index.css",
+        "line": 61,
+        "oldContent": "  color: var(--text-light);",
+        "newContent": "  color: var(--primary-dark);",
+        "wcagGuideline": "1.4.3",
+        "description": "Switched to dark text on gold button for sufficient text contrast."
+      },
+      {
+        "file": "src/index.css",
+        "line": 71,
+        "oldContent": "  border: 1px solid var(--primary-gold);",
+        "newContent": "  border: 1px solid var(--text-dark);",
+        "wcagGuideline": "1.4.11",
+        "description": "Increased outline button border contrast to meet non-text contrast."
+      },
+      {
+        "file": "src/index.css",
+        "line": 72,
+        "oldContent": "  color: var(--primary-gold);",
+        "newContent": "  color: var(--text-dark);",
+        "wcagGuideline": "1.4.3",
+        "description": "Set outline button text to dark for sufficient contrast on white."
+      },
+      {
+        "file": "src/index.css",
+        "line": 77,
+        "oldContent": "  color: var(--text-light);",
+        "newContent": "  color: var(--primary-dark);",
+        "wcagGuideline": "1.4.3",
+        "description": "Adjusted hover text color on gold background to meet contrast."
+      },
+      {
+        "file": "src/index.css",
+        "line": 93,
+        "oldContent": "  color: var(--text-low-contrast);",
+        "newContent": "  color: #4a4a4a;",
+        "wcagGuideline": "1.4.3",
+        "description": "Increased text contrast for low-contrast text class."
+      },
+      {
+        "file": "src/index.css",
+        "line": 105,
+        "oldContent": "  background-color: #22c55e;",
+        "newContent": "  background-color: #22c55e; border-radius: 2px;",
+        "wcagGuideline": "1.4.1",
+        "description": "Added shape change (square) so status is not conveyed by color alone."
+      },
+      {
+        "file": "src/index.css",
+        "line": 109,
+        "oldContent": "  background-color: #ef4444;",
+        "newContent": "  background-color: #ef4444; border: 2px solid #1a1a1a;",
+        "wcagGuideline": "1.4.1",
+        "description": "Added a high-contrast border to provide a non-color cue for status."
+      },
+      {
+        "file": "src/index.css",
+        "line": 118,
+        "oldContent": "  border: 1px solid #e5e5e5;",
+        "newContent": "  border: 1px solid #767676;",
+        "wcagGuideline": "1.4.11",
+        "description": "Darkened input border to meet non-text contrast for control boundaries."
+      },
+      {
+        "file": "src/index.css",
+        "line": 124,
+        "oldContent": "  border-color: var(--primary-gold);",
+        "newContent": "  border-color: #1a1a1a;",
+        "wcagGuideline": "1.4.11",
+        "description": "Provided a higher-contrast focus indicator for inputs."
+      }
+    ]
+  }
+}

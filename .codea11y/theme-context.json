@@ -1,0 +1,224 @@
+{
+  "resolvedCssVariables": {
+    "--bg-cream": "#faf9f7",
+    "--bg-white": "#ffffff",
+    "--primary-dark": "#1a1a1a",
+    "--primary-gold": "#c9a962",
+    "--primary-light": "#f8f6f2",
+    "--text-dark": "#2d2d2d",
+    "--text-light": "#ffffff",
+    "--text-low-contrast": "#cccccc"
+  },
+  "hardcodedColors": [
+    "#1a1a1a",
+    "#22c55e",
+    "#2d2d2d",
+    "#666666",
+    "#999999",
+    "#c9a962",
+    "#ef4444",
+    "#faf9f7",
+    "#ffffff",
+    "transparent"
+  ],
+  "classMap": {
+    "c:\\Users\\2862775\\Desktop\\demo-site\\src\\App.css": {
+      ".app": {},
+      ".welcome-banner": {},
+      ".welcome-text": {
+        "color": "#ffffff"
+      }
+    },
+    "c:\\Users\\2862775\\Desktop\\demo-site\\src\\components\\ContactForm.css": {
+      ".contact-section": {
+        "backgroundColor": "#faf9f7"
+      },
+      ".contact-wrapper": {},
+      ".contact-info .section-label": {
+        "color": "#c9a962"
+      },
+      ".contact-info .section-title": {},
+      ".contact-desc": {
+        "color": "#666666"
+      },
+      ".contact-details": {},
+      ".contact-item": {},
+      ".contact-label": {
+        "color": "#c9a962"
+      },
+      ".contact-value": {
+        "color": "#2d2d2d"
+      },
+      ".contact-form": {},
+      ".form-row": {},
+      ".contact-form input,\r\n.contact-form textarea": {},
+      ".contact-form input:focus,\r\n.contact-form textarea:focus": {
+        "borderColor": "#c9a962"
+      },
+      ".submit-btn": {},
+      ".submit-btn:hover": {}
+    },
+    "c:\\Users\\2862775\\Desktop\\demo-site\\src\\components\\Footer.css": {
+      ".footer": {},
+      ".footer-grid": {},
+      ".footer-logo": {
+        "color": "#1a1a1a"
+      },
+      ".footer-tagline": {},
+      ".social-icons": {},
+      ".social-icon": {},
+      ".social-icon:hover": {},
+      ".footer-heading": {
+        "color": "#1a1a1a"
+      },
+      ".link-list": {},
+      ".link-list a": {},
+      ".link-list a:hover": {
+        "color": "#c9a962"
+      },
+      ".footer-bottom": {},
+      ".copyright": {},
+      ".terms": {}
+    },
+    "c:\\Users\\2862775\\Desktop\\demo-site\\src\\components\\Header.css": {
+      ".header": {
+        "backgroundColor": "#ffffff"
+      },
+      ".header-container": {},
+      ".logo-text": {
+        "color": "#1a1a1a"
+      },
+      ".nav-menu": {},
+      ".nav-item": {
+        "color": "#2d2d2d"
+      },
+      ".nav-item:hover": {
+        "color": "#c9a962"
+      },
+      ".book-btn": {},
+      ".book-btn:hover": {}
+    },
+    "c:\\Users\\2862775\\Desktop\\demo-site\\src\\components\\Hero.css": {
+      ".hero": {},
+      ".hero-image": {},
+      ".hero-overlay": {},
+      ".hero-content": {},
+      ".hero-tagline": {
+        "color": "#c9a962"
+      },
+      ".hero-title": {},
+      ".hero-subtitle": {
+        "color": "#ffffff"
+      },
+      ".hero-buttons": {},
+      ".hero-buttons .btn-outline": {},
+      ".hero-buttons .btn-outline:hover": {
+        "color": "#1a1a1a"
+      }
+    },
+    "c:\\Users\\2862775\\Desktop\\demo-site\\src\\components\\PriceList.css": {
+      ".price-section": {},
+      ".price-table": {},
+      ".price-table tr": {},
+      ".table-header-row": {
+        "backgroundColor": "#1a1a1a"
+      },
+      ".table-header-row td": {},
+      ".price-table td": {},
+      ".price-table tr:not(.table-header-row):hover": {
+        "backgroundColor": "#faf9f7"
+      },
+      ".price-table td:first-child": {},
+      ".price-table td:not(:first-child)": {
+        "color": "#c9a962"
+      },
+      ".price-note": {},
+      ".price-note a": {}
+    },
+    "c:\\Users\\2862775\\Desktop\\demo-site\\src\\components\\RoomAvailability.css": {
+      ".rooms-section": {
+        "backgroundColor": "#faf9f7"
+      },
+      ".section-header": {},
+      ".section-label": {
+        "color": "#c9a962"
+      },
+      ".section-title": {},
+      ".section-desc": {
+        "color": "#666666"
+      },
+      ".rooms-grid": {},
+      ".room-card": {},
+      ".room-card:hover": {},
+      ".room-image": {},
+      ".room-info": {},
+      ".room-header": {},
+      ".room-name": {},
+      ".room-details": {},
+      ".room-price": {
+        "color": "#c9a962"
+      },
+      ".price-period": {
+        "color": "#999999"
+      },
+      ".room-link": {
+        "color": "#2d2d2d"
+      },
+      ".room-link:hover": {
+        "color": "#c9a962"
+      }
+    },
+    "c:\\Users\\2862775\\Desktop\\demo-site\\src\\index.css": {
+      "*": {},
+      ":root": {},
+      "html": {},
+      "body": {
+        "color": "#2d2d2d",
+        "backgroundColor": "#ffffff"
+      },
+      "a": {},
+      "a:hover": {},
+      ".btn": {},
+      ".btn-primary": {
+        "backgroundColor": "#c9a962",
+        "color": "#ffffff"
+      },
+      ".btn-primary:hover": {},
+      ".btn-outline": {
+        "backgroundColor": "transparent",
+        "borderColor": "#c9a962",
+        "color": "#c9a962"
+      },
+      ".btn-outline:hover": {
+        "backgroundColor": "#c9a962",
+        "color": "#ffffff"
+      },
+      ".section": {},
+      ".container": {},
+      ".low-contrast-text": {
+        "color": "#cccccc"
+      },
+      ".status-dot": {},
+      ".status-available": {
+        "backgroundColor": "#22c55e"
+      },
+      ".status-booked": {
+        "backgroundColor": "#ef4444"
+      },
+      "input, textarea": {
+        "backgroundColor": "#ffffff"
+      },
+      "input:focus, textarea:focus": {
+        "borderColor": "#c9a962"
+      },
+      "h1, h2, h3, h4, h5, h6": {
+        "color": "#2d2d2d"
+      },
+      "from": {},
+      "to": {},
+      ".animate-fade-in": {}
+    }
+  },
+  "tailwindColors": {},
+  "tailwindUtilities": {}
+}

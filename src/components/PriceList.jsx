@@ -19,13 +19,16 @@ function PriceList() {
                     <h3 className="section-title">Price List</h3>
                 </div>
                 <table className="price-table">
-                    <tr className="table-header-row">
-                        <td>Service</td>
-                        <td>Weekday</td>
-                        <td>Weekend</td>
-                        <td>Holiday</td>
-                    </tr>
-                    {services.map((item, index) => (
+                    <thead>
+                        <tr className="table-header-row" style={{ color: '#FFFFFF' }}>
+                        <th scope="col">Service</th>
+                        <th scope="col">Weekday</th>
+                        <th scope="col">Weekend</th>
+                        <th scope="col">Holiday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {services.map((item, index) => (
                         <tr key={index}>
                             <td>{item.service}</td>
                             <td>{item.weekday}</td>
@@ -33,12 +36,13 @@ function PriceList() {
                             <td>{item.holiday}</td>
                         </tr>
                     ))}
+                    </tbody>
                 </table>
 
-                <p className="price-note low-contrast-text">
+                <p className="price-note">
                     * All prices are per night and subject to availability. Additional taxes and fees may apply.
                     For group bookings or extended stays, please contact us for special rates.
-                    <a href="#">Click here</a> for full terms.
+                    <a href="#">View full terms</a>.
                 </p>
             </div>
         </div>

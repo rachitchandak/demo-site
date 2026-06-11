@@ -1,0 +1,43 @@
+{
+  "version": 3,
+  "sourceDir": "src",
+  "targetUrl": "http://localhost:5173",
+  "crawl": {
+    "maxPages": 25,
+    "maxDepth": 4
+  },
+  "fileHashes": [
+    {
+      "filePath": "src/App.jsx",
+      "hash": "81c08a34fcbc9c10a28b312e9c1e76081738dd2cfe9adf3834462b01abd31b10"
+    },
+    {
+      "filePath": "src/components/ContactForm.jsx",
+      "hash": "c780afa2a58915f9571e07fee9e58cfe7fd16f08307e4812a790a9fbf7035649"
+    },
+    {
+      "filePath": "src/components/Footer.jsx",
+      "hash": "dd66df31703d97fcf9b4a14372427ca935f1a27b36a5dc624d89960870489258"
+    },
+    {
+      "filePath": "src/components/Header.jsx",
+      "hash": "386305748b6a77f53aacbbf194505a93a0a9f4915e54dd2698022574ddb9339c"
+    },
+    {
+      "filePath": "src/components/Hero.jsx",
+      "hash": "c4ef15d83abcc1aebd237bb04eaf0f4ca5a1a2749c6be6ae507828121b24b958"
+    },
+    {
+      "filePath": "src/components/PriceList.jsx",
+      "hash": "7a361b16eb48b525cecfcbaf0010bbd3ff7102ee90ef6f78ce51ed93424892ee"
+    },
+    {
+      "filePath": "src/components/RoomAvailability.jsx",
+      "hash": "0a4eaffeab54c4e1b19384be09a498e68805afa62d7c51ad63fb8e8b60d9ca6b"
+    },
+    {
+      "filePath": "src/main.jsx",
+      "hash": "ae81f1c01f2c8018a1ba5cf73171921c8982d90b049bb6b039ea82f8e1dec958"
+    }
+  ]
+}

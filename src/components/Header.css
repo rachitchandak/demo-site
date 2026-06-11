@@ -43,14 +43,14 @@
 }
 
 .nav-item:hover {
-    color: #c9a962;
+    color: #8a6c2f;
 }
 
 .book-btn {
     display: inline-block;
     padding: 14px 28px;
     background: linear-gradient(135deg, #c9a962 0%, #b8944f 100%);
-    color: white;
+    color: #1a1a1a;
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 1.5px;

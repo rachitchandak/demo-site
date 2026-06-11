@@ -6,20 +6,20 @@ function Footer() {
                 <div className="footer-grid">
                     <div className="footer-brand">
                         <span className="footer-logo">The Silent Oasis</span>
-                        <p className="footer-tagline low-contrast-text">
+<p className="footer-tagline">
                             Where luxury meets serenity. Experience the pinnacle of refined
                             hospitality in our exclusive retreat.
                         </p>
                         <div className="social-icons">
-                            <img src="https://cdn-icons-png.flaticon.com/128/733/733547.png" alt="" className="social-icon"/>
-                            <img src="https://cdn-icons-png.flaticon.com/128/2111/2111463.png" alt="" className="social-icon"/>
-                            <img src="https://cdn-icons-png.flaticon.com/128/733/733579.png" alt="" className="social-icon"/>
+<img src="https://cdn-icons-png.flaticon.com/128/733/733547.png" alt="Facebook" className="social-icon"/>
+<img src="https://cdn-icons-png.flaticon.com/128/2111/2111463.png" alt="Instagram" className="social-icon"/>
+<img src="https://cdn-icons-png.flaticon.com/128/733/733579.png" alt="Twitter" className="social-icon"/>
                         </div>
                     </div>
 
                     <div className="footer-links">
-                        <span className="footer-heading">Quick Links</span>
-                        <div className="link-list low-contrast-text">
+<h2 className="footer-heading">Quick Links</h2>
+<div className="link-list">
                             <a href="#">About Us</a>
                             <a href="#">Our Rooms</a>
                             <a href="#">Dining</a>
@@ -29,8 +29,8 @@ function Footer() {
                     </div>
 
                     <div className="footer-links">
-                        <span className="footer-heading">Services</span>
-                        <div className="link-list low-contrast-text">
+<h2 className="footer-heading">Services</h2>
+<div className="link-list">
                             <a href="#">Concierge</a>
                             <a href="#">Airport Transfer</a>
                             <a href="#">Private Events</a>
@@ -40,8 +40,8 @@ function Footer() {
                     </div>
 
                     <div className="footer-links">
-                        <span className="footer-heading">Legal</span>
-                        <div className="link-list low-contrast-text">
+<h2 className="footer-heading">Legal</h2>
+<div className="link-list">
                             <a href="#">Privacy Policy</a>
                             <a href="#">Terms of Service</a>
                             <a href="#">Cookie Policy</a>
@@ -51,12 +51,12 @@ function Footer() {
                 </div>
 
                 <div className="footer-bottom">
-                    <p className="copyright low-contrast-text">
+<p className="copyright">
                         © 2024 The Silent Oasis. All rights reserved.
                         <a href="#">Read More</a> about our commitment to excellence.
                     </p>
 
-                    <p className="terms low-contrast-text">
+<p className="terms">
                         By using this website you agree to our Terms and Conditions.
                         <a href="#">Click here</a> to view our full legal disclaimer and privacy practices.
                         We reserve the right to modify these terms at any time without prior notice.
